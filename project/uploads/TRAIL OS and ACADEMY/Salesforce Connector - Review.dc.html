@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-bg); }
+  a { color: var(--tt-link); text-decoration: none; }
+  a:hover { color: var(--tt-link-hover); text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: var(--tt-slate); background: var(--tt-bg); min-height: 100vh; padding: 56px 32px 96px;">
+<div style="max-width: 1040px; margin: 0 auto;">
+
+  <header style="border-bottom: 1px solid var(--tt-warm-gray); padding-bottom: 32px; margin-bottom: 48px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tt-deep-teal); margin: 0 0 16px;">Salesforce connector · review</p>
+    <h1 style="font-family: 'Poppins', sans-serif; font-size: 44px; line-height: 1.15; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 20px; max-width: 26ch; text-wrap: pretty;">The objects are built and loaded. The code never asks for them.</h1>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 24px; max-width: 64ch; text-wrap: pretty;">You have eighteen custom objects designed across the data model — eight Penny objects, six curriculum and progress objects, and four build-governance objects — plus documented reuse of Contact, Knowledge, Program and Program Engagement with new fields added. The connector queries none of the eighteen. It reads Contact, Account, Case and Organization, probes three Nonprofit Success Pack objects and eight Program Management objects, and it is read-only.</p>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch; text-wrap: pretty;">Access is confirmed, not the problem — the trail configs are deployed and populated, and the connected user can read them. The validation endpoint itself is genuinely well built. The gap is not connectivity and not quality. It is that no query names these objects, so nothing in Trail OS reads or proves them.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 14px;">
+      <div><p style="margin: 0 0 4px; opacity: .7;">Reviewed</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">api-server salesforce route · SF data model</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Endpoints</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">4 · all GET</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Custom objects queried</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">0 of 18 — access confirmed</p></div>
+    </div>
+  </header>
+
+  <section style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 32px 36px; margin-bottom: 24px; box-shadow: 0 12px 28px rgba(42,46,44,.10);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">RESULTS · 3 AUGUST</p>
+      <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">The probe ran. Seventeen of eighteen are live.</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 18px; max-width: 74ch;">F-05-10 through F-05-13 are applied and the validation endpoint now probes all eighteen objects. Your objects are deployed in <strong style="color: var(--tt-charcoal);">production</strong>, and the connector reads them as <code style="font-family: Menlo, monospace; font-size: 14px;">angela@transitiontrails.org</code>. Case priority order is confirmed High, Medium, Low — the sort is fixed and urgent cases now surface first, so SF-03 is closed.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px;">
+      <div style="background: var(--tt-green-100); border-radius: 14px; padding: 18px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Populated</p>
+        <p style="font-size: 15px; line-height: 1.7; margin: 0;">Course_Module_Activity__c — 150<br>Course_Module__c — 113<br>Course__c — 24<br>Penny_Trail_Config__c — 4</p>
+      </div>
+      <div style="background: var(--tt-sky-100); border-radius: 14px; padding: 18px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Deployed, empty</p>
+        <p style="font-size: 15px; line-height: 1.7; margin: 0;">Thirteen objects — all eight Penny objects except trail config, both surviving progress objects, and all four governance objects.</p>
+      </div>
+      <div style="background: var(--tt-amber-100); border-radius: 14px; padding: 18px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--tt-warning); margin: 0 0 8px;">Missing</p>
+        <p style="font-size: 15px; line-height: 1.7; margin: 0;"><code style="font-family: Menlo, monospace; font-size: 14px;">Learner_Course__c</code> — does not exist in the org. Its two children do.</p>
+      </div>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px; max-width: 74ch;">Field checks passed on all four reused objects: Contact carries 28 TT fields including <code style="font-family: Menlo, monospace; font-size: 14px;">Penny_Trail__c</code>, <code style="font-family: Menlo, monospace; font-size: 14px;">Coach__c</code> and <code style="font-family: Menlo, monospace; font-size: 14px;">LMS_Learner_ID__c</code>; Program 17; Program Engagement 7; Knowledge 31.</p>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px; padding: 14px 18px; background: var(--tt-green-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">Sequencing decision, 3 August.</strong> The connector moves to a dedicated integration user before any learner work begins — carried below as F-05-14. Doing it first means the learner read model is built and tested against the permissions it will actually run under, rather than against Angela's full access and then discovering the gap later.</p>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0; padding: 14px 18px; background: var(--tt-sky-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">Two things the probe surfaced that were not on any list.</strong> First, <code style="font-family: Menlo, monospace; font-size: 14px;">Learner_Course__c</code> is absent while <code style="font-family: Menlo, monospace; font-size: 14px;">Learner_Course_Module__c</code> and <code style="font-family: Menlo, monospace; font-size: 14px;">Learner_Course_Module_Activity__c</code> both exist — the parent of the learner progress chain is missing, so those two children have nothing to hang from. Second, firing eighteen counts in parallel breached Salesforce's ten-requests-per-second ceiling and eight returned throttling errors. The parallel pattern that works for eight objects does not work for eighteen; it needs batching or a single describe call.</p>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1.5px solid var(--tt-warning); border-radius: 22px; padding: 32px 36px; margin-bottom: 48px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-warning); margin: 0;">READ THIS FIRST</p>
+      <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">The PRD names objects your data model replaced</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px; max-width: 74ch;">The data model is a later and better design than the PRD. It reuses Contact and Course instead of creating parallel objects. But the PRD's acceptance criteria still name the old objects literally — so anyone building to the PRD would create duplicates of things you have already solved differently.</p>
+    <div style="background: var(--tt-sky-100); border-radius: 14px; overflow: hidden; margin-bottom: 16px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 14px 20px; border-bottom: 1px solid rgba(42,46,44,.1); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">
+        <p style="margin: 0;">PRD acceptance criteria say</p><p style="margin: 0;">Data model actually uses</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px 20px; font-size: 14px; font-family: Menlo, monospace; border-bottom: 1px solid rgba(42,46,44,.06);"><p style="margin: 0;">Penny_Conversation__c<br>Penny_Conversation_Message__c</p><p style="margin: 0;">Penny_Interaction_Log__c</p></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px 20px; font-size: 14px; font-family: Menlo, monospace; border-bottom: 1px solid rgba(42,46,44,.06);"><p style="margin: 0;">Penny_Career_Profile__c</p><p style="margin: 0;">Penny_Career_Review__c</p></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px 20px; font-size: 14px; font-family: Menlo, monospace; border-bottom: 1px solid rgba(42,46,44,.06);"><p style="margin: 0;">Penny_Trail_Quest_Template__c</p><p style="margin: 0;">Course__c — reused and extended</p></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px 20px; font-size: 14px; font-family: Menlo, monospace; border-bottom: 1px solid rgba(42,46,44,.06);"><p style="margin: 0;">Penny_Trail_Quest_Activity__c</p><p style="margin: 0;">Course_Module_Activity__c + Penny_Quest_Submission__c</p></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px 20px; font-size: 14px; font-family: Menlo, monospace;"><p style="margin: 0;">Learner__c</p><p style="margin: 0;">Contact — reused, Penny fields added</p></div>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px; max-width: 74ch;">And two objects exist in the data model that the PRD never mentions at all: <code style="font-family: Menlo, monospace; font-size: 14px;">Penny_Badge__c</code> and <code style="font-family: Menlo, monospace; font-size: 14px;">Penny_Gamification__c</code>. Those are the badge and points system from the POC mobile app — real design work, invisible to the plan.</p>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-warning);"><strong style="color: var(--tt-charcoal);">Action</strong> — the data model wins; correct the PRD's object names. This is the cheapest possible fix now and an expensive one after someone builds <code style="font-family: Menlo, monospace; font-size: 14px;">Learner__c</code>.</p>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">What the connector does well</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch;">Worth saying plainly, because the rest of this document is gaps. The validation endpoint is the most carefully written integration code in the repository.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Auth is not hand-rolled</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">It goes through the Replit connector proxy, so there are no Salesforce credentials in the codebase and no token refresh logic to get wrong. That is the right choice and it removes a whole class of security risk.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Identity check degrades gracefully</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">If the Chatter identity endpoint is unavailable, it falls back to the limits endpoint and reports remaining daily API calls instead. Two ways to prove the connection is alive, and the fallback is arguably more useful than the primary.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Package detection is real</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">It probes eight Program Management objects in parallel, records which are accessible and their row counts, sorts accessible first, and reports a fraction rather than a boolean. That is a genuinely informative readiness signal.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">The org URL is resolved, not guessed</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">Rather than assembling a Lightning URL from the instance name — which breaks on My Domain and after migrations — it reads the real base URL from the OAuth userinfo response. A small thing that someone thought about properly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">What it cannot do</h2>
+      <p style="font-size: 14px; margin: 0; opacity: .7;">5 findings</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch;">Two of these block whole features elsewhere in the platform.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">SF-01</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Blocker</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The connector is read-only. There are no write paths at all.</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">All four endpoints are GET, and every Salesforce call is a SOQL query. Nothing creates or updates a record. That single fact blocks a long list of features that appear to be UI problems and are not:</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Penny cannot persist an interaction. A quest cannot be assigned. A submission cannot be recorded. A career review cannot be saved. A weekly report cannot be stored. Points and badges cannot be awarded. Every one of those is waiting on the same missing capability.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — one generic authenticated write helper, then the specific endpoints on top of it. This is the highest-leverage piece of work in the whole connector: it unblocks more features than anything else on any list I have seen today.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">SF-02</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Blocker</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">No custom object is queried or validated</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The validation endpoint proves Contact, Account, NPSP and the eight Program Management objects. It never names a single object you built.</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">To be clear about the cause, because it changes the size of the job: <strong style="color: var(--tt-charcoal);">this is not a connection problem.</strong> The objects are deployed, the trail configs are populated, and the connected user can read them. The connector proxy would return them today if a query asked. Nothing does.</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Two consequences. Trail OS reads none of your own data, which is why twenty of its thirty-five data files are still illustrative. And the readiness page cannot tell you whether the objects deployed correctly in any environment — the place that would tell you does not look.</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px;">The eighteen objects that should be probed, exactly as the eight managed-package objects already are — accessible or not, row count, error if not:</p>
+          <div style="background: var(--tt-sky-100); border-radius: 14px; padding: 20px 24px; margin-bottom: 14px;">
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Penny — 8</p>
+            <p style="font-family: Menlo, monospace; font-size: 14px; line-height: 1.8; margin: 0 0 16px;">Penny_Trail_Config__c · Penny_Interaction_Log__c · Penny_Quest_Submission__c · Penny_Career_Review__c · Penny_Weekly_Report__c · Penny_Badge__c · Penny_Gamification__c · Penny_Classroom_Nudge__c</p>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Curriculum and progress — 6</p>
+            <p style="font-family: Menlo, monospace; font-size: 14px; line-height: 1.8; margin: 0 0 16px;">Course__c · Course_Module__c · Course_Module_Activity__c · Learner_Course__c · Learner_Course_Module__c · Learner_Course_Module_Activity__c</p>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Build governance — 4</p>
+            <p style="font-family: Menlo, monospace; font-size: 14px; line-height: 1.8; margin: 0 0 16px;">TT_Build_Item__c · TT_Automation__c · TT_SOP_Automation__c · TT_SOP_Account__c</p>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Reused, with new fields — verify the fields, not just the object</p>
+            <p style="font-family: Menlo, monospace; font-size: 14px; line-height: 1.8; margin: 0;">Contact · Knowledge_kav · pmdm__Program__c · pmdm__ProgramEngagement__c</p>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — probe all eighteen, and for the four reused objects check that the added custom fields exist rather than only that the object does. That turns the validation page into a real deployment check you can run against any environment.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">SF-03</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Defect</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The Cases list almost certainly sorts backwards</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The open-cases query orders by <code style="font-family: Menlo, monospace; font-size: 14px; background: var(--tt-sky-100); padding: 2px 6px; border-radius: 8px;">Priority DESC</code>. Salesforce sorts picklists by their defined order, not alphabetically — and the standard Case priority order is High, Medium, Low. Descending therefore returns Low first, so the twenty-five cases shown are the least urgent ones and high-priority cases can fall off the end entirely.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0 0 12px; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — worth checking against your actual picklist order before changing, since a customised order changes the answer. But the intent is clearly "most urgent first", and as written it is unlikely to be doing that.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding: 12px 16px; background: var(--tt-green-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">Tracked as a defect</strong> — agreed 3 August. Carried below as F-05-12 and to be raised as a defect record in Salesforce rather than carried in this document.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">SF-04</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">A failure and a zero look identical</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Every operations query is wrapped in a helper that catches any error and returns null. A permissions problem, a missing field, a malformed query and a genuinely empty result all arrive at the interface the same way. Worse, the status filters use hardcoded picklist values — Active, Planning, High — so if your org uses different values the query succeeds and returns zero, which is not even null.</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">A dashboard showing "0 active programmes" when the real answer is "the picklist value is spelled differently" is worse than an error, because it looks like information.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0 0 12px; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — return the error alongside the value rather than swallowing it, and read the picklist values from the org rather than hardcoding them. The design system now has a critical state and a neutral state; use them to show the difference between broken and empty.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding: 12px 16px; background: var(--tt-green-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">Agreed</strong> — 3 August. Carried below as F-05-11. Reading picklist values from the org also removes the hardcoded 'Active', 'Planning' and 'High' assumptions, so this closes the silent-zero problem at the same time.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">SF-05</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="gray" hint-size="auto,28px">Cleanup</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Environment details are in the source, and results are silently truncated</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The connector identifier is written into a code comment, which will be wrong the moment there is a second environment. The API version is pinned inline in the request path rather than configured in one place. Queries cap at twenty-five cases and fifty programmes with no pagination and no indication that more exist. And the cache is in-memory per instance, so it resets on restart and will diverge if the app ever runs more than once.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0 0 12px; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — all minor individually, all cheap now. The truncation is the one I would fix first: a list that quietly stops at twenty-five is a wrong answer presented confidently.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding: 12px 16px; background: var(--tt-green-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">Agreed</strong> — 3 August. Split across F-05-12 (truncation, with the priority sort) and F-05-13 (environment config and shared cache). Moving the connector identifier and API version into configuration is what makes a staging environment possible, so it is worth doing before promotion work starts.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section style="margin-bottom: 48px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">Proposed features</h2>
+      <p style="font-size: 14px; margin: 0; opacity: .7;">6</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 66ch;">Same shape as the Penny features, ready to load into Salesforce. Mapped to E-05 for the platform connector work and E-10 for the learner journey data it unlocks.</p>
+
+    <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; overflow: hidden; box-shadow: 0 12px 28px rgba(42,46,44,.10);">
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 16px 24px; background: var(--tt-sky-100); border-bottom: 1px solid var(--tt-warm-gray); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">
+        <p style="margin: 0;">Feature</p><p style="margin: 0;">Epic</p><p style="margin: 0;">Name and acceptance</p><p style="margin: 0;">Priority</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-09</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Salesforce write capability</p><p style="margin: 0;">A generic authenticated create-and-update helper through the connector proxy, with error surfacing. Acceptance: a record can be created and read back in one round trip, and a validation-rule failure returns the Salesforce message rather than a generic error. Unblocks interaction logging, quest assignment, submissions, career reviews, weekly reports, points and badges.</p></div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-10</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Validate the Trail OS objects, not just the packages</p><p style="margin: 0;">Probe all eighteen custom objects named under SF-02 — eight Penny, six curriculum and progress, four build governance — reporting accessible, row count and error per object as the managed-package probe already does. For the four reused objects, check the added custom fields exist rather than only the object. Acceptance: the validation page shows a per-object table covering all eighteen, and a missing or unreadable object appears as a failure rather than being absent from the report.</p></div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-11</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Distinguish broken from empty</p><p style="margin: 0;">Return the error reason with each operations figure instead of collapsing failures to null, and read status picklist values from the org rather than hardcoding them. Acceptance: a permissions failure and a genuine zero render differently, using the critical and neutral states from the design system.</p></div>
+        <p style="margin: 0;">High</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-12</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Fix the case priority sort and the silent truncation</p><p style="margin: 0;">Order open cases most-urgent-first against the org's real picklist order, and either paginate or show that results were capped. Acceptance: the first case listed is the most urgent open case in the org, and a capped list says so.</p></div>
+        <p style="margin: 0;">High</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-10-01a</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-10</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Live learner read model</p><p style="margin: 0;">A learner endpoint joining Contact, Program Engagement and the Penny fields into the shape the interface needs. Acceptance: the Penny learners screen renders from this endpoint with no prototype fallback, and a new enrolment in Salesforce appears without a code change. This is the data the learner-context prompt layer needs.</p></div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55; background: var(--tt-green-100);">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-14</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div>
+          <p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Move the connector to a dedicated integration user</p>
+          <p style="margin: 0 0 8px;">The connector authenticates to production as <code style="font-family: Menlo, monospace; font-size: 14px;">angela@transitiontrails.org</code>. Replace that with a named integration user so the connection does not carry one person's permissions and does not break when their access changes.</p>
+          <p style="margin: 0 0 8px;">Scope: create the integration user, define a permission set granting read on exactly the eighteen custom objects plus Contact, Account, Case, Knowledge and the managed-package objects the connector uses — no more — reauthorise the Replit connector as that user, and confirm the validation endpoint returns the same eighteen results afterwards.</p>
+          <p style="margin: 0;">Acceptance: the validation endpoint reports the integration user rather than a personal account; all seventeen accessible objects still return their counts; and revoking the personal user's access does not affect Trail OS. Worth capturing the permission set as a deployable component so a sandbox can be authorised the same way.</p>
+        </div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-13</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Move environment config out of source</p><p style="margin: 0;">Connector identifier and API version into configuration, and a shared cache that survives restart. Acceptance: pointing the app at a second org requires no code edit. Small, but it is what makes a staging environment possible.</p></div>
+        <p style="margin: 0;">Medium</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-deep-teal); border-radius: 22px; padding: 36px 40px; color: var(--tt-white);">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600; margin: 0 0 14px; color: var(--tt-white);">The one thing I would do first</h2>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 16px; max-width: 68ch; opacity: .95;">Write capability. Everything else on both lists — Penny persistence, quest assignment, career reviews, weekly reports, badges, points — is waiting on the same missing piece, and each of those currently looks like a separate feature.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 68ch; opacity: .95;">Second, extend the object validation. Not because it is urgent, but because you told me the objects are built as far as you know — and right now there is nothing in Trail OS that can confirm that. Once the validation page probes them, "as far as I know" becomes a page you can look at.</p>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100}}"></script>
+</body>
+</html>

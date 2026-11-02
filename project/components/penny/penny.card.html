@@ -1,0 +1,51 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Penny" subtitle="Conversation turns, mode badges, human gate, flags" -->
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px 22px;background:var(--tt-bg);font-family:var(--tt-font-body)}.lbl{font-family:var(--tt-font-heading);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#8a908d;margin:0 0 9px}.col{display:flex;flex-direction:column;gap:10px}.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}.sec{margin-bottom:18px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { PennyMessage, PennyModeBadge, HumanGate, PennyFlag } = window.TransitionTrailsDesignSystem_335df4;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div>
+    <div className="sec">
+      <p className="lbl">Conversation — ask before telling</p>
+      <div className="col">
+        <PennyMessage from="learner">I don't know how to explain my CLYLP project.</PennyMessage>
+        <PennyMessage mode="coach">What did the nonprofit do with the org that they couldn't do before?</PennyMessage>
+        <PennyMessage mode="coordinator">Two items need you before Thursday's client call. Which do you want to take first?</PennyMessage>
+      </div>
+    </div>
+    <div className="two">
+      <div>
+        <div className="sec">
+          <p className="lbl">Modes</p>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'6px'}}>
+            <PennyModeBadge mode="coach" /><PennyModeBadge mode="coordinator" />
+            <PennyModeBadge mode="quest" /><PennyModeBadge mode="liaison" />
+          </div>
+        </div>
+        <div>
+          <p className="lbl">Flags — Penny surfaces, humans act</p>
+          <div className="col">
+            <PennyFlag title="Sprint 2B overdue — client waiting" detail="Jordan · no activity in 4 days" action="View learner" />
+            <PennyFlag level="watch" title="Client check-in Thursday" detail="Agenda not drafted" action="Draft agenda" />
+            <PennyFlag level="healthy" title="No flags on this project" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <p className="lbl">Human gate — Penny drafts, a person sends</p>
+        <HumanGate recipient="#project-dfw-rescue">
+          Hi team — quick check on Sprint 2B ahead of Thursday's client call. Where are we?
+        </HumanGate>
+      </div>
+    </div>
+  </div>
+);
+</script>
+</body></html>

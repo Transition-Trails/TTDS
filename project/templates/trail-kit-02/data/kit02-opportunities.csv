@@ -1,0 +1,44 @@
+Name,AccountName,StageName,CloseDate,Amount,Type,LeadSource,OwnerAlias,Probability,NextStep
+Northwind Logistics — Annual renewal,Northwind Logistics,Prospecting,2026-01-04,12000,New Business,Web,Dana Whitfield,10,Send revised quote
+Alpine Manufacturing — New fit-out,Alpine Manufacturing,Qualification,2026-04-05,34050,Existing Business,Referral,Marcus Reyes,25,Book site visit
+Alpine Manufacturing — Expansion,Alpine Manufacturing,Proposal,2026-09-06,75000,Renewal,Trade Show,Priya Anand,50,Chase signature
+Cedar Ridge Dental — Expansion,Cedar Ridge Dental,Proposal,2026-07-06,56100,Renewal,Trade Show,Priya Anand,50,Chase signature
+Cedar Ridge Dental — Replacement program,Cedar Ridge Dental,Negotiation,2026-12-07,97050,New Business,Partner,Tom Okafor,75,Confirm budget
+Cedar Ridge Dental — Pilot,Cedar Ridge Dental,Closed Won,2026-05-08,12000,Existing Business,Web,Dana Whitfield,100,
+Harbourline Freight — Replacement program,Harbourline Freight,Negotiation,2026-10-07,78150,New Business,Partner,Tom Okafor,75,Confirm budget
+Quill & Page Publishing — Pilot,Quill & Page Publishing,Closed Won,2026-01-08,100200,Existing Business,Web,Dana Whitfield,100,
+Quill & Page Publishing — Service contract,Quill & Page Publishing,Closed Lost,2026-06-09,15150,Renewal,Cold Call,Marcus Reyes,0,
+Ferrous Tooling — Service contract,Ferrous Tooling,Closed Lost,2026-04-09,122250,Renewal,Cold Call,Marcus Reyes,0,
+Ferrous Tooling — Annual renewal,Ferrous Tooling,Prospecting,2026-09-10,37200,New Business,,Priya Anand,50,Chase signature
+Ferrous Tooling — New fit-out,Ferrous Tooling,Qualification,2026-02-11,78150,Existing Business,Web,Tom Okafor,75,Confirm budget
+Bright Meadow Foods — Annual renewal,Bright Meadow Foods,Prospecting,2026-07-10,18300,New Business,,Priya Anand,50,Chase signature
+Lakeside Property Group — New fit-out,Lakeside Property Group,Qualification,2026-10-11,40350,Existing Business,Web,Tom Okafor,75,Confirm budget
+Lakeside Property Group — Expansion,Lakeside Property Group,Proposal,2026-03-12,81300,Renewal,Referral,Dana Whitfield,10,Send revised quote
+Tessera Analytics — Expansion,Tessera Analytics,Proposal,2026-01-12,62400,Renewal,Referral,Dana Whitfield,10,Send revised quote
+Tessera Analytics — Replacement program,Tessera Analytics,Negotiation,2026-06-13,103350,New Business,Trade Show,Marcus Reyes,25,Book site visit
+Tessera Analytics — Pilot,Tessera Analytics,Closed Won,2026-11-14,18300,Existing Business,Partner,Priya Anand,100,
+Copperfield Legal — Replacement program,Copperfield Legal,Negotiation,2026-04-13,84450,New Business,Trade Show,Marcus Reyes,25,Book site visit
+Vantage Roofing — Pilot,Vantage Roofing,Closed Won,2026-07-14,106500,Existing Business,Partner,Priya Anand,100,
+Vantage Roofing — Service contract,Vantage Roofing,Closed Lost,2026-12-15,21450,Renewal,Web,Tom Okafor,0,
+Marlowe Textiles — Service contract,Marlowe Textiles,Closed Lost,2026-10-15,128550,Renewal,Web,Tom Okafor,0,
+Marlowe Textiles — Annual renewal,Marlowe Textiles,Prospecting,2026-03-16,43500,New Business,Cold Call,Dana Whitfield,10,Send revised quote
+Marlowe Textiles — New fit-out,Marlowe Textiles,Qualification,2026-08-17,84450,Existing Business,,Marcus Reyes,25,Book site visit
+Ironhold Security — Annual renewal,Ironhold Security,Prospecting,2026-01-16,24600,New Business,Cold Call,Dana Whitfield,10,Send revised quote
+Sunbeam Optics — New fit-out,Sunbeam Optics,Qualification,2026-04-17,46650,Existing Business,,Marcus Reyes,25,Book site visit
+Sunbeam Optics — Expansion,Sunbeam Optics,Proposal,2026-09-18,87600,Renewal,Web,Priya Anand,50,Chase signature
+Greenfield Agritech — Expansion,Greenfield Agritech,Proposal,2026-07-18,68700,Renewal,Web,Priya Anand,50,Chase signature
+Greenfield Agritech — Replacement program,Greenfield Agritech,Negotiation,2026-12-19,109650,New Business,Referral,Tom Okafor,75,Confirm budget
+Greenfield Agritech — Pilot,Greenfield Agritech,Closed Won,2026-05-20,24600,Existing Business,Trade Show,Dana Whitfield,100,
+Pinnacle Staffing — Replacement program,Pinnacle Staffing,Negotiation,2026-10-19,90750,New Business,Referral,Tom Okafor,75,Confirm budget
+Riverstone Dental — Pilot,Riverstone Dental,Closed Won,2026-01-20,112800,Existing Business,Trade Show,Dana Whitfield,100,
+Riverstone Dental — Service contract,Riverstone Dental,Closed Lost,2026-06-21,27750,Renewal,Partner,Marcus Reyes,0,
+Halcyon Travel — Service contract,Halcyon Travel,Closed Lost,2026-04-21,134850,Renewal,Partner,Marcus Reyes,0,
+Halcyon Travel — Annual renewal,Halcyon Travel,Prospecting,2026-09-22,49800,New Business,Web,Priya Anand,50,Chase signature
+Halcyon Travel — New fit-out,Halcyon Travel,Qualification,2026-02-23,90750,Existing Business,Cold Call,Tom Okafor,75,Confirm budget
+Kestrel Aviation — Annual renewal,Kestrel Aviation,Prospecting,2026-07-22,30900,New Business,Web,Priya Anand,50,Chase signature
+Summit Fabrication — New fit-out,Summit Fabrication,Qualification,2026-10-23,52950,Existing Business,Cold Call,Tom Okafor,75,Confirm budget
+Summit Fabrication — Expansion,Summit Fabrication,Proposal,2026-03-24,93900,Renewal,,Dana Whitfield,10,Send revised quote
+Delta Rail Services — Expansion,Delta Rail Services,Proposal,2026-01-24,75000,Renewal,,Dana Whitfield,10,Send revised quote
+Delta Rail Services — Replacement program,Delta Rail Services,Negotiation,2026-06-25,115950,New Business,Web,Marcus Reyes,25,Book site visit
+Delta Rail Services — Pilot,Delta Rail Services,Closed Won,2026-11-26,30900,Existing Business,Referral,Priya Anand,100,
+Wexford Engineering — Replacement program,Wexford Engineering,Negotiation,2026-04-25,97050,New Business,Web,Marcus Reyes,25,Book site visit

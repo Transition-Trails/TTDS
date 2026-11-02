@@ -1,0 +1,86 @@
+/* Transition Trails — Trail Kit sub-brand scope
+   A Trail Kit is a printed field guide / notebook, not a webpage. This layer keeps
+   the brand DNA (Poppins/Open Sans, Trail Green, Deep Teal, the trail metaphor)
+   and shifts register: warm paper ground, hairline rules, visible page furniture,
+   and a Clay accent that appears ONLY in Trail Kits so a kit is recognizable on a desk.
+
+   Base values on :root so consumers can reference them; the .trail-kit scope
+   re-points the semantic roles for print surfaces. */
+:root {
+  /* ---- Trail Kit accent — Clay (kit-only; never on the website) ---- */
+  --tt-clay:     #B4552D;
+  --tt-clay-100: #F7EAE3;
+  --tt-clay-300: #DFA285;
+  --tt-clay-500: #B4552D;
+  --tt-clay-700: #8A3D1C;
+
+  /* ---- Paper surfaces ---- */
+  --tt-paper:      #FBF7F0;  /* notebook ground */
+  --tt-paper-alt:  #F3EDE2;  /* side rail / marginalia */
+  --tt-rule:       #DED5C7;  /* hairline rules, note lines */
+  --tt-rule-strong:#C4B8A5;
+
+  /* ---- Page furniture ---- */
+  --tt-kit-gutter:  0.62in; /* @kind spacing */ /* page inset */
+  --tt-kit-rail:    2.05in; /* @kind spacing */ /* marginalia side rail */
+  --tt-kit-tab:     0.42in; /* @kind spacing */ /* printed tab strip width */
+  --tt-note-line:   0.30in; /* @kind spacing */ /* ruled note line pitch */
+}
+
+/* Scoped theme: wrap any Trail Kit page in class="trail-kit" */
+.trail-kit {
+  --tt-bg:          var(--tt-paper);
+  --tt-surface:     #FFFFFF;
+  --tt-surface-alt: var(--tt-paper-alt);
+  --tt-border:      var(--tt-rule);
+  --tt-text:        #3B3F3D;
+  --tt-heading:     var(--tt-charcoal);
+
+  /* Deep Teal leads the kit; Clay is the kit-only accent; Amber stays reserved
+     for the single conversion CTA on the Next Trail spread. */
+  --tt-action-primary:       var(--tt-deep-teal);
+  --tt-action-primary-hover: #245863;
+  --tt-action-accent:        var(--tt-clay);
+  --tt-action-accent-hover:  var(--tt-clay-700);
+  --tt-link:                 var(--tt-clay-700);
+  --tt-link-hover:           var(--tt-clay);
+
+  /* Print type scale — tighter than web, 12pt floor */
+  --tt-kit-h1:    34pt; /* @kind font */
+  --tt-kit-h2:    19pt; /* @kind font */
+  --tt-kit-h3:    14pt; /* @kind font */
+  --tt-kit-body:  11.5pt; /* @kind font */
+  --tt-kit-small: 9.5pt; /* @kind font */
+  --tt-kit-caps:  8pt; /* @kind font */ /* tracked-out labels */
+
+  /* Print surfaces get flat ink, not shadows */
+  --tt-shadow-card: none;
+  --tt-shadow-soft: none;
+}
+
+/* ---- EDITIONS ----------------------------------------------------------
+   A Trail Kit is one product line sold in two editions. Same paper, same
+   Clay accent, same 5-beat tabbed spine — the difference is who is holding it
+   and therefore what "why" the kit has to answer, and where it points at the end.
+
+   .is-learner   — an individual upskilling on their own, or someone at a company
+                   who needs guidance. The kit answers "why this makes me
+                   employable" and closes on programs + the next kit.
+   .is-nonprofit — a nonprofit enabling the feature themselves. The kit answers
+                   "why our organization needs this and what it costs us not to"
+                   and closes on the Digital Compass page.
+
+   The edition also sets --tt-kit-why, the accent used on the "why this matters"
+   panels: Clay for a learner's career case, Deep Teal for an organizational case. */
+.trail-kit.is-learner {
+  --tt-kit-edition: 'Learner edition'; /* @kind other */
+  --tt-kit-why:      var(--tt-clay-500);   /* @kind color */
+  --tt-kit-why-bg:   var(--tt-clay-100);   /* @kind color */
+  --tt-kit-why-rule: var(--tt-clay-300);   /* @kind color */
+}
+.trail-kit.is-nonprofit {
+  --tt-kit-edition: 'Nonprofit edition'; /* @kind other */
+  --tt-kit-why:      var(--tt-deep-teal);  /* @kind color */
+  --tt-kit-why-bg:   var(--tt-sky-100);    /* @kind color */
+  --tt-kit-why-rule: var(--tt-sky-blue);   /* @kind color */
+}

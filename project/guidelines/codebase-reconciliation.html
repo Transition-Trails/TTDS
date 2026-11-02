@@ -1,0 +1,25 @@
+<!-- @dsCard group="Brand" viewport="700x405" name="Codebase reconciliation" subtitle="Where the system, the public site and Trail OS agree — and the five that drift" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:18px 22px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}
+.ok{font-size:12.5px;line-height:1.55;color:var(--tt-slate);border-left:3px solid var(--tt-green-500);padding-left:11px;margin-bottom:14px}
+.ok b{color:var(--tt-heading)}
+table{width:100%;border-collapse:collapse;margin-bottom:13px}
+th{font-family:var(--tt-font-heading);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--tt-text-muted);text-align:left;padding:0 0 6px;border-bottom:1px solid var(--tt-border)}
+td{font-size:12px;line-height:1.45;padding:5px 0;border-bottom:1px solid var(--tt-border);color:var(--tt-slate)}
+td.n{font-family:var(--tt-font-heading);font-weight:600;color:var(--tt-heading);width:26%}
+.sw{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:5px;border:1px solid rgba(0,0,0,.12)}
+code{font-family:var(--tt-font-mono);font-size:11px}
+.flag{font-size:12.5px;line-height:1.6;background:var(--tt-amber-100);border-radius:var(--tt-radius-sm);padding:11px 14px}
+.flag b{color:var(--tt-heading)}
+</style></head><body>
+<div class="ok"><b>The core already agrees.</b> All four brand colors, the neutrals, the sky tint, radius, spacing and both card shadows are identical across the design system, the public website and Trail OS.</div>
+<table>
+<tr><th>Token</th><th>System + Trail OS</th><th>Public website</th></tr>
+<tr><td class="n">Green 700</td><td><span class="sw" style="background:#245531"></span><code>#245531</code></td><td><span class="sw" style="background:#1E4A2A"></span><code>#1E4A2A</code></td></tr>
+<tr><td class="n">Amber 100</td><td><span class="sw" style="background:#FFF3E0"></span><code>#FFF3E0</code></td><td><span class="sw" style="background:#FEF3DB"></span><code>#FEF3DB</code></td></tr>
+<tr><td class="n">Amber 700</td><td><span class="sw" style="background:#CC8400"></span><code>#CC8400</code></td><td><span class="sw" style="background:#D4890A"></span><code>#D4890A</code></td></tr>
+<tr><td class="n">Critical</td><td><span class="sw" style="background:#A93F2F"></span><code>#A93F2F</code></td><td><span class="sw" style="background:#A83A2C"></span><code>#A83A2C</code></td></tr>
+<tr><td class="n">Muted text</td><td><span class="sw" style="background:#686E6C"></span><code>#686E6C</code></td><td><span class="sw" style="background:#8C8882"></span><code>#8C8882</code> — fails 4.5:1</td></tr>
+</table>
+<div class="flag"><b>Typography — decided.</b> <b>Fraunces</b> for H1/H2 on <b>marketing surfaces only</b> (website, landing pages, brochures); <b>Poppins</b> everywhere else — H3 down, all of Trail OS, and all print artifacts. The serif earns its keep at 40px and up and nowhere below, so the seam between brochure and application is deliberate. Reverses the 2026-08-06 "Poppins everywhere" rule, which production never followed. See <code>guidelines/token-divergence.md</code>.</div>
+</body></html>

@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+/* Transition Trails — design system guard.
+ *
+ * Fails when app code hardcodes a value that belongs to the design system.
+ * Wire it into the build so drift is caught at commit time, not in review:
+ *   "scripts": { "tt:check": "node tt-check.mjs" }
+ *
+ * Scans ./src by default: node tt-check.mjs [dir]
+ */
+import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { join, extname } from 'node:path';
+
+const ROOT = process.argv[2] || 'src';
+const EXT = new Set(['.js', '.jsx', '.ts', '.tsx', '.css', '.scss', '.html']);
+const SKIP = new Set(['node_modules', '.git', 'dist', 'build', '.next']);
+
+/* Brand hexes are allowed inside the token file itself, nowhere else. */
+const ALLOW_FILE = /tt-tokens\.css$/;
+
+const RULES = [
+  { re: /#[0-9a-fA-F]{3,8}\b/g, msg: 'raw hex color — use a token or Tailwind class' },
+  { re: /\brgba?\(\s*\d+\s*,\s*\d+\s*,\s*\d+/g, msg: 'raw rgb color — use a token' },
+  { re: /font-family\s*:(?!\s*var\()/g, msg: 'raw font stack — use font-heading / font-body' },
+  { re: /\b(Trailhead|Trailblazer|Ohana)\b/g, msg: 'prohibited ecosystem term' },
+  { re: /\b(licence|authoris|organis|behaviour|practis(?:e|ing)|analyse|favour|colour|programme|catalogue|recognis|prioritis|summaris)/gi, msg: 'British spelling — US English only' },
+  { re: /[\u{1F300}-\u{1FAFF}\u{FE0F}\u{2B50}\u{2764}]/gu, msg: 'emoji — not used in this brand' },
+];
+
+const findings = [];
+function walk(dir) {
+  let entries;
+  try { entries = readdirSync(dir); } catch { return; }
+  for (const name of entries) {
+    if (SKIP.has(name)) continue;
+    const p = join(dir, name);
+    const s = statSync(p);
+    if (s.isDirectory()) { walk(p); continue; }
+    if (!EXT.has(extname(p))) continue;
+    if (ALLOW_FILE.test(p)) continue;
+    const lines = readFileSync(p, 'utf8').split('\n');
+    lines.forEach((line, i) => {
+      for (const r of RULES) {
+        r.re.lastIndex = 0;
+        const m = r.re.exec(line);
+        if (m) findings.push({ file: p, line: i + 1, hit: m[0], msg: r.msg });
+      }
+    });
+  }
+}
+walk(ROOT);
+
+if (!findings.length) {
+  console.log(`tt-check: clean — no design system violations in ${ROOT}/`);
+  process.exit(0);
+}
+console.error(`tt-check: ${findings.length} violation(s)\n`);
+for (const f of findings) console.error(`  ${f.file}:${f.line}  ${JSON.stringify(f.hit)}  — ${f.msg}`);
+console.error('\nSee replit.md for the rules. Tokens are in tt-tokens.css.');
+process.exit(1);

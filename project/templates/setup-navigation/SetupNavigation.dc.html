@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Navigating Setup — insert sheet" description="Reusable one-page insert: find Setup, use Quick Find, tell Lightning from Classic, and read Object Manager. Assumed by every Trail Kit." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Navigating Setup" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.55in 0.5in 0.45in 0.62in;display:flex;flex-direction:column">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Keep this — every kit assumes it</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.2in">
+<div style="max-width:4.4in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.25;color:#2A2E2C;margin:0 0 7px;letter-spacing:-.01em">Finding your way around Setup</h1>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0">Every kit says "in Setup, type this into Quick Find." If that sentence has ever lost you, this page is the one to read first. Nothing here is specific to one feature.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/setup-basics" label="Watch the tour" caption="8 min — Setup, end to end." tone="teal" size="88" hint-size="2.2in,1.15in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 2.1in;gap:0.28in;flex:1;min-height:0">
+<div>
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="map-pin" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The four places you will be sent</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.18in">
+
+<div style="display:grid;grid-template-columns:1.35in 1fr;gap:13px;padding:9px 0;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;line-height:1.25">Setup</div><div style="font-size:8.5pt;line-height:1.4;color:#8C857A;margin-top:2px">Gear icon, top right</div></div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The admin area — everything that changes how the org behaves. Click the gear, then <b>Setup</b>. It opens in a new tab, which is why people lose it.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.35in 1fr;gap:13px;padding:9px 0;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;line-height:1.25">Quick Find</div><div style="font-size:8.5pt;line-height:1.4;color:#8C857A;margin-top:2px">Search box, top left of Setup</div></div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Type a few letters of what you want and it filters the whole menu. This is faster than the tree, always. Type <b>fewer</b> words, not more — "activity" beats "Einstein Activity Capture settings."</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.35in 1fr;gap:13px;padding:9px 0;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;line-height:1.25">Object Manager</div><div style="font-size:8.5pt;line-height:1.4;color:#8C857A;margin-top:2px">Tab at the top of Setup</div></div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Where fields, page layouts, and record types live — per object. If a kit says "on the Contact object," you are going here, not into the menu on the left.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.35in 1fr;gap:13px;padding:9px 0;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;line-height:1.25">Users</div><div style="font-size:8.5pt;line-height:1.4;color:#8C857A;margin-top:2px">Quick Find: "users"</div></div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">People, and what each can do. Almost every "it works for me but not for them" ends up here.</div>
+</div>
+
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.22in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.15in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:5px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="layout-grid" size="11" color="#2F6F7E" hint-size="11px,11px"></x-import>Lightning or Classic?</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D">If the top of the screen is a blue bar with tabs, you are in <b>Classic</b>. If it is white with an app launcher of nine dots at the left, you are in <b>Lightning</b>. Our kits assume Lightning.</div>
+</div>
+<div style="background:#F3EDE2;border-radius:8px;padding:0.15in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:5px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="triangle-alert" size="11" color="#8A3D1C" hint-size="11px,11px"></x-import>The menu moves</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D">Salesforce ships three releases a year and things get renamed. If a kit's click path is wrong, search the label in Quick Find instead. The label survives longer than the path.</div>
+</div>
+</div>
+
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.13in">
+
+<div style="background:#fff;border:1px solid #DED5C7;border-radius:8px;padding:0.15in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="search" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>If Quick Find shows nothing</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px">Three reasons, in the order to check them:</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px"><b>1.</b> You typed too much. Try one word.</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px"><b>2.</b> Your user lacks the permission that reveals it.</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D"><b>3.</b> Your edition does not include it at all.</div>
+</div>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.4in">Learn Quick Find and you can stop memorizing click paths for good. Every kit, every release, same two keystrokes.</x-import>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" hint-size="100%,1.3in">Bookmark Setup itself. It opens in its own tab, and half of "I can't find it" is actually "I closed that tab."</x-import>
+
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.14in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Navigating Setup</span>
+</div>
+
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

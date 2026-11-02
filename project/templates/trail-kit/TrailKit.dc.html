@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Trail Kit Notebook" description="Tabbed, printable Trail Kit notebook — covers, Build With Me QR codes, marginalia guidance, note pages, action plan, and next-kit code." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="./image-slot.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit is-learner">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Front cover" style="background:#2F6F7E;display:flex;flex-direction:column;font-family:'Open Sans',sans-serif;color:#fff;overflow:hidden">
+<div style="padding:0.66in 0.66in 0">
+<div style="display:flex;justify-content:space-between;align-items:flex-start">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14pt;letter-spacing:.01em;line-height:1.5">Transition Trails</div><div style="font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:#7FAFC6;margin-top:2px">Bridging the experience gap</div></div>
+<div style="text-align:right;font-family:'Poppins',sans-serif"><div style="font-weight:600;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:#DFA285">Trail Kit</div><div style="font-weight:700;font-size:26pt;line-height:1.5;color:#fff">01</div></div>
+</div>
+<div style="height:3px;background:#B4552D;width:1.5in;margin:0.34in 0 0.28in"></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:#DFA285;margin-bottom:0.16in">Build With Me series · Salesforce · Learner edition</div>
+<h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34pt;line-height:1.3;margin:0 0 0.16in;color:#fff;letter-spacing:-.01em;text-wrap:balance">Enabling Einstein Activity Capture</h1>
+<p style="font-size:12pt;line-height:1.5;color:rgba(255,255,255,.86);margin:0;max-width:5.1in">A self-paced notebook for getting this working in your own org — videos, templates, best practices, and room to think it through. No certification required.</p>
+</div>
+<div style="flex:1;position:relative;margin:0.42in 0 0;min-height:0">
+<image-slot id="kit01-cover-front" shape="rect" placeholder="Drop the front cover image — candid, natural light, someone working"></image-slot>
+</div>
+<div style="background:#245863;padding:0.3in 0.66in;display:flex;justify-content:space-between;align-items:center">
+<div style="display:flex;gap:0.4in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#7FAFC6;margin-bottom:3px">Inside</div><div style="font-size:9.5pt;line-height:1.5;color:#fff">5 tabbed sections · 3 Build With Me videos<br>2 templates · resources · action plan · notes</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#7FAFC6;margin-bottom:3px">Pace</div><div style="font-size:9.5pt;line-height:1.5;color:#fff">45 minutes, self-paced<br>Beginner · no certification needed</div></div>
+</div>
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;letter-spacing:.08em;color:#DFA285;border:1px solid rgba(223,162,133,.5);border-radius:5px;padding:6px 12px;white-space:nowrap">TK-01-EAC</div>
+</div>
+</section>
+
+<section class="page" data-screen-label="How to use this notebook" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.32in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span>How to use this notebook</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.14in">This is a notebook, not a handout.</h2>
+<p style="font-size:11.5pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.3in;max-width:4.6in">Print it, or keep it open beside your org. Watch a step, do the step, write down what you saw. The margins are for your questions and the note pages are for your own configuration — the parts you write are the parts you will remember.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;margin-bottom:0.34in">
+<div style="border-left:2.5px solid #2F6F7E;padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Scan the codes</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Every QR opens the Build With Me video or template for that step. Point your phone at it and follow along.</div></div>
+<div style="border-left:2.5px solid var(--tt-kit-why);padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Read the margins</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The side rail holds pro tips, best practices, and the mistakes we see most often. Read them before you build, not after.</div></div>
+<div style="border-left:2.5px solid #2F6B3F;padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Check your work</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Each step ends with what you should see. If you do not see it, the Verify tab tells you where to look.</div></div>
+<div style="border-left:2.5px solid #C4B8A5;padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Finish with a plan</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The last tab turns what you learned into three things you will actually do this week.</div></div>
+</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.14in">What's inside — tap a tab or a line to jump</div>
+<div style="display:flex;flex-direction:column">
+<a href="#s1" style="display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 1</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Orient</span><span style="flex:1;font-size:9.5pt;color:#8C857A">What Activity Capture does and why it matters</span><span style="font-size:9.5pt;color:#8C857A">3</span></a>
+<a href="#s2" style="display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 2</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Prepare</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Access, decisions, and the pre-flight checklist</span><span style="font-size:9.5pt;color:#8C857A">4</span></a>
+<a href="#s3" style="display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 3</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Build</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Seven steps, with video and space for your screenshots</span><span style="font-size:9.5pt;color:#8C857A">5</span></a>
+<a href="#s4" style="display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 4</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Verify</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Prove it works, fix what breaks, and how to turn it off</span><span style="font-size:9.5pt;color:#8C857A">7</span></a>
+<a href="#s5" style="display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 5</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Next Trail</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Action plan, videos, resources, certifications &amp; programs</span><span style="font-size:9.5pt;color:#8C857A">10</span></a>
+</div>
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" hint-size="100%,1.25in" aside="momentum over perfection">Work at whatever pace fits around your week. The people who finish these are not the ones with the most free time — they are the ones who did one step and wrote down what they saw before they closed the laptop.</x-import>
+<div style="border-top:1px solid #DED5C7;padding-top:0.2in;margin-top:0.24in;display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="book-open" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What this kit is</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">One feature, built end to end, with the reasoning included — so you can explain your choices, not just repeat the clicks.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8C857A" hint-size="12px,12px"></x-import>What it is not</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">A certification course, a substitute for real project work, or something you have to submit. Nobody is grading this.</div></div>
+</div>
+<div style="padding-top:0.18in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>transitiontrails.org/kits</span><span>2</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="-1" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="s1" data-screen-label="Tab 1 — Orient" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.54in 0.24in 0.42in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.3in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 1 · Orient</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.12in">Start here: what you are actually turning on.</h2>
+<p style="font-size:11.5pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.26in">Einstein Activity Capture connects a user's email and calendar to Salesforce so that emails and meetings appear on the right records automatically. Done well, your team stops logging activity by hand and your pipeline data starts telling the truth. Done carelessly, you sync data nobody agreed to share. This kit walks the careful path.</p>
+<div style="display:flex;border-top:1.5px solid #C4B8A5;border-bottom:1.5px solid #C4B8A5;margin-bottom:0.28in">
+<div style="flex:1;padding:11px 16px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Time</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;color:#2A2E2C;line-height:1.25">45 minutes</div></div>
+<div style="flex:1;padding:11px 16px;border-left:1px solid #DED5C7"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Pace</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;color:#2A2E2C;line-height:1.25">Self-paced</div></div>
+<div style="flex:1;padding:11px 16px;border-left:1px solid #DED5C7"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Level</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;color:#2A2E2C;line-height:1.25">Beginner</div></div>
+<div style="flex:1;padding:11px 16px;border-left:1px solid #DED5C7"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="key-round" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>You need</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;color:#2A2E2C;line-height:1.25">An org you can change — sample data is in your download</div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.14in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="arrow-right-left" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What changes once this is on</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.24in">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;padding:11px 0;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Email lands on the record by itself</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Messages between your team and a contact appear on that contact's record without anyone copying them there.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">History survives turnover</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">When someone leaves, the conversation stays with the record instead of leaving with their mailbox.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;padding:11px 0;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Nobody logs activity by hand</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Manual logging is the task everyone skips, which is why activity data is usually wrong.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">People can see each other's email</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">This is the part to be deliberate about. Captured messages are visible to colleagues with access to the record.</div></div>
+</div>
+</div>
+<div style="background:#F3EDE2;border-radius:8px;padding:0.18in 0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>What it does not do</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">It does not create contacts you do not have, clean up bad data, or store captured email in Salesforce the way a logged task does. It surfaces what is already in the mailbox — nothing more.</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.13in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.2in">Read this tab before you open Salesforce. Fifteen minutes of orientation separates a clean setup from one you unpick later.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.25in">The privacy question is the one people skip. If nobody has discussed who can see their email in Salesforce, have that conversation before Tab 3.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.2in">Every admin I know has turned this on for everyone at once, exactly once. Start with three people.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://www.youtube.com/watch?v=TT07-BUILD" label="Build With Me" caption="16 min walkthrough — watch 00:00 before you start." tone="teal" hint-size="100%,1.1in"></x-import>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 1 · Orient</span><span>3</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="0" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="s2" data-screen-label="Tab 2 — Prepare" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.54in 0.24in 0.42in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 2 · Prepare</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Decide before you click.</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.16in;max-width:5.2in">Every problem people hit with this feature traces back to a decision made by default rather than on purpose. Answer these three in writing first.</p>
+
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Who does this cover?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Name two or three people rather than a whole profile. A small pilot you can actually ask questions of beats a broad rollout nobody owns.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">What syncs — email, calendar, or both?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Email on, calendar off is the common starting answer. Calendar sync surfaces personal appointments people did not expect to share.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">How will you know it worked?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Pick one record you will check, and one colleague who will confirm they see what you see. Write both down now.</div></div>
+</div>
+</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="list-checks" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Pre-flight checklist</div>
+<div style="border-bottom:1px solid #DED5C7">
+<div style="display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #DED5C7">
+<div style="width:13px;height:13px;flex-shrink:0;border:1.5px solid #A9C3CE;border-radius:3px;margin-top:2px"></div>
+<div><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Admin access confirmed.</span> <span style="font-size:9.5pt;line-height:1.5;color:#6E6559">You can open Setup and see Einstein Activity Capture.</span></div>
+</div>
+<div style="display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #DED5C7">
+<div style="width:13px;height:13px;flex-shrink:0;border:1.5px solid #A9C3CE;border-radius:3px;margin-top:2px"></div>
+<div><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Email consent owner identified.</span> <span style="font-size:9.5pt;line-height:1.5;color:#6E6559">You know who grants Microsoft 365 or Google Workspace consent, and you have asked them.</span></div>
+</div>
+<div style="display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #DED5C7">
+<div style="width:13px;height:13px;flex-shrink:0;border:1.5px solid #A9C3CE;border-radius:3px;margin-top:2px"></div>
+<div><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Pilot group named.</span> <span style="font-size:9.5pt;line-height:1.5;color:#6E6559">Two or three people, written down, who know it is coming.</span></div>
+</div>
+<div style="display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #DED5C7">
+<div style="width:13px;height:13px;flex-shrink:0;border:1.5px solid #A9C3CE;border-radius:3px;margin-top:2px"></div>
+<div><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Sync decision made.</span> <span style="font-size:9.5pt;line-height:1.5;color:#6E6559">Email on, calendar off — or a deliberate reason for something else.</span></div>
+</div>
+<div style="display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #DED5C7">
+<div style="width:13px;height:13px;flex-shrink:0;border:1.5px solid #A9C3CE;border-radius:3px;margin-top:2px"></div>
+<div><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Success test chosen.</span> <span style="font-size:9.5pt;line-height:1.5;color:#6E6559">One record you will check, one colleague who will confirm.</span></div>
+</div>
+<div style="display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #DED5C7">
+<div style="width:13px;height:13px;flex-shrink:0;border:1.5px solid #A9C3CE;border-radius:3px;margin-top:2px"></div>
+</div>
+</div>
+<div style="margin-top:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="Draft the note you will send your pilot group" lines="2" hint-size="100%,0.95in"></x-import>
+<div style="margin-top:0.12in;padding-top:0.1in;border-top:1px solid #DED5C7;font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Before importing the sample data:</b> six records read <span style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;white-space:nowrap">REPLACE-WITH-YOUR-ADDRESS</span>. Change them to addresses you control — capture matches on the address, and skipping this looks exactly like the feature being broken.</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="key-round" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Access you need</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">A Salesforce user with <b>System Administrator</b> permissions, and someone who can grant consent for your Microsoft 365 or Google Workspace account. That second person is often not you — find out now, not at step 5.</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.3in">If you cannot get admin consent for your email service, stop here. Nothing downstream works without it, and discovering that at step 5 wastes an afternoon.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.4in">Writing the announcement before you build is not busywork. It forces you to say plainly what you are turning on — and if you cannot, you do not understand it yet.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/01/worksheet" label="Worksheet" caption="Print the decisions and checklist as one page." hint-size="100%,1.1in"></x-import>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 2 · Prepare</span><span>4</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="1" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="s3" data-screen-label="Tab 3 — Build (steps 1–4)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.2in">Steps 1–4: set it up.</h2>
+<div style="display:flex;flex-direction:column;gap:0.18in;flex:1;min-height:0">
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="1" title="Open the Activity Capture setup page" verify="the Einstein Activity Capture settings page with a Configurations tab" hint-size="100%,1.1in">From Setup, enter <b>Einstein Activity Capture</b> in the Quick Find box, then select <b>Settings</b>.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step1" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Settings page, before you change anything</div>
+</div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="2" title="Create a configuration" verify="your new configuration listed with a status of Not Active" hint-size="100%,1.1in">Select <b>New Configuration</b>. Name it for the group it serves — <i>Sales Pilot</i>, not <i>Config 1</i>.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step2" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your configuration, still Not Active</div>
+</div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="3" title="Choose what syncs, and which direction" verify="your sync selections summarized on the configuration detail page" hint-size="100%,1.1in">Set email and event sync separately. Start with <b>email capture only</b> and leave calendar sync off until the pilot group is comfortable.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step3" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your sync selections</div>
+</div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="4" title="Assign the pilot users" verify="your pilot users counted on the configuration record" hint-size="100%,1.1in">Assign by <b>user</b> or <b>profile</b>. For a pilot, assign named users — profiles grow when you are not looking.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step4" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your assigned pilot users</div>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.18in;margin-top:0.18in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.15in">Name configurations after the audience, not the sequence. Six months from now "Sales Pilot" tells you something and "Config 1" does not.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.15in">Turning on calendar sync at the same time as email doubles the number of surprises your users report. Sequence them.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://www.youtube.com/watch?v=TT07-BUILD" label="Watch steps 1–4" caption="Chapters 01:40–10:20." tone="teal" hint-size="100%,1.15in"></x-import>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>5</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 3 — Build (steps 5–7)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.28in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.2in">Steps 5–7: connect, activate, and tell people.</h2>
+<div style="display:flex;flex-direction:column;gap:0.18in;flex:1;min-height:0">
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="5" title="Connect the email and calendar service" verify="a Connected status for your Microsoft 365 or Google Workspace account" hint-size="100%,1.1in">Authenticate with an account that has the right admin consent. If consent is blocked, this is the step where you need your IT administrator in the room.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step5" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your Connected status</div>
+</div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="6" title="Activate the configuration" verify="a green Active badge on the configuration row" hint-size="100%,1.1in">Select <b>Activate</b>. Sync begins in the background; the first records can take a few hours to appear.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step6" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">The green Active badge</div>
+</div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="7" title="Send the announcement" verify="a reply from at least one pilot user confirming they read it" hint-size="100%,1.1in">Send the email you wrote in Tab 2. Say what is captured, who can see it, and how to ask a question. This step is not optional.</x-import></div>
+<div style="width:2.55in;flex-shrink:0">
+<div style="height:0.95in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-step7" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">The announcement you sent</div>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.2in;margin-top:0.2in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.2in">Nothing appearing after activation usually means consent, not configuration. Check the connected account before you change any settings.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.2in">Activate on a Tuesday morning, never a Friday afternoon. And if the first sync looks wrong, change one setting, wait, look again.</x-import>
+</div>
+<div style="margin-top:0.18in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/01/audio" label="Listen: When consent gets blocked" caption="7 min audio — what to ask your IT admin, and why." tone="teal" hint-size="100%,1.05in"></x-import>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>6</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="s4" data-screen-label="Tab 4 — Verify" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.28in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.12in">Prove it works — then prove it works for someone else.</h2>
+<p style="font-size:11.5pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:4.5in">Verification is what turns "I configured it" into evidence you can show an employer or a client. Record what you observed, not what you expected.</p>
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="clipboard-check" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Verification log</div>
+<table style="width:100%;border-collapse:collapse;margin-bottom:0.24in">
+<thead><tr>
+<th style="text-align:left;padding:0 8px 6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5">Check</th>
+<th style="text-align:left;padding:0 8px 6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5;width:1in">Result</th>
+<th style="text-align:left;padding:0 0 6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5;width:0.8in">Date</th>
+</tr></thead>
+<tbody>
+<tr><td style="height:0.32in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">Configuration shows Active</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.32in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">Connected account shows Connected</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.32in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">A sent email appears on the contact record</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.32in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">It appears on the related opportunity too</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.32in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">A pilot user confirms it in their own words</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.32in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">A user NOT in scope sees nothing new</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+</tbody>
+</table>
+<div style="display:flex;gap:0.18in;align-items:flex-start">
+<div style="width:2.1in;flex-shrink:0">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Proof it worked</div>
+<div style="height:1.2in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01-shot-verify" shape="rect" radius="0" placeholder="Drop a screenshot of the captured email on a record"></image-slot></div>
+</div>
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="Evidence I captured (screenshots, record links, who confirmed)" lines="5" hint-size="100%,1.8in"></x-import></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in;background:#F3EDE2;border-radius:8px;padding:0.18in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" title="If nothing syncs" hint-size="100%,1.5in">Check in this order: connected account status, then user assignment, then how long it has been. Most "broken" syncs are under four hours old.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.3in">The out-of-scope check matters as much as the in-scope one. Being able to say "and no one else saw anything" is the evidence people ask for.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.2in">Keep this page. A completed verification log is portfolio evidence — it shows judgment, not just clicks.</x-import>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>7</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 4 — When it doesn't work" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">When it doesn't work</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.14in;max-width:5.2in">Diagnosing this well is the skill, not avoiding it. <b>Change one thing at a time</b> and note what you changed — that habit is what separates someone who configures Salesforce from someone who clicks in it.</p>
+<div style="border-bottom:1px solid #DED5C7">
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">Nothing at all appears, hours after activating</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The mailbox is not fully authorized. Consent at the organization level is a separate approval from anything you did in Salesforce.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Check the connected account reads <b>Connected</b> before touching anything else. If it does not, the fix is with whoever administers your email — not in your configuration.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">It works for you but not for a colleague</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Capture is per-person. Being in the configuration is not enough; each person connects their own mailbox once.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Confirm they are assigned, then watch them complete the connection prompt. This step is skipped far more often than it fails.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">Emails appear on the wrong record, or nowhere</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Matching runs on the email address. A message from an address that is not on the contact record has nothing to match to.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Compare the sending address against the addresses on the record, and add it as a secondary. Expect to keep doing this — it is data hygiene, not a fault.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">It worked for weeks, then quietly stopped</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The connection expired — usually a password change, a security policy update, or a mailbox migration.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Reconnect the account. Then set a quarterly reminder: this fails silently, so nobody reports it until the data is already missing.</div></div>
+</div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">You cannot find the setup page at all</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Either your edition does not include the feature, or your user does not have the permission that reveals it. Both look identical from where you are sitting.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Check your edition first — it is the cheaper question to answer. Knowing which of the two it is before you ask makes you sound like someone who has done this before.</div></div>
+</div>
+</div>
+<div style="margin-top:auto">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in;margin-top:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="clipboard-list" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Write this down before you ask anyone for help</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">What you expected · what you saw · which user · the exact time you activated · whether the account says Connected. Five lines gets a useful answer. "It's not working" gets a week of questions — and in an interview, the difference between those two is the whole point.</div>
+</div>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>8</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 4 — How to turn this off" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">How to turn this off</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.22in;max-width:5.3in">Knowing how to reverse something is part of knowing how to turn it on. If this was a trial, if the pilot group changes, or if someone raises a privacy concern you had not thought through — here is the clean way back.</p>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.22in">
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Tell people first</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Same list you told when you switched it on. Turning it off quietly is how trust in the system gets lost.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Deactivate the configuration</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Open the configuration and set it to inactive. This stops new capture immediately; you do not need to delete anything.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Leave the connection alone for now</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Disconnecting the mailbox as well is a bigger step and rarely necessary. Deactivating is enough to stop the flow.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">4</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Write down why</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">One line on the notes page. If someone revisits this in six months, the reason matters more than the setting.</div></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.22in;margin-bottom:0.2in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="archive" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What stays</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Activity already captured stays visible on your records. Turning the feature off stops new capture — it is not an undo of what has already synced.</div>
+</div>
+<div style="background:#F7EAE3;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>What does not come back</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">If you delete the configuration rather than deactivating it, its settings are gone and you rebuild from scratch. Deactivate first. Delete only when you are sure.</div>
+</div>
+</div><div style="border-top:1px solid #DED5C7;padding-top:0.18in;margin-bottom:0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="mail" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to send when you switch it off</div>
+<div style="background:#fff;border:1px solid #DED5C7;border-radius:8px;padding:0.16in 0.18in;font-size:9.5pt;line-height:1.6;color:#3B3F3D">
+We have turned off the email capture we switched on earlier this month. Anything already logged stays where it is — nothing has been deleted. New email will stop appearing on records from today. We are pausing it because <span style="color:#A39B8E">[reason]</span>, and we will revisit it <span style="color:#A39B8E">[when]</span>. If you have questions, come to me first.
+</div>
+<div style="font-size:8.5pt;line-height:1.5;color:#8C857A;margin-top:7px">Four sentences: what changed, what did not, why, and who to ask. Silence is what makes people distrust the system, not the change itself.</div>
+</div>
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1in">Being able to say "here is how I would roll this back" is one of the strongest answers you can give in an interview. Most candidates have never thought about it.</x-import>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>9</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="s5" data-screen-label="Tab 5 — Action plan" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.28in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.12in">Now do it where it counts.</h2>
+<p style="font-size:11.5pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.26in;max-width:4.6in">You configured this in a sandbox. The skill becomes real when you carry it into an org someone depends on. Write down three moves and a date beside each — vague intentions are how good work quietly stops.</p>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.14in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="target" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>My action plan</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ActionPlan" rows="7" hint-size="100%,2.6in" style="margin-bottom:0.3in"></x-import>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="route" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Where this trail leads</div>
+<div style="font-size:10.5pt;line-height:1.6;color:#3B3F3D">
+<p style="margin:0 0 0.14in">Activity Capture is one of the configurations clients ask about most, and one of the few you can demonstrate end to end on your own. Pair it with a written scope sheet and a verification log and you have a portfolio piece.</p>
+<p style="margin:0">When you are ready for project work with real stakes — and a record of it someone else will vouch for — that is what our programs are for.</p>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitCode" code="TRAIL-EAC-25" headline="Your next trail" body="Use this code for 25% off your next Trail Kit, or apply it to your first month if you join a program. It expires 90 days from purchase." cta="Browse Trail Kits" url="transitiontrails.org/kits" hint-size="100%,2.4in"></x-import>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>10</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 5 — Video index" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.18in">
+<div style="max-width:4.5in"><h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 5px">Everything in this kit, on video</h2><p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0">One walkthrough, chaptered so you can jump to the step you are on. Scan once and keep the tab open beside your Salesforce window.</p></div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://www.youtube.com/watch?v=TT07-BUILD" label="Build With Me" caption="16 min, full walkthrough" size="82" hint-size="2.4in,1.05in"></x-import>
+</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">00:00</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">What we are turning on</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">The feature in plain terms, and the two things it changes.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">01:40</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Opening setup</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Where the settings live and what you should see when you land.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">03:15</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Creating a configuration</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Naming it so the next person understands it.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">05:30</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Choosing what syncs</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">The email-vs-calendar decision, made out loud.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">08:05</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Assigning people</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Why named users beat a whole profile for a first run.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">10:20</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Connecting the mailbox</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">The consent screen, and what a blocked one looks like.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">12:45</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Activating</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">What happens immediately, and what does not.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">14:10</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Proving it worked</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Finding the first captured email on a real record.</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in;margin-bottom:0.2in">
+<div style="background:#F3EDE2;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="headphones" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Also included · audio</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">When consent gets blocked — 7 min</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The one problem that stops people cold, talked through end to end. Listen on a walk before you start — it will save you an hour.</div>
+</div>
+<div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/01/audio" label="Listen" caption="7 min audio, no video needed" size="82" hint-size="100%,1.05in"></x-import>
+</div>
+</div><div style="border-top:1px solid #DED5C7;padding-top:0.18in;margin-bottom:0.2in;display:grid;grid-template-columns:1.15fr 1fr;gap:0.3in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="timer" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>If you only have five minutes</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Watch <b>05:30 — Choosing what syncs</b> and <b>14:10 — Proving it worked</b>. Those two carry the judgment; the rest is clicking you can follow from the page.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#8C857A;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="refresh-cw" size="12" color="#8C857A" hint-size="12px,12px"></x-import>If it has been a while</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Salesforce moves menus between releases. If a screen looks different from the video, the sequence still holds — search Setup for the label rather than following the click path.</div></div>
+</div>
+<div style="border-top:1px solid #DED5C7;padding-top:0.18in;margin-bottom:0.2in;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="unlock" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>No login needed</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">The links work without an account and do not expire. Bookmark them; they are yours for good.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="captions" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Captions and transcript</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Every video is captioned, and a full transcript is on the kit page if you would rather read than watch.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="video" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Recorded live</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">In a real org, in one take. When something loads slowly or a menu has moved, you see that too.</div></div>
+</div>
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" hint-size="100%,0.95in">Watch a chapter, then do that step yourself before watching the next. Watching the whole thing first feels productive and teaches you far less.</x-import>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>11</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 5 — Resources & tools" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.3in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Tools and resources worth your time</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:4.9in">Scan any code to open the resource. We only list things we would use ourselves, and we tell you plainly when a link earns us a commission.</p>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ResourceLink" name="Einstein Activity Capture — official documentation" provider="Salesforce Help" kind="Docs" free="true" url="https://help.salesforce.com/s/articleView?id=sf.einstein_sales_aac.htm" why="The authoritative reference for every setting in this kit. Check here first when behavior surprises you." hint-size="100%,1in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ResourceLink" name="Salesforce Administrator study guides" provider="K2 University" kind="Guide" affiliate="true" url="https://k2university.com/salesforce-admin" why="If this kit leaves you wanting the fundamentals underneath it, this is where we send people. Not required for anything here." hint-size="100%,1in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ResourceLink" name="Jotform for Salesforce" provider="Jotform" kind="Tool" affiliate="true" url="https://www.jotform.com/integrations/salesforce" why="Useful when the intake side of your process still lives in email. Free tier is enough to follow along." hint-size="100%,1in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ResourceLink" name="Notes from the Trail" provider="Transition Trails" kind="Newsletter" free="true" url="https://transitiontrails.org/notes" why="One practical thing a week for people building experience on their own. No pitch." hint-size="100%,1in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ResourceLink" name="Study plan for the Administrator exam" provider="Transition Trails" kind="Worksheet" free="true" url="https://transitiontrails.org/kits/01/study-plan" why="A week-by-week plan built around what this kit just had you configure, so the exam material maps onto something you have actually done." hint-size="100%,1in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ResourceLink" name="Explorer's Trail community" provider="Transition Trails" kind="Community" url="https://transitiontrails.org/explorers-trail" why="Where Trail Kit readers compare configurations and ask the question they did not want to ask out loud." hint-size="100%,1in"></x-import>
+</div>
+<div style="background:#F3EDE2;border-radius:7px;padding:0.16in 0.18in;font-size:8.5pt;line-height:1.55;color:#6E6559">
+<b style="font-family:'Poppins',sans-serif;color:#8A3D1C">Affiliate disclosure.</b> Links marked <i>Affiliate link</i> earn Transition Trails a commission if you buy something, at no extra cost to you. It does not change what we recommend, and nothing in this kit requires a paid product to complete. Commission supports our programs.
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>12</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 5 — Certifications" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">The two certifications our programs require</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:5.3in">Nothing in this kit needed a certification, and that was deliberate. But if you are aiming at our programs — or at a first Salesforce role — these two are the credentials that open the gate. They are Salesforce’s own, they are what employers ask for by name, and they are the entry requirement for every one of our trails.</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.22in;margin-bottom:0.24in">
+<div style="border:1px solid #DED5C7;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:var(--tt-kit-why);color:#fff;padding:11px 14px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;line-height:1.3">Salesforce Platform Foundations</div>
+<div style="font-size:8.5pt;color:rgba(255,255,255,.85);margin-top:2px">The entry credential</div>
+</div>
+<div style="padding:13px 14px;display:flex;flex-direction:column;gap:11px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="badge-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>What it proves</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">That you understand the platform’s core concepts — how objects, records and relationships fit together, and what Salesforce is actually for.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Who it is for</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Anyone starting out, including staff who inherited an org and have never been taught how it works.</div></div>
+<div style="margin-top:auto;padding-top:11px;border-top:1px solid #DED5C7">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://trailhead.salesforce.com/credentials/platformfoundations" label="Foundations — exam details" caption="Scan for current exam format, fee and prerequisites." tone="teal" size="86" hint-size="100%,1.15in"></x-import>
+</div>
+</div>
+</div>
+<div style="border:1px solid #DED5C7;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:var(--tt-kit-why);color:#fff;padding:11px 14px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;line-height:1.3">Salesforce Platform Administrator</div>
+<div style="font-size:8.5pt;color:rgba(255,255,255,.85);margin-top:2px">The working credential</div>
+</div>
+<div style="padding:13px 14px;display:flex;flex-direction:column;gap:11px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="badge-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>What it proves</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">That you can configure and maintain an org: users and permissions, data model changes, automation, reports and dashboards.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Who it is for</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The person who actually administers a Salesforce org, or is about to become that person.</div></div>
+<div style="margin-top:auto;padding-top:11px;border-top:1px solid #DED5C7">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://trailhead.salesforce.com/credentials/administrator" label="Administrator — exam details" caption="Scan for current exam format, fee and prerequisites." tone="teal" size="86" hint-size="100%,1.15in"></x-import>
+</div>
+</div>
+</div>
+</div>
+
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in;margin-bottom:0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="route" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Which one first</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Foundations first, then Administrator. Foundations takes weeks, not months, and it is what makes the Administrator material make sense rather than feel like memorization. Skipping it is the single most common reason people stall on Administrator and conclude they are not cut out for this.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-top:8px;padding-top:8px;border-top:1px solid #CFDEE5">Salesforce publishes free study paths for both, and the exams can be retaken. The resources page in this kit lists the study guide we point people to when the official material is not clicking.</div>
+</div>
+
+<div style="margin-top:auto">
+<div style="border-top:1px solid #DED5C7;padding-top:0.18in;display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="graduation-cap" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Required for our programs</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Foundations Trail asks only for Platform Foundations. Guided Trail and Trail of Mastery expect Administrator. We are not looking for a credential collection — we want to know you have sat a Salesforce exam and understand what the platform is, so we can tell you are a good fit.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-alert" size="12" color="#8C857A" hint-size="12px,12px"></x-import>A certification is not experience</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">It proves you can pass an exam, not that you have judgment under real constraints. That gap is the whole reason our programs exist — and the reason this kit does not require one.</div></div>
+</div>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>13</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 5 — Note pages" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.3in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.06in">Notes from the trail</h2>
+<p style="font-size:10.5pt;color:#3B3F3D;margin:0 0 0.28in;max-width:4.6in">Come back to these pages. What you write here when the work is fresh is what you will draw on in an interview six months from now.</p>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="What I learned that the video did not say" lines="9" hint-size="100%,2.8in" style="margin-bottom:0.28in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="Sketch my configuration — users, scope, direction of sync" grid="true" lines="10" hint-size="100%,3.1in" style="margin-bottom:0.28in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="Questions I still have" lines="5" hint-size="100%,1.7in"></x-import>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>14</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Programs placemat" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.26in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.08in">Three trails. Pick the one that matches where you are.</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.24in;max-width:5.2in">Trail Kits are how you practice alone. Programs are how you build a record of real project work that someone else will vouch for. All three trails expect a Salesforce credential from page 10 — Foundations Trail asks only for Platform Foundations; Guided and Mastery expect Administrator.</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.16in;margin-bottom:0.24in">
+<div style="border:1px solid #DED5C7;border-radius:7px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:#2F6F7E;color:#fff;padding:9px 12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;line-height:1.3">Foundations Trail</div><div style="font-size:8pt;color:rgba(255,255,255,.8);margin-top:1px">6 weeks · part-time</div></div>
+<div style="padding:11px 12px;display:flex;flex-direction:column;gap:9px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="map-pin" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Start here if</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You have studied, maybe certified, and never touched a real org with stakes in it.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>You leave with</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">A first documented project and the habits that make the next one easier.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="calendar-days" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Typical week</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">About 6 hours a week, evenings and weekends included.</div></div>
+</div></div>
+<div style="border:1px solid #DED5C7;border-radius:7px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:#2F6B3F;color:#fff;padding:9px 12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;line-height:1.3">Guided Trail</div><div style="font-size:8pt;color:rgba(255,255,255,.8);margin-top:1px">12 weeks · flagship</div></div>
+<div style="padding:11px 12px;display:flex;flex-direction:column;gap:9px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="map-pin" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Start here if</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You can configure things but cannot yet prove it to an employer who asks.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>You leave with</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Project work for a real nonprofit, reviewed and signed off — experience-validated, not self-reported.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="calendar-days" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Typical week</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">About 10 hours a week, with a fixed weekly check-in.</div></div>
+</div></div>
+<div style="border:1px solid #DED5C7;border-radius:7px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:#2A2E2C;color:#fff;padding:9px 12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;line-height:1.3">Trail of Mastery</div><div style="font-size:8pt;color:rgba(255,255,255,.8);margin-top:1px">Opens Fall 2026</div></div>
+<div style="padding:11px 12px;display:flex;flex-direction:column;gap:9px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="map-pin" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Start here if</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You have delivered before and want engagements that test judgment, not clicks.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>You leave with</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">A multi-project record across partners, and a reference who can speak to it.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:#8C857A;margin-bottom:3px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="calendar-days" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Typical week</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Varies by engagement; agreed before you start.</div></div>
+</div></div>
+</div>
+
+<div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid #DED5C7;border-radius:7px;background:#fff;margin-bottom:0.2in">
+<span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6B3F;white-space:nowrap">Not sure which?</span>
+<span style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Start with the Guided Trail. It is the one most people are ready for, and if it turns out to be the wrong fit we will move you rather than let you struggle through it.</span>
+</div>
+<div style="display:flex;gap:0.24in;align-items:stretch;border:2px dashed #DFA285;border-radius:9px;background:#F7EAE3;padding:0.24in 0.24in">
+<div style="flex:1">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#8A3D1C;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="ticket" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Register with this code</div>
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:19pt;font-weight:600;letter-spacing:.09em;color:#2A2E2C;background:#fff;border:1px solid #DFA285;border-radius:7px;padding:8px 15px;display:inline-block;margin-bottom:9px;white-space:nowrap">KIT01-START</div>
+<p style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin:0">Waives the application fee on any trail, and credits what you paid for this kit toward your first month. Valid 90 days from purchase.</p>
+</div>
+<div style="width:1px;background:#DFA285"></div>
+<div style="width:2.1in;display:flex;flex-direction:column;justify-content:center;gap:10px">
+<div style="display:inline-flex;align-items:center;justify-content:center;gap:7px;background:#F5A623;color:#2A2E2C;font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;padding:10px 16px;border-radius:9px;white-space:nowrap">Find your trail →</div>
+<div style="font-size:8.5pt;line-height:1.45;color:#6E6559;text-align:center">transitiontrails.org/trails<br>Applications reviewed weekly.</div>
+</div>
+</div>
+
+<div style="margin-top:auto">
+<div style="border-top:1px solid #DED5C7;padding-top:0.2in;margin-top:0.24in;margin-bottom:0.24in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="check-check" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What every trail includes</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b style="font-family:'Poppins',sans-serif;color:#2A2E2C">Real project work.</b> Not exercises. A nonprofit is depending on the outcome, which is what makes the experience worth citing.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b style="font-family:'Poppins',sans-serif;color:#2A2E2C">A record someone signs.</b> Your work is reviewed and attested to, so you are not the only person vouching for it.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b style="font-family:'Poppins',sans-serif;color:#2A2E2C">A cohort.</b> People at the same stage, hitting the same walls, in the same weeks as you.</div>
+</div>
+</div>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>15</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="About Transition Trails" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Einstein Activity Capture</span><span style="color:#2F6F7E">Tab 5 · Next Trail</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Who made this</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:5.3in">Transition Trails is a nonprofit workforce-development organization. We exist to close the <b>experience gap</b> — the trap where capable people earn a certification and still cannot get hired, because every employer wants proof they have done the work before.</p>
+
+<div style="background:#EDF5F8;border-radius:8px;padding:0.2in 0.22in;margin-bottom:0.24in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="compass" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Our mission</div>
+<div style="font-size:11.5pt;line-height:1.55;color:#2A2E2C;font-family:'Poppins',sans-serif;font-weight:500">To turn certification into competence through supervised, real project work — and to give nonprofits the capacity they could not otherwise afford while we do it.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.22in;margin-bottom:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#8C857A" hint-size="12px,12px"></x-import>For learners</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Experience-validated credentials — work a mentor reviewed and signed, not a self-reported project.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="building-2" size="12" color="#8C857A" hint-size="12px,12px"></x-import>For nonprofits</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Supervised project capacity at low risk, scoped in writing before anything touches your system.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why kits exist</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Not everyone needs a program. A Trail Kit is the same guidance, self-paced, for one task.</div></div>
+</div>
+
+<div style="margin-top:auto">
+<div style="display:flex;gap:0.3in;align-items:center;border-top:1px solid #DED5C7;padding-top:0.2in;margin-bottom:0.16in">
+<div style="flex:1">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="book-open" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Why you are holding this</div>
+<div style="font-size:10pt;line-height:1.55;color:#3B3F3D;margin-bottom:9px">You bought a kit, which means you are doing this on your own. That is exactly who we built these for — and if you later want the version with a mentor reviewing your work, that is what our programs are.</div>
+<div style="font-size:9.5pt;line-height:1.6;color:#6E6559">Founded and led by <b style="color:#2A2E2C">Angela Landrith</b>.<br>Written, tested, and sold by the same people who run the programs.</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org" label="transitiontrails.org" caption="Programs, kits, and how to get involved" size="94" hint-size="2.3in,1.2in"></x-import>
+</div>
+</div><div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Trail</span><span>16</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" sections="Orient,Prepare,Build,Verify,Next Trail" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Back cover" style="background:#2A2E2C;display:flex;flex-direction:column;font-family:'Open Sans',sans-serif;color:#fff;overflow:hidden">
+<div style="flex:1;position:relative;min-height:0">
+<image-slot id="kit01-cover-back" shape="rect" placeholder="Drop the back cover image — a trail, a bridge, or hands at work"></image-slot>
+</div>
+<div style="padding:0.5in 0.66in 0.42in">
+<div style="height:3px;background:#B4552D;width:1.5in;margin-bottom:0.28in"></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:24pt;line-height:1.34;margin:0 0 0.16in;color:#fff;max-width:5.4in;text-wrap:balance">Keep going. The next trail is already open.</h2>
+<p style="font-size:11pt;line-height:1.6;color:rgba(255,255,255,.78);margin:0 0 0.34in;max-width:4.9in">Trail Kits teach you to build on your own, at your own pace. Our programs put that work on real nonprofit projects — so what you learned becomes experience someone else will vouch for.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.3in;padding-top:0.26in;border-top:1px solid rgba(255,255,255,.16)">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#DFA285;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>More Trail Kits</div><div style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,.82)">08 · Lightning record pages<br>09 · Flow for admins<br>10 · Reports that get read</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#DFA285;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="users" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Or join a program</div><div style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,.82)">Foundations Trail<br>Guided Trail<br>Trail of Mastery</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#DFA285;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="globe" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Find us</div><div style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,.82)">transitiontrails.org<br>transitiontrails.org/kits</div></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:0.4in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:13pt;color:#fff">Transition Trails</div><div style="font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:#8C857A;margin-top:2px">Bridging the experience gap</div></div>
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;letter-spacing:.08em;color:#8C857A;white-space:nowrap">TK-01-EAC · v1.0 · 2026</div>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.28);padding-top:0.22in;margin-top:0.26in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:#A9C3CE;margin-bottom:9px">Someone else needs this?</div>
+<div style="display:flex;gap:0.3in;align-items:center">
+<div style="flex:1">
+<div style="font-size:11pt;line-height:1.55;color:#fff;margin-bottom:8px">Do not send them the file — send them your referral link. They get their own copy, and <b>you both get money off a program</b> when either of you enrols.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#BFD9E4">Your link and code are in the folder this kit came in. Passing the PDF around costs us the next kit and costs you the discount.</div>
+</div>
+<div style="text-align:center;flex-shrink:0">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:15pt;font-weight:600;letter-spacing:.08em;color:#2A2E2C;background:#fff;border-radius:7px;padding:8px 15px;display:inline-block;white-space:nowrap">REF-KIT01</div>
+<div style="font-size:8pt;color:#BFD9E4;margin-top:6px">Your referral code</div>
+</div>
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

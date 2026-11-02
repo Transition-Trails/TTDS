@@ -1,0 +1,11 @@
+<!-- @dsCard group="Brand" viewport="700x315" name="Replit Starter" subtitle="Four files that give a new Replit app this design system — and keep it" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px 24px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}p{font-size:12.5px;line-height:1.6;margin:0 0 12px;color:var(--tt-slate)}.f{display:grid;grid-template-columns:1.35in 1fr;gap:12px;padding:7px 0;border-top:1px solid var(--tt-border);font-size:12.5px;line-height:1.45}.n{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--tt-deep-teal);white-space:nowrap}.d{color:var(--tt-slate)}b{color:var(--tt-heading)}.note{margin-top:12px;padding-top:11px;border-top:1px solid var(--tt-border);font-size:12px;line-height:1.55;color:var(--tt-slate)}</style>
+</head><body>
+<p>Copy all four into a Replit app root, dropping the <b>.txt</b> from the two scripts. Targets <b>Tailwind v4</b> — both TT apps run it, and v4 removed <b>presets</b>, so there is no config step.</p>
+<div class="f"><div class="n">tt-tokens.css</div><div class="d">Every token as a custom property, plus a <b>@theme inline</b> block that registers the Tailwind v4 utilities. <b>Generated</b> from the live sources, so it cannot drift.</div></div>
+<div class="f"><div class="n">replit.md</div><div class="d">What the agent reads before it writes code, so a new app starts correct rather than being corrected.</div></div>
+<div class="f"><div class="n">tt-check.mjs.txt</div><div class="d">Build guard — fails on raw hex, British spelling, emoji, and prohibited ecosystem terms.</div></div>
+<div class="f"><div class="n">tt-sync.mjs.txt</div><div class="d"><b>npm run tt:sync</b> pulls the latest tokens from GitHub and prints which ones were added or removed.</div></div>
+<div class="note">The design system, Trail OS, and the public site currently run <b>three token conventions with three divergent values</b> — see <b>guidelines/token-divergence.md</b>.</div>
+</body></html>

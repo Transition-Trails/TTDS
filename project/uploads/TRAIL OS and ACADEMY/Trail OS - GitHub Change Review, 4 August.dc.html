@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-bg); }
+  a { color: var(--tt-link); text-decoration: none; }
+  a:hover { color: var(--tt-link-hover); text-decoration: underline; }
+  code { font-family: Menlo, Consolas, monospace; font-size: max(14px, 0.92em); }
+</style>
+</helmet>
+
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: var(--tt-slate); background: var(--tt-bg); min-height: 100vh; padding: 56px 32px 96px;">
+<div style="max-width: 1020px; margin: 0 auto;">
+
+  <header style="border-bottom: 1px solid var(--tt-warm-gray); padding-bottom: 32px; margin-bottom: 40px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tt-deep-teal); margin: 0 0 16px;">Change review · 4 August</p>
+    <h1 style="font-family: 'Poppins', sans-serif; font-size: 42px; line-height: 1.15; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 20px; max-width: 22ch; text-wrap: pretty;">A learner surface shipped, and it cannot write</h1>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 16px; max-width: 64ch; text-wrap: pretty;">Reviewed from GitHub as asked. A great deal has landed — route enforcement built exactly to the design, Salesforce preflight hardened properly, and the test suite up to 352. Two of the backlog's open items are effectively closed.</p>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 16px; max-width: 64ch; text-wrap: pretty;">A whole learner surface has also appeared, and I checked its Salesforce assumptions against production. <strong style="color: var(--tt-charcoal);">Two of its data paths reference fields that do not exist</strong> — and because every failure is swallowed, a learner is told they succeeded while nothing is recorded.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch; text-wrap: pretty; padding: 14px 18px; background: var(--tt-sky-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">What I verified, and what I did not.</strong> I described three objects against production: the quest submission object and the course module activity object are both broken as used, and the points object is correct — its learner link and points field exist as the code expects. I did not verify the learner context fields selected from Contact, so those are neither confirmed nor in doubt. The learner surface makes about six Salesforce calls in total; three of them are covered here.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 14px;">
+      <div><p style="margin: 0 0 4px; opacity: .7;">Reviewed</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">8 new route files · CHANGELOG 1.3.0</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Verified against</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">Production schema</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Defects found</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">4 · 2 are schema</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Closed by this push</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">2 features</p></div>
+    </div>
+  </header>
+
+  <section style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px 32px; margin-bottom: 40px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+    <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-deep-teal); margin: 0 0 12px;">STATUS · RE-CHECKED 21:15</p>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 14px;">This round replaced hardcoded assumptions. The findings below are scheduled, not missed.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px; max-width: 74ch;">The goal for Trail Quests this session was removing hardcoded assumptions and data, and quest generation moved from Claude to Gemini — a cleaner implementation, using structured output rather than instructing the model not to wrap its answer in markdown.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">Everything in the four findings below is queued for the next work session. Listing them here as open work, not as a verdict on this round.</p>
+    <div style="background: var(--tt-sky-100); border-radius: 14px; padding: 18px 22px;">
+      <p style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Next session</p>
+      <p style="font-size: 15px; line-height: 1.8; margin: 0;">Quest submission field mapping — the learner link, the required assignment link, and saving the written answer<br>Assignments query moved onto the per-learner objects<br>Admin check on template create and update<br>A decision on the quest eligibility gate</p>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 44px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">What landed well</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 22px; max-width: 64ch;">Worth saying first, because the rest of this is problems.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Enforcement is built exactly as designed</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">Default-deny with a five-entry public list. Authorisation checks the group <em>set</em>, not the derived tier, so two groups keep both grants. The 401 and 403 responses are distinguishable and each carries the right next step. The superadmin whitelist keeps the operator account working. This is the design landed faithfully.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">The throttling lesson was generalised</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">Per-object timeouts, retries, and a rule that a rate-limited or timed-out probe becomes <em>undetermined</em> and never <em>missing</em>. That principle has now been applied across the whole preflight rather than only where it first bit.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Two more schema mismatches caught</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">The unnamespaced programme engagement object was corrected to its real namespaced name, and a training plan object confirmed absent and removed. Both are the same class of bug as the interaction log, found before they cost anything.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Per-user Salesforce is done</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">Full authorisation-code flow with PKCE, state validation, silent token refresh, replay protection on the callback, and per-user cache flushing so one person never sees another's cached data. That was a backlog item and it is closed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1.5px solid var(--tt-warning); border-radius: 22px; padding: 32px 36px; margin-bottom: 20px; box-shadow: 0 12px 28px rgba(42,46,44,.10);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-warning); margin: 0;">DEFECT 1 · MOST SERIOUS</p>
+    </div>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 14px;">Quest submission always fails, and tells the learner it succeeded</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">The submission route writes three fields to the quest submission object. Checked against production:</p>
+    <div style="background: var(--tt-sky-100); border-radius: 14px; padding: 18px 22px; margin: 0 0 14px;">
+      <p style="font-size: 15px; line-height: 1.8; margin: 0;"><code>Learner__c</code> — <strong style="color: var(--tt-charcoal);">does not exist on this object</strong><br><code>Assignment__c</code> — <strong style="color: var(--tt-charcoal);">required, and not supplied</strong><br><code>Submission_Text__c</code> — exists, and the learner's answer is not written to it</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">So the insert fails twice over. The helper returns null rather than throwing, the route carries on, and the learner receives <em>success</em>, encouraging feedback from Penny, and a points total. Nothing is recorded. Their written answer goes to Gemini for feedback and is then discarded, even though there is a field waiting for it.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0; max-width: 74ch; padding: 14px 18px; background: var(--tt-green-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">This is the interaction-log bug again, one step worse.</strong> That one failed silently; this one reports success. The lesson in the contributor pack — validate written values against the real schema, because mocked tests prove intent rather than conformance — was written two days ago and this shipped anyway.</p>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1.5px solid var(--tt-warning); border-radius: 22px; padding: 32px 36px; margin-bottom: 20px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-warning); margin: 0;">DEFECT 2</p>
+    </div>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 14px;">The assignments list queries the wrong object, on two fields that do not exist</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">The learner dashboard asks the course module activity object for records where the learner matches and a due date falls this week. That object has <strong style="color: var(--tt-charcoal);">neither a learner field nor a due date field</strong> — it is the curriculum catalogue, describing activities per module, not per person.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">The per-learner records live elsewhere: there is a course enrolment object and a course activity completion object, both already in the org, and those are what a learner's assignment list should be built from.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0; max-width: 74ch;">The query fails, the error is caught and turned into an empty array, and the dashboard shows a learner with no assignments — indistinguishable from a learner who genuinely has none.</p>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 32px 36px; margin-bottom: 20px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-warning); margin: 0;">DEFECT 3</p>
+    </div>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 14px;">The approval gate you ruled on yesterday is not enforced on the write</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">You ruled that approving a prompt template requires Penny Admin, and I noted it should be enforced on the write rather than hidden in the interface. On the template routes, only the bulk seed carries an admin check. <strong style="color: var(--tt-charcoal);">Create and update carry none</strong> — so any signed-in staff member can set a template's status to approved by calling the endpoint directly.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0; max-width: 74ch;">The two-person review rule added in this release has the same shape: the submitter is prevented from approving their own template by the panel that renders the button, not by the route that saves the record. Both are good controls in the wrong layer.</p>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 32px 36px; margin-bottom: 44px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-warning); margin: 0;">DEFECT 4</p>
+    </div>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 14px;">A governance gate already in the schema is being bypassed</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">The course module activity object carries a <code>Quest_Eligible__c</code> flag, and its help text is explicit: only activities where this is true may be used as source material for quest generation by Penny. Someone made a deliberate decision that quests come from approved curriculum.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">The daily quest route ignores it entirely. It asks Claude to invent a quest from the learner's trail and phase. The quest submission object's required link to a real activity points the same way — the model expects quests to be tied to curriculum, and the implementation generates them from nothing.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0; max-width: 74ch;">That is a product decision rather than a typo, so it needs your call rather than a fix. But as built, an admin control that exists in the org has no effect.</p>
+  </section>
+
+  <section style="margin-bottom: 44px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">Three things that need a decision</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 22px; max-width: 64ch;">Not defects. Choices that were made implicitly and should be made deliberately.</p>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Resolved — a learner Google group will gate the learner surface</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 8px;">Settled 4 August. Learner access will be granted through a dedicated Google group, the same mechanism already driving staff access — so learner identity comes from group membership rather than from the presence of a Contact record. The Contact lookup stays, but as the way to find someone's record, not as the test of whether they belong.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">That also settles the question the learner read model was waiting on, and it keeps one mechanism for both surfaces rather than two. Worth adding the new group to the staff-group constants as a learner grant when it is created, so the set stays the single place access is defined.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Resolved — quest generation moved to Gemini</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 8px;">Settled 4 August. Penny is one model again, so cost, rate limits and failure modes are uniform across her features. The Anthropic integration stays in place for future use rather than being removed.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">One thing to carry: a retained-but-unused integration should still appear in the readiness table, marked as available rather than live. An integration nobody has recorded is the kind of thing that surprises someone during a security review.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">The points object is a ledger, used as a counter</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">The gamification object has fields for who awarded the points, why, a note, and a sprint number — the shape of an award history. The learner code keeps a single row per person and adds to a running total, so every award overwrites the last and the audit trail never accumulates. Both models are reasonable; only one matches the schema.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-deep-teal); border-radius: 22px; padding: 36px 40px; color: var(--tt-white); margin-bottom: 44px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; opacity: .85;">Correction to my own work</p>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600; margin: 0 0 16px; color: var(--tt-white); max-width: 34ch;">The F-05-05 design was wrong on its central premise</h2>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 16px; max-width: 66ch; opacity: .95;">I wrote that prompt templates live in a source file and nothing reads them at request time. They have been database-backed since mid-July, with full create, update and seed routes, a live editing panel, and an auto-seed on first load. I searched the studio page rather than reading the release history, and got it wrong.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 16px; max-width: 66ch; opacity: .95;">What that changes: the sub-feature for making the studio read and write real records is <strong style="color: var(--tt-white);">already done</strong>. And moving templates to Salesforce — which you agreed to on my recommendation — is now a migration away from a working implementation rather than a first build.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 66ch; opacity: .95;">The argument for Salesforce still holds: it keeps behaviour-governing content out of the telemetry store and gives you platform-level audit and permissions. But it is no longer free, so it is worth re-deciding rather than inheriting. The genuinely open work is unchanged either way — the templates still assert their own identity, and nothing yet feeds them to the layer assembler.</p>
+  </section>
+
+  <section>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">What I would do next</h2>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 22px 26px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">1</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Stop the learner surface reporting false success</p><p style="font-size: 15px; line-height: 1.6; margin: 0;">Whatever else happens, a submission that fails must not return success. That is a small change and it is the difference between a feature that is incomplete and one that misleads the person using it.</p></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 22px 26px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">2</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Add a schema conformance check to the test suite</p><p style="font-size: 15px; line-height: 1.6; margin: 0;">Three write bugs of the same species in three days is a pattern, not bad luck. One test that reads the real object description and asserts every field the code writes actually exists would have caught all three, and would catch the next one for free.</p></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 22px 26px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">3</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Move the two approval controls onto the routes</p><p style="font-size: 15px; line-height: 1.6; margin: 0;">Admin check on template create and update, and the self-approval rule enforced where the record is saved. Small, and it is the ruling you already made.</p></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 22px 26px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">4</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Decide who counts as a learner, then enforce it</p><p style="font-size: 15px; line-height: 1.6; margin: 0;">Programme engagement is the obvious test, and it is the same question the learner read model has been blocked on. Answering it once unblocks both.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1080}}"></script>
+</body>
+</html>

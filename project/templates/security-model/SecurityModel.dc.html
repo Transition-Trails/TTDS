@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Security Model — insert sheet" description="Reusable one-page insert: profiles, roles, permission sets, permission set groups and custom settings — what each one controls, and the two questions that tell you which to reach for. Drops into any Trail Kit unchanged." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Security model" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.5in 0.62in 0.38in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.16in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Reference — keep this one</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.16in">
+<div style="max-width:4.6in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.2;color:#2A2E2C;margin:0 0 6px;letter-spacing:-.01em">Who can do what, and who can see what</h1>
+<p style="font-size:10.5pt;line-height:1.5;color:#3B3F3D;margin:0">Salesforce answers two separate questions with two separate systems. Almost every mistake comes from reaching into the wrong one.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://help.salesforce.com/s/articleView?id=sf.security_data_access.htm" label="Official reference" caption="The full model, including sharing rules." tone="teal" size="80" hint-size="2.1in,1.05in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in;margin-bottom:0.13in">
+<div style="background:#EDF5F8;border-radius:9px;padding:0.15in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="key-round" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What you can do</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Permissions.</b> Edit an account, export a report, run Setup. Granted by <b>profile</b> and <b>permission sets</b>. The tell is a greyed-out button, a field that will not change, or a save that is refused.</div>
+</div>
+<div style="background:#F0F5F1;border-radius:9px;padding:0.15in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="eye" size="12" color="#2F6B3F" hint-size="12px,12px"></x-import>What you can see</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Record access.</b> Which rows appear at all. Governed by org-wide defaults, the <b>role hierarchy</b> and sharing rules. The tell is a record absent from a list view, or a link that will not open.</div>
+</div>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.14in">
+<div style="display:grid;grid-template-columns:1.4in 0.72in 1fr 1.55in;gap:12px;padding:6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A">
+<div>Thing</div><div>Per user</div><div>What it controls</div><div>Reach for it when</div>
+</div>
+<div style="display:grid;grid-template-columns:1.4in 0.72in 1fr 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Profile</div><div style="font-size:9.5pt;color:#8A3D1C">Exactly one</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">The floor everyone in that job starts from — object and field access, login hours, default app.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Setting a baseline. Keep them few and generic.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.4in 0.72in 1fr 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Permission set</div><div style="font-size:9.5pt;color:#2F6B3F">Many</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Extra permissions on top. <b>Additive only</b> — a permission set can never take something away.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Granting anything to some people and not others.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.4in 0.72in 1fr 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Permission set group</div><div style="font-size:9.5pt;color:#2F6B3F">Many</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">A bundle of permission sets assigned as one job role, with the option to mute parts of it.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">You keep assigning the same five sets together.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.4in 0.72in 1fr 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Role</div><div style="font-size:9.5pt;color:#8A3D1C">One or none</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Record visibility up the hierarchy — a manager sees their team's records. <b>Grants no permissions.</b></div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Someone cannot see records they should.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.4in 0.72in 1fr 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Custom setting</div><div style="font-size:9.5pt;color:#8C857A">Depends</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Not security — stored configuration. The <b>hierarchy</b> type varies by profile or user; the <b>list</b> type is the same for everyone.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">A feature needs a per-user setting, not per-user access.</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.24in;margin-bottom:0.1in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:5px">Start low, add up</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Give the profile the least everyone in that job needs, then add permission sets. Salesforce keeps moving permissions out of profiles — build the habit now.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:5px">Never clone per person</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A profile per employee is the most common mess we unpick. Forty profiles differing by one checkbox cannot be audited.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:5px">Additive means additive</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">You cannot revoke with a permission set. If someone has too much, it came from their profile or another set — go and find it.</div></div>
+</div>
+
+<div style="margin-top:auto">
+<div style="background:#F7EAE3;border-radius:9px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Diagnosing it in one question</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>"Insufficient privileges" tells you nothing.</b> Salesforce shows it for both halves — a link to a record you cannot see and an action you are not allowed produce the same page. Go by how the person arrived, not by the message.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Could they reach the record and not act on it? Permissions — check the profile, then every permission set they hold. Could they never reach it at all? Record access — check the org-wide default, then the role hierarchy, then sharing rules.</div>
+</div>
+</div>
+<div style="padding-top:0.11in;border-top:1px solid #DED5C7;margin-top:0.11in;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Security model</span>
+</div>
+</div>
+
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

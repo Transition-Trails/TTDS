@@ -1,0 +1,27 @@
+<!-- @dsCard group="Forms" height=150 subtitle="Label, input, help & error" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>*{box-sizing:border-box}body{margin:0}#root{padding:20px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+(function(){
+  var h = React.createElement;
+  var C = window.TransitionTrailsDesignSystem_335df4.Input;
+  var libs = [];
+  function load(i){
+    if (i >= libs.length) { ReactDOM.createRoot(document.getElementById('root')).render(h('div',{style:{display:'flex',gap:28,flexWrap:'wrap'}},
+  h(C,{label:'Email address',type:'email',placeholder:'you@example.com',help:"We'll only use this to send trail updates."}),
+  h(C,{label:'Full name',defaultValue:'Jordan',error:'Please enter your full name.'}))); return; }
+    var s = document.createElement('script'); s.src = libs[i];
+    s.onload = s.onerror = function(){ load(i + 1); };
+    document.head.appendChild(s);
+  }
+  load(0);
+})();
+</script>
+</body>
+</html>

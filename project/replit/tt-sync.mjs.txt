@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+/* Transition Trails — pull the latest design tokens from GitHub.
+ *
+ *   npm run tt:sync
+ *
+ * Overwrites tt-tokens.css from the design system repo. Run it when the design
+ * system changes; nothing else in the app needs touching, because the file
+ * carries its own Tailwind v4 @theme block.
+ *
+ * Set TT_DS_REPO / TT_DS_BRANCH / TT_DS_PATH to point somewhere else.
+ */
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
+
+const REPO = process.env.TT_DS_REPO || 'Transition-Trails/TTDS';
+const BRANCH = process.env.TT_DS_BRANCH || 'main';
+const PATH = process.env.TT_DS_PATH || 'replit/tt-tokens.css';
+const URL = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${PATH}`;
+const DEST = 'tt-tokens.css';
+
+const res = await fetch(URL);
+if (!res.ok) {
+  console.error(`tt-sync: ${res.status} fetching ${URL}`);
+  console.error('If the repo is private, use a token:  GITHUB_TOKEN=… npm run tt:sync');
+  process.exit(1);
+}
+const next = await res.text();
+
+if (!/--tt-trail-green/.test(next)) {
+  console.error('tt-sync: fetched file does not look like the token file — refusing to overwrite.');
+  process.exit(1);
+}
+
+const before = existsSync(DEST) ? readFileSync(DEST, 'utf8') : '';
+if (before === next) {
+  console.log('tt-sync: already up to date.');
+  process.exit(0);
+}
+
+const count = (s) => new Set([...s.matchAll(/(--tt-[a-z0-9-]+)\s*:/g)].map((m) => m[1]));
+const prev = count(before), now = count(next);
+const added = [...now].filter((t) => !prev.has(t));
+const removed = [...prev].filter((t) => !now.has(t));
+
+writeFileSync(DEST, next);
+console.log(`tt-sync: updated ${DEST} — ${now.size} tokens.`);
+if (added.length) console.log(`  added:   ${added.join(', ')}`);
+if (removed.length) console.log(`  removed: ${removed.join(', ')}`);
+if (added.length || removed.length) {
+  console.log('\n  Token names changed — check the @theme block in tt-tokens.css maps them.');
+}

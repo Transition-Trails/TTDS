@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-trail-light); }
+  a { color: var(--tt-trail-green); }
+  a:hover { color: var(--tt-green-700); }
+  html { scroll-behavior: smooth; }
+</style>
+</helmet>
+
+<div style="min-height:100%;background:var(--tt-trail-light);font-family:'Open Sans',Roboto,sans-serif;color:var(--tt-slate);padding:0 0 96px">
+
+  <div style="background:var(--tt-deep-teal);color:var(--tt-white);padding:56px 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:18px">
+      <div style="font-family:Poppins,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)">Design system review</div>
+      <h1 style="font-family:Poppins,sans-serif;font-size:44px;line-height:1.1;font-weight:600;margin:0;color:var(--tt-white);max-width:920px;text-wrap:pretty">The site and the design system have never met</h1>
+      <p style="font-size:18px;line-height:1.6;margin:0;max-width:860px;color:rgba(255,255,255,.88)">Not a conformance problem so much as a wiring one. The site does not import a single design-system token — it hardcodes hex values in Tailwind brackets, <strong>1,580 of them in the page files alone</strong>. Most land on the right brand colours by hand, which is why nothing looks obviously wrong. It also means every near-miss is invisible until you go looking, and nothing the design system changes can ever reach the site.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px">
+        <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">0 tokens referenced</x-import>
+        <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">14 off-system colours</x-import>
+        <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">6 gaps in the system</x-import>
+        <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">Fraunces adopted</x-import>
+        <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">Gradients approved</x-import>
+        <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">v2.1 tokens ready to merge</x-import>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--tt-white);border-bottom:1px solid var(--tt-warm-gray);padding:16px 0;position:sticky;top:0;z-index:10">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;flex-wrap:wrap;gap:22px;font-family:Poppins,sans-serif;font-size:13.5px;font-weight:600">
+      <a href="#wiring" style="text-decoration:none">01 The wiring</a>
+      <a href="#colour" style="text-decoration:none">02 Colour</a>
+      <a href="#type" style="text-decoration:none">03 Type</a>
+      <a href="#shape" style="text-decoration:none">04 Shape and depth</a>
+      <a href="#amber" style="text-decoration:none">05 The amber rule</a>
+      <a href="#gaps" style="text-decoration:none">06 Add to the system</a>
+      <a href="#order" style="text-decoration:none">07 What to do</a>
+    </div>
+  </div>
+
+  <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:56px">
+
+    <section id="wiring" style="margin-top:44px;display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">01 · The wiring</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Two token sets that do not know about each other</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:880px;text-wrap:pretty">The site defines its own brand variables in its stylesheet — and gets the four brand colours and four neutrals exactly right. Then almost nothing uses them. Components write the hex value inline instead, so the variables sit there being correct and unread.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+        <sc-for list="{{ wiring }}" as="w" hint-placeholder-count="3">
+          <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:10px">
+            <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">{{ w.name }}</div>
+            <div style="font-size:15px;line-height:1.65">{{ w.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Alert" tone="info" title="Why this is the only finding that really matters" dc-props="{{ wideAlert }}" hint-size="100%,120px"><div>Every other item on this page is a symptom. Three slightly different greens exist because nobody could reference one green. The amber CTA rule is broken because there is no component enforcing it. Fraunces spread because there was no token saying otherwise. <strong>Fix the wiring and the rest become one-line changes; leave it and this review is due again in six months.</strong></div></x-import>
+    </section>
+
+    <section id="colour" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">02 · Colour</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">The brand colours are right. The shades around them are improvised.</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:880px">Trail Green, Deep Teal, Sky Blue, Sun Amber and all four neutrals match the system exactly wherever they appear. The problem is everything between them — tints and shades invented at the point of use, several of them a hair away from a token that already exists.</p>
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:52px 1.1fr 1.1fr 1.5fr;gap:16px;padding:15px 26px;background:var(--tt-trail-light);border-bottom:1px solid var(--tt-warm-gray);font-family:Poppins,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tt-slate)">
+          <span></span><span>On the site</span><span>In the system</span><span>Verdict</span>
+        </div>
+        <sc-for list="{{ colours }}" as="c" hint-placeholder-count="10">
+          <div style="{{ c.rowStyle }}">
+            <span style="{{ c.swatchStyle }}"></span>
+            <span style="font-family:Poppins,sans-serif;font-size:13.5px;font-weight:600;color:var(--tt-charcoal)">{{ c.site }}</span>
+            <span style="font-size:13.5px;line-height:1.5">{{ c.ds }}</span>
+            <span style="font-size:13.5px;line-height:1.55;color:{{ c.tint }}">{{ c.verdict }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="background:var(--tt-green-100);border-radius:22px;padding:24px 28px;font-size:15px;line-height:1.7"><span style="font-family:Poppins,sans-serif;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tt-green-700);display:block;margin-bottom:6px">The three-greens problem</span>Three separate pale greens are in use — <strong>#E6F3EA</strong> for callout panels, <strong>#EBF3EE</strong> for icon chips, and the system's own <strong>#E6F0EA</strong>. They are within two or three points of each other, which is close enough that nobody will ever spot it and far enough that they are genuinely different values sitting side by side on the About page. Pick one, and it should be the token.</div>
+    </section>
+
+    <section id="type" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">03 · Type</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">A third typeface nobody wrote down, and an accent face nobody used</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px">
+        <sc-for list="{{ typeItems }}" as="t" hint-placeholder-count="4">
+          <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">{{ t.name }}</div>
+              <span style="{{ t.tagStyle }}">{{ t.tag }}</span>
+            </div>
+            <div style="font-size:15px;line-height:1.65">{{ t.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Alert" tone="success" title="Decided — Fraunces is in, and the brand book gets updated" dc-props="{{ wideAlert }}" hint-size="100%,130px"><div>Kept, because it makes the H1 and H2 headings genuinely stand out in a way Poppins does not at display sizes. The system becomes three faces plus the accent, with the roles written down: <strong>Fraunces for H1 and H2 only</strong>, Poppins for H3, H4, buttons and labels, Open Sans for body and UI, Caveat once per page at most.<br><br>The part that matters is the boundary. Fraunces earns its place at display sizes and loses it below them — without the H1/H2 limit written into the system it will creep down into H3 and subheads, and the contrast that makes it work now disappears.</div></x-import>
+    </section>
+
+    <section id="shape" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">04 · Shape and depth</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Corners are tighter and shadows are greyer than the system says</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:880px">Both of these read as slightly more corporate than intended. Neither is wrong on its own; together they cost the site some of the softness the brand is going for.</p>
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:1fr 1.2fr 1.2fr 1.4fr;gap:16px;padding:15px 26px;background:var(--tt-trail-light);border-bottom:1px solid var(--tt-warm-gray);font-family:Poppins,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tt-slate)">
+          <span>Property</span><span>On the site</span><span>In the system</span><span>Effect</span>
+        </div>
+        <sc-for list="{{ shape }}" as="s" hint-placeholder-count="5">
+          <div style="{{ s.rowStyle }}">
+            <span style="font-family:Poppins,sans-serif;font-size:14px;font-weight:600;color:var(--tt-charcoal)">{{ s.prop }}</span>
+            <span style="font-size:13.5px;line-height:1.55">{{ s.site }}</span>
+            <span style="font-size:13.5px;line-height:1.55;color:var(--tt-green-700)">{{ s.ds }}</span>
+            <span style="font-size:13.5px;line-height:1.55">{{ s.effect }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="background:var(--tt-sky-100);border-radius:22px;padding:24px 28px;font-size:15px;line-height:1.7"><span style="font-family:Poppins,sans-serif;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tt-deep-teal);display:block;margin-bottom:6px">One place the site is better than the system</span>The site's focus style is a solid 2px green outline with a 2px offset. The system specifies a soft 3px green glow at 15% opacity, which is prettier and much harder to see. For keyboard users the site's version is the correct call — <strong>change the token, not the site.</strong></div>
+    </section>
+
+    <section id="amber" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">05 · The amber rule</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">One amber call to action per screen, and we were running four</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:880px">The brand book is unusually firm here: never more than one Sun Amber CTA per screen, never decorative. It was the strongest rule in the system and the most consistently broken one — now settled, and sent to the site.</p>
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:28px 32px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">On a typical program page you will find amber in four roles at once</div>
+        <sc-for list="{{ amber }}" as="a" hint-placeholder-count="4">
+          <div style="display:flex;gap:11px;font-size:15px;line-height:1.65"><span style="color:var(--tt-amber-700);font-weight:700">·</span><span>{{ a.text }}</span></div>
+        </sc-for>
+        <div style="font-size:15px;line-height:1.7;border-top:1px solid var(--tt-warm-gray);padding-top:16px"><strong>Decided: the nav button gives up amber, the in-page CTA keeps it.</strong> The nav button is identical on every page, so it cannot be the next step anywhere — it is a fallback. The real next step differs per page, and that is what amber should track. On the teal bar it becomes solid white with teal text, which is higher contrast than the amber was; solid green if the bar ever goes light on scroll.</div>
+        <div style="background:var(--tt-green-100);border-radius:14px;padding:18px 22px;font-size:14.5px;line-height:1.7"><span style="font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tt-green-700);display:block;margin-bottom:6px">The rule, in three parts</span><strong>One amber button per screen</strong> — the next step on that page. <strong>Amber text on dark surfaces only</strong>, using amber-300, which keeps the eyebrows on the charcoal heroes where they do real hierarchy work and keeps amber text off light backgrounds where it fails contrast anyway. <strong>Amber tint fills allowed but never beside the amber button</strong> — "MOST POPULAR" on a program card is fine; the same badge next to the page's CTA is not.<br><br>The one place needing real rework was the full-bleed amber band at the foot of Guided Trail — an amber section containing an amber button. The band goes deep green and the button carries the amber.</div>
+      </div>
+      <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Alert" tone="success" title="Decided — gradients are in, with three fixed recipes" dc-props="{{ wideAlert }}" hint-size="100%,120px"><div>Approved, and the ramps are the reason it is safe: because every stop comes from a defined ramp, a gradient is on-palette by construction rather than by taste. The brand book's blanket "no gradients" line goes.<br><br>What replaces it is three named recipes — green, teal, and deep — all at 135 degrees, and nothing else. The drift so far came from hand-mixing stops page by page, not from gradients as an idea. One rule worth keeping: never behind body copy, only behind display type and generous whitespace.</div></x-import>
+    </section>
+
+    <section id="gaps" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">06 · Add to the system</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Six things the site needs that the system does not have</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:880px">These are not site errors. They are patterns the site invented because it had to, and each one has been reinvented several times slightly differently. Every one belongs in the system.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">
+        <sc-for list="{{ gaps }}" as="g" hint-placeholder-count="6">
+          <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">{{ g.name }}</div>
+              <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="{{ g.tone }}" hint-size="auto,24px">{{ g.kind }}</x-import>
+            </div>
+            <div style="font-size:14.5px;line-height:1.65">{{ g.text }}</div>
+            <div style="font-size:14px;line-height:1.6;color:var(--tt-green-700);border-top:1px solid var(--tt-warm-gray);padding-top:11px;margin-top:auto"><span style="font-family:Poppins,sans-serif;font-weight:600">Proposed: </span>{{ g.proposal }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="order" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">07 · What to do</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">In this order, and none of it this week</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:880px">Nothing here blocks launch. The site looks consistent because the hardcoded values are mostly right — the risk is drift over the next year, not appearance next Tuesday.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+          <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:14px;padding:20px 26px;display:grid;grid-template-columns:44px 1fr 150px;gap:20px;align-items:center">
+            <span style="font-family:Poppins,sans-serif;font-size:22px;font-weight:600;color:var(--tt-trail-green)">{{ s.n }}</span>
+            <span style="font-size:15.5px;line-height:1.6">{{ s.text }}</span>
+            <span style="font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;color:var(--tt-slate);text-align:right">{{ s.when }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="background:var(--tt-deep-teal);color:var(--tt-white);border-radius:22px;padding:32px 36px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:Caveat,cursive;font-size:27px;color:var(--tt-amber-300)">the next step on the trail</div>
+        <div style="font-size:16.5px;line-height:1.65;color:rgba(255,255,255,.92);max-width:880px">The v2.1 token additions are written and ready to merge — Fraunces, the teal ramp, danger, muted, the dark surface set, the three gradient recipes, and the eight near-duplicates to collapse. What still decides whether this holds is step three: make the site import the tokens rather than keep its own copies. After that, changing the brand's green is one edit instead of a search across 1,580 hex values — and this review never needs writing again.</div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240}}">
+const WIRING = [
+  ['The site has its own tokens','The stylesheet defines trail-green, deep-teal, sky-blue, sun-amber and the four neutrals — and every one matches the design system exactly. Somebody transcribed them carefully.'],
+  ['Almost nothing reads them','Components write the hex inline instead. 1,580 hardcoded hex values across the page files, against a handful of variable references. The variables are decoration.'],
+  ['So the system cannot reach the site','Changing a token in the design system changes nothing anywhere. The two are copies that happened to agree on the day they were made, and have been drifting since.']
+];
+
+const COLOURS = [
+  ['#2F6B3F','Trail Green','#2F6B3F — exact match','Correct everywhere it appears','#2F6B3F','ok'],
+  ['#2F6F7E','Deep Teal','#2F6F7E — exact match','Correct','#2F6F7E','ok'],
+  ['#F5A623','Sun Amber','#F5A623 — exact match','Correct value, overused. See section 05','#F5A623','warn'],
+  ['#1E4A2A','Dark green, used constantly','#245531 is the green-700 token','Off-system. The site\u2019s is darker and richer — probably the better colour. Adopt it as green-700 rather than changing the site','#1E4A2A','add'],
+  ['#E6F3EA','Pale green, callout panels','#E6F0EA is green-100','Three points apart. Near-duplicate','#E6F3EA','warn'],
+  ['#EBF3EE','Pale green, icon chips','#E6F0EA is green-100','A second near-duplicate of the same token, on the same pages','#EBF3EE','warn'],
+  ['#D4890A','Amber hover state','#CC8400 is amber-700','Off-system by a shade. Pick one and token it','#D4890A','warn'],
+  ['#FEF3DB / #FEF3DC','Amber tint, badges','#FFF3E0 is amber-100','Two variants of each other, neither the token. The pair differ by one hex digit','#FEF3DB','warn'],
+  ['#1E4F5C','Dark teal, gradient stops','No equivalent','Genuinely missing. The gradients need a teal-700','#1E4F5C','add'],
+  ['#6B7280 / #F3F4F6','Tailwind greys, body copy','#4A4F4D is slate','Default Tailwind greys leaking in. Cooler than the warm neutrals and it shows next to them','#6B7280','warn'],
+  ['#8C8882','Muted caption text','No equivalent','A warm mid-grey the system lacks. Worth adding as a muted token','#8C8882','add'],
+  ['#DC2626 / #FEE2E2','Error red, board page','Nothing at all','The system has no danger colour. See section 06','#DC2626','add'],
+  ['#6BBF85','Light green accent, dark sections','No equivalent','Needed because green-500 fails against charcoal. See section 06','#6BBF85','add']
+];
+
+const TYPE_ITEMS = [
+  ['Fraunces','adopted','Now the display face, for H1 and H2 only. Already loaded and in use sitewide, so nothing changes on the site — the system catches up to it. The H1/H2 boundary is the part that needs writing down.','ok'],
+  ['Poppins','role narrowed','No longer H1 and H2. Holds H3, H4, buttons, labels and eyebrows — which is what it was already doing in practice.','ok'],
+  ['Open Sans','correct','Body and UI throughout, exactly as specified. No issues.','ok'],
+  ['Caveat','never used','The accent face — one short pull quote or trail name per page, maximum. It appears nowhere on the site. A warm, handwritten note is the one bit of personality the palette cannot supply on its own, and it is sitting unused.','add']
+];
+
+const SHAPE = [
+  ['Card radius','12–16px (rounded-xl, rounded-2xl)','22px (radius-lg)','Cards read tighter and more corporate than the soft, approachable intent'],
+  ['Button radius','8px (rounded-lg)','14px (radius-md)','Same again — buttons are noticeably squarer than specified'],
+  ['Radius 14 and 22','Never used','The two most-used values in the system','The system\u2019s two signature radii appear nowhere on the site'],
+  ['Card shadow','rgba(0,0,0,.06) and Tailwind defaults','0 12px 28px rgba(42,46,44,.10)','Neutral black instead of warm charcoal. Reads slightly colder and flatter'],
+  ['Amber CTA glow','Not applied','0 2px 8px rgba(245,166,35,.35)','The one lift that makes the primary CTA feel pressable is missing'],
+  ['Focus ring','2px solid green, 2px offset','0 0 0 3px rgba(47,107,63,.15)','The site is more accessible here. Change the token instead']
+];
+
+const AMBER = [
+  ['The persistent "Join the Waitlist" button in the navigation, present on every page.'],
+  ['The primary hero CTA, amber on most program pages.'],
+  ['Section call-to-action bands — the full-bleed amber block at the foot of Guided Trail, and amber buttons on dark sections elsewhere.'],
+  ['Decorative use: eyebrow text, badge backgrounds, icon accents and "MOST POPULAR" tags — which the brand book rules out explicitly.']
+];
+
+const GAPS = [
+  ['Danger and error','colour','tone','The board page uses #DC2626 on #FEE2E2 for a warning card, and forms need error states. The palette has no danger colour at all, so one got invented — and the next person will invent a different one.',
+   'A red that sits with the warm palette rather than a stock Tailwind red, plus a tint. Same treatment for success, which currently borrows Trail Green.'],
+  ['The dark section','pattern','teal','Full-bleed charcoal sections are one of the site\u2019s most recognisable moves — used on About, Board, Coaches, Consulting, Guided Trail and the blog. The system does not describe it, so the rules get re-derived each time: which green reads on charcoal, how much white to use, what an amber CTA does there.',
+   'A named surface with its own on-colour set. This is also where #6BBF85 came from — green-500 fails contrast on charcoal, so a lighter green is genuinely needed and should be a token.'],
+  ['The gradient hero','decided','green','Approved. The ramps make gradients on-palette by construction, so the risk was never the gradient — it was hand-mixed stops drifting page by page.',
+   'Three fixed recipes at 135 degrees: green, teal and deep. Nothing else, and never behind body copy. Written into the token file.'],
+  ['The stat block','component','green','Three or four figures with a value, a label and an accent colour, appearing on the home hero, consulting, coaches, coaching, recruiters and Trail of Mastery. Rebuilt from scratch every time with different sizes and spacing.',
+   'A Stat component. It is the single most repeated pattern on the site and the most inconsistently built.'],
+  ['The tier or pricing card','component','green','Program cards, Explorer\u2019s tiers, Digital Compass tiers, coaching packages. All the same shape — badge, name, price, note, feature list, CTA — and all separately implemented.',
+   'One card with a featured variant. Would have prevented the Explorer\u2019s Trail card losing a tier and the Digital Compass card mixing monthly with annual.'],
+  ['Muted and caption text','colour','tone','#8C8882 for captions and attributions, #6B7280 borrowed from Tailwind for secondary body. Neither is in the system, and the Tailwind grey is cool where everything around it is warm.',
+   'A warm muted neutral between slate and warm-gray, so nobody reaches for a Tailwind default again.']
+];
+
+const STEPS = [
+  ['1','Merge the v2.1 token additions into the design system — Fraunces as the display face, the teal ramp, danger, muted, the dark surface set, and the three gradient recipes. Written and ready in the changeset file.','Ready now'],
+  ['2','Update the brand book to match: three faces plus the accent, Fraunces limited to H1 and H2, and the "no gradients" line replaced by the three recipes.','With step 1'],
+  ['3','Publish the tokens as a stylesheet the site imports, and redefine the site\u2019s own variables as aliases pointing at them. Nothing visual changes; the two systems become one.','The one that matters'],
+  ['4','Collapse the near-duplicates: three greens to one, two amber tints to one, Tailwind greys out. Eight find-and-replaces, listed in the changeset.','Mechanical once step 3 is done'],
+  ['5','Build Stat and TierCard, then move radius and shadow onto the tokens and soften the corners.','Last, and optional']
+];
+
+const SEV_TINT = { ok:'var(--tt-green-700)', warn:'var(--tt-amber-700)', add:'var(--tt-deep-teal)' };
+
+class Component extends DCLogic {
+  css(o) { return Object.entries(o).map(([k,v]) => k.replace(/[A-Z]/g,m=>'-'+m.toLowerCase())+':'+v).join(';'); }
+
+  renderVals() {
+    return {
+      lightChip: { style:{ background:'rgba(255,255,255,.14)', color:'var(--tt-white)', whiteSpace:'nowrap' } },
+      wideAlert: { style:{ maxWidth:'none', fontSize:'15.5px', lineHeight:1.65, padding:'22px 26px', borderRadius:'22px', gap:'14px' } },
+
+      wiring: WIRING.map(([name,text]) => ({ name, text })),
+
+      colours: COLOURS.map(([hex,site,ds,verdict,swatch,sev], i) => ({
+        site, ds, verdict, tint: SEV_TINT[sev],
+        swatchStyle: this.css({
+          display:'block', width:'34px', height:'34px', borderRadius:'8px',
+          background: swatch, border:'1px solid var(--tt-warm-gray)'
+        }),
+        rowStyle: this.css({
+          display:'grid', gridTemplateColumns:'52px 1.1fr 1.1fr 1.5fr', gap:'16px',
+          padding:'13px 26px', alignItems:'center',
+          borderBottom: i < COLOURS.length-1 ? '1px solid var(--tt-warm-gray)' : 'none'
+        })
+      })),
+
+      typeItems: TYPE_ITEMS.map(([name,tag,text,sev]) => ({
+        name, tag, text,
+        tagStyle: this.css({
+          fontFamily:'Poppins, sans-serif', fontSize:'10.5px', fontWeight:700,
+          letterSpacing:'.08em', textTransform:'uppercase', borderRadius:'999px', padding:'4px 10px',
+          color: sev === 'ok' ? 'var(--tt-green-700)' : sev === 'warn' ? '#B4720A' : 'var(--tt-deep-teal)',
+          background: sev === 'ok' ? 'var(--tt-green-100)' : sev === 'warn' ? '#FDF3E2' : 'var(--tt-sky-100)'
+        })
+      })),
+
+      shape: SHAPE.map(([prop,site,ds,effect], i) => ({
+        prop, site, ds, effect,
+        rowStyle: this.css({
+          display:'grid', gridTemplateColumns:'1fr 1.2fr 1.2fr 1.4fr', gap:'16px',
+          padding:'14px 26px', alignItems:'start',
+          borderBottom: i < SHAPE.length-1 ? '1px solid var(--tt-warm-gray)' : 'none'
+        })
+      })),
+
+      amber: AMBER.map(([text]) => ({ text })),
+      gaps: GAPS.map(([name,kind,tone,text,proposal]) => ({ name, kind, tone, text, proposal })),
+      steps: STEPS.map(([n,text,when]) => ({ n, text, when }))
+    };
+  }
+}
+</script>
+</body>
+</html>

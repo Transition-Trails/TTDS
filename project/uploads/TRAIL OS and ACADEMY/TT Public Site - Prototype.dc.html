@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-trail-light); }
+  a { color: var(--tt-trail-green); }
+  a:hover { color: var(--tt-green-700); }
+</style>
+</helmet>
+
+<div style="min-height:100%;background:var(--tt-trail-light);font-family:'Open Sans',Roboto,sans-serif;color:var(--tt-slate)">
+
+  <div style="background:var(--tt-charcoal);padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)">Prototype · corrected copy</span>
+      <span style="font-size:13px;color:rgba(255,255,255,.72)">Every change traces to a finding in the site review.</span>
+    </div>
+    <div onClick="{{ toggleMarks }}" style="{{ markStyle }}">{{ markLabel }}</div>
+  </div>
+
+  <div style="background:var(--tt-deep-teal);padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;min-height:72px;position:sticky;top:0;z-index:20">
+    <div style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-white);letter-spacing:-.01em">Transition Trails</div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px">
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="6">
+        <div onClick="{{ n.pick }}" style="{{ n.style }}">{{ n.label }}</div>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div style="font-family:Poppins,sans-serif;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.85);padding:10px 14px;cursor:pointer">Donate</div>
+      <div style="font-family:Poppins,sans-serif;font-size:13.5px;font-weight:600;background:var(--tt-sun-amber);color:var(--tt-charcoal);padding:11px 20px;border-radius:14px;cursor:pointer;box-shadow:0 2px 8px rgba(245,166,35,.35)">Join the Waitlist</div>
+    </div>
+  </div>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="background:linear-gradient(135deg,#1E4F5C 0%,#2F6F7E 55%,#1E4A2A 100%);padding:88px 32px">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:22px">
+        <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--tt-amber-300)">Real experience. Real impact.</div>
+        <h1 style="font-family:Poppins,sans-serif;font-size:58px;line-height:1.08;font-weight:600;margin:0;color:var(--tt-white);max-width:820px;letter-spacing:-.02em;text-wrap:pretty">Every career has a trail.</h1>
+        <p style="font-size:19px;line-height:1.6;margin:0;max-width:760px;color:rgba(255,255,255,.85)">Transition Trails puts certified Salesforce professionals on supervised nonprofit work — and gives nonprofits the implementation capacity their budgets never reach.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:10px">
+          <div style="font-family:Poppins,sans-serif;font-size:15px;font-weight:600;background:var(--tt-sun-amber);color:var(--tt-charcoal);padding:15px 28px;border-radius:14px;cursor:pointer;box-shadow:0 2px 8px rgba(245,166,35,.35)">Find your Trail →</div>
+          <div style="font-family:Poppins,sans-serif;font-size:15px;font-weight:600;border:1.5px solid rgba(255,255,255,.6);color:var(--tt-white);padding:15px 28px;border-radius:14px;cursor:pointer">Book a free assessment</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:56px;margin-top:34px;padding-top:30px;border-top:1px solid rgba(255,255,255,.18)">
+          <sc-for list="{{ heroStats }}" as="s" hint-placeholder-count="3">
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <span style="font-family:Poppins,sans-serif;font-size:30px;font-weight:600;color:var(--tt-white);line-height:1">{{ s.value }}</span>
+              <span style="font-size:13.5px;color:rgba(255,255,255,.7)">{{ s.label }}</span>
+              <span style="{{ s.mark }}">{{ s.note }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--tt-white);border-bottom:1px solid var(--tt-warm-gray);padding:20px 32px">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-wrap:wrap;gap:38px">
+        <sc-for list="{{ trust }}" as="t" hint-placeholder-count="5">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <span style="font-family:Poppins,sans-serif;font-size:13.5px;font-weight:600;color:var(--tt-charcoal)">{{ t.label }}</span>
+            <span style="font-size:12.5px;color:var(--tt-slate)">{{ t.detail }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="padding:80px 32px;background:var(--tt-trail-light)">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:34px">
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:780px">
+          <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">The problem we solve</div>
+          <h2 style="font-family:Poppins,sans-serif;font-size:38px;line-height:1.15;font-weight:600;margin:0;color:var(--tt-charcoal);text-wrap:pretty">The experience gap is real. We close it.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+          <sc-for list="{{ gaps }}" as="g" hint-placeholder-count="3">
+            <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:12px">
+              <div style="width:44px;height:6px;border-radius:999px;background:{{ g.tint }}"></div>
+              <div style="font-family:Poppins,sans-serif;font-size:21px;font-weight:600;color:var(--tt-charcoal)">{{ g.title }}</div>
+              <div style="font-size:15px;line-height:1.7">{{ g.body }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:80px 32px;background:var(--tt-white)">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:34px">
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:780px">
+          <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">Where are you today?</div>
+          <h2 style="font-family:Poppins,sans-serif;font-size:38px;line-height:1.15;font-weight:600;margin:0;color:var(--tt-charcoal)">Find your starting point.</h2>
+          <p style="font-size:17px;line-height:1.65;margin:0">Transition Trails is not one linear curriculum. Where you begin depends on where you are right now — and nobody starts over when they move.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+          <sc-for list="{{ cards }}" as="c" hint-placeholder-count="5">
+            <div onClick="{{ c.pick }}" style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,box-shadow .15s" style-hover="transform:translateY(-3px);box-shadow:0 12px 28px rgba(42,46,44,.10)">
+              <div style="height:7px;background:{{ c.accent }}"></div>
+              <div style="padding:26px;display:flex;flex-direction:column;gap:11px;flex:1">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                  <span style="font-family:Poppins,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-slate)">{{ c.tier }}</span>
+                  <sc-if value="{{ c.featured }}" hint-placeholder-val="{{ true }}">
+                    <span style="font-family:Poppins,sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;background:#FEF3DB;color:#7A4F00;padding:3px 9px;border-radius:999px">MOST POPULAR</span>
+                  </sc-if>
+                </div>
+                <div style="font-family:Poppins,sans-serif;font-size:20px;font-weight:600;color:var(--tt-charcoal)">{{ c.name }}</div>
+                <div style="font-size:14px;line-height:1.6;flex:1">{{ c.whoFor }}</div>
+                <div style="font-family:Poppins,sans-serif;font-size:24px;font-weight:600;color:var(--tt-charcoal);margin-top:6px">{{ c.price }}</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--tt-slate)">{{ c.priceNote }}</div>
+                <div style="{{ c.mark }}">{{ c.note }}</div>
+                <div style="font-family:Poppins,sans-serif;font-size:13.5px;font-weight:600;color:var(--tt-trail-green);padding-top:10px">Learn more →</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isProgram }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="{{ p.heroStyle }}">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:20px">
+        <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--tt-amber-300)">{{ p.eyebrow }}</div>
+        <h1 style="font-family:Poppins,sans-serif;font-size:52px;line-height:1.1;font-weight:600;margin:0;color:var(--tt-white);max-width:840px;letter-spacing:-.02em;text-wrap:pretty">{{ p.headline }}</h1>
+        <p style="font-size:18.5px;line-height:1.65;margin:0;max-width:780px;color:rgba(255,255,255,.85)">{{ p.sub }}</p>
+        <div style="{{ p.heroMark }}">{{ p.heroNote }}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px">
+          <div style="font-family:Poppins,sans-serif;font-size:15px;font-weight:600;background:var(--tt-sun-amber);color:var(--tt-charcoal);padding:15px 28px;border-radius:14px;cursor:pointer;box-shadow:0 2px 8px rgba(245,166,35,.35)">{{ p.cta }}</div>
+          <div style="font-family:Poppins,sans-serif;font-size:15px;font-weight:600;border:1.5px solid rgba(255,255,255,.6);color:var(--tt-white);padding:15px 28px;border-radius:14px;cursor:pointer">Talk to us first</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:26px">
+          <sc-for list="{{ p.facts }}" as="f" hint-placeholder-count="4">
+            <div style="background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:16px 20px;min-width:190px;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-white)">{{ f.v }}</span>
+              <span style="font-size:12.5px;color:rgba(255,255,255,.62)">{{ f.k }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:76px 32px;background:var(--tt-white)">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:34px">
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:800px">
+          <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">{{ p.sectionEyebrow }}</div>
+          <h2 style="font-family:Poppins,sans-serif;font-size:36px;line-height:1.15;font-weight:600;margin:0;color:var(--tt-charcoal);text-wrap:pretty">{{ p.sectionTitle }}</h2>
+          <p style="font-size:17px;line-height:1.7;margin:0">{{ p.sectionBody }}</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px">
+          <sc-for list="{{ p.blocks }}" as="b" hint-placeholder-count="4">
+            <div style="background:var(--tt-trail-light);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:11px">
+              <div style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-charcoal)">{{ b.title }}</div>
+              <div style="font-size:15px;line-height:1.7">{{ b.body }}</div>
+              <div style="{{ b.mark }}">{{ b.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:76px 32px;background:var(--tt-trail-light)">
+      <div style="max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:28px">
+        <h2 style="font-family:Poppins,sans-serif;font-size:32px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">{{ p.listTitle }}</h2>
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:34px 38px;display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px">
+          <sc-for list="{{ p.list }}" as="l" hint-placeholder-count="6">
+            <div style="display:flex;gap:12px;font-size:15.5px;line-height:1.65"><span style="color:var(--tt-trail-green);font-weight:700">✓</span><span>{{ l.text }}</span></div>
+          </sc-for>
+        </div>
+        <div style="background:var(--tt-deep-teal);color:var(--tt-white);border-radius:22px;padding:34px 38px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:Caveat,cursive;font-size:26px;color:var(--tt-amber-300)">{{ p.closerKicker }}</div>
+          <div style="font-size:17px;line-height:1.65;color:rgba(255,255,255,.92);max-width:840px">{{ p.closer }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="background:var(--tt-charcoal);padding:56px 32px;color:rgba(255,255,255,.7)">
+    <div style="max-width:1140px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:10px;max-width:340px">
+        <div style="font-family:Poppins,sans-serif;font-size:18px;font-weight:600;color:var(--tt-white)">Transition Trails</div>
+        <div style="font-size:14px;line-height:1.65">Empowering nonprofits and building digital careers — together.</div>
+        <div style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);margin-top:6px">1228 Hollywood Ave, Dallas, TX 75208<br>hello@transitiontrails.org<br>501(c)(3) · EIN 88-2746412</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)">Programs</div>
+        <sc-for list="{{ footerPrograms }}" as="f" hint-placeholder-count="5">
+          <div style="font-size:14px">{{ f.name }}</div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)">Get involved</div>
+        <div style="font-size:14px">Volunteer</div>
+        <div style="font-size:14px">Coach with us</div>
+        <div style="font-size:14px">Partner with us</div>
+        <div style="font-size:14px">Donate</div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280},&quot;startPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;explorers&quot;,&quot;foundations&quot;,&quot;guided&quot;,&quot;mastery&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;'home' | 'explorers' | 'foundations' | 'guided' | 'mastery'&quot;,&quot;section&quot;:&quot;Prototype&quot;},&quot;showCorrections&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototype&quot;}}">
+const HERO_STATS = [
+  ['3','Nonprofit clients, none lost','HOME-01 · "served" understates it — CLYLP, Hartford Promise and Global One are all still active'],
+  ['2022','Delivering client work since','HOME-01 · was "2025 · Guided Trail Cohort 0" — Cohort 0 is Foundations, and it is running now'],
+  ['501(c)(3)','Tax-exempt nonprofit','']
+];
+
+const TRUST = [
+  ['501(c)(3) Nonprofit','EIN 88-2746412'],
+  ['Dallas, TX','501(c)(3) since May 2022'],
+  ['Salesforce Ecosystem','Certified practitioners'],
+  ['Dual Impact Model','Learners + nonprofits'],
+  ['Supervised Delivery','Not simulations']
+];
+
+const GAPS = [
+  ['The workforce gap','Thousands of career changers earn Salesforce certifications every year and hit a wall: entry-level roles want one to two years of experience. Without a first job there is no experience, and without experience there is no first job. The trail stops abruptly.','var(--tt-trail-green)'],
+  ['The capacity gap','Nonprofits are given powerful software licenses for free, but not the budget to implement them. Unconfigured, the platform becomes a burden rather than an accelerator. Their trail is overgrown.','var(--tt-deep-teal)'],
+  ['The bridge','We connect the two. Supervised project environments give learners verifiable experience while nonprofits receive implementations they could not otherwise fund.','var(--tt-sun-amber)']
+];
+
+const CARDS = [
+  ['explorers','AWARENESS TIER',"Explorer's Trail",'Anyone at any stage — just starting out, or years in and looking for a community.','$27/mo','Community Pass · $97/mo or $1,164/yr Full · $1,464/yr Full + Coaching · Opens October 1','#7FAFC6',false,'ET-01 · the $1,464 coaching tier was missing from this card'],
+  ['foundations','ENTRY TIER','Foundations Trail','You hold the Platform Foundations certification and are working toward Salesforce Certified Administrator.','$997','or 3 payments of $367 · Cohort 0 testing now — public dates announced after October 1','#2F6B3F',false,'CERT-01 + FT-01 · cert name corrected; the "opens after October 1" promise removed until the call is made'],
+  ['guided','BRIDGE TIER','Guided Trail','Certified and ready to turn it into a career.','$1,497','Real nonprofit backlog · 12 weeks · Portfolio — or 3 payments of $549 · Cohort 1 begins October 1, once the waitlist reaches 20 · Trail Forward Scholarship available','#1E4A2A',true,'GT-01 + GT-04 · "Real nonprofit client" removed — the client is Transition Trails; launch date and waitlist condition added'],
+  ['mastery','ADVANCEMENT TIER','Trail of Mastery','Employed Salesforce professionals ready to advance.','Coming 2027','Apprenticeship · 4 role tracks · Cohort 0 in 2027 · Interest list open','#2F6F7E',false,'TOM-01 + TOM-02 · five tracks down to four; Q2/H1 conflict resolved to a single year'],
+  ['compass','NONPROFIT MEMBERSHIP','Digital Compass','Nonprofits at any stage of their Salesforce journey.','$149/mo','$3,490/yr Mid · $7,490/yr Full Partner — annual service contracts','#2F6F7E',false,'GAP-01 · the supply side of the model, and absent from the Master Guide entirely']
+];
+
+const PAGES = {
+  guided: {
+    accent: 'linear-gradient(135deg,#1E4A2A 0%,#2F6B3F 60%,#1E4F5C 100%)',
+    eyebrow: 'Bridge tier · cohort-based · supervised client work',
+    headline: 'You passed the cert. Now inherit somebody else\u2019s org.',
+    sub: 'Twelve weeks of real nonprofit work in a squad of three to five, with an Associate Coach who holds every client relationship. You work in sandboxes, not production. You get corrected in private, not in front of a client.',
+    heroNote: 'GT-01 + GT-03 · was "pairs you with a real nonprofit client" and a rebuild of the Foundations capstone',
+    cta: 'Join the Cohort 1 waitlist',
+    facts: [['Cohort 1 starts','October 1'],['Cohort 1','Two squads · 2, 4 or 6 each'],['Length','12 weeks · 3 sprints'],['Prerequisite','Certified Administrator'],['You work in','Sandboxes, never production']],
+    sectionEyebrow: 'What the twelve weeks are',
+    sectionTitle: 'An org you did not build, already broken in ways nobody wrote down.',
+    sectionBody: 'Most first jobs are not a blank org and a clear brief. They are an inherited system with five years of undocumented decisions in it. Guided Trail starts you there on purpose.',
+    blocks: [
+      ['The inherited org','You receive a seeded org with deliberate configuration debt and no documentation. Your first deliverable is a findings register: what you inherited, what you flagged, and what you deliberately chose to leave alone — with the reasoning for each.','GT-03 · replaces "a structured capstone project aligned to the exam domains"'],
+      ['Real client work, at one remove','Live requirements from nonprofit member organizations, worked in a sandbox. Brand-new org setups where nothing is inherited. And Transition Trails\u2019 own 501(c)(3) org — donors, grants, programs, volunteers, board reporting. Your coach relays every requirement and carries every result back, so you are corrected in private rather than in front of the person paying.','GT-01 · was "pairs you with a real nonprofit client" — the work is real, the contact is not'],
+      ['Squad buddy testing','Each learner writes a UAT script and runs a peer\u2019s. You produce evidence of testing and of being tested — which is what a hiring manager is actually screening for. Squads are always even, 2, 4 or 6, so nobody is left without a partner — and if someone leaves, a Coach\u2019s Assistant steps into the pair.','GT-02 · squads are even by design, capped at six'],
+      ['Deploys by change set','A release request per deploy, reviewed before production, pushed by hand. No pipeline. Most nonprofit orgs run exactly this way, and doing it manually is how you learn what a pipeline is for.','GT-05 · was the vaguer "real deployments"']
+    ],
+    listTitle: 'What you leave with',
+    list: [
+      ['A findings register on an org you inherited cold'],
+      ['Peer test reports — evidence of testing and being tested'],
+      ['Release requests with dependency reasoning and rollback plans'],
+      ['Twelve 90-second interview answers, first to last — the curve is the evidence'],
+      ['A Demo Day recording you can send an employer as a work sample'],
+      ['One year of Explorer\u2019s Trail membership, earned']
+    ],
+    closerKicker: 'the next step on your trail',
+    closer: 'Cohort 1 begins October 1, or as soon as twenty people are on the waitlist — whichever comes later. Twenty is what fills two squads and names alternates behind them. If you are offered an alternate place, you are told so plainly: your Explorer\u2019s Trail membership starts that day, a seat is yours if one opens before the end of week one, and Cohort 2 is guaranteed without reapplying.'
+  },
+
+  mastery: {
+    accent: 'linear-gradient(135deg,#1E4F5C 0%,#2F6F7E 55%,#2A2E2C 100%)',
+    eyebrow: 'Advancement tier · apprenticeship · in development',
+    headline: 'For the admin who has hit the ceiling.',
+    sub: 'An apprenticeship for people already working. A real client, direct contact with a coach present, a real pipeline with source control, and a role track that teaches a specific job rather than the platform.',
+    heroNote: 'TOM-01 + TOM-02 · five tracks down to four; the H1-versus-Q2 conflict resolved',
+    cta: 'Join the interest list',
+    facts: [['Cohort 0','2027'],['Role tracks','4'],['Length','8–12 weeks'],['Client contact','Direct, coach present'],['Capstone','None — the client is the capstone']],
+    sectionEyebrow: 'The four tracks',
+    sectionTitle: 'Four tracks. Mixed-role teams. One methodology.',
+    sectionBody: 'A squad is staffed by whatever roles the engagement needs, assigned from a coverage ledger rather than a queue. Solution Consultant and Solution Architect are in design and not offered yet.',
+    blocks: [
+      ['Admin','Configuration, security and sharing, data quality, and the release discipline to change a production org without breaking it.',''],
+      ['Product Owner','Backlog, trade-offs, and the explicit no. RESOLVE end to end — Recognize in Sprint 1, Evolve in Sprint 3 — with three decisions defended to a panel at the close.',''],
+      ['Business Analyst','Requirements a developer can build from, process maps a client recognises, and the discipline of naming a problem rather than restating a request.',''],
+      ['Advanced Admin','Automation at scale, integration boundaries, and the architectural judgement to say what the platform should not be asked to do.','TOM-01 · the fifth track has been removed from the count and moved to "in design"']
+    ],
+    listTitle: 'What an engagement produces',
+    list: [
+      ['A coverage ledger — every required skill exercised, with proof'],
+      ['Role-specific evidence: decision logs, config reviews, releases'],
+      ['Something shipped, then measured a month later against the problem it named'],
+      ['Nonprofit capacity delivered in a real production org'],
+      ['A second certification and a promotion case'],
+      ['Lifetime Explorer\u2019s Trail membership, earned']
+    ],
+    closerKicker: 'a note on timing',
+    closer: 'Cohort 0 runs in 2027. Today this page collects an interest list and nothing else — no applications, no deposits, no dates we cannot keep. When the cohort is scoped, the list hears first.'
+  },
+
+  explorers: {
+    accent: 'linear-gradient(135deg,#2F6F7E 0%,#7FAFC6 60%,#2F6B3F 100%)',
+    eyebrow: 'Awareness tier · membership · opens October 1',
+    headline: 'The community underneath every other program.',
+    sub: 'The front door if you are curious, the waiting room while a cohort fills, and the home you never have to leave once you are placed. Nobody exits Explorer\u2019s Trail.',
+    heroNote: 'ET-01 · all three tiers now shown wherever the program is summarised',
+    cta: 'Join for $27/mo',
+    facts: [['Opens','October 1'],['Community Pass','$27/mo'],['Full','$97/mo · $1,164/yr'],['Full + Coaching','$1,464/yr'],['Earned free','By completing Guided Trail']],
+    sectionEyebrow: 'What a membership is',
+    sectionTitle: 'Three tiers, and two ways to stop paying for it.',
+    sectionBody: 'Completing Guided Trail earns a year of Full Membership. Completing an apprenticeship earns it for life. There is no trial tier — both free paths are earned by finishing something.',
+    blocks: [
+      ['Community Pass · $27/mo','The daily Trail Quest, the monthly Trail Mission, and the community. Enrol in Guided Trail while active and $27 comes off your tuition.',''],
+      ['Full Membership · $97/mo or $1,164/yr','Everything in Community, plus the full archive, the RESOLVE Practitioner Series, group coaching sessions, and prior capstones to build against.',''],
+      ['Full + Coaching · $1,464/yr','Full Membership with human coaching included. This is what the top tier buys — everything else is available without a coach in the room.','ET-01 · missing from the program card on the homepage and programs index'],
+      ['The coach ladder','Members who have completed Guided Trail can join the ladder: Coach\u2019s Assistant, then Associate Coach, then Advanced Coach. First-read verdicts are confirmed by a senior coach until the two agree.','']
+    ],
+    listTitle: 'What membership includes',
+    list: [
+      ['A daily Trail Quest aimed at your weakest domain'],
+      ['A monthly Trail Mission the whole membership works together'],
+      ['Group coaching sessions and the RESOLVE Practitioner Series'],
+      ['Prior capstones and scenarios to build against'],
+      ['A public portfolio, hosted for as long as you stay involved'],
+      ['Two Expedition Weekends a year — one virtual, one in Dallas, from Fall 2027']
+    ],
+    closerKicker: 'why it opens the same day',
+    closer: 'Explorer\u2019s Trail opens alongside Guided Trail on purpose. It is where waitlisted people wait. Without it, twenty interested people have nowhere to be while the cohort fills — and the ones who arrived through a free Trail Talk are exactly the ones who drift.'
+  },
+
+  foundations: {
+    accent: 'linear-gradient(135deg,#2F6B3F 0%,#1E4A2A 60%,#2F6F7E 100%)',
+    eyebrow: 'Entry tier · Cohort 0 testing',
+    headline: 'Learning to build, from an empty org.',
+    sub: 'Twelve weeks constructing a complete case-management system for a fictional nonprofit, in your own Developer org, with the Salesforce Certified Administrator exam as the goal.',
+    heroNote: 'CERT-01 · "Salesforce Platform Administrator" is not a real credential',
+    cta: 'Join the notification list',
+    facts: [['Status','Cohort 0 testing'],['Length','12 weeks · 3 sprints'],['Price','$997 or 3 × $367'],['Prerequisite','Platform Foundations cert'],['Goal','Certified Administrator']],
+    sectionEyebrow: 'How the twelve weeks run',
+    sectionTitle: 'Sprint 1 the foundation. Sprint 2 the engine. Sprint 3 the proof.',
+    sectionBody: 'Email-to-Case, queues, assignment rules, flows and reports — built in sequence, in your own org, against published criteria rather than a grade.',
+    blocks: [
+      ['Judged, not graded','Every week your build is assessed as Pass, Needs rework, or Not attempted. Needs rework is the expected state for a first attempt at judgement work — the falling rate across sprints is the evidence you are learning.',''],
+      ['A Decision Log from week one','Context, options, the choice, the business reason. Numbered from #1 and never restarted — by the time you are hired it is the centrepiece of your portfolio.',''],
+      ['Constraint encounters','Deliberate moments where the out-of-the-box feature does not fit and you have to document the workaround and defend it. The skill nobody teaches and every employer tests for.',''],
+      ['Where it leads','The Administrator certification gates Guided Trail. Graduate without passing yet and you wait in Explorer\u2019s Trail rather than being pushed forward.','CERT-01 · corrected credential name']
+    ],
+    listTitle: 'What you produce',
+    list: [
+      ['12 Decision Log entries with business justifications'],
+      ['36 weekly build verifications against published criteria'],
+      ['Domain scores at intake and exit, on one instrument'],
+      ['A working org — the closest thing to a real system you can show'],
+      ['A public portfolio page, hosted by Transition Trails'],
+      ['Readiness for the Salesforce Certified Administrator exam']
+    ],
+    closerKicker: 'about timing',
+    closer: 'Foundations Trail is in Cohort 0 testing. Public dates will be announced after October 1. If you are already certified you do not need this program — you enter at Guided Trail.'
+  }
+};
+
+const NAV = [['home','Home'],['explorers',"Explorer's Trail"],['foundations','Foundations'],['guided','Guided Trail'],['mastery','Trail of Mastery']];
+
+class Component extends DCLogic {
+  state = { page: null, marks: null };
+  get page() { return this.state.page || this.props.startPage || 'home'; }
+  get marks() { return this.state.marks === null ? (this.props.showCorrections !== false) : this.state.marks; }
+  css(o) { return Object.entries(o).map(([k,v]) => k.replace(/[A-Z]/g,m=>'-'+m.toLowerCase())+':'+v).join(';'); }
+
+  mark(note) {
+    if (!note || !this.marks) return 'display:none';
+    return this.css({
+      fontFamily:'Poppins, sans-serif', fontSize:'11.5px', lineHeight:1.5, fontWeight:600,
+      color:'#7A4F00', background:'#FEF3DB', border:'1px dashed #E0AE4A',
+      borderRadius:'10px', padding:'8px 11px', marginTop:'8px'
+    });
+  }
+
+  renderVals() {
+    const page = this.page, p = PAGES[page];
+    return {
+      markLabel: this.marks ? 'Hide correction notes' : 'Show correction notes',
+      markStyle: this.css({
+        fontFamily:'Poppins, sans-serif', fontSize:'12.5px', fontWeight:600, cursor:'pointer',
+        padding:'8px 16px', borderRadius:'999px',
+        background: this.marks ? 'var(--tt-sun-amber)' : 'transparent',
+        color: this.marks ? 'var(--tt-charcoal)' : 'rgba(255,255,255,.7)',
+        border: this.marks ? '1.5px solid var(--tt-sun-amber)' : '1.5px solid rgba(255,255,255,.3)'
+      }),
+      toggleMarks: () => this.setState({ marks: !this.marks }),
+
+      isHome: page === 'home',
+      isProgram: page !== 'home',
+
+      nav: NAV.map(([k,label]) => ({
+        label,
+        pick: () => this.setState({ page: k }),
+        style: this.css({
+          fontFamily:'Poppins, sans-serif', fontSize:'13.5px', fontWeight:600, cursor:'pointer',
+          padding:'10px 15px', borderRadius:'10px',
+          color: k === page ? 'var(--tt-white)' : 'rgba(255,255,255,.72)',
+          background: k === page ? 'rgba(255,255,255,.14)' : 'transparent'
+        })
+      })),
+
+      heroStats: HERO_STATS.map(([value,label,note]) => ({ value, label, note, mark: this.mark(note) })),
+      trust: TRUST.map(([label,detail]) => ({ label, detail })),
+      gaps: GAPS.map(([title,body,tint]) => ({ title, body, tint })),
+
+      cards: CARDS.map(([k,tier,name,whoFor,price,priceNote,accent,featured,note]) => ({
+        tier, name, whoFor, price, priceNote, accent, featured, note,
+        mark: this.mark(note),
+        pick: () => this.setState({ page: k === 'compass' ? 'home' : k })
+      })),
+
+      p: p ? {
+        heroStyle: this.css({ background: p.accent, padding: '84px 32px' }),
+        eyebrow: p.eyebrow, headline: p.headline, sub: p.sub, cta: p.cta,
+        heroNote: p.heroNote,
+        heroMark: p.heroNote && this.marks ? this.css({
+          fontFamily:'Poppins, sans-serif', fontSize:'12px', fontWeight:600, lineHeight:1.5,
+          color:'var(--tt-charcoal)', background:'var(--tt-amber-300)',
+          borderRadius:'10px', padding:'9px 13px', alignSelf:'flex-start', maxWidth:'760px'
+        }) : 'display:none',
+        facts: p.facts.map(([k2,v]) => ({ k: k2, v })),
+        sectionEyebrow: p.sectionEyebrow, sectionTitle: p.sectionTitle, sectionBody: p.sectionBody,
+        blocks: p.blocks.map(([title,body,note]) => ({ title, body, note, mark: this.mark(note) })),
+        listTitle: p.listTitle,
+        list: p.list.map(([text]) => ({ text })),
+        closerKicker: p.closerKicker, closer: p.closer
+      } : null,
+
+      footerPrograms: [["Explorer's Trail"],['Foundations Trail'],['Guided Trail'],['Trail of Mastery'],['Digital Compass']].map(([name]) => ({ name }))
+    };
+  }
+}
+</script>
+</body>
+</html>

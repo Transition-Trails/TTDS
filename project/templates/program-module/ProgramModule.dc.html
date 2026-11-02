@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Program Module" description="Official program curriculum module for the Foundations Trail, Guided Trail, or Trail of Mastery — objectives, competency codes, rubric, and mentor sign-off." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}</style>
+</helmet>
+<div class="program-trail is-guided">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Module overview" style="background:#FDFDFC;font-family:'Open Sans',sans-serif;padding:0.75in;display:flex;flex-direction:column;overflow:hidden">
+<div style="display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A908C;font-family:'Poppins',sans-serif;font-weight:600;margin-bottom:0.26in"><span>Transition Trails · Program Curriculum</span><span>Confidential — enrolled learners &amp; mentors</span></div>
+
+<div style="margin-bottom:0.34in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.ProgramBand" stage="guided" module="3" of="8" eyebrow="Unit 2 · Activity &amp; data integrity" title="Configuring and validating Einstein Activity Capture" hint-size="100%,1.5in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1.9in;gap:0.34in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:0.08in">Why this module exists</div>
+<p style="font-size:12pt;line-height:1.6;color:#383C3A;margin:0 0 0.28in">Activity data is the first thing a partner organization asks you to be trusted with, and the first place careless configuration causes harm. Your mentor is assessing judgment — the reasoning behind your choices — not your ability to find a settings page.</p>
+
+<div style="margin-bottom:0.3in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Objectives" items="EAC-1::Scope a capture configuration against a stated business need, and say in writing what will and will not be shared. | EAC-2::Activate under supervision and validate sync behavior for in-scope and out-of-scope users alike. | EAC-3::Explain the data-visibility implications to a non-technical stakeholder in their own terms. | EAC-4::Produce documentation another administrator could act on without asking you a question." hint-size="100%,2.6in"></x-import>
+</div>
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:0.1in">How this module runs</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;gap:14px;padding:10px 0;border-top:1px solid #DCDFDC"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6B3F;width:0.95in;flex-shrink:0">Week 1</span><span style="font-size:11pt;line-height:1.5;color:#383C3A">Scope with your partner; mentor reviews first.</span></div>
+<div style="display:flex;gap:14px;padding:10px 0;border-top:1px solid #DCDFDC"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6B3F;width:0.95in;flex-shrink:0">Week 2</span><span style="font-size:11pt;line-height:1.5;color:#383C3A">Build in the sandbox; supervised activation.</span></div>
+<div style="display:flex;gap:14px;padding:10px 0;border-top:1px solid #DCDFDC;border-bottom:1px solid #DCDFDC"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6B3F;width:0.95in;flex-shrink:0">Week 3</span><span style="font-size:11pt;line-height:1.5;color:#383C3A">Present your reasoning; mentor signs off.</span></div>
+</div>
+</div>
+
+<aside style="background:#F1F3F1;border-radius:7px;padding:0.2in;display:flex;flex-direction:column;gap:0.2in">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:8px">Prerequisites</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#383C3A">Modules 1–2 signed off · Salesforce Administrator certification · Partner sandbox access granted</div>
+</div>
+<div style="border-top:1px solid #DCDFDC;padding-top:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:8px">Time commitment</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#383C3A">3 weeks · approx. 9 supervised hours, plus your own project work</div>
+</div>
+<div style="border-top:1px solid #DCDFDC;padding-top:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:8px">Related Trail Kit</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#383C3A">Trail Kit 07 covers the mechanics of this configuration. It is optional reference, not a substitute for the supervised work.</div>
+</div>
+<div style="border-top:1px solid #DCDFDC;padding-top:0.18in;margin-top:auto">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:8px">A note on judgment</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#383C3A">You will be asked why, not just whether. Keep a record of the decisions you rejected and the reason — that record is often the strongest evidence in your file.</div>
+</div>
+</aside>
+</div>
+
+<div style="margin-top:auto;padding-top:0.2in;border-top:1px solid #DCDFDC;font-size:8pt;color:#9AA09C;display:flex;justify-content:space-between"><span>Guided Trail · Module 3 of 8</span><span>1</span></div>
+</section>
+
+<section class="page" data-screen-label="Assessment & sign-off" style="background:#FDFDFC;font-family:'Open Sans',sans-serif;padding:0.75in;display:flex;flex-direction:column;overflow:hidden">
+<div style="display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A908C;font-family:'Poppins',sans-serif;font-weight:600;border-bottom:1px solid #DCDFDC;padding-bottom:8px;margin-bottom:0.32in"><span>Guided Trail · Module 3 · Activity Capture</span><span style="color:#2F6B3F">Assessment</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:18pt;color:#2A2E2C;margin:0 0 0.1in">How this module is assessed</h2>
+<p style="font-size:12pt;line-height:1.6;color:#383C3A;margin:0 0 0.28in;max-width:5.6in">Your mentor assesses each criterion at one of three levels using the evidence you submit. Proficient is the standard for sign-off; Exemplary is recorded in your file, and it is what we cite when an employer asks what you can be trusted with.</p>
+
+<div style="margin-bottom:0.3in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Rubric" criteria="Scoping::Enables org-wide without a scoping conversation.::Defines and assigns a named pilot group.::Documents the rationale, the risks considered, and partner sign-off. | Validation::Confirms the feature works for in-scope users.::Confirms in-scope behavior and that out-of-scope users see nothing new.::Produces a dated log another administrator could reuse unchanged. | Communication::Tells users after activation, or not at all.::Sends a clear announcement before activation.::Explains visibility in the stakeholder's own language and handles the follow-up questions. | Judgment::Follows the steps as given.::Adapts the approach to the partner's constraints.::Can defend the decisions rejected, and why." hint-size="100%,3.2in"></x-import>
+</div>
+
+<div style="border:1px solid #DCDFDC;border-left:3px solid #2F6B3F;border-radius:0 6px 6px 0;padding:0.18in 0.2in;margin-bottom:0.24in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:8px">What Exemplary looked like — Spring 2026 cohort</div>
+<p style="font-size:10pt;line-height:1.55;color:#383C3A;margin:0 0 7px">A learner scoped capture for a food bank's three-person development team, then recommended <i>against</i> enabling calendar sync because donor meetings were held on personal calendars. She documented the reasoning, the partner agreed, and the configuration shipped narrower than originally asked for.</p>
+<p style="font-size:10pt;line-height:1.55;color:#383C3A;margin:0">The build was the easy part. The sign-off cited her judgment in declining scope she could have delivered.</p>
+</div>
+
+<p style="font-size:11pt;line-height:1.6;color:#383C3A;margin:0;max-width:5.6in">Bring the completed evidence to your week 3 review. Your mentor records the level for each criterion and signs off on the following page.</p>
+
+<div style="margin-top:auto;padding-top:0.2in;border-top:1px solid #DCDFDC;font-size:8pt;color:#9AA09C;display:flex;justify-content:space-between"><span>Guided Trail · Module 3 of 8</span><span>2</span></div>
+</section>
+
+<section class="page" data-screen-label="Mentor sign-off" style="background:#FDFDFC;font-family:'Open Sans',sans-serif;padding:0.75in;display:flex;flex-direction:column;overflow:hidden">
+<div style="display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A908C;font-family:'Poppins',sans-serif;font-weight:600;border-bottom:1px solid #DCDFDC;padding-bottom:8px;margin-bottom:0.32in"><span>Guided Trail · Module 3 · Activity Capture</span><span style="color:#2F6B3F">Sign-off</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:18pt;color:#2A2E2C;margin:0 0 0.1in">Evidence and mentor sign-off</h2>
+<p style="font-size:12pt;line-height:1.6;color:#383C3A;margin:0 0 0.3in;max-width:5.6in">This page is the record we point to when an employer or partner asks what you have been trusted with. Complete it carefully and keep a copy.</p>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.SignOff" evidence="Scope sheet, reviewed by the mentor before configuration began | Completed verification log with dates, including the out-of-scope check | The announcement email exactly as it was sent | A short written record of the decisions rejected, and why | Partner contact's confirmation that the outcome matched the scope" hint-size="100%,3.2in" style="margin-bottom:0.34in"></x-import>
+
+<div style="border-top:1px solid #DCDFDC;padding-top:0.26in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:0.1in">Mentor comments</div>
+<p style="font-size:9.5pt;line-height:1.5;color:#6E746F;margin:0 0 0.14in;max-width:5.6in">Name the specific decision or moment that determined the level awarded. Comments here are quoted back to the learner and, with their permission, to employers.</p>
+<div style="height:1.5in;background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 0.29in, #DCDFDC 0.29in, #DCDFDC 0.3in)"></div>
+</div>
+
+<div style="padding-top:0.14in;margin-top:0.14in;border-top:1px solid #DCDFDC;font-size:8.5pt;line-height:1.5;color:#8A908C">Held in the learner's file for the program's duration and seven years after. If the level awarded is not yet Proficient, the module is repeated with a revised scope — repeating is expected and is not recorded as a failure. A countersigned copy is available to the learner on request, and is theirs to share.</div>
+
+<div style="margin-top:auto;padding-top:0.2in;border-top:1px solid #DCDFDC;font-size:8pt;color:#9AA09C;display:flex;justify-content:space-between"><span>Guided Trail · Module 3 of 8</span><span>3</span></div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

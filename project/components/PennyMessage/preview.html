@@ -1,0 +1,28 @@
+<!-- @dsCard group="Penny" height=260 subtitle="Conversation turn with mode badge" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>*{box-sizing:border-box}body{margin:0}#root{padding:20px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+(function(){
+  var h = React.createElement;
+  var C = window.TransitionTrailsDesignSystem_335df4.PennyMessage;
+  var libs = ["https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"];
+  function load(i){
+    if (i >= libs.length) { ReactDOM.createRoot(document.getElementById('root')).render(h('div',{style:{display:'flex',flexDirection:'column',gap:10}},
+  h(C,{from:'learner'},"I don't know how to explain my CLYLP project."),
+  h(C,{mode:'coach'},"What did the nonprofit do with the org that they couldn't do before?"),
+  h(C,{mode:'coordinator'},"Two items need you before Thursday's client call. Which do you want to take first?"))); return; }
+    var s = document.createElement('script'); s.src = libs[i];
+    s.onload = s.onerror = function(){ load(i + 1); };
+    document.head.appendChild(s);
+  }
+  load(0);
+})();
+</script>
+</body>
+</html>

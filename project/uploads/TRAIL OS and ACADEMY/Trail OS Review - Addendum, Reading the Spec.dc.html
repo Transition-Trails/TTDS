@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-bg); }
+  a { color: var(--tt-link); text-decoration: none; }
+  a:hover { color: var(--tt-link-hover); text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: var(--tt-slate); background: var(--tt-bg); min-height: 100vh; padding: 56px 32px 96px;">
+<div style="max-width: 1000px; margin: 0 auto;">
+
+  <header style="border-bottom: 1px solid var(--tt-warm-gray); padding-bottom: 32px; margin-bottom: 48px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tt-deep-teal); margin: 0 0 16px;">Review addendum</p>
+    <h1 style="font-family: 'Poppins', sans-serif; font-size: 42px; line-height: 1.15; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 20px; max-width: 22ch; text-wrap: pretty;">What the specification actually says</h1>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 28px; max-width: 62ch; text-wrap: pretty;">I reviewed Trail OS against its README and working notes without having read the forty-thousand-word specification or the Penny six-pager. Having now read both: four of my findings need correcting, one of them reverses entirely, and seven new ones appear. The most important single thing I got wrong is also the most consequential finding in either document.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 14px;">
+      <div><p style="margin: 0 0 4px; opacity: .7;">Read</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">TRAIL_OS_SPEC.md v1.1, Penny six-pager</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Corrections</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">4</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">New findings</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">7</p></div>
+    </div>
+  </header>
+
+  <section style="background: var(--tt-deep-teal); border-radius: 22px; padding: 40px 44px; color: var(--tt-white); margin-bottom: 56px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; opacity: .85;">Read this one first</p>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600; margin: 0 0 16px; color: var(--tt-white); max-width: 30ch;">Trail OS was not drifting from a standard. It was complying with one.</h2>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 20px; max-width: 64ch; opacity: .95;">I reported that Trail OS had no design documentation. That was wrong. Section 5 of the specification is titled Phase 1 UX Standards, it is mandatory — "all pages must conform" — and it is mirrored in the app at an internal standards page.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 20px; max-width: 64ch; opacity: .95;">It specifies eyebrow labels at ten pixels, body text at eleven and twelve, and badge text at nine and ten pixels bold and uppercase. It specifies the smaller corner radius. Every type-floor violation I found is not an oversight — it is the documented house style, written down and enforced.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 64ch; opacity: .95;"><strong style="color: var(--tt-white);">This means the sweep we just ran will regress.</strong> The next person to build a screen will read the standards page, use nine-pixel badges, and be correct to do so. The standard has to be rewritten or none of today's work holds.</p>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">Corrections to my review</h2>
+      <p style="font-size: 14px; margin: 0; opacity: .7;">4</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 32px; max-width: 62ch;">Trail OS is better documented than my review credited. Two of my eight documentation findings were simply wrong.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-06</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Was wrong</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Design documentation exists — and it mandates the violations</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Covered above. The finding gets worse rather than going away: rewriting the UX standards section is now a blocker in its own right, because it is the thing that will undo the type floor and the radius change.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">New action</strong> — rewrite section 5 and the in-app standards page to the brand: fourteen pixel floor, sentence case, brand radius, the five status roles, the amber rule. Same words in both places, and the app page should say the brand is the source.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-05</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="green" hint-size="auto,28px">Downgrade</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">A data classification does exist</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Section 14 classifies the data files into three groups — accurate and ready for a live swap, placeholder shapes needing live data, and stale needing review — and names what replaces each one. That is most of what I asked for. It covers roughly twenty of the thirty-three files.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Revised action</strong> — extend the existing classification to the remaining files rather than writing a data dictionary from scratch. Much smaller job than I described.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-03</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="green" hint-size="auto,28px">Reframe</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The tier model is properly specified — the gating is what is inconsistent</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Section 3 defines all four tiers, maps three of them to named Google Workspace groups, documents the flag helpers, and states that Super Admin is email-whitelist only in the prototype. That is a complete model, better than I gave it credit for.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Revised finding</strong> — the sidebar gates only on the power and admin tiers, so items the specification marks Super Admin only are reachable by any Admin. Also worth knowing: without the service account credentials in place, every signed-in staff member defaults to the lowest tier. That is the safe direction to fail, but it means the tier model is not actually enforced yet.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-CON-01</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Note</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The specification called the RESOLVE data authoritative</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Section 14 listed the RESOLVE phases under "accurate representation, ready for live data swap" and labelled them authoritative. They were not — they were an eight-phase reconstruction whose own source notes said the details required source mapping. Two documents in the same repository disagreed about whether the same file could be trusted.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Now true.</strong> Worth remembering as a caution about the classification itself: it asserts fidelity that in at least one case had not been checked.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">New findings</h2>
+      <p style="font-size: 14px; margin: 0; opacity: .7;">7</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 32px; max-width: 62ch;">Four of these are documents disagreeing with each other. Three are about Penny, and those are the ones that matter before Q3.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-09</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Blocker</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Penny is specified twice, and the two specifications are incompatible</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px;">The six-pager places Penny in the learner experience — Experience Cloud, mobile and web, learner-facing chat — with an MVP whose guardrails explicitly exclude coach dashboards, task creation and saved drafts. Coach dashboards are listed as a fourth-quarter item.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px;">
+            <div style="background: var(--tt-sky-100); border-radius: 14px; padding: 18px;">
+              <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Six-pager MVP guardrails</p>
+              <p style="font-size: 15px; line-height: 1.7; margin: 0;">On-demand only · no saved drafts · no task creation · <strong>no coach dashboards</strong></p>
+            </div>
+            <div style="background: var(--tt-green-100); border-radius: 14px; padding: 18px;">
+              <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Built in Trail OS today</p>
+              <p style="font-size: 15px; line-height: 1.7; margin: 0;">Command centre · prompt studio · learner interaction logs · assessments · capability registry · intelligence dashboard</p>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Trail OS has built the coach-facing governance surface first, in a different product, while the learner-facing MVP the six-pager describes does not exist. Neither document acknowledges the other.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — this is a real product question, not a documentation tidy. My read is that Trail OS is Penny's <em>control room</em> and Experience Cloud is Penny's <em>front of house</em>, and that both are correct — but nothing says so, and the six-pager reads as though the learner MVP is the next thing being built. Decide which surface ships to learners in Q3 and write the division down. It is the first thing a funder will probe.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-10</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Two sets of Penny principles, no authority between them</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The six-pager has six tenets. The specification has four non-negotiables. They agree in spirit — Penny augments coaches, stays grounded in reviewed sources, is transparent — but they are different lists in different words, and neither says it governs. The six-pager's are stronger: it is the only document that says Penny must never fabricate credentials or invent experience, and the only one that names overdependence as a risk.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — one list, in one place, named as authoritative, quoted by the other. This is the answer to the question I asked earlier about where Penny stops and a human coach starts, and the six-pager already contains most of it.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-11</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Blocker</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The Penny six-pager predates almost everything</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">It names two programmes where the Master Program Guide now has eight. It treats pricing as an open question in two places, when Digital Compass and the Explorer's tiers are now set. Its roadmap runs in quarters with no year attached, and the capabilities it schedules for the third and fourth quarters are already live. It calls the organisation "Transition Trails Academy", which is not the brand.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — this is the document most likely to end up in a funder packet, because it is the one written in narrative form. It needs a reissue more urgently than the internal ones on your list.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-12</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Blocker</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">There are now four navigation descriptions and no two agree</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The specification adds a third table to the two I already found, and the sidebar code is a fourth. The specification lists items in the Penny, Knowledge, Collaboration and Administration groups that the sidebar does not render, and gates Operations, Programs, Knowledge and Collaboration at the admin tier — which, if the specification is right, means coaches on the Power tier see almost nothing.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — worth checking against a real Power-tier login before anything else, because if coaches genuinely cannot reach the operational hubs, that is a functional problem rather than a documentation one. Then one table, generated from the sidebar definition.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-13</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The specification contradicts itself on authentication</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Section 17 lists live user authentication as deferred to a later phase, to be built on Salesforce single sign-on or Replit auth. Sections 3 and 4 of the same document report Clerk with Google sign-in as live and complete, with Google Groups assigning tiers. The non-goals list was not updated when the thing shipped.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — sweep the non-goals list against what actually shipped. It is the section most likely to be quoted back at you, because it is the one that says what the product deliberately does not do.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-14</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="gray" hint-size="auto,28px">Cleanup</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The Lens picker is documented against routes that redirect away</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The specification says the Lens picker appears on three paths. Its own legacy redirect map, four sections later, redirects one of those paths elsewhere, and the other two do not appear in the route list at all. So a documented feature with two named modes may simply never render.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — check whether the Lens picker is reachable. If it is not, decide whether it is wanted; a feature nobody can see is worth either fixing or deleting, not documenting.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 150px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">TOS-DOC-15</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">"Transition Trails Academy" is not the brand</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The Penny six-pager and the Trail OS working notes both call the organisation Transition Trails Academy. The brand book, the public site and the Master Program Guide call it Transition Trails. Small, but it is in the title of the document most likely to be read by an outsider.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — pick one and put it in the glossary. If Academy is deliberate for the programme delivery arm, that is a reasonable distinction, but it needs saying.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section style="margin-bottom: 40px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">What I would still like</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 62ch;">The specification answered my question about what Trail OS does. Section 1 is clear and well written, and the line about prioritising density and role awareness over consumer conventions is the most useful sentence in either document. Two things it does not answer.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">How would you know Trail OS worked?</p>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0;">The goals are all capability statements — give directors a single place, surface the right data, govern quality. None of them can be measured. The Penny six-pager does this well by contrast: it names weekly usage, on-time assignment completion and coach satisfaction. Trail OS needs the equivalent, and it needs it before the measurement dashboard gets built, not after.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">A funder packet or board memo, if one exists</p>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0;">Still the thing I would most like to read. Both documents I have are written for builders. Neither shows me how you describe this product when something is at stake, and I would rather match that voice than invent one for the documentation set.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1060}}"></script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-trail-light); }
+  a { color: var(--tt-trail-green); }
+  a:hover { color: var(--tt-green-700); }
+  html { scroll-behavior: smooth; }
+</style>
+</helmet>
+
+<div style="min-height:100%;background:var(--tt-trail-light);font-family:'Open Sans',Roboto,sans-serif;color:var(--tt-slate);padding:0 0 96px">
+
+  <div style="background:var(--tt-deep-teal);color:var(--tt-white);padding:56px 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:18px">
+      <div style="font-family:Poppins,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)">Public website · pre-launch review</div>
+      <h1 style="font-family:Poppins,sans-serif;font-size:44px;line-height:1.1;font-weight:600;margin:0;color:var(--tt-white);max-width:920px;text-wrap:pretty">Where the site and the Master Program Guide disagree</h1>
+      <p style="font-size:18px;line-height:1.6;margin:0;max-width:840px;color:rgba(255,255,255,.88)">{{ findingCount }} findings across <code style="background:rgba(255,255,255,.14);padding:2px 7px;border-radius:6px;font-size:15px">Transition-Trails/TT-Public-Website</code> at <code style="background:rgba(255,255,255,.14);padding:2px 7px;border-radius:6px;font-size:15px">fcaf925</code>, the Digital Compass blueprint, and the June program comparison. The Guide is the source of truth — every fix below moves the other documents toward it, except where the finding is flagged as a decision or a gap in the Guide itself.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px">
+        <sc-for list="{{ heroPills }}" as="p" hint-placeholder-count="5">
+          <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" dc-props="{{ lightChip }}" hint-size="auto,28px">{{ p.label }}</x-import>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:44px">
+
+    <section style="margin-top:44px;display:flex;flex-direction:column;gap:18px">
+      <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Alert" tone="success" title="The site is done. The documents are not." dc-props="{{ wideAlert }}" hint-size="100%,150px"><div><strong>Every finding against the public site has been applied.</strong> All five blockers, and the remaining copy and data corrections after them — Guided Trail\u2019s client model, squad structure and alternates, the inherited org, four Trail of Mastery tracks, one date, no Foundations promise, the third Explorer\u2019s tier, the founding year, the hero stats and the Digital Compass pricing.<br><br><strong>What is left is internal.</strong> The Digital Compass blueprint still sells Penny as core access at every paid tier, and the June comparison sheet still records her as shipped, prices Explorer\u2019s Trail at $47, and describes a single Trail of Mastery track. That sheet is the document grant applications and ETPL filings are written from. A web page can be corrected after someone reads it; a funder packet cannot.</div></x-import>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+        <span style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-slate);margin-right:6px">Filter</span>
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+          <div onClick="{{ f.pick }}" style="{{ f.style }}">{{ f.label }}</div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <sc-for list="{{ findings }}" as="f" hint-placeholder-count="8">
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-left:5px solid {{ f.tint }};border-radius:22px;padding:26px 30px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+            <span style="font-family:Poppins,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--tt-slate);background:var(--tt-trail-light);border-radius:999px;padding:5px 12px">{{ f.id }}</span>
+            <span style="{{ f.sevStyle }}">{{ f.sev }}</span>
+            <h3 style="font-family:Poppins,sans-serif;font-size:20px;line-height:1.25;font-weight:600;margin:0;color:var(--tt-charcoal);flex:1;min-width:280px">{{ f.title }}</h3>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+            <div style="background:#FDF1F0;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:7px">
+              <span style="font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#9B3B2E">What the site says</span>
+              <span style="font-size:14.5px;line-height:1.6">{{ f.site }}</span>
+            </div>
+            <div style="background:var(--tt-green-100);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:7px">
+              <span style="font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--tt-green-700)">What the Guide says</span>
+              <span style="font-size:14.5px;line-height:1.6">{{ f.guide }}</span>
+            </div>
+          </div>
+
+          <div style="background:var(--tt-sky-100);border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--tt-deep-teal)">The fix</span>
+            <span style="font-size:15px;line-height:1.65">{{ f.fix }}</span>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;gap:7px;border-top:1px solid var(--tt-warm-gray);padding-top:14px">
+            <sc-for list="{{ f.files }}" as="p" hint-placeholder-count="3">
+              <code style="font-size:12.5px;background:var(--tt-trail-light);border:1px solid var(--tt-warm-gray);border-radius:8px;padding:4px 9px;color:var(--tt-slate)">{{ p.path }}</code>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </section>
+
+    <section style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">Before you ship</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Six things only you can decide</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:860px">Everything above is a copy or data change someone else can make. These six are calls that change what the site is allowed to say — they need an answer before the fixes can be written.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+        <sc-for list="{{ decisions }}" as="d" hint-placeholder-count="4">
+          <div style="background:var(--tt-white);border:2px solid var(--tt-sun-amber);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px">
+            <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">{{ d.q }}</div>
+            <div style="font-size:14.5px;line-height:1.6">{{ d.text }}</div>
+            <div style="font-size:14px;line-height:1.55;color:var(--tt-green-700);border-top:1px solid var(--tt-warm-gray);padding-top:10px;margin-top:auto"><span style="font-family:Poppins,sans-serif;font-weight:600">Recommendation: </span>{{ d.rec }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">Verified consistent</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:30px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">What already agrees, and should not be touched</h2>
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px">
+        <sc-for list="{{ clean }}" as="c" hint-placeholder-count="6">
+          <div style="display:flex;gap:10px;font-size:15px;line-height:1.6"><span style="color:var(--tt-trail-green);font-weight:700">✓</span><span>{{ c.text }}</span></div>
+        </sc-for>
+      </div>
+      <div style="background:var(--tt-deep-teal);color:var(--tt-white);border-radius:22px;padding:32px 36px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:Caveat,cursive;font-size:27px;color:var(--tt-amber-300)">the next step on the trail</div>
+        <div style="font-size:16.5px;line-height:1.65;color:rgba(255,255,255,.92);max-width:880px">Five of the seven blockers are copy or JSON — no component work. The fastest path is one content pass over <code style="background:rgba(255,255,255,.14);padding:2px 7px;border-radius:6px;font-size:15px">src/content/</code> plus the five program pages, then the recruiter and employer pages, which repeat the same claims to the audience least forgiving of them. The other two — Penny and Digital Compass pricing — are decisions rather than edits, and both are already on the pending list with a Q3 date against them. The prototype next to this file has the corrected copy applied, so you can read the fixed pages before anyone opens an editor. The new <a href="Digital%20Compass%20-%20Program%20Design%20v0.1.dc.html" style="color:var(--tt-amber-300)">Digital Compass program design</a> now sits alongside the other four in the Master Guide.</div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240},&quot;severityFilter&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;all&quot;,&quot;blocker&quot;,&quot;high&quot;,&quot;medium&quot;,&quot;low&quot;],&quot;default&quot;:&quot;all&quot;,&quot;tsType&quot;:&quot;'all' | 'blocker' | 'high' | 'medium' | 'low'&quot;,&quot;section&quot;:&quot;Review&quot;}}">
+const F = [
+  ['GT-01','blocker','Guided Trail is sold on a nonprofit client most learners will not have',
+   'Eleven places promise an external client. The hero says Guided Trail "pairs you with a real nonprofit client for a real 12-week Salesforce implementation"; the nav calls it "Our flagship program — real nonprofit clients"; both partner pages list "Real nonprofit client project experience" as a graduate credential.',
+   'Settled after three passes. Guided Trail does work external member clients — but <strong>in a sandbox, never in client production, and never in a room with the client</strong>. Squads also take brand-new Base Camp org setups and Transition Trails\u2019 own 501(c)(3) org and Trail OS backlog. The coach relays every requirement, for a coaching reason rather than a legal one: a coach must be able to stop a learner mid-decision and correct them, which is impossible with a client watching.',
+   'Keep "real nonprofit client work" — it is true. Delete the pairing and the implied meetings. "You work real member requirements in a sandbox, with your coach holding the client relationship" is accurate and still strong. The partner pages can keep the credential line; add "supervised, sandbox-based delivery" so a recruiter who probes it gets the same answer from the site that they get from you.',
+   ['pages/GuidedTrail.jsx:13,20,29','components/Nav.jsx:99','content/programs.json:34','pages/Home.jsx:167,203','pages/About.jsx:96','pages/PartnersEmployers.jsx:49,51','pages/PartnersRecruiters.jsx:114,119','pages/Coaches.jsx:319']],
+
+  ['GT-02','high','Cohort 1 is advertised as one room of 8–12 seats',
+   'The action banner, the waitlist page and the Guided Trail hero all say "Cohort 1 · 8–12 seats · Application required."',
+   'Decided: Cohort 1 runs <strong>two squads concurrently</strong>, to prove we can carry two before scaling. Squads are <strong>even-numbered — 2, 4 or 6, never more than 6</strong>, because buddy testing pairs learners and an odd squad leaves someone without a partner. Actual size follows the client work available. That is 4 to 12 seats across the cohort, plus two named alternates per squad.',
+   'The seat range was in the right neighbourhood; the shape was wrong. Do not publish a fixed number — publish the rule: "Cohort 1 · two squads · 2, 4 or 6 learners each · application required." Saying squads are even because learners test in pairs explains the model in one line and makes the cap sound deliberate rather than small. Add the alternate offer to the waitlist page at the same time.',
+   ['content/site.json (actionBanner.body)','pages/GuidedTrail.jsx:42','pages/Waitlist.jsx:80']],
+
+  ['GT-07','high','There is no alternate process anywhere on the site',
+   'The waitlist page offers one outcome: a seat, or nothing. Terms of Service says only that joining the waitlist does not guarantee enrolment and that people will be contacted when seats become available.',
+   'New: two alternates per squad, named at acceptance rather than left on an undifferentiated list. Squads are strictly even, so a single drop-out strands a learner without a testing partner. Alternates are the first line — two per squad, because a squad of six losing two still has to land back on an even number. After week one the fallback is a Coach\u2019s Assistant filling the pair, or the squad continuing as a rotating trio.',
+   'Define and publish the offer, because a vague alternate is just a rejection with extra waiting. Suggested: you are told you are an alternate, not left guessing; Explorer\u2019s Trail membership starts immediately, which is exactly what that program is for; a seat opening any time up to the end of week one is yours; and if none opens, Cohort 2 is guaranteed with no reapplication. That makes being an alternate a real position rather than a consolation.',
+   ['pages/Waitlist.jsx','pages/TermsOfService.jsx:60','Master Program Guide.dc.html (PROGRAMS.guided)']],
+
+  ['GT-03','blocker','Guided Trail is described as rebuilding the Foundations capstone',
+   '"You work through a structured capstone project aligned to the Salesforce Platform Administrator exam domains — the same domains you studied." The deliverables list promises "A Salesforce Developer Org with your completed capstone configuration," and the Foundations page says "Guided Trail uses the same capstone — independently."',
+   'Guided Trail learners inherit an undocumented org seeded with deliberate configuration debt. They do not rebuild anything. The environment is a seeded org plus client sandboxes, and the first deliverable is a findings register: what was inherited, what was flagged, what was deliberately left alone.',
+   'Replace the capstone section with the inherited-org story — it is a better sales pitch anyway. "You inherit an org you did not build, undocumented and already broken in ways nobody wrote down. Your first job is to find out what is in it." Change the deliverable to the findings register, peer test reports and release requests.',
+   ['pages/GuidedTrail.jsx:118,119,150,216','pages/FoundationsTrail.jsx:140']],
+
+  ['CERT-01','high','The Master Guide carries a retired certification name — the site was right',
+   'The site says "Salesforce Platform Administrator certification" across the Foundations card and page, the Guided Trail prerequisite, both partner pages, the programs page, and both scholarship pages.',
+   '<strong>I filed this backwards and it is worth recording why.</strong> I marked the site wrong on the basis that the credential is called Salesforce Certified Administrator. It is not, any more. Salesforce\u2019s own credential page confirms the exam is <strong>Salesforce Certified Platform Administrator</strong>, with Platform Administrator II above it. "Salesforce Certified Administrator" is the retired name — and it is the one the Master Program Guide uses throughout.',
+   'The site needed only a word-order correction: "Salesforce Certified Platform Administrator" is the exact official form, not "Salesforce Platform Administrator". <strong>The Master Guide is what actually needs fixing</strong>, along with the blueprints and the June comparison, which all carry the old name — including on documents heading to the Texas Workforce Commission, where a retired credential name against a program listing is a real problem. The site was closer to right than any internal document.',
+   ['Master Program Guide.dc.html (matrix, PROGRAMS.foundations, PROGRAMS.guided)','TT Master Program Comparison v2.0','Digital Compass Blueprint','trailhead.salesforce.com/credentials/platformadministrator']],
+
+  ['TOM-01','low','Trail of Mastery advertises five tracks',
+   'The card highlight reads "Apprenticeship · 5 Tracks", the meta description says "five tracks", and the page has a section headed "Five tracks. One team. One methodology."',
+   'Four role tracks: Admin, Product Owner, Business Analyst, Advanced Admin. Solution Consultant and Solution Architect are explicitly deferred, and that is recorded as settled.',
+   'Drop to four everywhere and name them. If the fifth card on the page is Solution Consultant or Solution Architect, move it into a "Tracks we are designing next" note rather than deleting it — the interest signal is worth collecting while the waitlist is the only thing this page does.',
+   ['content/programs.json:44','pages/TrailOfMastery.jsx:90,158,209,220']],
+
+  ['TOM-02','low','The site gives two different dates for Trail of Mastery Cohort 0',
+   'The program card highlight says "Cohort 0 · Q2 2027" and the waitlist page says "Cohort 0 in Q2 2027". The program page says "H1 2027" in four places, including the tagline on the card directly above the Q2 highlight.',
+   'Trail of Mastery is waitlist only, Cohort 0 in 2027. No quarter is committed.',
+   'Pick one and use it everywhere. Given no quarter is settled internally, "Cohort 0 · 2027" is the honest version and costs nothing on a page whose only job is collecting an interest list.',
+   ['content/programs.json:44','pages/TrailOfMastery.jsx:90,119,149,271,307','pages/Waitlist.jsx:80']],
+
+  ['GT-04','high','Guided Trail has no launch date on its card',
+   'Explorer\u2019s Trail carries launchDate "October 1, 2026". Guided Trail has status "waitlist" and no date at all, so the card reads as indefinite next to a program that opens in nine weeks.',
+   'Explorer\u2019s Trail and Guided Trail open together on 1 October, or as soon as twenty people are on the waitlist — whichever comes later.',
+   'Add the launch date and the condition. "Cohort 1 begins October 1, once the waitlist reaches 20" is more persuasive than a bare date: it tells a hesitant visitor their signup is the thing that starts the cohort.',
+   ['content/programs.json (guidedTrail)']],
+
+  ['FT-01','low','The site commits Foundations Trail to opening after October 1',
+   'The waitlist page states "Foundations Trail opens after October 1." The card shows status cohort0 with the waitlist open.',
+   'Whether Foundations opens publicly on 1 October or waits for Q1 2027 is still an open question. Holding it back is a legitimate call, since an already-certified applicant enters at Guided Trail anyway.',
+   'Applied. The waitlist page now says Foundations is in Cohort 0 testing with dates to be announced, and promises nothing. The waitlist carries the interest until the call is made.',
+   ['pages/Waitlist.jsx:80','content/programs.json (foundationsTrail)']],
+
+  ['ET-01','low','The Explorer\u2019s Trail card hides the coaching tier',
+   'The card note reads "$27/mo Community Pass · or $1,164/yr Full Membership." The program page sells three tiers, the third being Full + Coaching at $1,464/yr.',
+   'Three tiers: $27 Community Pass, $97/mo or $1,164/yr Full, $1,464/yr with coaching. Human coaching is what the top tier buys.',
+   'Add the third tier to the card note. It is the highest-value option and the only one that includes a human coach — the summary card is the wrong place to leave it out.',
+   ['content/programs.json:8','pages/ExplorersTrail.jsx:78,424']],
+
+  ['ORG-01','low','The site gives two founding years',
+   'The trust strip under the hero reads "Dallas, TX · Founded 2020." The organization schema in the page head declares foundingDate 2022-05-15.',
+   'Not covered by the Guide — but both cannot be true, and the structured data is what Google and Ad Grants read.',
+   'Confirm the incorporation date and make the trust strip match the schema. If 2020 is when the work started and 2022 is incorporation, say "Serving since 2020 · 501(c)(3) since 2022" rather than choosing one.',
+   ['content/site.json (trustStrip)','index.html (ld+json foundingDate)']],
+
+  ['HOME-01','low','The hero stats undersell a four-year track record',
+   'Three stats: "3 — Nonprofit clients served," "2025 — Guided Trail Cohort 0," and the 501(c)(3) status.',
+   'Cohort 0 is Foundations Trail and it is in testing now; Guided Trail\u2019s first cohort is Cohort 1, October 2026. Separately, client delivery started in 2022 — CLYLP first, then Hartford Promise, then Global One Urban Farming, and all three are still clients.',
+   'Replace the cohort stat with "2022 — Delivering client work since," which is both true and stronger. And "served" is the wrong tense on the first stat: three clients acquired over four years with none lost is a retention record, not a count. "3 — Nonprofit clients, none lost" says the thing a funder actually wants to know.',
+   ['content/pages/home.json (hero.stats)']],
+
+  ['PENNY-01','low','Penny does not exist anywhere on the site',
+   'Zero mentions across every page, component and content file.',
+   'She is in development for the learner programs; Digital Compass comes later.',
+   'Resolved as correct for launch. Leaving her off while she is in development is the right call, and the daily Trail Quest and skill assessments can be described by what they do rather than what runs them. Revisit when she ships — a named AI coach is worth an announcement, not a silent addition.',
+   ['(absent sitewide — deliberately)']],
+
+  ['RES-01','medium','Trail OS runs a different RESOLVE from the one the site teaches',
+   'The consulting page lists seven phases — Recognize, Explore, Select, Outline, Launch, Verify, Evolve — which matches the Guide exactly.',
+   'The Guide\u2019s RESOLVE is those same seven. But Trail OS defines eight differently-named phases: Recognize, Evaluate, Solve, Organize, Leverage, Verify, Execute, Evolve.',
+   'The public site is correct; the platform is not. Not a launch blocker, but a learner who reads the site and then logs into Trail OS meets a different methodology in week one. Raise it with Kim alongside the dashboard work.',
+   ['pages/Consulting.jsx:49 (correct)','Trail OS resolvePhases.ts (divergent)']],
+
+  ['BRAND-01','medium','Fraunces is the heading font on nearly every page',
+   'Fraunces is loaded in the document head and used for almost every H1 and H2 sitewide — home, about, board, consulting, expedition, all four program pages. Poppins survives mostly on H3 and H4.',
+   'The brand book specifies Poppins for headings H1 through H4, Open Sans for body and UI, Caveat for a single accent per page. Fraunces is not in the system.',
+   'Either adopt Fraunces into the brand book as the display face and document it, or restore Poppins. The current state means the design system and the live site disagree about what the brand looks like — and every new page inherits the wrong answer.',
+   ['index.html (font link)','pages/*.jsx (font-[\'Fraunces\'])','src/index.css (defines Poppins only)']],
+
+  ['TERM-01','medium','"Expedition" is on the site\u2019s own prohibited-terms list',
+   'Two constants files carry a legal warning block listing Trailhead, Trailblazer, Ohana, Ranger and Superbadge as forbidden. The brand book pairs "Ranger / Expedition" and maps both to Milestone / Stage. Meanwhile the site has a full Expedition Series page, an Expedition patch, a Trail Box and the hashtag #TTExpedition.',
+   'The Guide uses Expedition Weekend freely as part of the shared spine across every program.',
+   'The Guide and the site agree with each other and contradict the brand book. Ranger is a Salesforce rank; Expedition is not a Salesforce trademark. Strike Expedition from the prohibited list rather than renaming a program you have already built merchandise around — but get that in writing so it does not resurface.',
+   ['constants/programs.js:1-16','constants/links.js:1-13','pages/Expedition.jsx (whole page)']],
+
+  ['GT-05','medium','Guided Trail hints at pipeline deployment',
+   '"You work on real projects inside a live Salesforce org using the Trail OS platform and the RESOLVE methodology. Real requirements, real change management, real deployments."',
+   'Guided Trail deploys by change set, by hand. Pipelines with source control are Trail of Mastery, and that separation is recorded as settled.',
+   '"Real deployments" is vague enough to read as CI/CD next to a Trail of Mastery page advertising a real pipeline. Make it concrete: "You write a release request for every deploy and push it by change set — the way most nonprofit orgs actually run." The manual step is the point.',
+   ['pages/GuidedTrail.jsx:125']],
+
+  ['ET-02','low','The Guide omits /mo on the Community Pass',
+   'The site says $27/mo consistently on the card and in both pricing blocks, and offers "$27 off GT tuition" as the matching credit.',
+   'The Guide\u2019s facts row reads "$27 Community Pass" with no period, next to "$97/mo or $1,164/yr Full."',
+   'The site is internally consistent, so this is a Guide correction rather than a site one. Add /mo to the Guide so the shorthand is not read as a one-time fee by anyone building against it.',
+   ['Master Program Guide.dc.html (PROGRAMS.explorers.facts)']],
+
+  ['TERM-02','low','"Find your trailhead" on the homepage',
+   'A section invites visitors to "Find your trailhead — where you begin depends on where you are right now," and the code comment above it calls the block the Trailhead Self-Selector.',
+   'Trailhead is first on the site\u2019s own prohibited list, with a note that it is a legal requirement.',
+   'Lowercase trailhead as a common noun is very likely fine, and the copy is good. But the code comment should go, and if counsel has taken a hard line, "Find your starting point" loses nothing.',
+   ['pages/Home.jsx:252,258']],
+
+  ['GAP-01','low','Digital Compass is missing from the Master Guide',
+   'The site sells five programs. Digital Compass is live at $149/mo, is the nonprofit-side membership, and is where the client work comes from.',
+   'The Guide\u2019s program matrix has four columns and never mentions Digital Compass.',
+   'A gap in the Guide, not an error on the site. Digital Compass is the supply side of the model — every Guided Trail engagement needs a nonprofit, and this is where they come from. It deserves at least a paragraph in section 01 explaining how client work reaches a squad.',
+   ['Master Program Guide.dc.html (section 01)']],
+
+  ['EXP-01','low','Expedition timing reads as current in one document and future in the other',
+   'The Expedition page is headed "Expedition I · Fall 2027" and the Guided Trail page says graduates are eligible, "Launching Fall 2027."',
+   'The Guide lists Expedition Weekend in the shared spine as twice a year, every program, one virtual and one in Dallas — written in the present tense.',
+   'Not a contradiction so much as a tense mismatch: the Guide describes the steady state, the site the first event. Add "from Fall 2027" to the Guide\u2019s spine entry so nobody plans a 2026 cohort around it.',
+   ['pages/Expedition.jsx:171,246,467','Master Program Guide.dc.html (spine)']],
+
+  ['PENNY-02','high','The Digital Compass blueprint sells Penny at every tier',
+   'The blueprint lists "Penny AI — learning and guidance support" as core access at Entry, Mid and Full, and builds the whole TrailKit video library around her narration. The June comparison goes further and records her as shipped: "Penny live on mobile PWA + Slack, Trail Missions in active use," with 1,100+ automated tests.',
+   'Answered: Penny is in development for the <strong>learner</strong> programs. Digital Compass is a later phase with no date attached.',
+   'Both documents are wrong in the same direction, and the blueprint is the one attached to a paid membership. Strike the Penny row from the tier table or mark it a future phase, and remove her from the TrailKit narration model until there is a date. The comparison sheet\u2019s "Penny live" line needs to go in the same reissue — it is in funder-facing material.',
+   ['Digital Compass Blueprint §2.1, §4.2','TT Master Program Comparison v2.0 (Grant View, What\u2019s New)']],
+
+  ['DC-01','low','The Digital Compass card mixes monthly and annual prices',
+   'The card shows "$149/mo" then "$3,490/yr Mid · $7,490/yr Full Partner" — a monthly Entry price next to two annual ones, and it never shows $349/mo or $749/mo.',
+   'Pricing is confirmed at $149, $349 and $749 a month, with annual at ten times monthly. The figures on the site are right; the presentation is inconsistent.',
+   'Downgraded from blocker now that pricing is settled. Show all three tiers the same way — monthly with the annual in parentheses — so a reader can compare them at a glance instead of doing arithmetic. Pending item #8 can be closed for tier pricing; custom team pricing is still undefined.',
+   ['content/programs.json (digitalCompass)','TT Master Program Comparison v2.0 (Pending #8)']],
+
+  ['TOM-03','high','Three documents give three different answers on Trail of Mastery tracks',
+   'The site advertises five tracks. The June comparison describes a single Salesforce Admin Track, with Agentforce planned for Q4 2026 and the four-layer model to be reused "for all future tracks (Agentforce, Slack, Advanced Admin)."',
+   'Four role tracks: Admin, Product Owner, Business Analyst, Advanced Admin, with Solution Consultant and Solution Architect deferred.',
+   'Five, four, and one. The Guide is the source of truth, so four — but the comparison is the document the grant applications and ETPL filings were written from, and it says one. Reconcile the two before the ETPL listing is filed, because a filed program description is much harder to change than a web page.',
+   ['pages/TrailOfMastery.jsx:209,220','TT Master Program Comparison v2.0 (Program View)','Master Program Guide.dc.html']],
+
+  ['TOM-04','high','Trail of Mastery length and price disagree across documents',
+   'The site says "Coming 2027" with no price. The June comparison is specific: 12 weeks, three phases of four, $1,997 standard, $1,597 employer-sponsored, and an ETPL filing marked ready with those figures.',
+   'The Guide says 8–12 weeks in three sprints, and gives no price.',
+   'Twelve weeks versus eight to twelve is a real difference once it is on an ETPL filing, where duration is a matched field. Settle the length, and put the price into the Guide — the comparison already treats $1,997 as confirmed and the funding paperwork depends on it.',
+   ['TT Master Program Comparison v2.0 (Program View, Pending #4)','Master Program Guide.dc.html (PROGRAMS.mastery)']],
+
+  ['ET-03','high','The June comparison prices Explorer\u2019s Trail at a third of the live price',
+   'The site and the Guide agree: $27/mo Community, $97/mo or $1,164/yr Full, $1,464/yr with coaching.',
+   'The comparison sheet locks different numbers as new in v2.0: "$47/mo, $397/yr, $597/yr + coaching," and the grant framing repeats them.',
+   'The Guide already settles this — pricing follows the live site and the blueprints are superseded. But the comparison is dated June 2026 and is being used as grant framing, so the old numbers are in funder-facing material. Reissue the comparison sheet rather than leaving two live price lists in circulation.',
+   ['TT Master Program Comparison v2.0 (Program View, Grant View)','content/programs.json','Master Program Guide.dc.html']],
+
+  ['CERT-02','medium','The comparison sheet had it right all along',
+   'The June comparison gives the Guided Trail prerequisite as "Salesforce Certified Platform Administrator — exam passed, not yet employed." That is the exact official credential name, correctly worded.',
+   'The Master Program Guide says "Salesforce Administrator certification" — the retired name — in the matrix, the Foundations exit condition and the Guided Trail prerequisite.',
+   'Reverse of what I first filed. The comparison sheet is the document to copy from here, not correct. Update the Guide to match it. Also worth checking the Trail of Mastery Advanced Admin track against the real credential ladder: the second-level exam is <strong>Platform Administrator II</strong>, which is probably the certification anchor that track should name.',
+   ['TT Master Program Comparison v2.0 (Program View) — correct','Master Program Guide.dc.html — needs updating','trailhead.salesforce.com/credentials/platformadministrator-ii']],
+
+  ['DC-02','medium','Trail OS installation in the member\u2019s org is invisible outside the blueprint',
+   'Nothing on the site mentions it. The blueprint makes it a precondition: "Trail OS installation is completed by the Transition Trails technology team as part of member onboarding," at step seven of registration, before any project work begins.',
+   'The Guide does not mention Digital Compass at all, so it does not mention this either.',
+   'Installing a managed package in a production org is the largest objection a cautious executive director will raise, and it is currently discovered during onboarding rather than during the sales conversation. Put it on the Digital Compass page as a named part of what membership involves — framed as the thing that makes support possible, which is how the blueprint frames it.',
+   ['Digital Compass Blueprint §1.4, §5.2','pages/DigitalCompass.jsx (absent)']],
+
+  ['DC-03','low','The blueprint still marks the HCH capstone as DRAFT',
+   'Three DRAFT warnings across the capstone section — structure, module count, scenario titles and completion recognition all "subject to change" — while the same document lists the capstone with a checkmark at all three tiers.',
+   'Resolved in conversation: the capstone is complete. Four modules, both roles. Only the stakeholder personas inside the scenario are unrefined, and those need testing with real members rather than more design.',
+   'Downgraded from blocker. Strip the DRAFT banners from the blueprint so the document stops understating a finished asset — it is the most concrete thing Digital Compass includes and the only one that is genuinely done. The paired own-org track is new and should be written into the blueprint at the same time.',
+   ['Digital Compass Blueprint §2.1, §3.3, §3.4','Digital Compass - Program Design v0.1.dc.html (§07)']],
+
+  ['GT-06','medium','A third answer on what Guided Trail learners build',
+   'The Digital Compass blueprint describes the Guided Trail role as "the Salesforce Administrator building HCH\u2019s system from scratch or inheriting it as an admin." The comparison sheet says Guided Trail is a real nonprofit implementation and gives Foundations the full HCH build.',
+   'Guided Trail learners inherit an undocumented org seeded with deliberate configuration debt, and separately take coach-assigned client work.',
+   'Three documents, three descriptions — build from scratch, inherit, or implement for a client. The Guide\u2019s answer covers all of it if stated in order: inherit a seeded org, and take live client work alongside it. Write that sentence once and paste it into the blueprint, the comparison and the site.',
+   ['Digital Compass Blueprint §3.1','TT Master Program Comparison v2.0','pages/GuidedTrail.jsx:118']],
+
+  ['DC-04','medium','Ten of eighteen project types have no dollar value',
+   'The Salesforce category prices every type — $1,200 to $6,000. Google Workspace, Jotform, Slack, the audits and the AI training are all recorded as "market rate value," two of them as hours saved.',
+   'Project Value Delivered is one of the nine Digital Compass measures, tracked and reported quarterly.',
+   'An unpriced project cannot be counted, so a third of delivered work is invisible in the impact figure — and the grant framing already leans on "for every $1 granted, TT contributes $4+ in leveraged resources." Price them as ranges, the way Digital Experience Site and Process Automation already are.',
+   ['Digital Compass Blueprint §5.4, §6.3']],
+
+  ['GRANT-01','medium','Salary figures exist in the grant material and nowhere else',
+   'The comparison sheet publishes specific outcomes: $65K–$75K at placement for Guided Trail, $90K–$120K+ for Trail of Mastery, and wage gains of $20K–$60K. The site publishes none of them.',
+   'The Guide does not carry salary claims. The brand voice explicitly prohibits overpromising.',
+   'Correct as it stands — these belong in a funder packet with methodology attached, not on a public program page. Worth stating as a deliberate policy so nobody later "improves" the Guided Trail page by adding them. If they ever do go public they need a documented basis and an n.',
+   ['TT Master Program Comparison v2.0 (Program View)','(absent from site — correctly)']],
+
+  ['DC-05','low','The Nine Pillars framework exists in one document only',
+   'The blueprint organises Digital Compass around nine areas of nonprofit health — strategic planning, governance, HR, volunteers, partnerships, fundraising, legal and finance, technology, marketing — and uses them to drive office hours topics, TrailKit priorities and the member roadmap conversation.',
+   'Absent from the Guide, the site and the portal.',
+   'It is the content model for the whole program and it lives in one Word document. Either it is the framework — in which case it belongs in the Guide and on the Digital Compass page as what membership covers — or it is an internal planning aid and should stop being described as the structure.',
+   ['Digital Compass Blueprint §6.2']],
+
+  ['ORG-02','low','The founding-date question has an answer',
+   'The site trust strip says "Founded 2020." The page schema says 2022-05-15.',
+   'Both internal documents footer the same line: "501(c)(3) Public Charity eff. May 15, 2022," and client delivery began the same year with CLYLP.',
+   'Closes ORG-01. May 2022 is the date, it matches the structured data, and it is when the client work started too — so there is no earlier history that "Founded 2020" is protecting. Change the trust strip to "501(c)(3) since May 2022" and leave the schema alone.',
+   ['content/site.json (trustStrip)','index.html (ld+json)','both source documents (footer)']]
+];
+
+const DECISIONS = [
+  ['Decided — Foundations publishes no date','The waitlist page no longer promises an opening window. Foundations is described as in Cohort 0 testing, with a list and nothing committed.',
+   'The right call. Foundations is not on the critical path to a first placement, so deciding late costs nothing — while announcing a date and then moving it would cost trust with exactly the people most likely to enrol. Revisit once Cohort 0 has told you what it needs to.'],
+  ['Decided — two concurrent squads, even-numbered, capped at six','Squads are 2, 4 or 6 because learners test in pairs; size follows the client work available. Two named alternates each. What remains open is whether one Associate Coach covers both squads or each needs their own — and that is really the question the concurrency test is asking.',
+   'Staff two coaches for Cohort 1 even if you think one could stretch. If one turns out to be enough you have learned it cheaply; if not, you find out mid-cohort with no second pair of hands. The coach ladder exists to make the second seat affordable.'],
+  ['Decided — the fallback when a squad goes odd','Alternates cover a drop through the end of week one. After that: a Coach\u2019s Assistant fills the empty side of the pair, or the squad becomes a trio and rotates testing. Both keep every learner\u2019s peer evidence intact.',
+   'Worth noting what this does for the coach ladder — it gives Coach\u2019s Assistant a concrete first assignment rather than a vague apprenticeship, and standing in as a testing partner is genuinely good practice for someone learning to read a UAT script. Write both options into the rubric so neither a coach-partnered nor a trio-rotated test report is treated as a lesser artifact.'],
+  ['Does Penny appear on the public site at all?','Answered: she is in development for the learner programs, and Digital Compass is a later phase. That closes the contradiction — the blueprint and the comparison sheet are both ahead of reality and need correcting. What is still open is the site, which has never mentioned her.',
+   'Leave her off the site until she ships. The Explorer\u2019s Trail page currently sells daily quests and skill assessments without naming what produces them, which is honest enough for now — and a named AI coach is a much better launch announcement than a quiet footnote.'],
+  ['Do the internal documents get reissued?','Three of the new findings are not website problems at all — Explorer\u2019s Trail priced at $47, a single Trail of Mastery track, and the invented certification name all live in the June comparison, which is the document grant applications and ETPL filings are written from.',
+   'Reissue the comparison sheet as v2.1 in the same pass as the site copy. A superseded price list in funder-facing material is worse than one on a web page, because the web page can be changed after someone reads it.'],
+  ['Fraunces or Poppins?','The live site is a Fraunces site. The brand book is a Poppins book. Every new page written from either source inherits a different answer.',
+   'Keep Fraunces and amend the brand book. It is already everywhere, it reads warmer than Poppins at display sizes, and rolling it back a week before launch is the riskiest change on this page.']
+];
+
+const CLEAN = [
+  'RESOLVE on the consulting page — all seven phases, correct names, correct order.',
+  'Explorer\u2019s Trail pricing on the program page — all three tiers, matching the Guide exactly.',
+  'The coach ladder — Coach\u2019s Assistant, Associate Coach, Advanced Coach, consistent across the site.',
+  'The 12-week length and three-sprint structure for both Foundations and Guided Trail.',
+  'Explorer\u2019s Trail launch date of 1 October, and the Guided Trail enrolment credit rules.',
+  'The prohibited-terms block itself — Trailhead, Trailblazer, Ohana and Superbadge appear nowhere in visitor-facing copy.',
+  'Digital Compass pricing, and its separation from consulting engagements.',
+  'The 501(c)(3) status, EIN and Dallas address, consistent in content and structured data.'
+];
+
+const SEV = {
+  blocker: ['Blocker','#9B3B2E','#FDF1F0'],
+  high:    ['High','#B4720A','#FDF3E2'],
+  medium:  ['Medium','#2F6F7E','#E8F3F6'],
+  low:     ['Low','#4A4F4D','#EFEFEC']
+};
+
+class Component extends DCLogic {
+  state = { filter: null };
+  get filter() { return this.state.filter || this.props.severityFilter || 'all'; }
+  css(o) { return Object.entries(o).map(([k,v]) => k.replace(/[A-Z]/g,m=>'-'+m.toLowerCase())+':'+v).join(';'); }
+
+  renderVals() {
+    const active = this.filter;
+    const counts = F.reduce((a,f) => (a[f[1]] = (a[f[1]]||0)+1, a), {});
+    const opts = [['all','All '+F.length],['blocker','Blockers '+(counts.blocker||0)],['high','High '+(counts.high||0)],['medium','Medium '+(counts.medium||0)],['low','Low '+(counts.low||0)]];
+    const heroPills = [
+      { label: (counts.blocker||0) + (counts.blocker === 1 ? ' blocker' : ' blockers') },
+      { label: (counts.high||0) + ' high' },
+      { label: (counts.medium||0) + ' medium' },
+      { label: (counts.low||0) + ' low' },
+      { label: 'Go-live next week' }
+    ];
+
+    return {
+      heroPills,
+      findingCount: F.length,
+      lightChip: { style: { background:'rgba(255,255,255,.14)', color:'var(--tt-white)', whiteSpace:'nowrap' } },
+      wideAlert: { style: { maxWidth:'none', fontSize:'15.5px', lineHeight:1.65, padding:'22px 26px', borderRadius:'22px', gap:'14px' } },
+
+      filters: opts.map(([k,label]) => ({
+        label,
+        pick: () => this.setState({ filter: k }),
+        style: this.css({
+          padding:'9px 18px', borderRadius:'999px', cursor:'pointer',
+          fontFamily:'Poppins, sans-serif', fontWeight:600, fontSize:'13.5px',
+          background: k === active ? 'var(--tt-trail-green)' : 'var(--tt-white)',
+          color: k === active ? 'var(--tt-white)' : 'var(--tt-slate)',
+          border: k === active ? '1.5px solid var(--tt-trail-green)' : '1.5px solid var(--tt-warm-gray)'
+        })
+      })),
+
+      findings: F.filter(f => active === 'all' || f[1] === active).map(([id,sev,title,site,guide,fix,files]) => {
+        const [label, ink, bg] = SEV[sev];
+        return {
+          id, title, site, guide, fix, tint: ink,
+          sev: label,
+          sevStyle: this.css({
+            fontFamily:'Poppins, sans-serif', fontSize:'11.5px', fontWeight:700,
+            letterSpacing:'.08em', textTransform:'uppercase',
+            color: ink, background: bg, borderRadius:'999px', padding:'5px 13px'
+          }),
+          files: files.map(path => ({ path }))
+        };
+      }),
+
+      decisions: DECISIONS.map(([q,text,rec]) => ({ q, text, rec })),
+      clean: CLEAN.map(text => ({ text }))
+    };
+  }
+}
+</script>
+</body>
+</html>

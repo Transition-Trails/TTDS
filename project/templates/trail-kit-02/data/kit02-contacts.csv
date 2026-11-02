@@ -1,0 +1,41 @@
+FirstName,LastName,AccountName,Title,Email,Phone,MailingCity,LeadSource
+Alice,Barrett,Northwind Logistics,Operations Manager,alice.barrett@northwindlogistics.example.com,,Portland,Web
+Ben,Cho,Alpine Manufacturing,Finance Director,ben.cho@alpinemanufacturing.example.com,(201) 555-1101,Boise,Referral
+Carla,Duarte,Cedar Ridge Dental,Owner,carla.duarte@cedarridgedental.example.com,(202) 555-1102,Spokane,Trade Show
+Devon,Ellis,Harbourline Freight,Facilities Lead,devon.ellis@harbourlinefreight.example.com,(203) 555-1103,Tacoma,Partner
+Elena,Fontaine,Quill & Page Publishing,Procurement Manager,elena.fontaine@quillpagepublishing.example.com,(204) 555-1104,Portland,Web
+Frank,Gallagher,Ferrous Tooling,IT Manager,frank.gallagher@ferroustooling.example.com,(205) 555-1105,Eugene,Cold Call
+Grace,Haddad,Bright Meadow Foods,Managing Director,grace.haddad@brightmeadowfoods.example.com,(206) 555-1106,Salem,
+Hugo,Ibarra,Lakeside Property Group,Operations Manager,hugo.ibarra@lakesidepropertygroup.example.com,(207) 555-1107,Seattle,Web
+Ivy,Jensen,Tessera Analytics,Finance Director,ivy.jensen@tesseraanalytics.example.com,(208) 555-1108,Bellevue,Referral
+Jonah,Kowalski,Copperfield Legal,Owner,jonah.kowalski@copperfieldlegal.example.com,,Portland,Trade Show
+Kira,Lindqvist,Vantage Roofing,Facilities Lead,kira.lindqvist@vantageroofing.example.com,(210) 555-1110,Vancouver,Partner
+Liam,Moreau,Marlowe Textiles,Procurement Manager,liam.moreau@marlowetextiles.example.com,(211) 555-1111,Yakima,Web
+Maya,Nakamura,Ironhold Security,IT Manager,maya.nakamura@ironholdsecurity.example.com,(212) 555-1112,Tacoma,Cold Call
+Noah,Osei,Sunbeam Optics,Managing Director,noah.osei@sunbeamoptics.example.com,(213) 555-1113,Bend,
+Orla,Petrov,Greenfield Agritech,Operations Manager,orla.petrov@greenfieldagritech.example.com,(214) 555-1114,Medford,Web
+Peter,Quintana,Pinnacle Staffing,Finance Director,peter.quintana@pinnaclestaffing.example.com,(215) 555-1115,Seattle,Referral
+Quinn,Rasmussen,Riverstone Dental,Owner,quinn.rasmussen@riverstonedental.example.com,(216) 555-1116,Olympia,Trade Show
+Rosa,Silva,Halcyon Travel,Facilities Lead,rosa.silva@halcyontravel.example.com,(217) 555-1117,Portland,Partner
+Sam,Tanaka,Bramble & Co,Procurement Manager,sam.tanaka@brambleco.example.com,,Bellingham,Web
+Tara,Ueda,Kestrel Aviation,IT Manager,tara.ueda@kestrelaviation.example.com,(219) 555-1119,Everett,Cold Call
+Umar,Vasquez,Orchard Lane Bakery,Managing Director,umar.vasquez@orchardlanebakery.example.com,(220) 555-1120,Corvallis,
+Vera,Walsh,Summit Fabrication,Operations Manager,vera.walsh@summitfabrication.example.com,(221) 555-1121,Kent,Web
+Wes,Xu,Delta Rail Services,Finance Director,wes.xu@deltarailservices.example.com,(222) 555-1122,Spokane,Referral
+Xena,Yildiz,Nightingale Care,Owner,xena.yildiz@nightingalecare.example.com,(223) 555-1123,Renton,Trade Show
+Yusuf,Zhao,Wexford Engineering,Facilities Lead,yusuf.zhao@wexfordengineering.example.com,(224) 555-1124,Redmond,Partner
+Zoe,Abbott,Northwind Logistics,Procurement Manager,zoe.abbott@northwindlogistics.example.com,(225) 555-1125,Portland,Web
+Adam,Boone,Alpine Manufacturing,IT Manager,adam.boone@alpinemanufacturing.example.com,(226) 555-1126,Boise,Cold Call
+Beth,Castellanos,Cedar Ridge Dental,Managing Director,beth.castellanos@cedarridgedental.example.com,,Spokane,
+Cole,Dunn,Harbourline Freight,Operations Manager,cole.dunn@harbourlinefreight.example.com,(228) 555-1128,Tacoma,Web
+Dina,Emerson,Quill & Page Publishing,Finance Director,dina.emerson@quillpagepublishing.example.com,(229) 555-1129,Portland,Referral
+Eli,Falk,Ferrous Tooling,Owner,eli.falk@ferroustooling.example.com,(230) 555-1130,Eugene,Trade Show
+Fiona,Grimes,Bright Meadow Foods,Facilities Lead,fiona.grimes@brightmeadowfoods.example.com,(231) 555-1131,Salem,Partner
+Gus,Hollis,Lakeside Property Group,Procurement Manager,gus.hollis@lakesidepropertygroup.example.com,(232) 555-1132,Seattle,Web
+Hana,Ingram,Tessera Analytics,IT Manager,hana.ingram@tesseraanalytics.example.com,(233) 555-1133,Bellevue,Cold Call
+Ira,Jarvis,Copperfield Legal,Managing Director,ira.jarvis@copperfieldlegal.example.com,(234) 555-1134,Portland,
+Jade,Keeler,Vantage Roofing,Operations Manager,jade.keeler@vantageroofing.example.com,(235) 555-1135,Vancouver,Web
+Kurt,Lowry,Marlowe Textiles,Finance Director,kurt.lowry@marlowetextiles.example.com,,Yakima,Referral
+Lena,Mbeki,Ironhold Security,Owner,lena.mbeki@ironholdsecurity.example.com,(237) 555-1137,Tacoma,Trade Show
+Milo,Novak,Sunbeam Optics,Facilities Lead,milo.novak@sunbeamoptics.example.com,(238) 555-1138,Bend,Partner
+Nadia,Ortega,Greenfield Agritech,Procurement Manager,nadia.ortega@greenfieldagritech.example.com,(239) 555-1139,Medford,Web

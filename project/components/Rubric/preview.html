@@ -1,0 +1,28 @@
+<!-- @dsCard group="Program" height=260 subtitle="Emerging · Proficient · Exemplary" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>*{box-sizing:border-box}body{margin:0}#root{padding:20px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}</style>
+</head>
+<body>
+<div id="root" class="program-trail is-guided"></div>
+<script>
+(function(){
+  var h = React.createElement;
+  var C = window.TransitionTrailsDesignSystem_335df4.Rubric;
+  var libs = [];
+  function load(i){
+    if (i >= libs.length) { ReactDOM.createRoot(document.getElementById('root')).render(h(C,{criteria:[
+  ['Scoping','Enables org-wide without discussion','Defines and assigns a pilot group','Documents rationale, risks, and sign-off'],
+  ['Validation','Confirms in-scope users only','Confirms in-scope and out-of-scope','Produces a log another admin could reuse'],
+  ['Communication','Announces after the fact','Announces before activation','Explains visibility in the stakeholder\u2019s own terms']]})); return; }
+    var s = document.createElement('script'); s.src = libs[i];
+    s.onload = s.onerror = function(){ load(i + 1); };
+    document.head.appendChild(s);
+  }
+  load(0);
+})();
+</script>
+</body>
+</html>

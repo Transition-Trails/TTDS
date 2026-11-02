@@ -1,0 +1,58 @@
+<!-- @dsCard height=340 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+#root{position:relative;width:960px;height:340px;background:var(--tt-trail-light);overflow:hidden}
+.band{position:absolute;left:0;top:0;width:960px;height:112px;display:block}
+.teal{fill:var(--tt-deep-teal)}
+.green{fill:var(--tt-trail-green)}
+.sky{fill:var(--tt-sky-blue)}
+.amber{fill:var(--tt-sun-amber)}
+.ink{fill:var(--tt-charcoal)}
+.marker{fill:var(--tt-green-100)}
+.text{position:absolute;left:48px;top:144px;max-width:880px}
+.name{margin:0;font-family:var(--font-display);font-weight:600;font-size:64px;line-height:.95;color:var(--tt-charcoal);letter-spacing:-.01em}
+.tag{margin:16px 0 0;font-family:var(--font-body);font-size:14px;line-height:1.4;color:var(--tt-slate-mid);max-width:440px}
+</style>
+</head>
+<body>
+<div id="root">
+<svg class="band" viewBox="0 0 960 112" aria-hidden="true">
+<!--
+  blocks: tt-deep-teal 384 (tt-space-2xl x8) · tt-trail-green 288 (x6) · tt-sky-blue 144 (x3) · tt-charcoal 48 · tt-sun-amber 96 (x2), all 112 tall (tt-space-2xl + tt-space-3xl)
+  arrangement: top-band skeleton; a strip of unequal bands, the name too wide for the 440px zone
+  pattern: pills (tt-radius-pill) — "trails and guided progress": a dashed trail of markers across teal and green
+  steps/radii: pill 32x8 at tt-space-2xl (48) pitch, y = tt-space-2xl + tt-space-xs; rx = half the short side
+-->
+<rect class="teal" x="0" y="0" width="384" height="112"/>
+<rect class="green" x="384" y="0" width="288" height="112"/>
+<rect class="sky" x="672" y="0" width="144" height="112"/>
+<rect class="ink" x="816" y="0" width="48" height="112"/>
+<rect class="amber" x="864" y="0" width="96" height="112"/>
+<g class="marker">
+<rect x="24" y="52" width="32" height="8" rx="4"/>
+<rect x="72" y="52" width="32" height="8" rx="4"/>
+<rect x="120" y="52" width="32" height="8" rx="4"/>
+<rect x="168" y="52" width="32" height="8" rx="4"/>
+<rect x="216" y="52" width="32" height="8" rx="4"/>
+<rect x="264" y="52" width="32" height="8" rx="4"/>
+<rect x="312" y="52" width="32" height="8" rx="4"/>
+<rect x="360" y="52" width="32" height="8" rx="4"/>
+<rect x="408" y="52" width="32" height="8" rx="4"/>
+<rect x="456" y="52" width="32" height="8" rx="4"/>
+<rect x="504" y="52" width="32" height="8" rx="4"/>
+<rect x="552" y="52" width="32" height="8" rx="4"/>
+<rect x="600" y="52" width="32" height="8" rx="4"/>
+</g>
+</svg>
+<div class="text">
+<h1 class="name">Transition Trails<br>Design System</h1>
+<p class="tag">Nature-inspired, reinforcing the metaphor of trails and guided progress.</p>
+</div>
+</div>
+</body>
+</html>

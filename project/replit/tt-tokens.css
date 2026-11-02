@@ -1,0 +1,284 @@
+/* Transition Trails — design tokens for Replit apps
+   GENERATED 2026-08-06 by concatenating the live token sources from the
+   Transition Trails Design System. Do not hand-edit: change the design system
+   and regenerate, or the two will drift.
+
+   Sources: tokens/fonts.css · tokens/colors.css · tokens/typography.css · tokens/spacing.css · tokens/elevation.css · tokens/semantic.css
+   Print-branch scopes (trail-kit, program, partner) are excluded — they are for
+   PDF artifacts, not apps.
+
+   Targets Tailwind v4 (@tailwindcss/vite), which both TT apps use. */
+
+/* ---- tokens/fonts.css ---- */
+/* Transition Trails — Webfonts
+   Hosted on Google Fonts. No local binaries were provided with the brand
+   assets, so we load from the CDN.
+   Poppins = headings · Open Sans = body/UI · Caveat = limited accent.
+
+   Fraunces is deliberately ABSENT here. The brand's display face is scoped to
+   H1/H2 on MARKETING surfaces only (public website, landing pages, brochures).
+   Apps built on this starter are product UI, which is Poppins throughout — the
+   same rule Trail OS follows. Do not add it. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap');
+
+/* ---- tokens/colors.css ---- */
+/* Transition Trails — Color tokens
+   Nature-inspired palette reinforcing the metaphor of trails and guided progress.
+   Base values + ramps. Semantic aliases live in semantic.css. */
+:root {
+  /* ---- Core brand palette ---- */
+  --tt-trail-green: #2F6B3F;   /* primary — actions, headings, growth */
+  --tt-deep-teal:   #2F6F7E;   /* secondary — containers, footer, depth */
+  --tt-sky-blue:    #7FAFC6;   /* surface — backgrounds, cards */
+  --tt-sun-amber:   #F5A623;   /* accent — ONE "Next Step" CTA per screen */
+
+  /* ---- Neutrals ---- */
+  --tt-trail-light: #FAFAF7;   /* main background */
+  --tt-warm-gray:   #E2E4E1;   /* dividers, borders */
+  --tt-slate:       #4A4F4D;   /* body text */
+  --tt-charcoal:    #2A2E2C;   /* headings, icons */
+  --tt-white:       #FFFFFF;
+
+  /* ---- Trail Green ramp ---- */
+  --tt-green-100: #E6F0EA;
+  --tt-green-300: #9FC3AE;
+  --tt-green-500: #2F6B3F;
+  --tt-green-700: #245531;
+
+  /* ---- Sun Amber ramp ---- */
+  --tt-amber-100: #FFF3E0;
+  --tt-amber-300: #FFD08A;
+  --tt-amber-500: #F5A623;
+  --tt-amber-700: #CC8400;
+
+  /* ---- Sky Blue tint ---- */
+  --tt-sky-100: #EDF5F8;
+
+  /* ---- Critical / brick red ----
+     Functional only: destructive actions, blocking errors, critical status.
+     Never decorative, and never the sole signal — pair with an icon and text.
+     Deliberately a warm brick rather than a pure red, so it sits inside the
+     palette instead of shouting over it. */
+  --tt-critical-100: #FBEAE6;  /* tinted background */
+  --tt-critical-300: #E8B9B4;  /* border */
+  --tt-critical-500: #A93F2F;  /* text, dot fill, destructive action */
+
+  /* ---- Extra neutral ----
+     Between Slate and Warm Gray. Muted and placeholder text — the only
+     neutral below Slate that still clears 4.5:1 on Trail Light. */
+  --tt-slate-mid:   #686E6C;
+}
+
+/* ---- tokens/typography.css ---- */
+/* Transition Trails — Typography tokens
+   Poppins (headings) · Open Sans / Roboto fallback (body/UI) · Caveat (accent,
+   limited). No --tt-font-display: that token is marketing-only. */
+:root {
+  --tt-font-heading: 'Poppins', system-ui, sans-serif;
+  --tt-font-body:    'Open Sans', 'Roboto', system-ui, sans-serif;
+  --tt-font-accent:  'Caveat', cursive;
+  --tt-font-mono:    Menlo, 'Courier New', monospace;  /* code, IDs, API names */
+
+  /* Type scale (mid-point of documented ranges) */
+  --tt-h1: 44px; /* @kind font */   /* 36–48 · Poppins 600–700 */
+  --tt-h2: 32px; /* @kind font */   /* 28–36 · Poppins 600 */
+  --tt-h3: 25px; /* @kind font */   /* 22–28 · Poppins 500–600 */
+  --tt-h4: 20px; /* @kind font */   /* 18–22 · Poppins 500 */
+  --tt-body: 17px; /* @kind font */    /* 16–18 · Open Sans 400 */
+  --tt-body-sm: 14px; /* @kind font */ /* 14–16 · Open Sans 400–500 */
+  --tt-label: 14px; /* @kind font */   /* Open Sans 500 */
+  --tt-accent: 30px; /* @kind font */  /* 22–32 · Caveat 400–600 */
+
+  /* Weights */
+  --tt-weight-regular: 400; /* @kind font */
+  --tt-weight-medium:  500; /* @kind font */
+  --tt-weight-semibold: 600; /* @kind font */
+  --tt-weight-bold:    700; /* @kind font */
+
+  /* Line heights */
+  --tt-leading-tight: 1.2; /* @kind font */
+  --tt-leading-snug:  1.4; /* @kind font */
+  --tt-leading-body:  1.6; /* @kind font */
+}
+
+/* ---- tokens/spacing.css ---- */
+/* Transition Trails — Spacing & radius tokens
+   8px-based scale. Generous radii give a soft, approachable feel. */
+:root {
+  /* Spacing (8px base) */
+  --tt-space-xs:  4px;
+  --tt-space-sm:  8px;
+  --tt-space-md:  16px;
+  --tt-space-lg:  24px;
+  --tt-space-xl:  32px;
+  --tt-space-2xl: 48px;
+  --tt-space-3xl: 64px;
+
+  /* Radius */
+  --tt-radius-sm:   8px;
+  --tt-radius-md:   14px;
+  --tt-radius-lg:   22px;
+  --tt-radius-pill: 999px;
+}
+
+/* ---- tokens/elevation.css ---- */
+/* Transition Trails — Elevation & focus tokens
+   Soft, low-contrast shadows. Cards lift gently on hover. */
+:root {
+  --tt-shadow-card:  0 12px 28px rgba(42, 46, 44, .10);
+  --tt-shadow-soft:  0 6px 16px rgba(42, 46, 44, .08);
+  --tt-shadow-hover: 0 15px 32px rgba(42, 46, 44, .13);  /* card hover lift */
+  --tt-shadow-amber: 0 2px 8px rgba(245, 166, 35, .35);
+  --tt-focus-ring:   0 0 0 3px rgba(47, 107, 63, .15);
+}
+
+/* ---- tokens/semantic.css ---- */
+/* Transition Trails — Semantic role aliases
+   Reference these in components so intent stays readable. */
+:root {
+  --tt-bg:         var(--tt-trail-light);
+  --tt-surface:    var(--tt-white);
+  --tt-surface-alt: var(--tt-sky-100);
+  --tt-border:     var(--tt-warm-gray);
+  --tt-text:       var(--tt-slate);
+  --tt-text-muted: var(--tt-slate-mid);
+  --tt-heading:    var(--tt-charcoal);
+  --tt-link:       var(--tt-trail-green);
+  --tt-link-hover: var(--tt-green-700);
+
+  /* Action roles */
+  --tt-action-primary:       var(--tt-trail-green);
+  --tt-action-primary-hover: var(--tt-green-700);
+  --tt-action-accent:        var(--tt-sun-amber);
+  --tt-action-accent-hover:  var(--tt-amber-700);
+
+  /* Status */
+  --tt-success:  var(--tt-green-500);
+  --tt-info:     var(--tt-deep-teal);
+  --tt-warning:  var(--tt-amber-700);
+  --tt-danger:        var(--tt-critical-500);
+  --tt-danger-bg:     var(--tt-critical-100);
+  --tt-danger-border: var(--tt-critical-300);
+}
+
+/* ---- Tailwind v4 theme mapping ----
+   Both Transition Trails apps run Tailwind v4 via @tailwindcss/vite, which
+   removed the `presets` option — there is no config file to extend. Importing
+   this file registers the utilities.
+
+   Opacity modifiers work without channel triplets: v4 composes alpha with
+   color-mix(), so bg-trail-green/50 resolves correctly against a var(). */
+@theme inline {
+
+  /* ── Namespace clears ──────────────────────────────────────────────────
+     Tailwind v4 ships complete default scales. Redefining only some steps
+     leaves the rest at Tailwind values, so a class that looks sanctioned
+     (bg-green-600, rounded-2xl) renders off-brand — and often lands
+     numerically between two brand values, so it looks almost right.
+     Clearing first means an unlisted step does not exist and fails loudly.
+
+     Not cleared: --spacing-* (v4 computes p-4 from a single --spacing base,
+     so clearing it would break every numeric spacing utility) and --font-*
+     (no collision; --font-sans is mapped below instead). */
+  --color-slate-*: initial;
+  --color-green-*: initial;
+  --color-amber-*: initial;
+  --color-sky-*: initial;
+  --color-critical-*: initial;
+  --color-slate: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --text-*: initial;
+
+  /* ── Colors ─────────────────────────────────────────────────────────── */
+  --color-trail-green:              var(--tt-trail-green);
+  --color-deep-teal:                var(--tt-deep-teal);
+  --color-sky-blue:                 var(--tt-sky-blue);
+  --color-sun-amber:                var(--tt-sun-amber);
+  --color-trail-light:              var(--tt-trail-light);
+  --color-warm-gray:                var(--tt-warm-gray);
+  --color-slate:                    var(--tt-slate);
+  --color-charcoal:                 var(--tt-charcoal);
+  --color-white:                    var(--tt-white);
+  --color-green-100:                var(--tt-green-100);
+  --color-green-300:                var(--tt-green-300);
+  --color-green-500:                var(--tt-green-500);
+  --color-green-700:                var(--tt-green-700);
+  --color-amber-100:                var(--tt-amber-100);
+  --color-amber-300:                var(--tt-amber-300);
+  --color-amber-500:                var(--tt-amber-500);
+  --color-amber-700:                var(--tt-amber-700);
+  --color-sky-100:                  var(--tt-sky-100);
+  --color-critical-100:             var(--tt-critical-100);
+  --color-critical-300:             var(--tt-critical-300);
+  --color-critical-500:             var(--tt-critical-500);
+  --color-slate-mid:                var(--tt-slate-mid);
+  --color-bg:                       var(--tt-bg);
+  --color-surface:                  var(--tt-surface);
+  --color-surface-alt:              var(--tt-surface-alt);
+  --color-border:                   var(--tt-border);
+  --color-text:                     var(--tt-text);
+  --color-text-muted:               var(--tt-text-muted);
+  --color-heading:                  var(--tt-heading);
+  --color-link:                     var(--tt-link);
+  --color-link-hover:               var(--tt-link-hover);
+  --color-action-primary:           var(--tt-action-primary);
+  --color-action-primary-hover:     var(--tt-action-primary-hover);
+  --color-action-accent:            var(--tt-action-accent);
+  --color-action-accent-hover:      var(--tt-action-accent-hover);
+  --color-success:                  var(--tt-success);
+  --color-info:                     var(--tt-info);
+  --color-warning:                  var(--tt-warning);
+  --color-danger:                   var(--tt-danger);
+  --color-danger-bg:                var(--tt-danger-bg);
+  --color-danger-border:            var(--tt-danger-border);
+
+  /* ── Fonts ──────────────────────────────────────────────────────────
+     --font-sans drives Preflight's html { font-family } — without it every
+     unstyled element renders in ui-sans-serif rather than the brand body face. */
+  --font-heading:                   var(--tt-font-heading);
+  --font-body:                      var(--tt-font-body);
+  --font-accent:                    var(--tt-font-accent);
+  --font-mono:                      var(--tt-font-mono);
+  --font-sans:                      var(--tt-font-body);  /* Preflight default */
+  --font-serif:                     var(--tt-font-heading);  /* Poppins — matches Trail OS */
+
+  /* ── Type scale ─────────────────────────────────────────────────────
+     Brand names, plus the three common Tailwind steps remapped onto brand
+     values so text-base is the 17px brand body, not Tailwind's 16px. */
+  --text-h1:                        var(--tt-h1);
+  --text-h2:                        var(--tt-h2);
+  --text-h3:                        var(--tt-h3);
+  --text-h4:                        var(--tt-h4);
+  --text-body:                      var(--tt-body);
+  --text-body-sm:                   var(--tt-body-sm);
+  --text-label:                     var(--tt-label);
+  --text-accent:                    var(--tt-accent);
+  --text-sm:                        var(--tt-body-sm);  /* 14px */
+  --text-base:                      var(--tt-body);  /* 17px */
+  --text-lg:                        var(--tt-h4);  /* 20px */
+
+  /* ── Spacing (namespace NOT cleared — see above) ────────────────────── */
+  --spacing-xs:                     var(--tt-space-xs);
+  --spacing-sm:                     var(--tt-space-sm);
+  --spacing-md:                     var(--tt-space-md);
+  --spacing-lg:                     var(--tt-space-lg);
+  --spacing-xl:                     var(--tt-space-xl);
+  --spacing-2xl:                    var(--tt-space-2xl);
+  --spacing-3xl:                    var(--tt-space-3xl);
+
+  /* ── Radius — three brand steps; anything else fails ────────────────── */
+  --radius-sm:                      var(--tt-radius-sm);
+  --radius-md:                      var(--tt-radius-md);
+  --radius-lg:                      var(--tt-radius-lg);
+  --radius-pill:                    var(--tt-radius-pill);
+
+  /* ── Shadows — brand names, plus the common Tailwind names remapped ─── */
+  --shadow-card:                    var(--tt-shadow-card);
+  --shadow-soft:                    var(--tt-shadow-soft);
+  --shadow-hover:                   var(--tt-shadow-hover);
+  --shadow-amber:                   var(--tt-shadow-amber);
+  --shadow-sm:                      var(--tt-shadow-soft);
+  --shadow-md:                      var(--tt-shadow-card);
+  --shadow-lg:                      var(--tt-shadow-hover);
+}

@@ -1,0 +1,43 @@
+/* Transition Trails — Typography tokens
+   Fraunces (H1/H2 on marketing surfaces) · Poppins (all other headings, buttons,
+   labels) · Open Sans / Roboto fallback (body/UI) · Caveat (accent, limited).
+
+   THE SPLIT — decided 2026-09-22, matching the live public site:
+     --tt-font-display  H1 and H2 on MARKETING surfaces only (website, landing
+                        pages, brochures). Fraunces has a spine Poppins does not
+                        at 40px and up; below that the two are near identical,
+                        so the serif earns nothing.
+     --tt-font-heading  everything else — H3 down, buttons, labels, and ALL
+                        headings inside product UI (Trail OS) and print
+                        artifacts (Trail Kits, program modules).
+
+   Trail OS is pure Poppins on purpose. The seam between marketing and product
+   is deliberate: the brochure has an editorial voice, the application does not. */
+:root {
+  --tt-font-display: 'Fraunces', Georgia, serif;
+  --tt-font-heading: 'Poppins', system-ui, sans-serif;
+  --tt-font-body:    'Open Sans', 'Roboto', system-ui, sans-serif;
+  --tt-font-accent:  'Caveat', cursive;
+  --tt-font-mono:    Menlo, 'Courier New', monospace;  /* code, IDs, API names */
+
+  /* Type scale (mid-point of documented ranges) */
+  --tt-h1: 44px; /* @kind font */   /* 36–48 · Poppins 600–700 */
+  --tt-h2: 32px; /* @kind font */   /* 28–36 · Poppins 600 */
+  --tt-h3: 25px; /* @kind font */   /* 22–28 · Poppins 500–600 */
+  --tt-h4: 20px; /* @kind font */   /* 18–22 · Poppins 500 */
+  --tt-body: 17px; /* @kind font */    /* 16–18 · Open Sans 400 */
+  --tt-body-sm: 14px; /* @kind font */ /* 14–16 · Open Sans 400–500 */
+  --tt-label: 14px; /* @kind font */   /* Open Sans 500 */
+  --tt-accent: 30px; /* @kind font */  /* 22–32 · Caveat 400–600 */
+
+  /* Weights */
+  --tt-weight-regular: 400; /* @kind font */
+  --tt-weight-medium:  500; /* @kind font */
+  --tt-weight-semibold: 600; /* @kind font */
+  --tt-weight-bold:    700; /* @kind font */
+
+  /* Line heights */
+  --tt-leading-tight: 1.2; /* @kind font */
+  --tt-leading-snug:  1.4; /* @kind font */
+  --tt-leading-body:  1.6; /* @kind font */
+}

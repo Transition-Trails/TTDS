@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Learner Kit Series — planning document" description="Internal master plan for the Learner Trail Kit series: what a paid kit offers that free official training does not, what qualifies as a kit, the scoring rubric, the candidate roster, sequencing, and how kit purchases credit toward Foundations Trail tuition. Not customer-facing." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Cover — series thesis" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.62in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #2F6F7E;padding-bottom:9px;margin-bottom:0.26in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#2F6F7E">Transition Trails · Internal planning</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#8C857A">Not for distribution</div>
+</div>
+
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:30pt;line-height:1.2;color:#2A2E2C;margin:0 0 0.14in;padding-bottom:5px;letter-spacing:-.015em;max-width:6in">Learner Trail Kit series</h1>
+<p style="font-size:12pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.28in;max-width:5.7in">A plan for the kits we sell to people who work in Salesforce — or want to. The hard question here is not what to build. It is what a paid kit offers that the free official training does not.</p>
+
+<div style="background:#2F6F7E;border-radius:10px;padding:0.26in 0.28in;margin-bottom:0.26in;color:#fff">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#A9C3CE;margin-bottom:9px">The thesis</div>
+<div style="font-size:13pt;line-height:1.5;font-family:'Poppins',sans-serif;font-weight:500">The free official training teaches you to click the buttons. It cannot tell you whether you should, what good looks like afterward, or how to get twelve colleagues to actually use the thing you just switched on. That gap is the product.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The accidental admin</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px">Handed the org because they were good with computers. Nobody trained them, and they have been guessing for two years.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">They are not job hunting. They want to stop feeling like a fraud in their own system.</div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="briefcase" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The working admin</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px">Certified and newly hired. The credential opened the door; now they have to do the job, often as the only Salesforce person there.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">They buy a kit for the reps they have not had yet, and buy again if the first respected their time.</div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="compass" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The career changer</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px">Studying toward a first Salesforce role, with a dev org and no one to ask whether their work is any good.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">All three are program prospects, entering by different doors — this one at Foundations, the other two at Guided or Mastery.</div>
+</div>
+</div>
+
+<div style="margin-top:0.18in;padding-top:0.16in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8.5pt;color:#8C857A">
+<span>Two of the three buyers already have the job. Write for them first.</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Page 1</span>
+</div>
+
+</div>
+</section>
+
+<section class="page" data-screen-label="What qualifies" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.6in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Learner kit series</span><span style="color:#2F6F7E">The rubric</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.2;color:#2A2E2C;margin:0 0 0.1in">Does this topic deserve a kit?</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.2in;max-width:5.6in">Score each candidate 1–5 on all six, out of 30. <b>Under 18 is not built at all; 18–23 is only built inside a series; 24 and above can launch alone.</b> Same thresholds as the nonprofit line, different dimensions.</p>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A">
+<div>Dimension</div><div>Scores 5 when</div><div>Scores 1 when</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Frequency</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Almost everyone in a Salesforce seat meets this, whether or not they handle it well.</div>
+<div style="font-size:9pt;line-height:1.45;color:#8C857A">Niche to one industry.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Dev-org viable</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Fully buildable in a free Developer Edition org, start to finish, with nothing licensed missing.</div>
+<div style="font-size:9pt;line-height:1.45;color:#8C857A">Cannot be practiced at all.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Adoption depth</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Switching it on is the easy half. Getting people to use it is a real problem with real tactics.</div>
+<div style="font-size:9pt;line-height:1.45;color:#8C857A">Nobody else is affected.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Judgment</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">There are two defensible ways to do it and the choice matters. This is what free content never covers.</div>
+<div style="font-size:9pt;line-height:1.45;color:#8C857A">One correct sequence of clicks.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Career-legible</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Having done this is worth saying out loud — in a review, an interview, or a handover.</div>
+<div style="font-size:9pt;line-height:1.45;color:#8C857A">Invisible to anyone else.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.15in;gap:14px;padding:8px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Films well</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">You can watch it happen and understand it. Screens change visibly.</div>
+<div style="font-size:9pt;line-height:1.45;color:#8C857A">Twenty minutes of typing.</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.28in;flex:1;min-height:0;align-items:start">
+<div style="background:#F7EAE3;border-radius:9px;padding:0.18in 0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="octagon-x" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Automatic no</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:7px">· Cannot be built in a Developer Edition org.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:7px">· Requires code. Our path is Foundations then Administrator, not developer.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:7px">· Duplicates something an affiliate does better — we would be competing with our own recommendation.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:7px">· Teaches exam answers rather than working practice.</div>
+<div style="font-size:9pt;line-height:1.5;color:#6E6559;margin-top:9px;padding-top:9px;border-top:1px solid #DFA285">Any one of these ends it regardless of score. Record the reason on page 3.</div>
+</div>
+<div style="background:#EDF5F8;border-radius:9px;padding:0.18in 0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="list-checks" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Every learner kit answers six questions</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>1 · What is it,</b> in language you could use with your manager.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>2 · Why would you turn it on,</b> and when you should not.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>3 · How do you enable it,</b> step by step, with proof at each stage.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>4 · What does good look like</b> — the practices that separate a competent setup from a working one.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>5 · How do people adopt it,</b> including what to say and who to tell first.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b>6 · What to watch</b> once it is live and other people depend on it.</div>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8.5pt;color:#8C857A">
+<span>Question 5 is the one nobody else answers. Do not let it get cut for space.</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Page 2</span>
+</div>
+
+</div>
+</section>
+
+<section class="page" data-screen-label="The roster" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.6in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Learner kit series</span><span style="color:#2F6F7E">Candidates</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.16in">
+<div style="max-width:5in">
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.2;color:#2A2E2C;margin:0 0 5px">The roster</h2>
+<p style="font-size:10pt;line-height:1.5;color:#3B3F3D;margin:0">A first pass that needs your judgment — you have sat with these people. Sorted by total.</p>
+</div>
+<div style="text-align:right;font-size:8.5pt;color:#8C857A;line-height:1.5">F · Frequency &nbsp; D · Dev-org<br>A · Adoption &nbsp; J · Judgment<br>C · Career &nbsp; V · Video</div>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7">
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A">
+<div>Kit</div><div>Topic</div><div>F</div><div>D</div><div>A</div><div>J</div><div>C</div><div>V</div><div>Tot</div><div>Status</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L01</div><div style="color:#2A2E2C">Reports and dashboards that answer a question</div><div>5</div><div>5</div><div>4</div><div>5</div><div>5</div><div>5</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">29</div><div style="font-size:8pt;color:#2F6B3F">Build first</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L02</div><div style="color:#2A2E2C">Permission sets and profiles, and which to reach for</div><div>5</div><div>5</div><div>3</div><div>5</div><div>5</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">27</div><div style="font-size:8pt;color:#2F6B3F">Standalone</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L03</div><div style="color:#2A2E2C">Your first Flow, and when not to build one</div><div>5</div><div>5</div><div>3</div><div>5</div><div>5</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">27</div><div style="font-size:8pt;color:#2F6B3F">Standalone</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L04</div><div style="color:#2A2E2C">Validation rules that people do not resent</div><div>4</div><div>5</div><div>5</div><div>5</div><div>4</div><div>3</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">26</div><div style="font-size:8pt;color:#2F6B3F">Standalone</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L05</div><div style="color:#2A2E2C">Why can this user not see this record?</div><div>5</div><div>5</div><div>2</div><div>5</div><div>5</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">26</div><div style="font-size:8pt;color:#2F6B3F">Standalone</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L06</div><div style="color:#2A2E2C">List views people actually use</div><div>5</div><div>5</div><div>5</div><div>3</div><div>3</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">25</div><div style="font-size:8pt;color:#2F6B3F">Standalone</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L07</div><div style="color:#2A2E2C">Activity Capture — email on the record</div><div>4</div><div>2</div><div>5</div><div>4</div><div>4</div><div>5</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">24</div><div style="font-size:8pt;color:#8C857A">Shipped</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L08</div><div style="color:#2A2E2C">Finding and merging duplicates</div><div>4</div><div>5</div><div>3</div><div>4</div><div>4</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#2F6B3F">24</div><div style="font-size:8pt;color:#2F6B3F">Standalone</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L09</div><div style="color:#2A2E2C">Record types and page layouts</div><div>4</div><div>5</div><div>4</div><div>4</div><div>3</div><div>3</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#8A3D1C">23</div><div style="font-size:8pt;color:#8A3D1C">In series</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L10</div><div style="color:#2A2E2C">Importing a spreadsheet without wrecking anything</div><div>4</div><div>5</div><div>2</div><div>4</div><div>4</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#8A3D1C">23</div><div style="font-size:8pt;color:#8A3D1C">In series</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L11</div><div style="color:#2A2E2C">Setting up a new user properly</div><div>4</div><div>5</div><div>4</div><div>3</div><div>4</div><div>3</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#8A3D1C">23</div><div style="font-size:8pt;color:#8A3D1C">In series</div>
+</div>
+<div style="display:grid;grid-template-columns:0.34in 1fr 0.22in 0.22in 0.22in 0.22in 0.22in 0.22in 0.36in 0.72in;gap:7px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline;font-size:9.5pt;color:#3B3F3D">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">L12</div><div style="color:#2A2E2C">Salesforce on a phone, set up so people use it</div><div>3</div><div>5</div><div>5</div><div>3</div><div>2</div><div>4</div><div style="font-family:'Poppins',sans-serif;font-weight:700;color:#8A3D1C">22</div><div style="font-size:8pt;color:#8A3D1C">In series</div>
+</div>
+</div>
+
+<div style="margin-top:0.2in;padding-top:0.16in;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#8A3D1C;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="octagon-x" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Considered and declined — and the rule that killed it</div>
+<div style="display:grid;grid-template-columns:1.95in 1.3in 1fr;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Certification exam prep</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8.5pt;color:#8A3D1C;line-height:1.3">Affiliate does it better</div>
+<div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">We already send people to K2 University for study guides. Selling against our own recommendation is bad business and worse advice.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.95in 1.3in 1fr;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Sandboxes and change sets</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8.5pt;color:#8A3D1C;line-height:1.3">Not in a dev org</div>
+<div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Genuinely valuable and genuinely unpracticeable on Developer Edition. Teaching it from screenshots is exactly what we tell people not to do.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.95in 1.3in 1fr;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Apex triggers</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8.5pt;color:#8A3D1C;line-height:1.3">Needs code</div>
+<div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Off the credential path we support. A learner who needs this needs a developer curriculum, not us.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.95in 1.3in 1fr;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C;line-height:1.3">Nonprofit-specific data models</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8.5pt;color:#8A3D1C;line-height:1.3">Wrong line</div>
+<div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Real topics, but they belong to the nonprofit series. Two editions of one kit is fine; two audiences in one kit is not.</div>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8.5pt;color:#8C857A">
+<span>Numbering is provisional. Renumber when the first three are scoped, not before.</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Page 3</span>
+</div>
+
+</div>
+</section>
+
+<section class="page" data-screen-label="Sequencing and production" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.6in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Learner kit series</span><span style="color:#2F6F7E">Order and production</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.2;color:#2A2E2C;margin:0 0 0.18in">What to build, in what order</h2>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.3in;margin-bottom:0.16in">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="route" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The order, and why</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px"><b>Reports first.</b> It scores 29, every seat needs it, and a buyer sees the result in an afternoon.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px"><b>Then duplicates and importing</b>, finishing the first series. A bundle needs a complete series; an unfinished one is three kits on a shelf.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b>Permission sets opens the second.</b> Highest-judgment topic on the roster, and the real test of whether the format survives a hard subject.</div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="hand-coins" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Pricing</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px">Single kit at the <b>same list price as the nonprofit line</b> — one price across both audiences is easier to defend than a split anyone can see through.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-bottom:8px">Bundle by <b>series, not by count</b> — on sale only when the series is complete.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b>Every kit purchase credits toward tuition on any program they later join.</b> Print it on the placemat in every learner kit — it turns a small test purchase into a deposit.</div>
+</div>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What each kit costs us to make</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.5in;gap:14px;padding:6px 0;border-top:1px solid #DED5C7;font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A">
+<div>Asset</div><div>What it is</div><div>Reused or per-kit</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Six shared inserts</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Permitted use, glossary, Setup navigation, where to practice, dev org, change record.</div><div style="font-size:9pt;color:#2F6B3F">Reused unchanged</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Kit body</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Five tabs against the six questions, plus troubleshooting and the certifications page.</div><div style="font-size:9pt;color:#8A3D1C">Per kit — the real work</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Build With Me video</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">One chaptered walkthrough, filmed live in a dev org.</div><div style="font-size:9pt;color:#8A3D1C">Per kit</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Adoption assets</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">The announcement template and the one-page explainer the buyer hands their team.</div><div style="font-size:9pt;color:#8A3D1C">Per kit — new to this line</div>
+</div>
+<div style="display:grid;grid-template-columns:1.5in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Trail OS record</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Product, edition, and asset records. The PDF is generated from these, not hand-built.</div><div style="font-size:9pt;color:#2F6B3F">Template exists</div>
+</div>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.15in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.08in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Done means all six — not five</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;padding-top:0.04in">
+<div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px">· Every step performed in a clean dev org by someone who did not write the kit.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px">· Each step names what you should see, not just what to click.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">· Troubleshooting lists failures we hit, not ones we imagined.</div>
+</div>
+<div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px">· Adoption names who to tell first, and gives them the words.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px">· Video chapters match the numbered steps exactly.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">· Trail OS holds the record; the PDF was generated from it.</div>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:5px">Effort and the dry run</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Two days writing, one filming, half a day of fixes. Then hand it to someone new and watch them work without helping — where they stop is the real weak point, and it is never where you expected.</div></div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,0.9in">A kit a month is the cadence, and the month a topic is thin is the month a bad kit ships. Skipping costs less than a refund.</x-import>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8.5pt;color:#8C857A">
+<span>Revisit whenever a kit ships or a score changes.</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Page 4</span>
+</div>
+
+</div>
+</section>
+
+<section class="page" data-screen-label="Series architecture" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.6in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Learner kit series</span><span style="color:#2F6F7E">Four series</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.2;color:#2A2E2C;margin:0 0 0.1in">Four series, each with one outcome</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.2in;max-width:5.7in">Named for what the buyer can do afterward, not for the features inside. A series is what turns twelve unrelated kits into something worth subscribing to.</p>
+
+<div style="display:flex;flex-direction:column;gap:0.13in;flex:1;min-height:0">
+
+<div style="border:1px solid #DED5C7;border-left:4px solid #2F6F7E;border-radius:0 9px 9px 0;background:#fff;padding:0.18in 0.2in">
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14pt;color:#2A2E2C;line-height:1.25">Answers, not exports</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E">3 kits · start here</div>
+</div>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D;margin-bottom:9px">Reports and dashboards · Finding and merging duplicates · Importing a spreadsheet</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">The promise</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You can answer a question with the system instead of exporting to a spreadsheet and hoping.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it leads</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">It contains our highest-scoring kit and the fastest visible payoff. Buyers judge the line on this.</div></div>
+</div>
+</div>
+
+<div style="border:1px solid #DED5C7;border-left:4px solid #2F6B3F;border-radius:0 9px 9px 0;background:#fff;padding:0.18in 0.2in">
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14pt;color:#2A2E2C;line-height:1.25">The right people, the right access</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F">3 kits · second</div>
+</div>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D;margin-bottom:9px">Permission sets and profiles · Why can this user not see this record · Setting up a new user</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">The promise</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You can set someone up correctly, and explain to their manager why they can see what they can see.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it matters</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Ties for highest judgment on the roster, and carries the highest stakes — access mistakes get found out the hard way.</div></div>
+</div>
+</div>
+
+<div style="border:1px solid #DED5C7;border-left:4px solid #8A3D1C;border-radius:0 9px 9px 0;background:#fff;padding:0.18in 0.2in">
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14pt;color:#2A2E2C;line-height:1.25">Changes people accept</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C">3 kits · L07 already shipped</div>
+</div>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D;margin-bottom:9px">Activity Capture · Validation rules · Salesforce on a phone</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">The promise</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You can roll out a change that affects other people without it quietly failing three weeks later.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it is ours</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">All three score 5 on adoption. Nobody else sells this, because it cannot be taught as a click path.</div></div>
+</div>
+</div>
+
+<div style="border:1px solid #DED5C7;border-left:4px solid #6E6559;border-radius:0 9px 9px 0;background:#fff;padding:0.16in 0.2in">
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14pt;color:#2A2E2C;line-height:1.25">Make the system fit the work</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#6E6559">3 kits · later</div>
+</div>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D;margin-bottom:8px">Your first Flow · Record types and page layouts · List views people actually use</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">The promise</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">You stop working around the system and start shaping it to how your team actually works.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it waits</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Flow is the most-taught topic anywhere. Enter it last, with three series of format behind us.</div></div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top:0.16in;padding-top:0.16in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8.5pt;color:#8C857A">
+<span>Twelve kits across four series. At one a month, that is the year.</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Page 5</span>
+</div>
+
+</div>
+</section>
+
+<section class="page" data-screen-label="The ladder" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.6in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Learner kit series</span><span style="color:#2F6F7E">Kit to program</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.2;color:#2A2E2C;margin:0 0 0.1in">Where a kit buyer goes next</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.2in;max-width:5.7in">Unlike the nonprofit line, this one has a real ladder — and now a real mechanism, because kit purchases credit toward program tuition.</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.2in;margin-bottom:0.22in">
+<div style="border:1px solid #DED5C7;border-radius:9px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:#F3EDE2;padding:11px 13px;border-bottom:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;color:#2A2E2C;line-height:1.25">One kit</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2F6F7E;margin-top:3px">See the record</div>
+</div>
+<div style="padding:11px 13px;display:flex;flex-direction:column;gap:7px;flex:1">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">One feature, understood well enough to explain and to roll out.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Bought by all three of our buyers, most often the working admin with one gap.</div>
+<div style="font-size:9pt;line-height:1.45;color:#2F6B3F;margin-top:auto;padding-top:7px;border-top:1px solid #DED5C7">Credits toward tuition.</div>
+</div>
+</div>
+<div style="border:1px solid #DED5C7;border-radius:9px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:#EDF5F8;padding:11px 13px;border-bottom:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;color:#2A2E2C;line-height:1.25">A series</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15pt;color:#2F6F7E;margin-top:3px">3–4 kits</div>
+</div>
+<div style="padding:11px 13px;display:flex;flex-direction:column;gap:7px;flex:1">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A capability rather than a feature — enough to change how someone works.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Goes on sale only when the series is finished, so the discount rewards completeness.</div>
+<div style="font-size:9pt;line-height:1.45;color:#2F6B3F;margin-top:auto;padding-top:7px;border-top:1px solid #DED5C7">Credits toward tuition.</div>
+</div>
+</div>
+<div style="border:1px solid #DED5C7;border-radius:9px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:#2F6F7E;padding:11px 13px;color:#fff">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12pt;line-height:1.25">A program</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15pt;margin-top:3px">Any of ours</div>
+<div style="font-size:8pt;color:#BFD9E4;margin-top:2px">Entry depends on what you hold</div>
+</div>
+<div style="padding:11px 13px;display:flex;flex-direction:column;gap:7px;flex:1">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Real project work for a real organization, reviewed and signed by someone who will vouch for it.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Foundations, Guided, or Mastery — which one depends on what you already hold and what you need next.</div>
+<div style="font-size:9pt;line-height:1.45;color:#2F6B3F;margin-top:auto;padding-top:7px;border-top:1px solid #DED5C7">Kit spend comes off any of them.</div>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:0.24in;flex:1;min-height:0;align-items:start">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="ticket" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Tuition credit — decided</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>What someone spends on kits comes off tuition on any program they apply to.</b> Any, because buyers arrive at different points — some are studying, some already hold the certification, some already have the job.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px">Say it on the placemat in plain terms: <i>every kit you buy comes off your tuition when you join a program.</i> No asterisk — the moment it needs a footnote it stops working.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">It also answers the objection we will hear most: <i>should I buy kits or save for the program?</i> Now the honest answer is both.</div>
+</div>
+<div style="background:#F0F5F1;border-radius:9px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6B3F" hint-size="12px,12px"></x-import>Mechanics to settle</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px"><b>A cap?</b> Uncapped is cleaner to say, and hard to exploit at a single-kit price.</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px"><b>An expiry?</b> Twelve months keeps it honest without feeling grudging.</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D">Trail OS should hold this on the contact record, so nobody has to find receipts.</div>
+</div>
+<div style="background:#EDF5F8;border-radius:9px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="triangle-alert" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Where Explorer's Trail sits</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D;margin-bottom:6px">Individual learners belong on <b>Explorer's Trail</b>, not Compass — that is settled in the program design.</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D">Open: does the kit library come with Explorer's Trail the way it does with every Compass tier? If it does, the credit and the membership start competing.</div>
+</div>
+</div>
+
+<div style="margin-top:0.16in;padding-top:0.16in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8.5pt;color:#8C857A">
+<span>A kit is a deposit on the program, not a substitute for it.</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Page 6</span>
+</div>
+
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

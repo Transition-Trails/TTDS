@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-bg); }
+  a { color: var(--tt-link); text-decoration: none; }
+  a:hover { color: var(--tt-link-hover); text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: var(--tt-slate); background: var(--tt-bg); min-height: 100vh; padding: 56px 32px 96px;">
+<div style="max-width: 1040px; margin: 0 auto;">
+
+  <header style="border-bottom: 1px solid var(--tt-warm-gray); padding-bottom: 32px; margin-bottom: 48px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tt-deep-teal); margin: 0 0 16px;">Reconciliation</p>
+    <h1 style="font-family: 'Poppins', sans-serif; font-size: 44px; line-height: 1.15; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 20px; max-width: 26ch; text-wrap: pretty;">The same identifiers mean different things</h1>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 24px; max-width: 64ch; text-wrap: pretty;">The documentation is far more complete than I expected. There is a product vision with twelve capabilities and twenty-four epics, two workbooks carrying fifty-six features with acceptance criteria and readiness gates, a full PRD, a measurement system, a user guide, and four implementation runbooks. This is not a documentation problem.</p>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 24px; max-width: 64ch; text-wrap: pretty;">It is a <strong style="color: var(--tt-charcoal);">collision</strong> problem, and it is worse than two plans disagreeing. The Product Vision and the Features workbooks both number their epics from E-01, and <strong style="color: var(--tt-charcoal);">the same identifier means a completely different piece of work in each.</strong> A backlog built from both would be incoherent.</p>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch; text-wrap: pretty;">The good news: the Product Vision is the most recent and most complete of the three, and reading it answers two of the rulings I was about to ask you for.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 14px;">
+      <div><p style="margin: 0 0 4px; opacity: .7;">Read</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">12 documents · 2 workbooks</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Audited against</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">Transition-Trails-Map · Penny-POC</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Date</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">3 August 2026</p></div>
+    </div>
+  </header>
+
+  <section style="margin-bottom: 56px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">The epic collision</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 20px; max-width: 64ch;">Read this table before anything else. Both documents number epics from E-01. Neither is wrong internally. But the identifiers overlap completely and mean different things, so no shared backlog can be built until one scheme is retired.</p>
+    <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; overflow: hidden; box-shadow: 0 6px 16px rgba(42,46,44,.08); margin-bottom: 32px;">
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; background: var(--tt-sky-100); border-bottom: 1px solid var(--tt-warm-gray); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">
+        <p style="margin: 0;">Epic</p><p style="margin: 0;">In the Product Vision</p><p style="margin: 0;">In the Features workbooks</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.5;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">E-02</p><p style="margin: 0;">Penny — Learner Coach (Portal)</p><p style="margin: 0;">Program Management</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.5;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">E-03</p><p style="margin: 0;">Penny — Slack Integration</p><p style="margin: 0;">Trail of Mastery</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.5;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">E-05</p><p style="margin: 0;">Penny — Internal Chief of Staff</p><p style="margin: 0;">Coach Infrastructure</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.5;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">E-07</p><p style="margin: 0;">Penny — Trail of Mastery Scrum Master</p><p style="margin: 0;">DevOps &amp; Build System</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.5;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">E-13</p><p style="margin: 0;">Role Track Infrastructure</p><p style="margin: 0;">Google Workspace Onboarding</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 1fr; padding: 16px 24px; font-size: 15px; line-height: 1.5;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">E-14</p><p style="margin: 0;">Client Case Queue &amp; RESOLVE Workflow</p><p style="margin: 0;">Trail OS Product</p>
+      </div>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 66ch;">The capability numbering diverges the same way. In the Vision, CAP-01 is Penny and carries eight epics. In the workbooks, CAP-01 never appears and Penny has no capability of her own at all. <strong style="color: var(--tt-charcoal);">My recommendation: the Product Vision wins.</strong> It is the newer document, it covers twenty-four epics against the workbooks' eleven, and it is the only one that places Penny at the centre — which is what the rest of the documentation describes. The workbooks' fifty-six features are still good work; they need remapping onto the Vision's epic IDs, not rewriting.</p>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">The two plans underneath</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch;">Beneath the numbering, the two document sets genuinely describe different work. Both are real. They share a team and almost nothing else.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Plan A — Run the organisation</p>
+        <p style="font-size: 14px; margin: 0 0 16px; opacity: .7;">Product Vision + the two Features workbooks</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px;">Eleven epics and fifty-six features — twenty-nine in the first workbook, twenty-seven in the second, which also cross-references two of the first's as dependencies. Salesforce-centric and operational: clean up thirty-six Program Engagement records, define stage progression, build a coach record type and certification checklist, a Session Log object, Google Classroom enrolment sync, commerce and revenue flow, marketing campaigns, analytics and funder reporting.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px;">Governed by readiness gates — twenty in the first workbook alone, of which two are complete and eighteen are Not Started, and nothing executes until they are confirmed. The second workbook carries no gate table at all.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong style="color: var(--tt-charcoal);">What it is really about:</strong> making Salesforce able to run the programmes.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Plan B — Finish the platform</p>
+        <p style="font-size: 14px; margin: 0 0 16px; opacity: .7;">Trail OS Phase 2 PRD</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px;">Fifteen features across five sprints. Replit and Gemini centric: wire Ask Penny and Test Penny to live Gemini, replace prototype fixtures with Salesforce queries, deliver quests and career review, build RAG over knowledge sources, generate weekly intelligence reports, add fifty tests, and retire the Penny POC.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px;">Governed by a prerequisite checklist and a risk register, with sprint sequencing and dependencies.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong style="color: var(--tt-charcoal);">What it is really about:</strong> making the Replit app stop being a prototype.</p>
+      </div>
+    </div>
+    <div style="background: var(--tt-green-100); border-radius: 22px; padding: 28px 32px; margin-top: 20px;">
+      <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 76ch;"><strong style="color: var(--tt-charcoal);">Neither plan contains the other's work.</strong> Plan A never mentions Penny's AI wiring, RAG, or POC retirement. Plan B never mentions program engagement cleanup, coach infrastructure, commerce, marketing or analytics. Both are needed, and the same three people deliver both. Until one document sequences them together, whoever joins will pick up whichever they were handed and work in a direction the other plan does not expect.</p>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-deep-teal); border-radius: 22px; padding: 40px 44px; color: var(--tt-white); margin-bottom: 56px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; opacity: .85;">Settle before onboarding anyone</p>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; margin: 0 0 18px; color: var(--tt-white); max-width: 34ch;">Three documents each tell Hugh what to build first</h2>
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 22px;">
+      <div style="border-left: 3px solid rgba(255,255,255,.4); padding-left: 18px;">
+        <p style="font-size: 16px; line-height: 1.6; margin: 0;"><strong style="color: var(--tt-white);">The PRD</strong> — a five-item prerequisite checklist before Sprint 1: resolve the object promotion errors, define the weekly report schema, verify the Gemini key, decide the Agentforce boundary, review the Figma file.</p>
+      </div>
+      <div style="border-left: 3px solid rgba(255,255,255,.4); padding-left: 18px;">
+        <p style="font-size: 16px; line-height: 1.6; margin: 0;"><strong style="color: var(--tt-white);">The Features workbooks</strong> — twenty readiness gates in the first workbook, and "no stories execute until gates are confirmed". Eighteen are Not Started. On its own terms, almost nothing in Plan A can begin.</p>
+      </div>
+      <div style="border-left: 3px solid rgba(255,255,255,.4); padding-left: 18px;">
+        <p style="font-size: 16px; line-height: 1.6; margin: 0;"><strong style="color: var(--tt-white);">The Measurement System</strong> — its own section titled "What Hugh Builds First", plus contact fields to add for outcome measurement and a JotForm survey pipeline that appears in no other document.</p>
+      </div>
+    </div>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 66ch; opacity: .95;">Each is reasonable alone. Together they are three first weeks. This is the single highest-value thing to fix, because it is the question a new engineer asks on day one and there is currently no answer — only three answers.</p>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">The identifier collisions</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch;">Mechanical, but they will cause real confusion in a shared backlog. The same string means different things in different documents.</p>
+    <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; overflow: hidden; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+      <div style="display: grid; grid-template-columns: 130px 1fr 1fr; padding: 16px 24px; background: var(--tt-sky-100); border-bottom: 1px solid var(--tt-warm-gray); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">
+        <p style="margin: 0;">Identifier</p><p style="margin: 0;">In the Features workbooks</p><p style="margin: 0;">In the Phase 2 PRD</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 130px 1fr 1fr; padding: 18px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">R-01</p>
+        <p style="margin: 0;">A RESOLVE gate. "Re-register Dev and Staging in DevOps Center."</p>
+        <p style="margin: 0;">A risk. "Object promotion XML errors block Salesforce promotion."</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 130px 1fr 1fr; padding: 18px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">Feature&nbsp;ID</p>
+        <p style="margin: 0;">Epic-scoped and sequential — <code style="font-family: Menlo, monospace; font-size: 13px;">F-07-01</code>, <code style="font-family: Menlo, monospace; font-size: 13px;">F-02-03</code>.</p>
+        <p style="margin: 0;">Sprint-banded — <code style="font-family: Menlo, monospace; font-size: 13px;">F-000</code>, <code style="font-family: Menlo, monospace; font-size: 13px;">F-100</code>, <code style="font-family: Menlo, monospace; font-size: 13px;">F-404</code>.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 130px 1fr 1fr; padding: 18px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">Planning unit</p>
+        <p style="margin: 0;">Trackable quarter — Q3 2026 onward.</p>
+        <p style="margin: 0;">Sprint — S0 through S4, roughly nine weeks total.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 130px 1fr 1fr; padding: 18px 24px; font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">"RESOLVE"</p>
+        <p style="margin: 0;">A governance gate on an epic.</p>
+        <p style="margin: 0;">The seven-phase delivery methodology.</p>
+      </div>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 20px 0 0; max-width: 66ch;">The last one is worth pausing on. Using RESOLVE for both the methodology learners are taught and the gate that blocks a backlog item means a coach and an engineer can say "it's blocked at RESOLVE" and mean entirely different things. Worth renaming one — the gates are readiness checks, so calling them readiness gates would cost nothing and remove the ambiguity permanently.</p>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">Contradictions to resolve</h2>
+      <p style="font-size: 14px; margin: 0; opacity: .7;">6</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 32px; max-width: 64ch;">Each needs one answer before it goes into a design document.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">RC-01</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="green" hint-size="auto,28px">Answered</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Retiring the POC removes the learner experience — but the Vision says where it goes</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Penny POC v2 is not a prototype. Twelve learner screens, four coach screens, a real database, a Slack bot, eleven hundred tests. F-404 switches it off, and nothing in the PRD rebuilds those sixteen screens — quests move to Slack direct message, career review to an admin tab, mobile deferred to Phase 3.</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The Product Vision resolves it. <strong style="color: var(--tt-charcoal);">E-02, Penny — Learner Coach (Portal): "Penny inside the Experience Cloud learner portal."</strong> Phase 1, In Progress. Alongside it, E-01 puts Penny on the Commerce Cloud storefront for prospective learners, E-03 covers Slack, and E-04 makes her a coach coordinator. The learner surface is the Experience Cloud portal — not Slack-only, and not Trail OS.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">What still needs deciding</strong> — this contradicts two things you have said recently. The PRD's non-goals call a learner portal "a separate product", and you told me coach and learner views belong inside Trail OS gated by Google group. The Vision says Experience Cloud. Three answers, and this one determines where the surface designs get drawn. It is the only ruling I need before I can start them.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">RC-02</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="green" hint-size="auto,28px">Answered</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The prompt architecture is seven layers — the PRD is the outlier</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The PRD specifies five layers and names them. The Six-Pager, the Agentforce setup guide, and now the Product Vision all say seven — the Vision states it explicitly in the E-02 description. Three documents to one, and the three include the newest.</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">One thing to clean up: the Agentforce guide numbers its layers one, two, three, five, six and seven, skipping four. Layer four is almost certainly the knowledge retrieval layer that the PRD calls L4 — meaning the seven-layer scheme is the five-layer one with the dynamic context layers split out, and nobody wrote the missing number back in.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Action</strong> — correct the PRD to seven and publish one canonical layer list with all seven numbered and named. This is the first thing built in Sprint 1, so it wants settling this week.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">RC-03</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,28px">Blocker</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The Salesforce object list does not agree between its own two documents</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">The PRD lists eight objects under the build work item plus a ninth to create before Sprint 3. The Penny Salesforce Build Requirements document opens with three objects as its top priorities — a capability object, a prompt object and a session log — none of which appear in the PRD's list. It also carries thirteen seed capability records, which is a genuine asset and referenced nowhere else.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — one object inventory, owned by the data model workbook, with the build work item tracking against it. Right now the true object count is unknowable from the documents.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">RC-04</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">There are two programme taxonomies</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px;">Penny is configured for four trails. The Master Program Guide has eight programmes. They are not the same list, and one name differs by a word.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px;">
+            <div style="background: var(--tt-sky-100); border-radius: 14px; padding: 18px;">
+              <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Penny's four trails</p>
+              <p style="font-size: 15px; line-height: 1.7; margin: 0;">Guided Trail · Explorer <em>Journey</em> · Trail of Mastery · Community and Alumni</p>
+            </div>
+            <div style="background: var(--tt-green-100); border-radius: 14px; padding: 18px;">
+              <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">Missing from Penny entirely</p>
+              <p style="font-size: 15px; line-height: 1.7; margin: 0;">Foundations Trail · Digital Compass · First Two Weeks</p>
+            </div>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — Foundations Trail is the one that matters. It is the certification-prep entry programme, it is where the most learners will be, and Penny has no persona for it. Either a fifth trail config is needed or Foundations learners are deliberately served by the Guided Trail persona — and the guide already documents how to add a fifth.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">RC-05</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The PRD mandates the UX standards we replaced today</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">Section 4.4 carries the Phase 1 standards forward as binding for all Phase 2 pages, and repeats the ones "most commonly violated" for emphasis: eyebrow labels at ten pixels bold uppercase, stat values capped, and the rest. Those are the exact rules we removed this afternoon.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — the PRD section should point at the brand-aligned standard rather than restating a superseded one. Small edit, but it is a contract document between you and Hugh, so it will be followed literally.</p>
+        </div>
+      </article>
+
+      <article style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 28px; box-shadow: 0 6px 16px rgba(42,46,44,.08); display: grid; grid-template-columns: 140px 1fr; gap: 28px;">
+        <div><p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">RC-06</p><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="teal" hint-size="auto,28px">Ruling</x-import></div>
+        <div>
+          <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 10px;">The learner-facing product is the furthest from brand</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px;">Penny POC has its own token package. Its brand primary is a fourth green, and its status colours are stock framework values.</p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 30px; height: 30px; border-radius: 8px; background: #0F6E56; border: 1px solid rgba(42,46,44,.12);"></span><div><p style="margin: 0; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">Penny POC</p><p style="margin: 0; font-family: Menlo, monospace; font-size: 13px;">#0F6E56</p></div></div>
+            <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 30px; height: 30px; border-radius: 8px; background: var(--tt-trail-green); border: 1px solid rgba(42,46,44,.12);"></span><div><p style="margin: 0; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">Trail Green</p><p style="margin: 0; font-family: Menlo, monospace; font-size: 13px;">#2F6B3F</p></div></div>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; padding-left: 16px; border-left: 3px solid var(--tt-green-300);"><strong style="color: var(--tt-charcoal);">Recommendation</strong> — do nothing if RC-01 resolves as retirement. If any part of the POC survives, or if its screens are the basis for the coach and learner views, its tokens need the same treatment Trail OS got today. Worth deciding before, not after.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section style="margin-bottom: 40px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">What I propose for the new documents</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch;">You asked for brand new Epics, Features and design documents. Having read what exists, I would not start from scratch — the Product Vision already has capabilities, epics and a roadmap, and the workbooks already have fifty-six features with acceptance criteria. Rewriting that would lose work and create a fifth numbering scheme.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">1</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">One epic map, on the Vision's numbering</p><p style="font-size: 16px; line-height: 1.6; margin: 0;">Adopt the Product Vision's twenty-four epics and twelve capabilities as the single scheme. Remap the workbooks' fifty-six features onto those IDs — the features are good, only their epic labels are wrong. Fold the PRD's fifteen features in as well. One identifier system, one backlog, no orphans, and a written note that the old workbook epic numbers are retired so nobody reuses them.</p></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">2</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">One sequence — the answer to "what first"</p><p style="font-size: 16px; line-height: 1.6; margin: 0;">A single ordered path through the readiness gates, the PRD prerequisites and the measurement build, with what blocks what. This is the document a new person reads first, and it is the one that does not exist yet in any form.</p></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">3</p>
+        <div><p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Design documents for the surfaces, not the whole platform</p><p style="font-size: 16px; line-height: 1.6; margin: 0;">Genuinely new work, once RC-01 is settled: the coach surface, the learner surface, and the shared states the prototype has never needed. Everything else already has a document.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 32px 36px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 16px;">What I still need</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;"><strong style="color: var(--tt-charcoal);">A ruling on RC-01.</strong> Experience Cloud portal, inside Trail OS, or Slack-only. Everything I would draw for the learner and coach surfaces depends on which. This is the one thing blocking me.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;"><strong style="color: var(--tt-charcoal);">Features for thirteen of the twenty-four epics.</strong> The workbooks cover eleven. The Vision's remaining epics — every Penny epic, role tracks, portfolio, Trail Tracker, the Agentforce track — have descriptions but no features or acceptance criteria. That is the gap the new Features document should fill, once the epic IDs are settled.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0;"><strong style="color: var(--tt-charcoal);">The Phase 2 Master Plan.</strong> The PRD references it repeatedly for the retirement checklist, the UX correction brief and the Figma spec. It is the companion document and I have not seen it.</p>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100}}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Trail Kit (print)" subtitle="Tabs, meta, QR, steps, coach notes, resources, action plan, kit code" -->
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;padding:20px;background:var(--tt-paper)}.g{display:grid;grid-template-columns:1fr 1fr;gap:20px}.stack{display:flex;flex-direction:column;gap:14px}a{color:var(--tt-clay-700);text-decoration:none}a:hover{color:var(--tt-clay)}</style>
+</head><body><div id="root" class="trail-kit"></div>
+<script type="text/babel">
+const { TabStrip, KitMeta, QRLink, ResourceLink, BuildStep, KitNote, CoachNote, NoteLines, ActionPlan, KitCode } = window.TransitionTrailsDesignSystem_335df4;
+ReactDOM.createRoot(document.getElementById('root')).render(<>
+  <KitMeta items={[['Time','45 minutes'],['Pace','Self-paced'],['Level','Beginner'],['You need','An org you can change']]} style={{marginBottom:'18px'}} />
+  <div className="g">
+    <div className="stack">
+      <BuildStep n={3} title="Turn on Activity Capture" verify="a green Active badge on the configuration row">
+        From Setup, search <b>Einstein Activity Capture</b>, then open Settings and select your configuration.
+      </BuildStep>
+      <QRLink url="https://youtu.be/dQw4w9WgXcQ" label="Watch: Build With Me" caption="9 min walkthrough of this step" />
+      <div style={{borderTop:'1px solid var(--tt-rule)',borderBottom:'1px solid var(--tt-rule)'}}>
+        <ResourceLink name="Salesforce Administrator study guides" provider="K2 University" kind="Guide" affiliate url="https://k2university.com/salesforce-admin" why="Where we send people who want the fundamentals underneath this kit." />
+      </div>
+      <KitNote kind="practice">Pilot with one small sales team before you enable org-wide.</KitNote>
+      <CoachNote aside="you have got this">If the first sync looks wrong, resist changing five settings at once. Change one, wait, look again.</CoachNote>
+      <KitNote kind="watchout">Sync is one-way by default — confirm direction before migrating history.</KitNote>
+    </div>
+    <div className="stack">
+      <div style={{display:'flex',gap:'16px',height:'150px'}}>
+        <TabStrip sections={['Orient','Prepare','Build','Verify','Next']} active={2} />
+        <NoteLines label="Your notes" lines={4} style={{flex:1}} />
+      </div>
+      <ActionPlan prompts={['Enable in sandbox','Brief the sales team']} rows={3} />
+      <KitCode code="TRAIL-EAC-25" body="Save 25% on your next Trail Kit." cta="Browse Trail Kits" url="transitiontrails.org/kits" />
+    </div>
+  </div>
+</>);
+</script></body></html>

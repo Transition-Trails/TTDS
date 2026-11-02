@@ -1,0 +1,21 @@
+<!-- @dsCard group="Trail OS" viewport="700x320" name="Readiness vocabulary" subtitle="Four words. Never call something live because the code exists." -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px 24px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}
+.lede{font-size:13px;line-height:1.55;color:var(--tt-slate);margin:0 0 14px}
+.lede b{color:var(--tt-heading)}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:11px 22px;margin-bottom:13px}
+.w{font-family:var(--tt-font-heading);font-weight:600;font-size:13px;color:var(--tt-heading);margin-bottom:3px;display:flex;align-items:center;gap:7px}
+.dot{width:9px;height:9px;border-radius:999px;flex-shrink:0}
+.d{font-size:12px;line-height:1.5;color:var(--tt-slate)}
+.ft{font-size:12px;line-height:1.55;color:var(--tt-slate);border-top:1px solid var(--tt-border);padding-top:10px}
+.ft b{color:var(--tt-heading)}
+</style></head><body>
+<p class="lede"><b>"Live" requires evidence, not a label.</b> These four words appear across the platform and in every document. Using them precisely is what lets anyone trust a status without re-checking it.</p>
+<div class="g">
+<div><div class="w"><span class="dot" style="background:var(--tt-green-500)"></span>Implemented</div><div class="d">The code, authorization, persistence and workflow behavior all exist and work.</div></div>
+<div><div class="w"><span class="dot" style="background:var(--tt-amber-800)"></span>Pilot or gated</div><div class="d">The workflow exists but is limited by scope, release, or validation gates.</div></div>
+<div><div class="w"><span class="dot" style="background:var(--tt-teal-500)"></span>Configuration-dependent</div><div class="d">Behavior needs external credentials, scopes, metadata, or a healthy connector.</div></div>
+<div><div class="w"><span class="dot" style="background:var(--tt-slate-mid)"></span>Planned</div><div class="d">The production contract or the operating policy is not complete yet.</div></div>
+</div>
+<div class="ft"><b>These four fills are the canonical status colors</b> — all clear 3:1 on Trail Light, so they stay readable at indicator size. Never use a divider or border token as a status fill. Applies to design artifacts too: a screen in a UI kit showing a gated workflow should say so. <b>A mock that implies something ships is the same lie as a status that does.</b></div>
+</body></html>

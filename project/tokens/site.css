@@ -1,0 +1,77 @@
+/* Transition Trails — tokens present on the live public site that the design
+   system could not previously express.
+
+   Source: Transition-Trails/TT-Public-Website @ b6e6faff961e
+           artifacts/transition-trails/src/styles/tokens.css
+   Read 2026-09-22. See guidelines/token-reconciliation.md.
+
+   Additive only — nothing here overrides a value in colors.css. The five
+   genuine value conflicts are listed in the reconciliation doc and await a
+   decision rather than being resolved here. */
+:root {
+  /* ---- Teal ramp ----
+     We carried only the lightest tint. The site uses the full ramp for
+     navigation, footers and dark teal panels. */
+  --tt-teal-100: #E0F0F3;
+  --tt-teal-300: #7FAFC6;   /* = --tt-sky-blue */
+  --tt-teal-500: #2F6F7E;   /* = --tt-deep-teal */
+  --tt-teal-700: #1E4F5C;
+
+  /* ---- Green mid ----
+     Gradient mid-point between green-500 and teal-300. */
+  --tt-green-400: #4A8A6E;
+  --tt-green-mid: var(--tt-green-400);
+
+  /* ---- Extra neutrals ---- */
+  --tt-cool-gray:  #6B7280;   /* secondary labels, placeholder text */
+  --tt-muted-fill: #F3F2EF;   /* subtle backgrounds */
+
+  /* ---- Bright error ----
+     Distinct from --tt-critical-500. The brick red is the brand's functional
+     red; this bright red is reserved for board and alert indicators where the
+     signal has to read as an alarm rather than a state. */
+  --tt-error:      #DC2626;
+  --tt-error-tint: #FEE2E2;
+
+  /* ---- Very dark backgrounds ----
+     Expedition sections only. Not general-purpose surfaces. */
+  --tt-near-black: #111111;   /* alternating dark section */
+  --tt-off-black:  #1A1A1A;   /* primary dark background */
+
+  /* ---- Dark-section palette ----
+     Used on About, Board, Coaches, Consulting, Guided Trail and Blog.
+     Text is set in white at declining opacity rather than in greys, so it
+     stays legible whichever dark surface sits behind it. Accents are lifted
+     versions of the brand colors — the standard green and amber are too dark
+     to read on charcoal. */
+  --tt-dark-surface:      var(--tt-charcoal);
+  --tt-dark-text-primary: rgba(255, 255, 255, 0.92);
+  --tt-dark-text-muted:   rgba(255, 255, 255, 0.68);
+  --tt-dark-text-faint:   rgba(255, 255, 255, 0.45);
+  --tt-dark-rule:         rgba(255, 255, 255, 0.16);
+  --tt-dark-fill:         rgba(255, 255, 255, 0.08);
+  --tt-dark-accent-green: #6BBF85;
+  --tt-dark-accent-amber: var(--tt-amber-300);
+
+  /* ---- Approved gradients ----
+     All 135°. These are the only gradients in the brand; do not invent new
+     angles or stops. */
+  --tt-gradient-green:         linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green));
+  --tt-gradient-teal:          linear-gradient(135deg, var(--tt-teal-700), var(--tt-deep-teal) 55%, var(--tt-green-700));
+  --tt-gradient-deep:          linear-gradient(135deg, var(--tt-green-700), var(--tt-trail-green) 55%, var(--tt-deep-teal));
+  --tt-gradient-teal-simple:   linear-gradient(135deg, var(--tt-teal-700), var(--tt-deep-teal));
+  --tt-gradient-explorer:      linear-gradient(135deg, var(--tt-trail-green), var(--tt-green-mid) 50%, var(--tt-teal-300));
+  --tt-gradient-teal-to-green: linear-gradient(135deg, var(--tt-deep-teal), var(--tt-trail-green));
+
+  /* ---- Cross-codebase aliases ----
+     Same values under the website's names, so markup copied either direction
+     resolves without a find-and-replace. */
+  --tt-sky-tint: var(--tt-sky-100);
+  --tt-space-1:  var(--tt-space-xs);
+  --tt-space-2:  var(--tt-space-sm);
+  --tt-space-4:  var(--tt-space-md);
+  --tt-space-6:  var(--tt-space-lg);
+  --tt-space-8:  var(--tt-space-xl);
+  --tt-space-12: var(--tt-space-2xl);
+  --tt-space-16: var(--tt-space-3xl);
+}

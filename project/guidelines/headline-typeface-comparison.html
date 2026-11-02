@@ -1,0 +1,120 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Headline typeface — Fraunces vs Poppins</title>
+<link rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}
+.wrap{max-width:1400px;margin:0 auto;padding:40px 44px 80px}
+.intro{max-width:760px;margin-bottom:36px}
+h1.pg{font-family:var(--tt-font-heading);font-weight:600;font-size:30px;color:var(--tt-heading);margin:0 0 10px;letter-spacing:-.01em}
+.sub{font-size:15px;line-height:1.6;color:var(--tt-slate);margin:0}
+.legend{display:flex;gap:0;margin:28px 0 0;border:1px solid var(--tt-border);border-radius:var(--tt-radius-sm);overflow:hidden}
+.legend div{flex:1;padding:11px 16px;font-size:12.5px;line-height:1.5}
+.legend div+div{border-left:1px solid var(--tt-border)}
+.lg-t{font-family:var(--tt-font-heading);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.spec{margin-top:44px}
+.spec-h{display:flex;align-items:baseline;gap:12px;padding-bottom:9px;border-bottom:1px solid var(--tt-border);margin-bottom:0}
+.spec-n{font-family:var(--tt-font-heading);font-weight:600;font-size:13px;color:var(--tt-heading)}
+.spec-m{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--tt-text-muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+.cell{padding:26px 22px;border-right:1px solid var(--tt-border)}
+.cell:last-child{border-right:none}
+.cell.dark{background:var(--tt-deep-teal)}
+.tag{font-family:var(--tt-font-heading);font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--tt-text-muted);margin-bottom:14px}
+.cell.dark .tag{color:rgba(255,255,255,.6)}
+.fr{font-family:'Fraunces',Georgia,serif}
+.po{font-family:'Poppins',system-ui,sans-serif}
+.on-dark{color:#fff}
+.on-light{color:var(--tt-charcoal)}
+.note{font-size:12.5px;line-height:1.55;color:var(--tt-text-muted);margin-top:16px;padding-top:12px;border-top:1px solid var(--tt-border)}
+.cell.dark .note{color:rgba(255,255,255,.65);border-top-color:rgba(255,255,255,.2)}
+.verdict{margin-top:56px;padding:24px 26px;background:var(--tt-sky-100);border-radius:var(--tt-radius-md)}
+.verdict h2{font-family:var(--tt-font-heading);font-weight:600;font-size:17px;color:var(--tt-heading);margin:0 0 12px}
+.verdict p{font-size:14px;line-height:1.65;color:var(--tt-slate);margin:0 0 11px;max-width:900px}
+.verdict p:last-child{margin-bottom:0}
+b{color:var(--tt-heading)}
+a{color:var(--tt-link)}a:hover{color:var(--tt-link-hover)}
+</style></head><body>
+<div class="wrap">
+
+<div class="intro">
+<h1 class="pg">Headline typeface — the real comparison</h1>
+<p class="sub">Your actual headline copy, at the actual sizes and treatments from the live site. Three columns: Fraunces as it ships today, a straight swap to Poppins, and Poppins tuned — because a straight swap is not the fair test. Fraunces is doing work at these sizes, and if Poppins is to replace it, it has to be set properly rather than dropped in.</p>
+</div>
+
+<div class="legend">
+<div><div class="lg-t">Fraunces — today</div>Optical-size serif, weight 700. High contrast, narrow, editorial.</div>
+<div><div class="lg-t">Poppins — straight swap</div>Same weight and tracking, font swapped. What you get from find-and-replace alone.</div>
+<div><div class="lg-t">Poppins — tuned</div>Weight 600, tighter tracking, tighter leading. Geometric sans needs different settings.</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Hero H1</span><span class="spec-m">Home.jsx · 62px · bold · tracking -1px · leading 1.1 · white on Deep Teal</span></div>
+<div class="grid">
+<div class="cell dark"><div class="tag">Fraunces 700</div><div class="fr on-dark" style="font-size:62px;font-weight:700;letter-spacing:-1px;line-height:1.1">Build the experience employers ask for.</div></div>
+<div class="cell dark"><div class="tag">Poppins 700 — as-is</div><div class="po on-dark" style="font-size:62px;font-weight:700;letter-spacing:-1px;line-height:1.1">Build the experience employers ask for.</div></div>
+<div class="cell dark"><div class="tag">Poppins 600 — tuned</div><div class="po on-dark" style="font-size:62px;font-weight:600;letter-spacing:-2.2px;line-height:1.04">Build the experience employers ask for.</div><div class="note">Lighter weight, tighter tracking and leading. Poppins at 700 is heavier than Fraunces at 700 — matching the number does not match the colour on the page.</div></div>
+</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Hero H1 — short</span><span class="spec-m">Blog.jsx · 60px · bold · white on Deep Teal</span></div>
+<div class="grid">
+<div class="cell dark"><div class="tag">Fraunces 700</div><div class="fr on-dark" style="font-size:60px;font-weight:700;line-height:1.1">Insights from the trail.</div></div>
+<div class="cell dark"><div class="tag">Poppins 700 — as-is</div><div class="po on-dark" style="font-size:60px;font-weight:700;line-height:1.1">Insights from the trail.</div></div>
+<div class="cell dark"><div class="tag">Poppins 600 — tuned</div><div class="po on-dark" style="font-size:60px;font-weight:600;letter-spacing:-2px;line-height:1.04">Insights from the trail.</div><div class="note">Short headlines are where the difference is starkest — nowhere for the eye to go but the letterforms.</div></div>
+</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Section H2</span><span class="spec-m">Home.jsx · 40px · bold · Charcoal on Trail Light</span></div>
+<div class="grid">
+<div class="cell"><div class="tag">Fraunces 700</div><div class="fr on-light" style="font-size:40px;font-weight:700;line-height:1.15">Where Are You Today?</div></div>
+<div class="cell"><div class="tag">Poppins 700 — as-is</div><div class="po on-light" style="font-size:40px;font-weight:700;line-height:1.15">Where Are You Today?</div></div>
+<div class="cell"><div class="tag">Poppins 600 — tuned</div><div class="po on-light" style="font-size:40px;font-weight:600;letter-spacing:-1.1px;line-height:1.12">Where Are You Today?</div></div>
+</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Section H2 — long</span><span class="spec-m">Board.jsx · 34px · bold · Charcoal on Trail Light</span></div>
+<div class="grid">
+<div class="cell"><div class="fr on-light" style="font-size:34px;font-weight:700;line-height:1.2">Strong governance makes everything else possible.</div></div>
+<div class="cell"><div class="po on-light" style="font-size:34px;font-weight:700;line-height:1.2">Strong governance makes everything else possible.</div></div>
+<div class="cell"><div class="po on-light" style="font-size:34px;font-weight:600;letter-spacing:-.7px;line-height:1.18">Strong governance makes everything else possible.</div></div>
+</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Section H2 — statement</span><span class="spec-m">Programs.jsx · 40px · bold · white on Deep Teal</span></div>
+<div class="grid">
+<div class="cell dark"><div class="fr on-dark" style="font-size:40px;font-weight:700;line-height:1.2">Build. Test. Improve. Repeat.</div></div>
+<div class="cell dark"><div class="po on-dark" style="font-size:40px;font-weight:700;line-height:1.2">Build. Test. Improve. Repeat.</div></div>
+<div class="cell dark"><div class="po on-dark" style="font-size:40px;font-weight:600;letter-spacing:-1.1px;line-height:1.16">Build. Test. Improve. Repeat.</div></div>
+</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Card H3 + figure</span><span class="spec-m">ProgramCard.jsx · 20px / 28px · bold · Charcoal on white</span></div>
+<div class="grid">
+<div class="cell" style="background:#fff"><div class="tag">Fraunces 700</div><div class="fr on-light" style="font-size:20px;font-weight:700;line-height:1.2">Guided Trail</div><div class="fr on-light" style="font-size:28px;font-weight:700;line-height:1;margin-top:8px">12 weeks</div></div>
+<div class="cell" style="background:#fff"><div class="tag">Poppins 700 — as-is</div><div class="po on-light" style="font-size:20px;font-weight:700;line-height:1.2">Guided Trail</div><div class="po on-light" style="font-size:28px;font-weight:700;line-height:1;margin-top:8px">12 weeks</div></div>
+<div class="cell" style="background:#fff"><div class="tag">Poppins 600 — tuned</div><div class="po on-light" style="font-size:20px;font-weight:600;line-height:1.2">Guided Trail</div><div class="po on-light" style="font-size:28px;font-weight:600;letter-spacing:-.5px;line-height:1;margin-top:8px">12 weeks</div><div class="note">At small sizes the two are close. The case for Fraunces lives at 40px and above, not here. (Figure is a stand-in — live prices belong in the record, not in the design system.)</div></div>
+</div>
+</div>
+
+<div class="spec">
+<div class="spec-h"><span class="spec-n">Against the platform</span><span class="spec-m">What a learner sees on the site, then inside Trail OS</span></div>
+<div class="grid" style="grid-template-columns:1fr 1fr">
+<div class="cell"><div class="tag">Marketing site today — Fraunces</div><div class="fr on-light" style="font-size:34px;font-weight:700;line-height:1.2">Your Guided Trail starts here.</div><div style="font-family:var(--tt-font-body);font-size:14px;line-height:1.6;color:var(--tt-slate);margin-top:12px">Body copy is Open Sans on both surfaces, so the body never changes — only the headline does.</div></div>
+<div class="cell" style="background:var(--tt-sky-100)"><div class="tag">Trail OS — Poppins</div><div class="po on-light" style="font-size:34px;font-weight:600;line-height:1.2">Your Guided Trail starts here.</div><div style="font-family:var(--tt-font-body);font-size:14px;line-height:1.6;color:var(--tt-slate);margin-top:12px">Same sentence, one click apart. This is the seam the ruling is meant to close.</div></div>
+</div>
+</div>
+
+<div class="verdict">
+<h2>What I would actually do</h2>
+<p><b>You are not wrong that Fraunces makes a better H1.</b> At 60px it has a spine Poppins does not — the optical sizing tightens the joins, and the serif gives the line an editorial authority that reads as "an organization with a point of view." Poppins at the same size reads friendlier and flatter. On the hero, Fraunces wins.</p>
+<p><b>But the straight swap in the middle column is not what the choice is between.</b> Poppins at 700 with Fraunces's tracking is heavier and looser than it should be — that column is the strawman, and it is also exactly what find-and-replace would ship. If you keep Poppins, it needs the third column's settings: weight 600, tracking around −1.8% of the size, leading a notch tighter.</p>
+<p><b>A third option worth naming:</b> keep Fraunces for H1 only — hero headlines, one per page — and move every H2 and below to Poppins. That preserves the editorial hit where it earns its keep, cuts about 70 of the 90 hardcoded usages, and shrinks the seam with Trail OS to a single line per page. It costs one extra font file and a rule people have to remember, which is the honest trade.</p>
+<p>Look at the 62px and 34px rows first — that is where the decision actually sits.</p>
+</div>
+
+</div></body></html>

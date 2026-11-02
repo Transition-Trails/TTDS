@@ -1,0 +1,25 @@
+<!-- @dsCard group="Trail Kit" height=140 subtitle="Scannable link to video & resources" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>*{box-sizing:border-box}body{margin:0}#root{padding:20px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}</style>
+</head>
+<body>
+<div id="root" class="trail-kit"></div>
+<script>
+(function(){
+  var h = React.createElement;
+  var C = window.TransitionTrailsDesignSystem_335df4.QRLink;
+  var libs = ["https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"];
+  function load(i){
+    if (i >= libs.length) { ReactDOM.createRoot(document.getElementById('root')).render(h(C,{url:'https://youtu.be/dQw4w9WgXcQ',label:'Watch: Build With Me',caption:'9 min walkthrough of this step'})); return; }
+    var s = document.createElement('script'); s.src = libs[i];
+    s.onload = s.onerror = function(){ load(i + 1); };
+    document.head.appendChild(s);
+  }
+  load(0);
+})();
+</script>
+</body>
+</html>

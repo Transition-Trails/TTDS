@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Dev Org Setup — insert sheet" description="Reusable one-page insert: create a free Salesforce Developer org, with the honest limitations. Drops into any Trail Kit unchanged." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Dev org setup" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.55in 0.5in 0.45in 0.62in;display:flex;flex-direction:column">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Keep this — every kit uses it</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.2in">
+<div style="max-width:4.4in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.25;color:#2A2E2C;margin:0 0 7px;letter-spacing:-.01em">Set up a free practice org</h1>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0">Never practice in a live org. A Salesforce Developer Edition org is free, permanent, and yours — this is where every Trail Kit expects you to work.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://developer.salesforce.com/signup" label="Sign up free" caption="Free, permanent, no credit card." tone="teal" size="92" hint-size="2.3in,1.2in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 2.15in;gap:0.28in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="list-checks" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Five steps, about ten minutes</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:11px;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:3px;line-height:1.3">Open the signup page</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Scan the code above, or type the address. Make sure it is the <b>developer</b> signup, not a trial — trials expire, developer orgs do not.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:11px;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:3px;line-height:1.3">Use an email you will keep</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A personal address, not a work one. If you change jobs you keep the org, and you will need that email to reset the password years from now.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:11px;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:3px;line-height:1.3">Pick a username you can read</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">It must be globally unique and looks like an email but is not one. Something like <span style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;white-space:nowrap">you.practice@example.dev</span> works.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:11px;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">4</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:3px;line-height:1.3">Confirm and set your password</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Follow the link in your email. Write the username below — that is the part people lose.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:11px;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">5</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:3px;line-height:1.3">Log in once a month</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Orgs are deactivated after a long stretch of no logins. Two minutes keeps years of work alive.</div></div>
+</div>
+
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.22in">
+<div style="background:#fff;border:1px solid #DED5C7;border-radius:8px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:7px">Username</div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.2in;margin-bottom:0.1in"></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:7px">Created on</div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in"></div>
+</div>
+<div style="background:#F3EDE2;border-radius:8px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="shield-alert" size="11" color="#8A3D1C" hint-size="11px,11px"></x-import>Never write your password here</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D">Use a password manager. A printed sheet with a live password on it is a habit that ends careers.</div>
+</div>
+</div>
+
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.12in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package-check" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What you get</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D">A full org with admin access, sample data, and no expiry date. Every setup screen a paying customer sees, yours to break and rebuild.</div>
+</div>
+
+<div style="background:#F3EDE2;border-radius:8px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>What it will not do</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>Two active users.</b> Enough to test permissions, not enough to simulate a team.</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>Very little storage.</b> Megabytes, not gigabytes — fine for practice, useless for a real data load.</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D;margin-bottom:6px"><b>Not every feature.</b> Some licensed features, including several this series covers, are simply absent. That is not you doing it wrong.</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D"><b>Never for real data.</b> No client records, no donor lists, no exceptions.</div>
+</div>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.15in">If a kit's feature is missing from your developer org, read that kit's access notes rather than hunting through Setup. The answer is licensing.</x-import>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/dev-org" label="Watch the setup" caption="6 min — signup to first login." tone="teal" size="80" hint-size="100%,1.05in"></x-import>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.14in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Dev org setup</span>
+</div>
+
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

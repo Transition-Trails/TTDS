@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Report Types — insert sheet" description="Reusable one-page insert: what a report type decides before anyone builds a report, the with-or-without join that catches everyone, and how to create, name and maintain them so people actually use them. Drops into any Trail Kit unchanged." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Report types" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.5in 0.62in 0.4in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.16in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Reference — every role, every org</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.16in">
+<div style="max-width:4.6in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.2;color:#2A2E2C;margin:0 0 6px;letter-spacing:-.01em">Report types</h1>
+<p style="font-size:10.5pt;line-height:1.5;color:#3B3F3D;margin:0">A report type decides what a report is allowed to contain <i>before</i> anyone opens the builder. Get them right and people answer their own questions. Get them wrong and they export to a spreadsheet — quietly, and forever.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://help.salesforce.com/s/articleView?id=sf.reports_report_type_overview.htm" label="Official reference" caption="Reporting changes most releases. Check what your edition has." tone="teal" size="80" hint-size="2.1in,1.05in"></x-import>
+</div>
+
+<div style="background:#EDF5F8;border-radius:9px;padding:0.16in 0.18in;margin-bottom:0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="git-merge" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The one decision that catches everyone</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.28in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">When you join a second object you choose between <b>"each A must have at least one B"</b> and <b>"A may or may not have B"</b>. Nobody reads that sentence carefully, and it silently removes rows.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Accounts with Opportunities</b> hides every account that has none. So the question <i>"which accounts have we never pitched?"</i> cannot be answered by that report type at all — you need <b>with or without</b>, then filter where the opportunity is blank.</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.26in;flex:1;min-height:0">
+
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="plus" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Creating</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>Build a custom one. Always.</b> Salesforce ships a standard type for every object and they look like a shortcut — but you cannot control which fields they expose, and custom fields on related objects are often unreachable.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>Start from the question,</b> not the schema. Whoever asked wants one thing counted — the primary object is usually the thing being counted.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>You get four objects.</b> A primary plus three related. If you need a fifth, the question is really two reports.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:7px"><b>Prove it before you announce it.</b> Build one report on the new type and check the row count against a number you already trust. A join that quietly drops rows looks perfectly normal.</div>
+</div>
+
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="users" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Managing — this is adoption</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>The name is the interface.</b> It is the first thing a person sees when they click New Report. Write it as the question it answers, not as the objects it joins.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>Fill in the description.</b> It shows in that picker and it is the cheapest support you will ever write.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Fewer, better.</b> Forty report types is a wall people walk away from. Retire the ones nobody has used in a year.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:7px"><b>Category is navigation.</b> Name categories for teams and put your custom types there. People pick the first thing that looks like their work, so crowd the standard types out.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:7px"><b>Test the name on a person.</b> Ask whoever requested it to find it without your help. If they cannot, the name is wrong — not them.</div>
+</div>
+
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#8A3D1C;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Maintaining</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>Add a field, then add it again.</b> A new custom field does not appear in an existing custom report type until someone puts it there. Standard types do pick up new fields on the <i>primary</i> object by themselves — the one thing they do better, and no compensation for the related-object fields they will never reach.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>In Development hides it.</b> A report type left in that state is invisible to everyone but admins — a common reason a colleague cannot find what you just built.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Deleting one breaks reports.</b> Every report built on it goes with it. Check before you tidy.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:7px"><b>Revisit them each release.</b> Salesforce has been changing reporting steadily, and a limitation you built a workaround for may now be handled natively.</div>
+</div>
+
+</div>
+
+<div style="margin-top:0.14in">
+<div style="background:#F7EAE3;border-radius:9px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="lightbulb" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Why this is the adoption lever</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">When someone says reporting in Salesforce is hard, they almost never mean the builder. They mean they could not find a starting point that had their fields in it, so they asked you instead — and next time they will not ask, they will export.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A dozen well-named report types with real descriptions turns that around more reliably than any training. Pair it with one folder rule — <b>only admins save to public folders</b>, everyone else drafts privately — and reporting stays usable a year from now.</div>
+</div>
+</div>
+<div style="padding-top:0.11in;border-top:1px solid #DED5C7;margin-top:0.11in;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Report types</span>
+</div>
+</div>
+
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Transition Trails — Partner (nonprofit) scope
+   The THIRD design branch. Its reader is a nonprofit decision-maker — an
+   executive director, ops lead, or board member — who has not yet decided that
+   supervised project capacity is worth their time. They are not learning and
+   they are not being assessed: they are weighing risk against outcome.
+
+   The three branches:
+     Trail Kit (.trail-kit)     retail  · warm paper · Clay accent · self-paced buyer
+     Program  (.program-trail)  credential · cool doc · stage colors · enrolled learner
+     Partner  (.partner-trail)  business case · bright surfaces · Sky Blue lead · nonprofit client
+
+   Partner material leads with Sky Blue and Deep Teal (calm competence, not the
+   green of learner growth), carries NO Clay (retail-only), and permits exactly one
+   Sun Amber CTA — which always points to the Digital Compass page. */
+:root {
+  /* ---- Partner surfaces — brighter and cooler than either other branch ---- */
+  --tt-partner-bg:      #F4F9FB;  /* @kind color */ /* sky-tinted ground */
+  --tt-partner-panel:   #FFFFFF;  /* @kind color */
+  --tt-partner-band:    #EDF5F8;  /* @kind color */ /* stat bands, pull sections */
+  --tt-partner-rule:    #CFDEE5;  /* @kind color */
+  --tt-partner-rule-strong: #A9C3CE; /* @kind color */
+  --tt-partner-ink-soft: #5A6A70; /* @kind color */
+
+  /* ---- Partner page furniture ---- */
+  --tt-partner-gutter: 0.7in; /* @kind spacing */
+}
+
+/* Scoped theme: wrap nonprofit-facing pages in class="partner-trail" */
+.partner-trail {
+  --tt-bg:          var(--tt-partner-bg);
+  --tt-surface:     var(--tt-partner-panel);
+  --tt-surface-alt: var(--tt-partner-band);
+  --tt-border:      var(--tt-partner-rule);
+  --tt-text:        #37464B;
+  --tt-heading:     #1F3238;
+
+  /* Deep Teal leads; Sky Blue is the surface language; Amber is the one CTA. */
+  --tt-action-primary:       var(--tt-deep-teal);
+  --tt-action-primary-hover: #245863;
+  --tt-action-accent:        var(--tt-sun-amber);
+  --tt-link:                 var(--tt-deep-teal);
+  --tt-link-hover:           #245863;
+
+  /* Print type scale — larger than a kit; this is read once, quickly, by a busy person */
+  --tt-partner-h1:    32pt; /* @kind font */
+  --tt-partner-h2:    20pt; /* @kind font */
+  --tt-partner-h3:    13pt; /* @kind font */
+  --tt-partner-body:  12pt; /* @kind font */
+  --tt-partner-small: 10pt; /* @kind font */
+  --tt-partner-caps:  8pt;  /* @kind font */
+  --tt-partner-stat:  34pt; /* @kind font */
+
+  --tt-shadow-card: none;
+  --tt-shadow-soft: none;
+}

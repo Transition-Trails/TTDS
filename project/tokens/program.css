@@ -1,0 +1,62 @@
+/* Transition Trails — Program Curriculum scope (official program content)
+   The second design branch. Where a Trail Kit is retail — warm paper, Clay accent,
+   a code to buy the next one — official program material for the Foundations Trail,
+   Guided Trail, and Trail of Mastery must read as CREDENTIAL, not purchase.
+
+   How the two branches differ, deliberately:
+     Trail Kit (.trail-kit)      warm paper · Clay accent · edge tabs · buy-next code
+     Program  (.program-trail)   cool neutral · NO Clay · module spine · mentor sign-off
+
+   Clay never appears in program content, and Sun Amber never appears at all —
+   there is nothing to sell to someone already enrolled. */
+:root {
+  /* ---- Program stage colors — one per trail, so a module is identifiable at a glance ---- */
+  --tt-prog-foundations: #2F6F7E;  /* Deep Teal */
+  --tt-prog-guided:      #2F6B3F;  /* Trail Green */
+  --tt-prog-mastery:     #2A2E2C;  /* Charcoal */
+
+  /* ---- Cool document surfaces (vs. the Trail Kit's warm paper) ---- */
+  --tt-doc:        #FDFDFC;
+  --tt-doc-alt:    #F1F3F1;  /* side rail, rubric fills */
+  --tt-doc-rule:   #DCDFDC;
+  --tt-doc-rule-strong: #B9BEBA;
+
+  /* ---- Curriculum page furniture ---- */
+  --tt-prog-gutter: 0.75in; /* @kind spacing */
+  --tt-prog-rail:   1.9in; /* @kind spacing */
+}
+
+/* Scoped theme: wrap official program pages in class="program-trail".
+   Set --tt-prog-stage per document to the trail's stage color. */
+.program-trail {
+  --tt-prog-stage:  var(--tt-prog-guided); /* @kind color */
+
+  --tt-bg:          var(--tt-doc);
+  --tt-surface:     #FFFFFF;
+  --tt-surface-alt: var(--tt-doc-alt);
+  --tt-border:      var(--tt-doc-rule);
+  --tt-text:        #383C3A;
+  --tt-heading:     var(--tt-charcoal);
+
+  /* The stage color leads; no Clay, no Amber. */
+  --tt-action-primary: var(--tt-prog-stage);
+  --tt-action-accent:  var(--tt-prog-stage);
+  --tt-link:           var(--tt-prog-stage);
+  --tt-link-hover:     var(--tt-green-700);
+
+  /* Print type scale — slightly larger body than a kit; these are read in long sittings */
+  --tt-prog-h1:    30pt; /* @kind font */
+  --tt-prog-h2:    18pt; /* @kind font */
+  --tt-prog-h3:    13pt; /* @kind font */
+  --tt-prog-body:  12pt; /* @kind font */
+  --tt-prog-small: 10pt; /* @kind font */
+  --tt-prog-caps:  8pt; /* @kind font */
+
+  --tt-shadow-card: none;
+  --tt-shadow-soft: none;
+}
+
+/* Per-trail stage overrides — add one of these alongside .program-trail */
+.program-trail.is-foundations { --tt-prog-stage: var(--tt-prog-foundations); }
+.program-trail.is-guided      { --tt-prog-stage: var(--tt-prog-guided); }
+.program-trail.is-mastery     { --tt-prog-stage: var(--tt-prog-mastery); }

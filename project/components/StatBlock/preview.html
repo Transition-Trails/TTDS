@@ -1,0 +1,28 @@
+<!-- @dsCard group="Partner" height=160 subtitle="Sourced statistic for the business case" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>*{box-sizing:border-box}body{margin:0}#root{padding:20px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}</style>
+</head>
+<body>
+<div id="root" class="partner-trail"></div>
+<script>
+(function(){
+  var h = React.createElement;
+  var C = window.TransitionTrailsDesignSystem_335df4.StatBlock;
+  var libs = [];
+  function load(i){
+    if (i >= libs.length) { ReactDOM.createRoot(document.getElementById('root')).render(h('div',{style:{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:20}},
+  h(C,{value:'42',label:'nonprofits have hosted a supervised project with us'}),
+  h(C,{value:'0',label:"cost to your budget for the learner's time",tone:'green'}),
+  h(C,{value:'3 wks',label:'typical time from scoping call to first delivery'}))); return; }
+    var s = document.createElement('script'); s.src = libs[i];
+    s.onload = s.onerror = function(){ load(i + 1); };
+    document.head.appendChild(s);
+  }
+  load(0);
+})();
+</script>
+</body>
+</html>

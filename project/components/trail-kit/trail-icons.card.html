@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="700x150" name="Trail Kit icons" subtitle="Pinned Lucide, print weight — one per label, never alone" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>body{margin:0;padding:18px 20px;background:var(--tt-paper,#FBF7F0);font-family:var(--tt-font-body),'Open Sans',sans-serif}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px 10px}.cell{display:flex;flex-direction:column;gap:5px}.row{display:flex;align-items:center;gap:6px;font-family:var(--tt-font-heading),'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.09em;text-transform:uppercase;color:var(--tt-deep-teal,#2F6F7E)}.name{font-family:ui-monospace,Menlo,monospace;font-size:7pt;color:#A39B8E;white-space:nowrap}</style>
+</head>
+<body>
+<div class="grid" id="g"></div>
+<script>
+const SET=[['lightbulb','Pro tip'],['triangle-alert','Watch out'],['award','Best practice'],['bookmark','Remember'],['compass','Coach'],['list-checks','Checklist'],['key-round','Access'],['circle-check-big','Proof'],['circle-slash','Does not'],['rotate-ccw','Rollback'],['mail','Announce'],['play','Video'],['headphones','Audio'],['graduation-cap','Cert'],['route','Sequence'],['calendar-days','Time'],['building-2','Nonprofit'],['user','Learner']];
+const pascal=s=>s.replace(/[-_ ]+([a-z0-9])/g,(_,c)=>c.toUpperCase()).replace(/^([a-z])/,(_,c)=>c.toUpperCase());
+document.getElementById('g').innerHTML=SET.map(([n,l])=>{
+  const node=window.lucide.icons[pascal(n)];
+  const inner=(node&&node[2]||[]).map(([t,a])=>'<'+t+' '+Object.entries(a).map(([k,v])=>k+'="'+v+'"').join(' ')+'/>').join('');
+  return '<div class="cell"><div class="row"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'+inner+'</svg>'+l+'</div><div class="name">'+n+'</div></div>';
+}).join('');
+</script>
+</body>
+</html>

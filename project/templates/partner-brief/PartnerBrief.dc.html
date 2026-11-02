@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Nonprofit Partner Brief" description="Two-page leave-behind making the business case to a nonprofit for hosting a supervised project, routing to the Digital Compass page." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="partner-trail">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="The case" style="background:#F4F9FB;font-family:'Open Sans',sans-serif;display:flex;flex-direction:column;overflow:hidden">
+<div style="background:#2F6F7E;color:#fff;padding:16px 0.7in;display:flex;justify-content:space-between;align-items:center">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14pt;line-height:1.4">Transition Trails</div><div style="font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:#BFD9E4;margin-top:1px">Bridging the experience gap</div></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.13em;text-transform:uppercase;color:#BFD9E4">For nonprofit partners</div>
+</div>
+
+<div style="padding:0.42in 0.7in 0.5in;display:flex;flex-direction:column;flex:1;min-height:0">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:30pt;line-height:1.32;color:#1F3238;margin:0 0 0.14in;max-width:6.1in;text-wrap:balance">Your mission is not short of ideas. It is short of hands.</h1>
+<p style="font-size:12pt;line-height:1.6;color:#37464B;margin:0 0 0.3in;max-width:5.9in">Most small nonprofits are running systems nobody has time to fix. We place learners who have the skills but not yet the track record onto bounded, supervised projects at organizations like yours. You get capacity you could not otherwise budget for. They get experience someone will vouch for. Nobody is anybody's unpaid intern.</p>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.3in;background:#EDF5F8;border-radius:9px;padding:0.24in 0.26in;margin-bottom:0.2in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34pt;line-height:1.3;color:#2F6F7E;letter-spacing:-.01em">$0</div><div style="font-size:10pt;line-height:1.45;color:#37464B;margin-top:5px">from your budget for the learner's time on a scoped project</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34pt;line-height:1.3;color:#2F6F7E;letter-spacing:-.01em">3 wks</div><div style="font-size:10pt;line-height:1.45;color:#37464B;margin-top:5px">typical time from first scoping call to something delivered</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34pt;line-height:1.3;color:#2F6B3F;letter-spacing:-.01em">42</div><div style="font-size:10pt;line-height:1.45;color:#37464B;margin-top:5px">nonprofits have hosted a supervised project with us</div></div>
+</div>
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#5A6A70;margin-bottom:0.1in">Where this usually starts</div>
+<div style="border-bottom:1px solid #CFDEE5">
+
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:12px 0;border-top:1px solid #CFDEE5">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#A9C3CE;line-height:1.2">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#5A6A70;margin-bottom:4px">Sound familiar?</div><div style="font-size:10pt;line-height:1.5;color:#37464B">Your database was set up by a volunteer who has since moved on, and nobody has touched it since.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What changes</div><div style="font-size:10pt;line-height:1.5;color:#37464B">A learner documents what actually exists, then rebuilds what broke — every change reviewed before it ships.</div><div style="margin-top:6px;font-size:9pt;line-height:1.45;color:#245531;font-family:'Poppins',sans-serif;font-weight:600">You keep the documentation, not just the fix.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:12px 0;border-top:1px solid #CFDEE5">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#A9C3CE;line-height:1.2">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#5A6A70;margin-bottom:4px">Sound familiar?</div><div style="font-size:10pt;line-height:1.5;color:#37464B">You suspect your reporting could tell you far more, but no one has a spare week to find out how.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What changes</div><div style="font-size:10pt;line-height:1.5;color:#37464B">We scope one bounded project with a defined finish line, so it cannot quietly become an open commitment.</div><div style="margin-top:6px;font-size:9pt;line-height:1.45;color:#245531;font-family:'Poppins',sans-serif;font-weight:600">A finished deliverable, or an honest no.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:12px 0;border-top:1px solid #CFDEE5">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#A9C3CE;line-height:1.2">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#5A6A70;margin-bottom:4px">Sound familiar?</div><div style="font-size:10pt;line-height:1.5;color:#37464B">You have been burned before by help that left you with something you could not maintain.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What changes</div><div style="font-size:10pt;line-height:1.5;color:#37464B">Handover documentation is part of the deliverable, not a favor at the end. We review it before sign-off.</div><div style="margin-top:6px;font-size:9pt;line-height:1.45;color:#245531;font-family:'Poppins',sans-serif;font-weight:600">Your next admin inherits notes, not a mystery.</div></div>
+</div>
+
+</div>
+
+<div style="margin-top:auto;padding-top:0.2in;font-size:8pt;color:#7E8E94;display:flex;justify-content:space-between"><span>transitiontrails.org · For nonprofit partners</span><span>1 of 2</span></div>
+</div>
+</section>
+
+<section class="page" data-screen-label="How it works & Compass" style="background:#F4F9FB;font-family:'Open Sans',sans-serif;padding:0.6in 0.7in 0.5in;display:flex;flex-direction:column;overflow:hidden">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #CFDEE5;padding-bottom:8px;margin-bottom:0.3in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#5A6A70;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · For nonprofit partners</span><span style="color:#2F6F7E">How it works</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.3;color:#1F3238;margin:0 0 0.24in">Four conversations, then work starts.</h2>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.16in;margin-bottom:0.32in">
+<div style="background:#fff;border:1px solid #CFDEE5;border-top:3px solid #2F6F7E;border-radius:0 0 7px 7px;padding:13px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">Step 1</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#1F3238;margin-bottom:5px;line-height:1.3">Tell us what is stuck</div><div style="font-size:9pt;line-height:1.45;color:#37464B">A 30-minute call. No preparation needed.</div></div>
+<div style="background:#fff;border:1px solid #CFDEE5;border-top:3px solid #2F6F7E;border-radius:0 0 7px 7px;padding:13px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">Step 2</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#1F3238;margin-bottom:5px;line-height:1.3">We scope it in writing</div><div style="font-size:9pt;line-height:1.45;color:#37464B">One page: the finish line, the risks, what we will not do.</div></div>
+<div style="background:#fff;border:1px solid #CFDEE5;border-top:3px solid #2F6F7E;border-radius:0 0 7px 7px;padding:13px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">Step 3</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#1F3238;margin-bottom:5px;line-height:1.3">You approve, or you don't</div><div style="font-size:9pt;line-height:1.45;color:#37464B">Nothing begins until the scope is signed.</div></div>
+<div style="background:#fff;border:1px solid #CFDEE5;border-top:3px solid #2F6B3F;border-radius:0 0 7px 7px;padding:13px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:6px">Step 4</div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#1F3238;margin-bottom:5px;line-height:1.3">Work, reviewed weekly</div><div style="font-size:9pt;line-height:1.45;color:#37464B">You see progress every week and can stop at any point.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.3in;margin-bottom:0.3in">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in">What we ask of you</div>
+<div style="font-size:10pt;line-height:1.6;color:#37464B">One named staff contact, about two hours a week. Access to the system in question. Honest feedback when something misses. That is the whole ask.</div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in">What we never ask</div>
+<div style="font-size:10pt;line-height:1.6;color:#37464B">A fee for the learner's time. A long-term commitment. Access to donor or client data that the project does not genuinely require.</div>
+</div>
+</div>
+
+<div style="background:#EDF5F8;border-radius:9px;padding:0.2in 0.22in;margin-bottom:0.3in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:9px">The question everyone asks</div>
+<div style="font-size:10pt;line-height:1.6;color:#37464B"><b style="font-family:'Poppins',sans-serif;color:#1F3238">"What if the learner is not good enough?"</b> Then the work does not ship. Every change is reviewed against the written scope before it reaches your system, and if a project cannot meet the standard we tell you and we stop. Your risk is the two hours a week, not the outcome.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.3in;padding:0.16in 0 0.02in;border-top:1px solid #CFDEE5;margin-bottom:0.14in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">Who you would be working with</div><div style="font-size:9.5pt;line-height:1.55;color:#37464B">Transition Trails is a nonprofit founded by Angela Landrith. Every project is reviewed against a written scope before anything reaches your system.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">If we are not the right fit</div><div style="font-size:9.5pt;line-height:1.55;color:#37464B">We will say so on the first call and point you toward someone better suited. A bad match costs you more than it costs us.</div></div>
+</div>
+
+<div style="margin-bottom:0.1in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CompassCTA" body="Tell us what is stuck. We will tell you honestly whether a supervised project fits — and if it does not, we will say so and point you somewhere better." hint-size="100%,2.55in"></x-import>
+</div>
+
+<div style="margin-top:auto;padding-top:0.2in;font-size:8pt;color:#7E8E94;display:flex;justify-content:space-between"><span>transitiontrails.org/compass</span><span>2 of 2</span></div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,31 @@
+FirstName,LastName,AccountName,Title,Email,Phone,MailingCity,Description
+Alice,Barrett,Northwind Logistics,Operations Manager,REPLACE-WITH-YOUR-ADDRESS-1@example.com,,Portland,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Ben,Cho,Alpine Manufacturing,Finance Director,REPLACE-WITH-YOUR-ADDRESS-2@example.com,(401) 555-1101,Boise,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Carla,Duarte,Cedar Ridge Dental,Owner,REPLACE-WITH-YOUR-ADDRESS-3@example.com,(402) 555-1102,Spokane,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Devon,Ellis,Harbourline Freight,Facilities Lead,REPLACE-WITH-YOUR-ADDRESS-4@example.com,(403) 555-1103,Tacoma,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Elena,Fontaine,Quill & Page Publishing,Procurement Manager,REPLACE-WITH-YOUR-ADDRESS-5@example.com,(404) 555-1104,Portland,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Frank,Gallagher,Ferrous Tooling,IT Manager,frank.gallagher@ferroustooling.example.com,(405) 555-1105,Eugene,
+Grace,Haddad,Bright Meadow Foods,Managing Director,grace.haddad@brightmeadowfoods.example.com,(406) 555-1106,Salem,
+Hugo,Ibarra,Lakeside Property Group,Operations Manager,,(407) 555-1107,Seattle,Deliberately has no email address. A contact with no address can never be matched — this is what an unmatchable record looks like.
+Ivy,Jensen,Tessera Analytics,Finance Director,ivy.jensen@tesseraanalytics.example.com,,Bellevue,
+Jonah,Kowalski,Copperfield Legal,Owner,jonah.kowalski@copperfieldlegal.example.com,(409) 555-1109,Portland,
+Kira,Lindqvist,Vantage Roofing,Facilities Lead,kira.lindqvist@vantageroofing.example.com,(410) 555-1110,Vancouver,
+Liam,Moreau,Marlowe Textiles,Procurement Manager,shared.inbox@harbourlinefreight.example.com,(411) 555-1111,Yakima,Deliberately shares an address with another contact at a different account. Watch which record the activity lands on.
+Maya,Nakamura,Ironhold Security,IT Manager,shared.inbox@harbourlinefreight.example.com,(412) 555-1112,Tacoma,Second contact using the same shared address. See the note on the other one.
+Noah,Osei,Sunbeam Optics,Managing Director,noah.osei@sunbeamoptics.example.com,(413) 555-1113,Bend,
+Orla,Petrov,Greenfield Agritech,Operations Manager,orla.petrov@greenfieldagritech.example.com,(414) 555-1114,Medford,
+Peter,Quintana,Pinnacle Staffing,Finance Director,peter.quintana@pinnaclestaffing.example.com,(415) 555-1115,Seattle,
+Quinn,Rasmussen,Riverstone Dental,Owner,quinn.rasmussen@riverstonedental.example.com,,Olympia,
+Rosa,Silva,Halcyon Travel,Facilities Lead,rosa.silva@halcyontravel.example.com,(417) 555-1117,Portland,
+Sam,Tanaka,Kestrel Aviation,Procurement Manager,,(418) 555-1118,Everett,Deliberately has no email address. A contact with no address can never be matched — this is what an unmatchable record looks like.
+Tara,Ueda,Summit Fabrication,IT Manager,tara.ueda@summitfabrication.example.com,(419) 555-1119,Kent,
+Umar,Vasquez,Northwind Logistics,Managing Director,umarvasquez@personalmail.example.net,(420) 555-1120,Portland,"Uses a personal address rather than the organization domain. Common in real data, and it breaks any assumption that domain implies account."
+Vera,Walsh,Alpine Manufacturing,Operations Manager,vera.walsh@alpinemanufacturing.example.com,(421) 555-1121,Boise,
+Wes,Xu,Cedar Ridge Dental,Finance Director,wes.xu@cedarridgedental.example.com,(422) 555-1122,Spokane,
+Xena,Yildiz,Harbourline Freight,Owner,xena.yildiz@harbourlinefreight.example.com,(423) 555-1123,Tacoma,
+Yusuf,Zhao,Quill & Page Publishing,Facilities Lead,yusuf.zhao@quillpagepublishing.example.com,,Portland,
+Zoe,Abbott,Ferrous Tooling,Procurement Manager,zoe.abbott@ferroustooling.example.com,(425) 555-1125,Eugene,
+Adam,Boone,Bright Meadow Foods,IT Manager,adam.boone@brightmeadowfoods.example.com,(426) 555-1126,Salem,
+Beth,Castellanos,Lakeside Property Group,Managing Director,beth.castellanos@lakesidepropertygroup.example.com,(427) 555-1127,Seattle,
+Cole,Dunn,Tessera Analytics,Operations Manager,cole.dunn@tesseraanalytics.example.com,(428) 555-1128,Bellevue,
+Dina,Emerson,Copperfield Legal,Finance Director,dina.emerson@copperfieldlegal.example.com,(429) 555-1129,Portland,

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-bg); }
+  a { color: var(--tt-link); text-decoration: none; }
+  a:hover { color: var(--tt-link-hover); text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: var(--tt-slate); background: var(--tt-bg); min-height: 100vh; padding: 56px 32px 96px;">
+<div style="max-width: 1040px; margin: 0 auto;">
+
+  <header style="border-bottom: 1px solid var(--tt-warm-gray); padding-bottom: 32px; margin-bottom: 48px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tt-deep-teal); margin: 0 0 16px;">Identity and access · design</p>
+    <h1 style="font-family: 'Poppins', sans-serif; font-size: 44px; line-height: 1.15; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 20px; max-width: 24ch; text-wrap: pretty;">One sign-in, three grants</h1>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 24px; max-width: 64ch; text-wrap: pretty;">What you described is the right architecture and it is achievable. One clarification makes the whole design fall into place: Google SSO can authenticate the <em>person</em> once, but it cannot by itself give Trail OS permission to act in Salesforce or Slack. Those need their own grants.</p>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch; text-wrap: pretty;">The good news is that if Salesforce and Slack already sign in through Google, those grants cost the user a consent click each, once, and never a password. It feels like one login because it is one identity.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 14px;">
+      <div><p style="margin: 0 0 4px; opacity: .7;">Exists today</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">Google OAuth plumbing · Groups read · SF OAuth</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">To build</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">Per-user login · group-derived access · enforcement</p></div>
+      <div><p style="margin: 0 0 4px; opacity: .7;">Date</p><p style="margin: 0; font-weight: 600; color: var(--tt-charcoal);">3 August 2026</p></div>
+    </div>
+  </header>
+
+  <section style="background: var(--tt-white); border: 1.5px solid var(--tt-warning); border-radius: 22px; padding: 32px 36px; margin-bottom: 48px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+      <p style="font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-warning); margin: 0;">THE THING TO KNOW FIRST</p>
+    </div>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 14px;">Trail OS has no per-user login today</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">The Google OAuth route in the codebase looks like a login flow but is not one. It is a one-off admin wizard: an administrator runs it, Google returns a refresh token, and the wizard tells you to paste that token into Replit Secrets. Trail OS then uses that single token for Drive, Calendar and Gmail — acting as one account for everyone, forever.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;">That is a reasonable way to give an application service access. It is not sign-in. It stores nothing per person, it has no session, and it is explicitly memory-only with a ten-minute expiry.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0; max-width: 74ch;">Clerk provides the actual login and is mounted across the API — but it attaches identity without enforcing it, and nothing connects it to your Google Groups. So the honest summary is: <strong style="color: var(--tt-charcoal);">the plumbing for what you want mostly exists, but it is wired for service access rather than for people.</strong></p>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">Why three grants, not one</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px; max-width: 66ch;">This is the one technical constraint that shapes everything else, so it is worth being precise about.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px; max-width: 66ch;">A Google sign-in proves <em>who someone is</em>. It produces a token that says "this is angela@transitiontrails.org, verified by Google". Salesforce will not accept that token as authority to read records, and Slack will not accept it as authority to post — each system issues its own tokens and only trusts its own.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 66ch;">What Google SSO <em>does</em> do is make each of those grants nearly invisible. If Salesforce and Slack use Google as their identity provider, the user is already signed in when they arrive — they see a consent screen, click once, and never type a password. Consent is remembered, so it happens on first use and effectively never again.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Google</p>
+        <p style="font-size: 14px; margin: 0 0 10px; opacity: .7;">Identity and access level</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">Proves who the person is and, through their group membership, what they may do in Trail OS. This is the only sign-in they experience.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Salesforce</p>
+        <p style="font-size: 14px; margin: 0 0 10px; opacity: .7;">What their records allow</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">A separate grant, chained straight after login. Signing in through Google means one consent click. Their Salesforce permissions then apply naturally, because Trail OS is acting as them.</p>
+      </div>
+      <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 8px;">Slack</p>
+        <p style="font-size: 14px; margin: 0 0 10px; opacity: .7;">Posting and reading as them</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">Same pattern. Only needed for people who act in Slack from Trail OS — so it can be requested on first use rather than at login.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">The flow</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 64ch;">What a person actually experiences, and what happens behind each step.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">1</p>
+        <div>
+          <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Sign in with Google</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 8px;">One button. Restricted to the transitiontrails.org domain so no personal account can reach Trail OS.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; opacity: .8;">The OAuth code already in the repository does most of this — it needs a per-user session instead of a token-display page.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">2</p>
+        <div>
+          <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Their groups become their access</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 8px;">At login, Trail OS asks the Directory API which groups <em>this person</em> belongs to, and that determines what they can see. No separate permissions table to maintain — you manage access in the Google Admin console, where you already manage everything else.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; opacity: .8;">The Directory call already works; today it lists members for an admin screen. The same call with a user key answers the reverse question.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">3</p>
+        <div>
+          <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Connect Salesforce — one click, once</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0 0 8px;">Immediately after login, redirect to Salesforce. Because they are already signed in with Google, they see a consent screen and nothing else. Their refresh token is stored against their account so it never happens again.</p>
+          <p style="font-size: 15px; line-height: 1.6; margin: 0; opacity: .8;">Trail OS then reads Salesforce as them — their sharing rules and field-level security apply automatically, with no permission logic to write.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: start; background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 24px 28px;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--tt-trail-green); margin: 0;">4</p>
+        <div>
+          <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 6px;">Slack when they first need it</p>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0;">Not everyone acts in Slack from Trail OS, so asking at login adds a step most people do not need. Request it at the point of use instead — the first time someone sends a message or assigns a quest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-deep-teal); border-radius: 22px; padding: 40px 44px; color: var(--tt-white); margin-bottom: 56px;">
+    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; opacity: .85;">The decision this forces</p>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600; margin: 0 0 18px; color: var(--tt-white); max-width: 36ch;">Some things must act as the user. Others cannot.</h2>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 18px; max-width: 66ch; opacity: .95;">If Trail OS reads Salesforce as the signed-in person, permissions work beautifully — a coach sees their learners, a staff member sees what their profile allows, and you never write authorisation code. That is the right model for anything on screen.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0 0 18px; max-width: 66ch; opacity: .95;">But Penny writes an interaction log after the reply is sent, the nightly sync runs when nobody is signed in, and a weekly report is generated on a schedule. None of those have a user. They need the dedicated integration user you already approved.</p>
+    <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 66ch; opacity: .95;"><strong style="color: var(--tt-white);">So the answer is both, deliberately split:</strong> user context for anything a person is looking at, system context for background work. That is a clean rule, and it means the integration user feature is not superseded by this design — its scope narrows to background operations only, which is also a smaller and safer permission set.</p>
+  </section>
+
+  <section style="margin-bottom: 56px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 12px;">Access levels, and the multiple-groups problem</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px; max-width: 66ch;">You raised this earlier and it lands here. A person can hold Penny Admin and Platform Admin at once, and today's model cannot express that — access is a single rung on a four-step ladder, so a second group has nowhere to go.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px; max-width: 66ch;">Group-derived access fixes this naturally, provided the groups are read as a <em>set</em> rather than resolved to a single tier. Each group grants something; a person holds everything their groups grant. Two groups mean two grants, not a contest over which one wins.</p>
+    <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; overflow: hidden; box-shadow: 0 6px 16px rgba(42,46,44,.08);">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1.5fr; padding: 16px 24px; background: var(--tt-sky-100); border-bottom: 1px solid var(--tt-warm-gray); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">
+        <p style="margin: 0;">Google group</p><p style="margin: 0;">Grants</p><p style="margin: 0;">Note</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1.5fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">trailosusers</p>
+        <p style="margin: 0;">Everyday</p>
+        <p style="margin: 0;">Baseline. Everyone who signs in should hold this.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1.5fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">trailospennyadmin</p>
+        <p style="margin: 0;">Penny governance</p>
+        <p style="margin: 0;">Prompt studio, capabilities, source trust. A domain, not a level.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1.5fr; padding: 16px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">trailosadmin</p>
+        <p style="margin: 0;">Platform governance</p>
+        <p style="margin: 0;">Integrations, secrets, configuration. Also a domain.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1.5fr; padding: 16px 24px; font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; opacity: .6;">— future —</p>
+        <p style="margin: 0;">Coach · Learner</p>
+        <p style="margin: 0;">New groups when those surfaces exist. A person can be both a coach and a learner, which the ladder could never express and a set handles without comment.</p>
+      </div>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 24px 0 0; max-width: 66ch;">The existing four-tier labels can stay as a display convenience — derived from the grants, shown in the interface — so nothing has to be renamed on day one. They just stop being what decisions are made on.</p>
+  </section>
+
+  <section style="margin-bottom: 48px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;">
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 600; color: var(--tt-charcoal); margin: 0;">Proposed features</h2>
+      <p style="font-size: 14px; margin: 0; opacity: .7;">5</p>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 66ch;">Sequenced so each is useful alone. The first two are the ones that make the rest possible.</p>
+    <div style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; overflow: hidden; box-shadow: 0 12px 28px rgba(42,46,44,.10);">
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 16px 24px; background: var(--tt-sky-100); border-bottom: 1px solid var(--tt-warm-gray); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">
+        <p style="margin: 0;">Feature</p><p style="margin: 0;">Epic</p><p style="margin: 0;">Name and acceptance</p><p style="margin: 0;">Priority</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-15</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Google SSO as the login for Trail OS</p><p style="margin: 0;">A real per-user sign-in: Google OAuth restricted to the transitiontrails.org domain, producing a persistent server-side session with the person's email and Google identity. Acceptance: signing in creates a session that survives a browser restart; a personal Gmail account is refused with a clear message; signing out ends the session. Decide in this feature whether Clerk remains as the session layer with Google behind it, or is removed — running two session systems is the thing to avoid.</p></div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-16</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Access from Google Group membership</p><p style="margin: 0;">At login, resolve the person's groups through the Directory API and hold them as a set of grants on the session — never collapsed to a single tier. Cache with a short expiry so a group change takes effect within minutes. Acceptance: someone in two groups holds both sets of permissions; removing someone from a group removes their access without a code change or a restart; someone in no Trail OS group cannot sign in.</p></div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-17</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Enforce access on every route</p><p style="margin: 0;">Grants currently describe access without restricting it — the prototype default is Super Admin and there are no route-level checks. Add enforcement at the API, not only in the navigation. Acceptance: a request for something the session does not grant is refused regardless of how it was made; the prototype default is removed; an unauthenticated request to any data route is refused. This is what makes the previous two features real rather than cosmetic.</p></div>
+        <p style="margin: 0;">Critical</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; border-bottom: 1px solid var(--tt-warm-gray); font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-18</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Per-user Salesforce authorisation</p><p style="margin: 0;">Chain a Salesforce OAuth grant after login and store each person's refresh token against their account, so screen data is read as them and their sharing rules apply. Keep the integration user for background work only. Acceptance: two people with different Salesforce profiles see different data in the same screen; a person who has not yet authorised sees a clear prompt rather than an error; background jobs continue to run with nobody signed in.</p></div>
+        <p style="margin: 0;">High</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 104px 70px 1fr 96px; padding: 20px 24px; font-size: 15px; line-height: 1.55;">
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px; font-weight: 600; color: var(--tt-charcoal);">F-05-19</p>
+        <p style="margin: 0; font-family: Menlo, monospace; font-size: 14px;">E-05</p>
+        <div><p style="margin: 0 0 6px; font-weight: 600; color: var(--tt-charcoal);">Slack authorisation at first use</p><p style="margin: 0;">Request a Slack grant when someone first acts in Slack from Trail OS, rather than at login. Acceptance: a person who never uses Slack is never asked; someone who does is asked once; actions post as that person rather than as a shared bot where the distinction matters.</p></div>
+        <p style="margin: 0;">Medium</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--tt-white); border: 1px solid var(--tt-warm-gray); border-radius: 22px; padding: 32px 36px;">
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; color: var(--tt-charcoal); margin: 0 0 16px;">One thing left to confirm</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch; padding: 14px 18px; background: var(--tt-green-100); border-radius: 14px;"><strong style="color: var(--tt-charcoal);">Confirmed 3 August — Salesforce uses Google as its SAML identity provider.</strong> So the Salesforce grant is a single consent screen with no password, and it happens once. Onboarding is genuinely "sign in with Google, approve Salesforce, done". This also means a person's Salesforce access is already governed by their Google account, so disabling someone in Google Workspace closes both doors at once.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 14px; max-width: 74ch;"><strong style="color: var(--tt-charcoal);">Clerk or Google directly?</strong> Clerk is already mounted and can sit in front of Google, giving you session management for free. Going direct removes a dependency and a moving part. Either is defensible; running both is not, and today you effectively have two half-wired identity systems. This is the one call I would want settled before any code is written.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin: 0; max-width: 74ch;">One sequencing note: the integration user work stands, but its scope narrows to background operations. Worth updating that feature before it is built, so it is not given permissions that per-user access will cover.</p>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100}}"></script>
+</body>
+</html>

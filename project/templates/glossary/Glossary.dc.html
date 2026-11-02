@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Salesforce Glossary — insert sheet" description="Reusable one-page glossary of the Salesforce words every Trail Kit uses without stopping to define them. Written for someone who inherited an org." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Glossary" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.55in 0.5in 0.45in 0.62in;display:flex;flex-direction:column">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.18in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Keep this open beside any kit</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.18in">
+<div style="max-width:4.6in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.25;color:#2A2E2C;margin:0 0 6px;letter-spacing:-.01em">The words, in plain English</h1>
+<p style="font-size:10.5pt;line-height:1.5;color:#3B3F3D;margin:0">Every kit uses these without stopping to explain them. If you inherited an org and nobody taught you the vocabulary, start here — none of it is complicated once someone says it plainly.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/glossary" label="Longer version" caption="With examples." tone="teal" size="76" hint-size="1.85in,1in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 0.3in;flex:1;min-height:0;align-content:start">
+<sc-for list="{{ terms }}" as="t" hint-placeholder-count="16">
+<div style="display:grid;grid-template-columns:1.05in 1fr;gap:11px;padding:6px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">{{ t.word }}</div>
+<div style="font-size:9pt;line-height:1.45;color:#3B3F3D">{{ t.means }}</div>
+</div>
+</sc-for>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in;margin-top:0.16in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.15in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The one that confuses everyone</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D"><b>Profile vs permission set.</b> A profile is the baseline every user must have exactly one of. A permission set adds extra on top, and a user can have many. Modern practice: keep profiles plain and grant the interesting things with permission sets.</div>
+</div>
+<div style="background:#F3EDE2;border-radius:8px;padding:0.15in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="triangle-alert" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Words that sound the same</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D"><b>Field</b> is a box on a record. <b>Object</b> is the kind of thing the record is. <b>Record</b> is one actual entry. So: the <i>Email</i> field, on the <i>Contact</i> object, on the record for <i>Maria Alvarez</i>.</div>
+</div>
+</div>
+
+<div style="margin-top:0.14in;padding-top:0.14in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Glossary</span>
+</div>
+
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      terms: [
+        { word: 'Org', means: 'Your organization\u2019s whole Salesforce instance. "In your org" means in your copy of Salesforce.' },
+        { word: 'Object', means: 'A kind of thing you store \u2014 Contact, Account, Opportunity. Like a table.' },
+        { word: 'Record', means: 'One actual entry of an object. One contact, one donation.' },
+        { word: 'Field', means: 'A single box on a record \u2014 Email, Amount, Close Date.' },
+        { word: 'Standard vs custom', means: 'Standard came with Salesforce. Custom was added by someone at your organization, and ends in __c.' },
+        { word: 'Setup', means: 'The admin area, behind the gear icon. Where you change how the org behaves.' },
+        { word: 'Profile', means: 'The baseline permission bundle. Every user has exactly one.' },
+        { word: 'Permission set', means: 'Extra permissions granted on top of a profile. A user can have several.' },
+        { word: 'Sharing', means: 'Who can see whose records. Separate from what they are allowed to do.' },
+        { word: 'Layout', means: 'Which fields appear on a record page, and in what order.' },
+        { word: 'Report', means: 'A saved question about your data. Runs live, every time you open it.' },
+        { word: 'Dashboard', means: 'A page of report results as charts. Only as good as the reports behind it.' },
+        { word: 'Automation', means: 'Anything that acts without a person clicking \u2014 usually a Flow these days.' },
+        { word: 'Flow', means: 'Salesforce\u2019s current tool for building automation without code.' },
+        { word: 'Sandbox', means: 'A copy of your org for testing. Changes here never touch real data.' },
+        { word: 'Production', means: 'Your live org, with real people and real records in it.' },
+        { word: 'Edition', means: 'Which tier your organization pays for. It decides which features exist at all.' },
+        { word: 'Release', means: 'Salesforce updates three times a year. Things get renamed and moved.' },
+        { word: 'Lightning', means: 'The current interface. Classic is the older one, still around in places.' },
+        { word: 'Activity', means: 'A logged interaction \u2014 an email, a call, a meeting \u2014 tied to a record.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

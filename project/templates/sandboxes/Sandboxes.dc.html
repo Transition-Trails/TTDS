@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Sandboxes — insert sheet" description="Reusable one-page insert: the four sandbox types, refresh intervals, the username change nobody warns you about, moving a change to production, and why reporting is the awkward thing to build in one. Drops into any Trail Kit unchanged." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Sandboxes" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.52in 0.62in 0.42in">
+<div style="display:flex;flex-direction:column;height:100%">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.18in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Reference — you may not be able to practice this</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.18in">
+<div style="max-width:4.5in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.2;color:#2A2E2C;margin:0 0 6px;letter-spacing:-.01em">Sandboxes</h1>
+<p style="font-size:10.5pt;line-height:1.5;color:#3B3F3D;margin:0">A copy of your org for building and testing. Developer Edition orgs do not get one — so if you are working from a free practice org, read this to understand what your workplace has, not to follow along.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://help.salesforce.com/s/articleView?id=sf.deploy_sandboxes_parent.htm" label="Current limits" caption="Storage and refresh figures change. Scan rather than trust a printed number." tone="teal" size="82" hint-size="2.2in,1.1in"></x-import>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.13in">
+<div style="display:grid;grid-template-columns:1.05in 1fr 0.85in 1.55in;gap:12px;padding:6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A">
+<div>Type</div><div>What is inside it</div><div>Refresh</div><div>Reach for it when</div>
+</div>
+<div style="display:grid;grid-template-columns:1.05in 1fr 0.85in 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Developer</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Your configuration only. <b>No records at all.</b> Smallest storage.</div><div style="font-size:9.5pt;color:#3B3F3D">1 day</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Building a field, a layout, an automation.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.05in 1fr 0.85in 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Developer Pro</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">The same, with room to load your own test records by hand.</div><div style="font-size:9.5pt;color:#3B3F3D">1 day</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">The above, but you need data to test against.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.05in 1fr 0.85in 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Partial Copy</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Configuration plus a <b>sample</b> of real records, chosen by a template you define.</div><div style="font-size:9.5pt;color:#3B3F3D">5 days</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">User testing, training, a realistic rehearsal.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.05in 1fr 0.85in 1.55in;gap:12px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Full</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">A complete copy — every record, including data you may not be cleared to look at.</div><div style="font-size:9.5pt;color:#3B3F3D">29 days</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Performance testing, and reporting that has to be right.</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.28in;margin-bottom:0.12in">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="key-round" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Logging in afterwards</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px"><b>Your username gains the sandbox name.</b> If you are <span style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;white-space:nowrap">you@example.com</span> in production, you are <span style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;white-space:nowrap">you@example.com.uat</span> in a sandbox named UAT. Your email address does not change — your login does.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>You log in at a different address.</b> Sandboxes live at <span style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;white-space:nowrap">test.salesforce.com</span>, not the usual one. The normal login page will simply reject you.</div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#8A3D1C;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="rotate-ccw" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Refreshing destroys it</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px">A refresh does not update your sandbox. It <b>replaces</b> it with a new copy of production. Everything you built there and did not deploy is gone, with no undo and no export.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Tell anyone else using it before you refresh. This is how people lose a week of someone else's work without ever knowing.</div>
+</div>
+</div>
+
+<div style="border-top:1px solid #DED5C7;padding-top:0.12in;margin-bottom:0.1in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="arrow-right-left" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Getting the change into production</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.24in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Change sets are the click path.</b> Build an outbound set in the sandbox, upload it, then validate the inbound set in production before deploying.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Data never travels.</b> A change set moves configuration only. Records you created for testing stay behind, which is usually what you want and occasionally a surprise.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Not everything is eligible.</b> Some settings cannot go in a change set at all and have to be redone by hand. Find out which before you promise a date.</div>
+</div>
+</div>
+
+<div style="margin-top:auto">
+<div style="background:#F7EAE3;border-radius:9px;padding:0.14in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="triangle-alert" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Reporting is the awkward one</div>
+<div style="display:grid;grid-template-columns:1.25fr 1fr;gap:0.28in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A report is only as testable as the data underneath it. A Developer sandbox has no records, so every report returns nothing and you cannot tell a correct one from a broken one. A Partial Copy is worse than empty — filters match a handful of rows, totals look plausible and are wrong, and you carry that false confidence into production.</div>
+<div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>So build reports in production.</b> They read data and do not change it, and one saved to <i>Private</i> is visible to nobody until you share it. Get it right against real numbers, then move the folder — this is the one case where the careful-looking route is the less reliable one.</div>
+</div>
+</div>
+</div>
+<div style="padding-top:0.11in;border-top:1px solid #DED5C7;margin-top:0.11in;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Sandboxes</span>
+</div>
+</div>
+
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

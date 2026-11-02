@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Trail Kit 02 — Reports, Dashboards, Views and Home Pages (Nonprofit)" description="Nonprofit edition of the reporting kit: build the report type first, then a report, list view, dashboard and home page your staff and board will actually use. Adoption and folder governance are the spine." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="./image-slot.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit is-nonprofit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Front cover" style="background:#2F6F7E;display:flex;flex-direction:column;justify-content:space-between;padding:0.9in 0.75in 0.7in;font-family:'Open Sans',sans-serif;color:#fff;overflow:hidden">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;letter-spacing:.16em;text-transform:uppercase;color:#A9C3CE;margin-bottom:0.5in">Transition Trails · Trail Kit 02</div>
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:40pt;line-height:1.12;margin:0 0 0.24in;letter-spacing:-.02em;max-width:5.4in">Reports people actually use</h1>
+<p style="font-size:13pt;line-height:1.55;color:#DCEAF0;margin:0;max-width:4.9in">Reports, dashboards, list views and home pages — built in the order that gets your staff using them, not the order the menus suggest.</p>
+</div>
+<div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.3in;padding-top:0.3in;border-top:1px solid rgba(255,255,255,.25)">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#A9C3CE;margin-bottom:5px">Time</div><div style="font-size:11pt;color:#fff">About 3 hours, plus two weeks of watching</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#A9C3CE;margin-bottom:5px">Level</div><div style="font-size:11pt;color:#fff">No consultant, no certification</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#A9C3CE;margin-bottom:5px">You need</div><div style="font-size:11pt;color:#fff">Admin access, and one question your board keeps asking</div></div>
+</div>
+</div>
+</section>
+
+<section class="page" data-screen-label="How to use" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden;padding:0.6in 0.62in 0.5in">
+<div style="display:flex;flex-direction:column;height:100%">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">How to use this</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:20pt;line-height:1.2;color:#2A2E2C;margin:0 0 0.1in">Build the thing, then get it used</h2>
+<p style="font-size:11pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.22in;max-width:5.4in">Most organizations stop halfway through this work. Someone builds a dashboard, mentions it at a staff meeting, and never finds out that nobody opened it twice. This kit treats the second half as the actual job.</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.3in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="list-checks" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Inside</div>
+<div style="display:flex;flex-direction:column">
+<a href="#n1" style="display:flex;align-items:baseline;gap:10px;padding:6px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6F7E;width:0.5in;flex-shrink:0">Tab 1</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Why people export to spreadsheets</span><span style="font-size:9.5pt;color:#8C857A">3</span></a>
+<a href="#n2" style="display:flex;align-items:baseline;gap:10px;padding:6px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6F7E;width:0.5in;flex-shrink:0">Tab 2</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Finding the question worth answering</span><span style="font-size:9.5pt;color:#8C857A">4</span></a>
+<a href="#n3" style="display:flex;align-items:baseline;gap:10px;padding:6px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6F7E;width:0.5in;flex-shrink:0">Tab 3</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Report type first, then the four surfaces</span><span style="font-size:9.5pt;color:#8C857A">5</span></a>
+<a href="#n4" style="display:flex;align-items:baseline;gap:10px;padding:6px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6F7E;width:0.5in;flex-shrink:0">Tab 4</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Good habits, proving it, fixing what fails</span><span style="font-size:9.5pt;color:#8C857A">9</span></a>
+<a href="#n5" style="display:flex;align-items:baseline;gap:10px;padding:6px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;color:#2F6F7E;width:0.5in;flex-shrink:0">Tab 5</span><span style="flex:1;font-size:9.5pt;color:#8C857A">The adoption fortnight, and what next</span><span style="font-size:9.5pt;color:#8C857A">12</span></a>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" hint-size="100%,1.5in" aside="the order matters">Build the report last if you like, but put it in front of people first. A perfect report filed in a folder is worth less than a rough one on somebody's home page.</x-import>
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="paperclip" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Read the report types insert first</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">It ships with this kit. A report you cannot build is nearly always a report type problem, and ten minutes there saves an hour in the builder.</div>
+</div>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>transitiontrails.org/kits</span><span>2</span></div>
+</div>
+</section>
+
+<section class="page" id="n1" data-screen-label="Tab 1 — Why" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 1 · Why</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Four surfaces, one job</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.2in;max-width:5.2in">They are usually taught as four separate features. They are really one system for putting an answer in front of a person, and each one reaches someone the others miss.</p>
+
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:1.15in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C">Report</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The answer itself, live every time it opens. Powerful, and invisible until someone goes looking for it.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.15in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C">List view</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The working surface. People do their day here, so a good one changes behavior more than any dashboard.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.15in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C">Dashboard</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Several answers at a glance, for the weekly conversation. It summarizes; it is not where work happens.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.15in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C">Home page</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The only surface people see without choosing to. This is why it is the adoption lever, and why it is usually left as the default.</div>
+</div>
+</div>
+<div style="background:#F3EDE2;border-radius:8px;padding:0.18in 0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Why people export anyway</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Almost never because the builder is hard. Because they could not find a starting point with their fields in it, the numbers did not match what they expected, or the thing they needed was three clicks off their daily path. All three are fixable, and none of them are a training problem.</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.3in">A number your board trusts is worth more than a system nobody questions. This is the work that makes Salesforce visible to the people who fund it.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.4in">A dashboard is the most satisfying thing to build and the least likely to be used daily. Build it for the board meeting, but do not mistake it for the win.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.4in">Ask someone what they keep in a spreadsheet. That spreadsheet is your specification, and they will hand it to you gladly.</x-import>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 1 · Why</span><span>3</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="0" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n2" data-screen-label="Tab 2 — Decide" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 2 · Decide</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Find the question first</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.2in;max-width:5.2in">Nobody wants a report. They want to stop wondering something — usually a director, a board member, or a funder. Write down the wondering, in their words, before you open Salesforce.</p>
+
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Whose question is it?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">One named person, not "the board". If you cannot name who will look at this on a Tuesday, you are building it for a meeting rather than for work.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">What will they do differently?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A number that changes no decision is decoration. Ask what action follows from a high answer and a low one.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">How often do they need it?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Daily means a list view. Weekly means a dashboard. Quarterly means a report they can find. The answer decides what you build.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">4</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">What number are they expecting?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Ask before you build. If your result differs, you have found either a data problem or a misunderstanding — and you want to find it now, not in the meeting.</div></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="The question, in their words" lines="3" hint-size="100%,1.15in"></x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/02/data-np" label="Test data — in your download folder" caption="Accounts, contacts and opportunities, with load order." tone="teal" size="72" hint-size="100%,1in"></x-import>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="key-round" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Access you need</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Permission to create reports and dashboards, a folder to save into, and — for the home page step — permission to edit Lightning pages. If one person holds all the admin access here, that is a separate risk worth raising.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-top:9px;padding-top:9px;border-top:1px solid #CFDEE5"><b>Practicing first?</b> Three CSV files came with your purchase. Load them rather than experimenting in your live org.</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" hint-size="100%,1.4in">Ask for their spreadsheet. The columns they kept are the fields that matter, and the ones they stopped filling in tell you what never mattered.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.4in">Never build the second thing they ask for. Build the first, put it in front of them, and let their reaction rewrite the rest of the list.</x-import>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 2 · Decide</span><span>4</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="1" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n3" data-screen-label="Tab 3 — Build (report type)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.18in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.06in">Step 1 is a report type. Always.</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.14in;max-width:5.2in">Before you open the builder, build the thing the builder draws from. This step decides whether reporting in your org is good or permanently frustrating.</p>
+
+<div style="background:#F7EAE3;border-radius:9px;padding:0.16in 0.18in;margin-bottom:0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="octagon-x" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Do not use standard report types</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Salesforce ships one per object and they look like a shortcut. <b>You cannot control which fields they expose</b> — custom fields on related objects are frequently unreachable, and you cannot add them.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Someone builds a report, cannot find the field they need, concludes Salesforce cannot do it, and exports. Every custom report type you build removes one of those moments permanently.</div>
+</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:9px;padding-top:9px;border-top:1px solid #DFA285"><b>There is no switch to hide them.</b> Salesforce gives no supported way to remove standard types from the picker — so you crowd them out: build a custom type for every question people ask, and file them in categories named for teams.</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.16in;flex:1;min-height:0">
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="1" title="Create the custom report type" verify="your report type listed, with a category you chose" hint-size="100%,1.1in">Setup, then Report Types. Primary object is the thing being counted. Read the join choice aloud — <b>must have</b> excludes rows, <b>may or may not have</b> keeps them.</x-import></div>
+<div style="width:2.5in;flex-shrink:0"><div style="height:1.05in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-rt1" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div><div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your report type, with its join choices</div></div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="2" title="Add every field anyone will ask for" verify="your custom fields present in the layout, not just the standard ones" hint-size="100%,1.1in">Open the field layout and add the custom fields. A field missing from the report type does not exist as far as your users are concerned. Add more than you need — unused columns cost nothing.</x-import></div>
+<div style="width:2.5in;flex-shrink:0"><div style="height:1.05in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-rt2" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div><div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">The field layout, with your custom fields added</div></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.18in;margin-top:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.1in">Name it as the question people ask, and fill in the description — both appear in the picker when someone clicks New Report.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.1in">Leave it In Development and only admins can see it. This is the most common reason a colleague cannot find what you just built.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.1in">Build the report type wider than today's question. The second request always arrives, and adding a field later means editing the layout again.</x-import>
+</div>
+
+<div style="margin-top:auto;padding-top:0.14in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>5</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 3 — Build (report and list view)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.18in">
+<div><h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 4px">Steps 3–4: the answer, and where work happens</h2><p style="font-size:10.5pt;color:#3B3F3D;margin:0">Paste your own screenshots in the boxes as you go.</p></div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://www.youtube.com/watch?v=TT02-NP-BUILD" label="Build With Me" caption="22 min walkthrough" size="78" hint-size="2.4in,1in"></x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.16in;flex:1;min-height:0">
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="3" title="Build the report, then check it against their number" verify="a total within a rounding error of what the person predicted" hint-size="100%,1.1in">Filter, group, summarize. Then compare with the number they gave you in Tab 2. A mismatch is information, not failure — go and find out which of you is right.</x-import></div>
+<div style="width:2.5in;flex-shrink:0"><div style="height:1.05in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-step3" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div><div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your report, with its total</div></div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="4" title="Make the list view they will live in" verify="a list view they can reach in one click, sorted the way they work" hint-size="100%,1.1in">Same filters, fewer columns. A list view is where someone acts on the answer rather than reading it, so include only what they need to decide and click.</x-import></div>
+<div style="width:2.5in;flex-shrink:0"><div style="height:1.05in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-step4" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div><div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your list view</div></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.18in;margin-top:0.18in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.1in">Name it as the question. "Grants closing this quarter" beats "Opportunity Report 4" and needs no explaining.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.1in">Save into a folder people can actually see. A report in your private folder does not exist to anyone else.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" hint-size="100%,1.1in">Fewer columns than feels right. Every extra one is a decision you are asking someone to make daily.</x-import>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>6</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 3 — Build (dashboard and home page)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.2in">Steps 5–6: the glance, and the front door</h2>
+
+<div style="display:flex;flex-direction:column;gap:0.16in;flex:1;min-height:0">
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="5" title="Build the dashboard for the weekly conversation" verify="three or four components that answer one question between them" hint-size="100%,1.1in">Build it for a specific meeting. If you cannot name the conversation it supports, you are decorating. Set the running user deliberately — it decides whose data everyone sees.</x-import></div>
+<div style="width:2.5in;flex-shrink:0"><div style="height:1.05in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-step5" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div><div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">Your dashboard</div></div>
+</div>
+<div style="display:flex;gap:0.2in;align-items:flex-start">
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.BuildStep" n="6" title="Put it on the home page" verify="the person opening Salesforce and seeing it without clicking anything" hint-size="100%,1.1in">Edit the Lightning home page, add the dashboard or list view component, and assign it to the right app and profile. This is the step people skip, and it is the step that decides whether any of the rest gets used.</x-import></div>
+<div style="width:2.5in;flex-shrink:0"><div style="height:1.05in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-step6" shape="rect" radius="0" placeholder="Drop your screenshot"></image-slot></div><div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:5px;font-family:'Poppins',sans-serif;font-weight:600">The home page as they will see it</div></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.2in;margin-top:0.18in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.2in">Assign the home page to a profile, not to everyone, until one person has used it for a week. A bad home page is the most visible mistake you can make in an org.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.2in">Log in as them if you can, or sit beside them. What you see from an admin login is never what they see.</x-import>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>7</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 3 — Dashboard design" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.16in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.16in">
+<div style="max-width:4.5in">
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 5px">Dashboards have rules the builder never mentions</h2>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0">Two of them decide your whole design, and you hit them after you have built five dashboards rather than before.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://help.salesforce.com/s/articleView?id=sf.dashboards_limits.htm" label="Current limits" caption="Caps change by edition and release." tone="teal" size="76" hint-size="2.1in,1in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;margin-bottom:0.16in">
+<div style="background:#EDF5F8;border-radius:9px;padding:0.15in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Running user — the default</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Everyone sees the data <b>that one person</b> can see, whoever is looking. Right for a leadership view. Wrong for anything called "my" — every rep looking at "My Open Deals" would see the running user's deals, not their own.</div>
+</div>
+<div style="background:#F7EAE3;border-radius:9px;padding:0.15in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="triangle-alert" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Dynamic — and severely capped</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Set it to run as the logged-in user and each person sees their own data. But you get a <b>handful per org</b> — commonly three, five on the higher editions. Not per user. Not per app. Per org.</div>
+</div>
+</div>
+
+<div style="background:#F3EDE2;border-radius:9px;padding:0.15in 0.17in;margin-bottom:0.16in">
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b>That cap is the single most important design constraint here.</b> You cannot give every team a personal dashboard, so stop trying. Spend your dynamic dashboards on the two or three places where seeing your own data genuinely changes behavior, and solve everything else with filters.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="filter" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Filters instead of copies</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px">A dashboard takes a small number of filters — usually three. One dashboard with a region filter replaces five regional copies, and the viewer picks their own view.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The maintenance difference is the whole argument. Five copies means five places to fix when a field changes, and four of them get forgotten. Anyone who has inherited an org has met the four.</div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="git-merge" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>One report, several components</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-bottom:7px">A single well-grouped report can feed a chart, a table and a metric at once — each component chooses its own grouping and visual from the same source.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Build one report properly rather than three thin ones. When the definition changes you edit it once, and every component moves together instead of drifting apart.</div>
+</div>
+</div>
+
+<div style="margin-top:auto">
+<div style="background:#EDF5F8;border-radius:9px;padding:0.14in 0.16in;margin-top:0.14in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>A dashboard's reports are not reports people read</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A source report is shaped for a chart: grouped, summarized, few columns, sorted for the visual. Opened directly it looks sparse and strange, because it was never meant to be opened.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Keep them in their own folder, named so it is obvious — <i>Dashboard sources</i>. Otherwise someone finds one, concludes reporting here is useless, and goes back to a spreadsheet.</div>
+</div>
+</div>
+<div style="padding-top:0.14in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>8</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n4" data-screen-label="Tab 4 — Good report habits" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.18in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.08in">Good report habits</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.16in;max-width:5.2in">An org with three hundred reports and no rules is one nobody trusts. These are the habits that keep reporting usable a year from now — and they cost nothing if you start with them.</p>
+
+<div style="background:#EDF5F8;border-radius:9px;padding:0.16in 0.18in;margin-bottom:0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="folder-lock" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The folder rule</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Nobody saves to a public folder except an admin.</b> Public Reports is where reporting goes to die — hundreds of half-finished attempts nobody dares delete because they might be someone's.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Everyone drafts in <b>their private folder</b>. When something is worth keeping, an admin moves it into a <b>shared folder owned by a team</b>, with access managed deliberately.</div>
+</div>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.16in">
+<div style="display:grid;grid-template-columns:1.15in 1fr 1.5in;gap:14px;padding:6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A">
+<div>Folder access</div><div>What it allows</div><div>Who should hold it</div>
+</div>
+<div style="display:grid;grid-template-columns:1.15in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Viewer</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Run and read what is in the folder. Cannot change or add anything.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Almost everyone.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.15in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Editor</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">Change and save over what is there — including someone else's report, silently.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">A named few, per team.</div>
+</div>
+<div style="display:grid;grid-template-columns:1.15in 1fr 1.5in;gap:14px;padding:7px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C">Manager</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D">All of the above, plus deleting the folder and changing who can reach it.</div><div style="font-size:9pt;line-height:1.4;color:#6E6559">Admins only.</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:5px">Name for the question</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">"Grants closing this quarter" tells someone whether to open it. "Opportunity Report 4" makes them build their own instead.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:5px">One owner per folder</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Someone has to be responsible for what is in it. A folder everyone can edit becomes a folder nobody maintains.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:5px">Prune once a year</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Check the last-run date and archive anything untouched for twelve months. Ask first, then move rather than delete.</div></div>
+</div>
+
+<div style="border-top:1px solid #DED5C7;padding-top:0.16in;margin-top:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="layout-dashboard" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Dashboards have their own folders — and one extra trap</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The same Viewer, Editor and Manager model applies, and the same rule holds: only an admin promotes a dashboard into a shared folder. People forget this because they set up report folders once and assume dashboards followed.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The trap is the <b>running user</b>. A dashboard shows whatever that person can see, not what the viewer can — so someone may be reading numbers drawn from records they have no access to. Set it deliberately and say out loud whose view it is.</div>
+</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:9px">A dashboard also needs its source reports to live somewhere the viewer can reach. Sharing the dashboard folder is not enough on its own — if the underlying report sits in your private folder, their dashboard renders empty and they will assume it is broken.</div>
+</div>
+
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,0.95in">These rules feel bureaucratic until the first time someone edits the board report an hour before the meeting. Then they feel like the cheapest insurance you ever bought.</x-import>
+<div style="padding-top:0.14in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>9</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 4 — Verify" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Built is not the same as used</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.2in;max-width:5.2in">Everything you have made exists now. That is the easy half and the half people stop at. Working means someone opened it a second time without being asked.</p>
+
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Four checks, in order</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.18in">
+<div style="display:grid;grid-template-columns:1.5in 1fr;gap:14px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C">The number is right</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">It matches what the person predicted, or you both understand why it does not.</div></div>
+<div style="display:grid;grid-template-columns:1.5in 1fr;gap:14px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C">They can find it</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Watch them look for it without help. Do not point. This is the most uncomfortable and most useful two minutes in the kit.</div></div>
+<div style="display:grid;grid-template-columns:1.5in 1fr;gap:14px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C">It survives their login</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Their permissions and sharing are not yours. Confirm what they see, not what you see.</div></div>
+<div style="display:grid;grid-template-columns:1.5in 1fr;gap:14px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2A2E2C">Someone came back</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A second unprompted visit in the first fortnight. Until then you have built something, not changed anything.</div></div>
+</div>
+<div style="display:flex;gap:0.18in;align-items:flex-start">
+<div style="width:2.05in;flex-shrink:0">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px">Proof it worked</div>
+<div style="height:1.15in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit02np-shot-verify" shape="rect" radius="0" placeholder="Drop a screenshot of their home page, from their login"></image-slot></div>
+</div>
+<div style="flex:1;min-width:0"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="What I built, and who confirmed it" lines="4" hint-size="100%,1.5in"></x-import></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.4in">Write down what you replaced. "Three people were each keeping their own spreadsheet" is the sentence that justifies the next investment in your system.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.3in">Report and dashboard folders have their own sharing. Access to the data does not mean access to the folder.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.3in">Write the numbers down the day you launch. In three months nobody will remember what it looked like before.</x-import>
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>10</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 4 — When nobody uses it" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">When nobody uses it</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.14in;max-width:5.2in">This is the normal outcome, not the exceptional one. Every cause below is fixable in under an hour, and none of them is that people are lazy.</p>
+
+<div style="border-bottom:1px solid #DED5C7">
+<div style="padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:6px;line-height:1.3">They looked once and the number seemed wrong</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Usually a filter they did not expect, or records they cannot see. It only takes one wrong-looking number to lose someone permanently.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Sit with them and reconcile it against their spreadsheet, line by line. Then say out loud what the difference was — trust comes back through explanation, not correction.</div></div>
+</div>
+</div>
+<div style="padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:6px;line-height:1.3">It is not on the path they already walk</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Three clicks is too far for something not yet a habit. Reports live somewhere people do not go.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Move it to the home page, or make it the default list view. Do not send a link — a link works once.</div></div>
+</div>
+</div>
+<div style="padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:6px;line-height:1.3">It answers a question nobody was asking</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">You built what was requested rather than what was wondered. The two often differ, and the requester rarely notices until they see it.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Go back to Tab 2 and ask what they would do differently. Being willing to discard a finished report is the whole skill.</div></div>
+</div>
+</div>
+<div style="padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:6px;line-height:1.3">Their login shows something different from yours</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Folder sharing, record access, or a home page assigned to the wrong profile. All three are invisible from an admin account.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Check the folder first, then the home page assignment, then sharing. The security insert in this kit has the full order.</div></div>
+</div>
+</div>
+<div style="padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:6px;line-height:1.3">The home page never appeared at all</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">A Lightning home page is assigned per app <i>and</i> per profile. Assign it to the wrong app and the right people see nothing while you see it perfectly. This is the most common failure in this kit.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Ask which app they actually open in the morning — it is often not the one you assumed. Then check the assignment covers that app and their profile, and confirm from their login rather than yours.</div></div>
+</div>
+</div>
+</div>
+
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,0.9in">Knowing why something was not used, and what you changed, is worth more to your organization than a dashboard nobody opens. Note which of these five it was — the pattern across a few builds tells you more about your org than any single fix.</x-import>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>11</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n5" data-screen-label="Tab 5 — The adoption fortnight" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 02 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 5 · Next Step</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">The two weeks after you build it</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.2in;max-width:5.2in">Adoption is not an announcement at a staff meeting. It is a fortnight of small, slightly awkward follow-up that almost nobody does — and it is the whole difference between a system people use and one they tolerate.</p>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:1.05in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2F6F7E">Day one</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Show one person, in person or on a call. Not a group, not an email. Watch them use it and say nothing while they do.</div></div>
+<div style="display:grid;grid-template-columns:1.05in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2F6F7E">Day two</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Fix whatever made them hesitate. There is always something, and it is usually a column or a name.</div></div>
+<div style="display:grid;grid-template-columns:1.05in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2F6F7E">Day three</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Now tell everyone — and say what question it answers, not what you built. Nobody has ever been excited by the word "dashboard".</div></div>
+<div style="display:grid;grid-template-columns:1.05in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2F6F7E">Week one</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Have your director use it in a meeting, out loud, in front of everyone. Nothing drives adoption in a small organization like watching leadership rely on it.</div></div>
+<div style="display:grid;grid-template-columns:1.05in 1fr;gap:14px;padding:9px 0;border-top:1px solid #DED5C7;align-items:baseline"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10pt;color:#2F6F7E">Week two</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Ask the one person who has not touched it why. Their answer is worth more than everyone else's praise.</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.2fr 1fr;gap:0.26in">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="mail" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to send on day three</div>
+<div style="background:#fff;border:1px solid #DED5C7;border-radius:8px;padding:0.15in 0.17in;font-size:9.5pt;line-height:1.6;color:#3B3F3D">If you have been wondering <span style="color:#A39B8E">[the question]</span>, it is now on your home page when you log in — no report to run and no spreadsheet to update. <span style="color:#A39B8E">[Name]</span> has been using it since Monday. If the number looks wrong to you, tell me; that is useful rather than annoying.</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" hint-size="100%,1.7in" aside="the awkward part is the job">Following up feels like nagging. It is not — it is the only way to find out whether you built the right thing, and in a small team it is the difference between a change that sticks and one that quietly reverses.</x-import>
+</div>
+
+<div style="border-top:1px solid #DED5C7;padding-top:0.16in;margin-top:0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6B3F;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6B3F" hint-size="12px,12px"></x-import>If it worked, finish the job</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;margin-bottom:4px">Make it the default</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Pin the list view so it is what opens, and leave the home page in place. A habit that depends on someone choosing it every day is not yet a habit.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;margin-bottom:4px">Retire the spreadsheet</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Ask the person to stop updating it, and agree a date. Two sources of the same number is worse than one bad one, because now nobody knows which to believe.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;margin-bottom:4px">Close the loop</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Go back to whoever asked the original question and show them it is answered. People stop bringing you problems when they never hear what happened to the last one.</div></div>
+</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D;margin-top:11px;padding-top:10px;border-top:1px solid #DED5C7">Then write down the date and what changed. In six months somebody will ask whether this was worth doing, and a sentence written today answers that far better than a memory will.</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Step</span><span>12</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Back cover" style="background:#2F6F7E;display:flex;flex-direction:column;justify-content:space-between;padding:0.9in 0.75in 0.7in;font-family:'Open Sans',sans-serif;color:#fff;overflow:hidden">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9pt;letter-spacing:.16em;text-transform:uppercase;color:#A9C3CE;margin-bottom:0.4in">Transition Trails</div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:26pt;line-height:1.25;margin:0 0 0.2in;max-width:5.2in">You have done the part most organizations skip</h2>
+<p style="font-size:12pt;line-height:1.6;color:#DCEAF0;margin:0;max-width:5in">Anyone can build a report. Finding out whether it changed what someone does — and fixing it when it did not — is what turns a database into something your team relies on.</p>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.4in">
+<div style="font-size:10pt;line-height:1.6;color:#BFD9E4">Stuck on the next one? The Digital Compass is where nonprofits<br>ask us directly. transitiontrails.org</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/compass" label="Digital Compass" caption="Where nonprofits ask us directly" tone="light" size="92" hint-size="2.3in,1.2in"></x-import>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.28);padding-top:0.22in;margin-top:0.26in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:#A9C3CE;margin-bottom:9px">Someone else needs this?</div>
+<div style="display:flex;gap:0.3in;align-items:center">
+<div style="flex:1">
+<div style="font-size:11pt;line-height:1.55;color:#fff;margin-bottom:8px">Do not send them the file — send them your referral link. They get their own copy, and <b>you both get money off a program</b> when either of you enrols.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#BFD9E4">Your link and code are in the folder this kit came in. Passing the PDF around costs us the next kit and costs you the discount.</div>
+</div>
+<div style="text-align:center;flex-shrink:0">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:15pt;font-weight:600;letter-spacing:.08em;color:#2A2E2C;background:#fff;border-radius:7px;padding:8px 15px;display:inline-block;white-space:nowrap">REF-KIT02</div>
+<div style="font-size:8pt;color:#BFD9E4;margin-top:6px">Your referral code</div>
+</div>
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

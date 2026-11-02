@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Trail Kit — Nonprofit Edition" description="Self-paced tabbed Trail Kit for a nonprofit enabling a feature themselves: why the organization needs it, what it costs not to, then build, verify, and the Digital Compass." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="./image-slot.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit is-nonprofit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Front cover" style="background:#2F6F7E;display:flex;flex-direction:column;font-family:'Open Sans',sans-serif;color:#fff;overflow:hidden">
+<div style="padding:0.66in 0.66in 0">
+<div style="display:flex;justify-content:space-between;align-items:flex-start">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14pt;letter-spacing:.01em;line-height:1.5">Transition Trails</div><div style="font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:#7FAFC6;margin-top:2px">Bridging the experience gap</div></div>
+<div style="text-align:right;font-family:'Poppins',sans-serif"><div style="font-weight:600;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:#BFD9E4">Trail Kit</div><div style="font-weight:700;font-size:26pt;line-height:1.5;color:#fff">01</div></div>
+</div>
+<div style="height:3px;background:#7FAFC6;width:1.5in;margin:0.34in 0 0.28in"></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:#BFD9E4;margin-bottom:0.16in">Build With Me series · Salesforce · Nonprofit edition</div>
+<h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34pt;line-height:1.3;margin:0 0 0.16in;color:#fff;letter-spacing:-.01em;text-wrap:balance">Stop losing the story of who you talked to</h1>
+<p style="font-size:12pt;line-height:1.5;color:rgba(255,255,255,.86);margin:0;max-width:5.1in">Turning on Einstein Activity Capture, in plain language — why your organization needs it, what it costs you not to have it, and how to switch it on yourself. Self-paced. No certification required.</p>
+</div>
+<div style="flex:1;position:relative;margin:0.42in 0 0;min-height:0">
+<image-slot id="kit01np-cover-front" shape="rect" placeholder="Drop the front cover image — nonprofit staff at work, natural light"></image-slot>
+</div>
+<div style="background:#245863;padding:0.3in 0.66in;display:flex;justify-content:space-between;align-items:center">
+<div style="display:flex;gap:0.4in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#7FAFC6;margin-bottom:3px">Inside</div><div style="font-size:9.5pt;line-height:1.5;color:#fff">5 tabbed sections · videos · templates<br>the business case · troubleshooting · notes</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#7FAFC6;margin-bottom:3px">Written for</div><div style="font-size:9.5pt;line-height:1.5;color:#fff">Small nonprofit teams<br>No Salesforce admin on staff needed</div></div>
+</div>
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;letter-spacing:.08em;color:#BFD9E4;border:1px solid rgba(191,217,228,.5);border-radius:5px;padding:6px 12px;white-space:nowrap">TK-01-EAC-NP</div>
+</div>
+</section>
+
+<section class="page" data-screen-label="How to use this notebook" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.3in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span>How to use this notebook</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.14in">You do not need a Salesforce person to do this.</h2>
+<p style="font-size:11.5pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.26in;max-width:4.7in">This kit is written for whoever on your team ends up holding the CRM — the operations manager, the development director, the person who is good with computers. It explains the decision before it explains the clicks, because the decision is the part that matters to your mission.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.28in;margin-bottom:0.28in">
+<div style="border-left:2.5px solid var(--tt-kit-why);padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Start with the why</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Tab 1 is the case you can take to your ED or your board. Read it even if you are already convinced.</div></div>
+<div style="border-left:2.5px solid #B4552D;padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Scan the codes</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Every QR opens the walkthrough video or a template. Point your phone at it and follow along.</div></div>
+<div style="border-left:2.5px solid #2F6B3F;padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Check your work</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Each step says what you should see. If you do not see it, Tab 4 tells you where to look.</div></div>
+<div style="border-left:2.5px solid #C4B8A5;padding-left:12px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">Write in it</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The note pages are where your org's specifics live, so the next person is not starting over.</div></div>
+</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in">What's inside</div>
+<div style="display:flex;flex-direction:column">
+<a href="#n1" style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 1</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Why</span><span style="flex:1;font-size:9.5pt;color:#8C857A">What this changes for your organization</span><span style="font-size:9.5pt;color:#8C857A">3</span></a>
+<a href="#n2" style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 2</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Decide</span><span style="flex:1;font-size:9.5pt;color:#8C857A">The four decisions to make before you touch anything</span><span style="font-size:9.5pt;color:#8C857A">4</span></a>
+<a href="#n3" style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 3</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Build</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Five steps, with video and space for your screenshots</span><span style="font-size:9.5pt;color:#8C857A">5</span></a>
+<a href="#n4" style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 4</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Verify</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Prove it works, fix what breaks, and how to turn it off</span><span style="font-size:9.5pt;color:#8C857A">8</span></a>
+<a href="#n5" style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid #DED5C7;color:#2A2E2C"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;width:0.72in">Tab 5</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt">Next Step</span><span style="flex:1;font-size:9.5pt;color:#8C857A">Videos, certifications, and the Digital Compass</span><span style="font-size:9.5pt;color:#8C857A">13</span></a>
+</div>
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" hint-size="100%,1.25in" aside="one feature at a time">You do not have to read this in order, but do read Tab 1 before Tab 3. Knowing why you are turning something on is what stops it being switched off again in six months.</x-import>
+<div style="border-top:1px solid #DED5C7;padding-top:0.2in;margin-top:0.24in;display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="book-open" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What this kit is</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">One feature, explained end to end, with the reasoning included. Written so you can hand it to whoever inherits the CRM after you.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8C857A" hint-size="12px,12px"></x-import>What it is not</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">A full CRM overhaul, a substitute for a data policy, or a course. There is no exam and nothing to submit.</div></div>
+</div>
+<div style="padding-top:0.18in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>transitiontrails.org/kits</span><span>2</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="-1" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n1" data-screen-label="Tab 1 — Why" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.26in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 1 · Why</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.12in">Your relationships live in people's inboxes.</h2>
+<p style="font-size:11.5pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:5.1in">Every email to a major donor, every exchange with a partner agency, every thread about a family you serve — most of it sits in one person's mail, invisible to everyone else. Activity Capture puts that history on the record it belongs to, automatically. Here is what that changes.</p>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.24in;background:var(--tt-kit-why-bg);border-radius:8px;padding:0.2in 0.22in;margin-bottom:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:26pt;line-height:1.3;color:var(--tt-kit-why)">0</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D;margin-top:3px">hours a week your staff spend logging emails by hand</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:26pt;line-height:1.3;color:var(--tt-kit-why)">1 day</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D;margin-top:3px">to set up, using this kit, with no consultant</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:26pt;line-height:1.3;color:#2F6B3F">$0</div><div style="font-size:9.5pt;line-height:1.45;color:#3B3F3D;margin-top:3px">extra license cost on most Salesforce editions</div></div>
+</div>
+
+<div style="border-bottom:1px solid #DED5C7">
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#C4B8A5;line-height:1.2">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Right now</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">When someone leaves, the relationship leaves with them. Their inbox goes dark and nobody knows what was promised.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">After this</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The correspondence is on the donor or contact record. Whoever picks it up can read the history before they call.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#C4B8A5;line-height:1.2">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Right now</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Your board asks how many times you contacted lapsed donors last quarter. You genuinely cannot say.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">After this</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">You can answer from a report instead of from memory, because the activity is captured whether or not anyone remembered.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#C4B8A5;line-height:1.2">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Right now</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Two staff contact the same funder in the same month, neither knowing the other did.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">After this</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The last touch is visible on the record, so the second call either does not happen or happens on purpose.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.32in 1fr 1fr;gap:14px;padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12pt;color:#C4B8A5;line-height:1.2">4</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px">Right now</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Your grant report needs evidence of engagement, and you reconstruct it from memory and sent folders the week it is due.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px">After this</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The engagement history is already there, dated, on the records it belongs to. You pull it instead of rebuilding it.</div></div>
+</div>
+</div>
+
+<div style="margin-top:0.22in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" hint-size="100%,1.3in" aside="take this page to your board">If you need to make this case to someone else, the three rows above are the argument — in their language, not Salesforce's. The cost of doing nothing is the part people forget to mention.</x-import>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 1 · Why</span><span>3</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="0" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n2" data-screen-label="Tab 2 — Decide" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.26in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 2 · Decide</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Four decisions, before any clicking.</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.22in;max-width:4.7in">These are judgement calls about your organization, not technical settings. Write your answers down — Tab 3 asks for them.</p>
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.24in;flex:1;min-height:0">
+<div>
+<div style="display:flex;flex-direction:column;gap:0.1in">
+<div style="border:1px solid #DED5C7;border-left:3px solid var(--tt-kit-why);border-radius:0 7px 7px 0;padding:12px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">1 · Whose email gets captured?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Start with the two or three people who talk to donors and partners most. Not the whole staff, not on day one.</div></div>
+<div style="border:1px solid #DED5C7;border-left:3px solid var(--tt-kit-why);border-radius:0 7px 7px 0;padding:12px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">2 · Email only, or calendar too?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Email first. Calendars often hold personal appointments, and that conversation deserves its own week.</div></div>
+<div style="border:1px solid #DED5C7;border-left:3px solid var(--tt-kit-why);border-radius:0 7px 7px 0;padding:12px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">3 · What must never be captured?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">If you serve clients whose privacy is protected, name those boundaries now and in writing. This is the decision that matters most.</div></div>
+<div style="border:1px solid #DED5C7;border-left:3px solid var(--tt-kit-why);border-radius:0 7px 7px 0;padding:12px 14px"><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px">4 · Who signs off?</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Your ED, and your board if you hold protected client data. Tell staff what will be visible before it is.</div></div>
+</div>
+<div style="margin-top:0.16in;padding-top:0.12in;border-top:1px solid #DED5C7;font-size:9.5pt;line-height:1.5;color:#3B3F3D"><b>Nothing in your org to test with?</b> Three CSV files came with your purchase. Five addresses in them are yours to replace before importing — the README explains why nothing can arrive pre-matched.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.14in;background:#F3EDE2;border-radius:8px;padding:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.7in" aside="you are the right person">These four questions are about your organization — nobody knows it better than you. The technical half comes later, and it is the easy half.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.4in">Captured email becomes visible to more colleagues than the sender expects. Say so in plain words, in writing, before you switch it on.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="Our answers" lines="4" hint-size="100%,1.5in"></x-import>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 2 · Decide</span><span>4</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="1" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n3" data-screen-label="Tab 3 — Build (steps 1–2)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.22in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.2in">
+<div><h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 4px">Now switch it on.</h2><p style="font-size:10.5pt;color:#3B3F3D;margin:0">Steps 1–2 of 5. Paste your own screenshots in the boxes as you go.</p></div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://www.youtube.com/watch?v=TT07-NP-BUILD" label="Build With Me" caption="16 min walkthrough" size="74" hint-size="2.4in,0.95in"></x-import>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<div>
+<div style="display:flex;gap:12px;margin-bottom:9px">
+<div style="width:25px;height:25px;flex-shrink:0;border-radius:999px;background:#2F6F7E;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt">1</div>
+<div style="flex:1;min-width:0">
+<h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;color:#2A2E2C;margin:1px 0 4px;line-height:1.25">Open setup and create a configuration</h4>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D">In Setup, type <b>Einstein Activity Capture</b> into Quick Find and choose <b>Settings</b>, then <b>New Configuration</b>. Name it for the group it covers.</div>
+<div style="margin-top:6px;display:flex;gap:6px;font-size:9pt;color:#245531"><span>✓</span><span><b style="font-family:'Poppins',sans-serif">You should see</b> — your configuration listed as Not Active</span></div>
+</div>
+</div>
+<div style="height:2.85in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01np-shot-step1" shape="rect" radius="0" placeholder="Drop your screenshot — Your Settings page, before you change anything"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:4px;font-family:'Poppins',sans-serif;font-weight:600">Your Settings page, before you change anything</div>
+</div>
+<div>
+<div style="display:flex;gap:12px;margin-bottom:9px">
+<div style="width:25px;height:25px;flex-shrink:0;border-radius:999px;background:#2F6F7E;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt">2</div>
+<div style="flex:1;min-width:0">
+<h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;color:#2A2E2C;margin:1px 0 4px;line-height:1.25">Set what syncs</h4>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D">Use your answer to decision 2 — email on, calendar off, unless you decided otherwise.</div>
+<div style="margin-top:6px;display:flex;gap:6px;font-size:9pt;color:#245531"><span>✓</span><span><b style="font-family:'Poppins',sans-serif">You should see</b> — your choices summarized on the configuration page</span></div>
+</div>
+</div>
+<div style="height:2.85in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01np-shot-step2" shape="rect" radius="0" placeholder="Drop your screenshot — Your sync selections"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:4px;font-family:'Poppins',sans-serif;font-weight:600">Your sync selections</div>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.14in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>5</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 3 — Build (steps 3–4)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.22in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+<div style="display:flex;flex-direction:column;gap:0.16in">
+<div>
+<div style="display:flex;gap:12px;margin-bottom:9px">
+<div style="width:25px;height:25px;flex-shrink:0;border-radius:999px;background:#2F6F7E;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt">3</div>
+<div style="flex:1;min-width:0">
+<h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;color:#2A2E2C;margin:1px 0 4px;line-height:1.25">Add your people</h4>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D">Assign the two or three from decision 1, by name rather than by profile — profiles grow when you are not looking.</div>
+<div style="margin-top:6px;display:flex;gap:6px;font-size:9pt;color:#245531"><span>✓</span><span><b style="font-family:'Poppins',sans-serif">You should see</b> — your named users counted on the configuration</span></div>
+</div>
+</div>
+<div style="height:3.25in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01np-shot-step3" shape="rect" radius="0" placeholder="Drop your screenshot — Your assigned users list"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:4px;font-family:'Poppins',sans-serif;font-weight:600">Your assigned users list</div>
+</div>
+<div>
+<div style="display:flex;gap:12px;margin-bottom:9px">
+<div style="width:25px;height:25px;flex-shrink:0;border-radius:999px;background:#2F6F7E;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt">4</div>
+<div style="flex:1;min-width:0">
+<h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;color:#2A2E2C;margin:1px 0 4px;line-height:1.25">Connect email and calendar</h4>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D">If consent is blocked here, this is where you need whoever administers your email. That is normal, not a mistake you made.</div>
+<div style="margin-top:6px;display:flex;gap:6px;font-size:9pt;color:#245531"><span>✓</span><span><b style="font-family:'Poppins',sans-serif">You should see</b> — a Connected status for your Microsoft 365 or Google Workspace account</span></div>
+</div>
+</div>
+<div style="height:3.25in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01np-shot-step4" shape="rect" radius="0" placeholder="Drop your screenshot — Your Connected status"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:4px;font-family:'Poppins',sans-serif;font-weight:600">Your Connected status</div>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.14in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>6</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 3 — Build (step 5)" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.22in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 3 · Build</span></div>
+<div style="margin-bottom:0.18in">
+<div>
+<div style="display:flex;gap:12px;margin-bottom:9px">
+<div style="width:25px;height:25px;flex-shrink:0;border-radius:999px;background:#2F6F7E;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt">5</div>
+<div style="flex:1;min-width:0">
+<h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;color:#2A2E2C;margin:1px 0 4px;line-height:1.25">Activate, then tell people</h4>
+<div style="font-size:10pt;line-height:1.5;color:#3B3F3D">Activate the configuration, then send the note you drafted in Tab 2. The telling is part of the task, not an afterthought — people should hear what changed from you rather than notice it themselves.</div>
+<div style="margin-top:6px;display:flex;gap:6px;font-size:9pt;color:#245531"><span>✓</span><span><b style="font-family:'Poppins',sans-serif">You should see</b> — a green Active badge, and a reply from a colleague confirming they read your note</span></div>
+</div>
+</div>
+<div style="height:3.8in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01np-shot-step5" shape="rect" radius="0" placeholder="Drop your screenshot — The green Active badge on your configuration"></image-slot></div>
+<div style="font-size:7.5pt;line-height:1.4;color:#8C857A;margin-top:4px;font-family:'Poppins',sans-serif;font-weight:600">The green Active badge on your configuration</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.18in;margin-bottom:0.18in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="watchout" hint-size="100%,1.2in">Nothing appearing after you activate usually means the email connection, not your settings. Check that first and change nothing else.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.2in">Sync can take hours to show anything. An empty record ten minutes after activating is not a mistake.</x-import>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="What we sent, and who we sent it to" lines="7" hint-size="100%,2.3in"></x-import>
+<div style="margin-top:auto;padding-top:0.14in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 3 · Build</span><span>7</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="2" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n4" data-screen-label="Tab 4 — Verify" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.26in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Check it, then have someone else check it.</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.22in;max-width:4.7in">Fill this in as you go. It is the page you will want when someone asks what was turned on, and when.</p>
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.24in;flex:1;min-height:0">
+<div>
+<table style="width:100%;border-collapse:collapse;margin-bottom:0.22in">
+<thead><tr>
+<th style="text-align:left;padding:0 8px 6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5">Check</th>
+<th style="text-align:left;padding:0 8px 6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5;width:0.9in">Result</th>
+<th style="text-align:left;padding:0 0 6px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5;width:0.8in">Date</th>
+</tr></thead>
+<tbody>
+<tr><td style="height:0.27in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">Configuration shows Active</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.27in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">Email account shows Connected</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.27in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">A sent email appears on the contact</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.27in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">A colleague confirms they can see it</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.27in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">Someone out of scope sees nothing new</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.27in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:10pt;color:#3B3F3D;vertical-align:bottom">Nothing we said would never sync, synced</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+</tbody>
+</table>
+<div style="display:flex;gap:0.18in;align-items:flex-start">
+<div style="width:2.6in;flex-shrink:0">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Proof it worked</div>
+<div style="height:1.5in;border:1px solid #C4B8A5;border-radius:6px;overflow:hidden;background:#fff"><image-slot id="kit01np-shot-verify" shape="rect" radius="0" placeholder="Drop a screenshot of the captured email on a record"></image-slot></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.NoteLines" label="What we turned on, in our own words" lines="4" hint-size="100%,1.5in" style="flex:1"></x-import>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:0.14in;background:#F3EDE2;border-radius:8px;padding:0.16in">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" title="If nothing syncs" hint-size="100%,1.5in">Check in this order: the email connection, then who is assigned, then how long it has been. Most "broken" syncs are under four hours old.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.5in">The last two rows matter as much as the first four. Being able to say "and nothing else changed" is what reassures a board.</x-import>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="remember" hint-size="100%,1.3in">Keep this page. It is the closest thing your org has to a change log.</x-import>
+</div>
+</div>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>8</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 4 — When it doesn't work" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">When it doesn't work</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.14in;max-width:5.2in">Almost every problem here is one of five things, and none of them mean you broke something. The first two account for most of it. <b>Change one thing at a time</b>, then wait.</p>
+
+<div style="border-bottom:1px solid #DED5C7">
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">Nothing at all appears, hours after activating</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The email account is not fully authorized. Your email administrator may need to grant consent at the organization level, which is a separate approval from anything you did in Salesforce.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Open the configuration and check the connected account reads <b>Connected</b>. If it does not, send your email administrator the consent request and wait — do not change the sync settings while you wait.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">It works for you but not for a colleague</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Capture is per-person. Being inside the configuration is not enough — each person also has to connect their own mailbox once.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Confirm they are assigned to the configuration, then have them complete the connection prompt themselves. Watch them do it; this step is usually skipped rather than failed.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">Emails appear, but on the wrong record or none at all</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Matching happens on the email address. If a donor writes from a personal address that is not on their contact record, there is nothing to match to.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Check the address the email actually came from against the addresses on the record. Add it as a secondary email, and expect to keep doing this — it is data hygiene, not a fault.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">Meetings are not showing up</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Calendar sync is off. If you followed Tab 2, this is deliberate and correct — you chose email first.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Nothing to fix. When you are ready for calendars, revisit decision 2 and have the privacy conversation before you switch it on.</div></div>
+</div>
+</div>
+<div style="padding:11px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5pt;color:#2A2E2C;margin-bottom:7px;line-height:1.3">It worked for weeks, then quietly stopped</div>
+<div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why it happens</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The connection expired — usually after a password change, a security policy update, or a mailbox migration.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="wrench" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to do</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Reconnect the account in the configuration. Add a recurring reminder to check this quarterly; the sync fails silently, so nobody reports it.</div></div>
+</div>
+</div>
+</div>
+
+<div style="margin-top:auto">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in;margin-top:0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="clipboard-list" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Before you ask anyone for help, write these down</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">What you expected to see · what you saw instead · which user it happened to · the exact time you activated · whether the connected account says Connected. Five lines gets you a useful answer; "it is not working" gets you a week of questions.</div>
+</div>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>9</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 4 — How to turn this off" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 4 · Verify</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">How to turn this off</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.22in;max-width:5.3in">Nobody tells you this part, and it is the part that makes trying something safe. If the pilot does not suit you, if a colleague raises a privacy concern, or if the timing turns out to be wrong — here is the clean way back.</p>
+
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.22in">
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">1</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Tell people first</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Same list you told when you switched it on. Turning it off quietly is how trust in the system gets lost.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">2</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Deactivate the configuration</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Open the configuration and set it to inactive. This stops new capture immediately; you do not need to delete anything.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">3</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Leave the connection alone for now</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Disconnecting the mailbox as well is a bigger step and rarely necessary. Deactivating is enough to stop the flow.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:0.3in 1fr;gap:12px;padding:10px 0;border-top:1px solid #DED5C7">
+<div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11pt;color:#A9C3CE;line-height:1.25">4</div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:11pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">Write down why</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">One line on the notes page. If someone revisits this in six months, the reason matters more than the setting.</div></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.22in;margin-bottom:0.2in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="archive" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What stays</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Activity already captured stays visible on your records. Turning the feature off stops new capture — it is not an undo of what has already synced.</div>
+</div>
+<div style="background:#F7EAE3;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>What does not come back</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">If you delete the configuration rather than deactivating it, its settings are gone and you rebuild from scratch. Deactivate first. Delete only when you are sure.</div>
+</div>
+</div><div style="border-top:1px solid #DED5C7;padding-top:0.18in;margin-bottom:0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:9px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="mail" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What to send when you switch it off</div>
+<div style="background:#fff;border:1px solid #DED5C7;border-radius:8px;padding:0.16in 0.18in;font-size:9.5pt;line-height:1.6;color:#3B3F3D">
+We have turned off the email capture we switched on earlier this month. Anything already logged stays where it is — nothing has been deleted. New email will stop appearing on records from today. We are pausing it because <span style="color:#A39B8E">[reason]</span>, and we will look at it again <span style="color:#A39B8E">[when]</span>. Come to me with any questions.
+</div>
+<div style="font-size:8.5pt;line-height:1.5;color:#8C857A;margin-top:7px">Four sentences: what changed, what did not, why, and who to ask. Silence is what makes people distrust the system — not the change itself.</div>
+</div>
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1in">Deciding to switch something off is not a failure. Trying it, learning it does not fit your organization, and reversing it cleanly is a good outcome.</x-import>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 4 · Verify</span><span>10</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="3" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 5 — Video index" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 5 · Next Step</span></div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.18in">
+<div style="max-width:4.5in"><h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 5px">Everything in this kit, on video</h2><p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0">One walkthrough, chaptered so you can jump to the step you are on. Scan once and keep the tab open beside your Salesforce window.</p></div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://www.youtube.com/watch?v=TT07-BUILD" label="Build With Me" caption="16 min, full walkthrough" size="82" hint-size="2.4in,1.05in"></x-import>
+</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.2in">
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">00:00</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">What we are turning on</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">The feature in plain terms, and the two things it changes.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">01:40</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Opening setup</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Where the settings live and what you should see when you land.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">03:15</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Creating a configuration</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Naming it so the next person understands it.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">05:30</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Choosing what syncs</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">The email-vs-calendar decision, made out loud.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">08:05</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Assigning people</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Why named users beat a whole profile for a first run.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">10:20</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Connecting the mailbox</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">The consent screen, and what a blocked one looks like.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">12:45</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Activating</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">What happens immediately, and what does not.</div>
+</div>
+<div style="display:grid;grid-template-columns:0.62in 1.85in 1fr;gap:12px;padding:8px 0;border-top:1px solid #DED5C7;align-items:baseline">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:9pt;color:#2F6F7E;white-space:nowrap">14:10</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:9.5pt;color:#2A2E2C;line-height:1.3">Proving it worked</div>
+<div style="font-size:9pt;line-height:1.45;color:#6E6559">Finding the first captured email on a real record.</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in;margin-bottom:0.2in">
+<div style="background:#F3EDE2;border-radius:8px;padding:0.16in 0.18in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="headphones" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Also included · audio</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5pt;color:#2A2E2C;margin-bottom:4px;line-height:1.3">When consent gets blocked — 7 min</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The problem most nonprofits hit — consent blocked by whoever runs your email. Listen before you start so you recognize it if it happens.</div>
+</div>
+<div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/01/audio" label="Listen" caption="7 min audio, no video needed" size="82" hint-size="100%,1.05in"></x-import>
+</div>
+</div><div style="border-top:1px solid #DED5C7;padding-top:0.18in;margin-bottom:0.2in;display:grid;grid-template-columns:1.15fr 1fr;gap:0.3in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="timer" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>If you only have five minutes</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Watch <b>05:30 — Choosing what syncs</b> and <b>14:10 — Proving it worked</b>. Those two carry the decisions; the rest is clicking you can follow from the page.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#8C857A;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="refresh-cw" size="12" color="#8C857A" hint-size="12px,12px"></x-import>If a screen looks different</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Salesforce moves menus between releases. The sequence still holds — search Setup for the label rather than following the click path.</div></div>
+</div>
+<div style="border-top:1px solid #DED5C7;padding-top:0.18in;margin-bottom:0.2in;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="unlock" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>No login needed</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">The links work without an account and do not expire. Share them with a colleague who is helping.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="captions" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Captions and transcript</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Every video is captioned, and a full transcript is on the kit page if you would rather read than watch.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="video" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Recorded live</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">In a real org, in one take. When something loads slowly or a menu has moved, you see that too.</div></div>
+</div>
+<div style="margin-top:auto">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="tip" hint-size="100%,0.95in">Watch a chapter, then do that step before watching the next. If you are doing this with a colleague, watch together — two people who both saw it is much better than one person who has to explain it later.</x-import>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Step</span><span>11</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Tab 5 — Certifications" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 5 · Next Step</span></div>
+
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">If you want someone on staff properly trained</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:5.3in">You do not need a certification to use this kit — you just used it. But if your organization keeps hitting the limits of what nobody has been taught, these are the two credentials worth funding. Both are Salesforce’s own, and both are recognized outside your organization, which matters to the person earning them.</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.22in;margin-bottom:0.24in">
+<div style="border:1px solid #DED5C7;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:var(--tt-kit-why);color:#fff;padding:11px 14px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;line-height:1.3">Salesforce Platform Foundations</div>
+<div style="font-size:8.5pt;color:rgba(255,255,255,.85);margin-top:2px">The entry credential</div>
+</div>
+<div style="padding:13px 14px;display:flex;flex-direction:column;gap:11px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="badge-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>What it proves</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">That you understand the platform’s core concepts — how objects, records and relationships fit together, and what Salesforce is actually for.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Who it is for</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">Anyone starting out, including staff who inherited an org and have never been taught how it works.</div></div>
+<div style="margin-top:auto;padding-top:11px;border-top:1px solid #DED5C7">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://trailhead.salesforce.com/credentials/platformfoundations" label="Foundations — exam details" caption="Scan for current exam format, fee and prerequisites." tone="teal" size="86" hint-size="100%,1.15in"></x-import>
+</div>
+</div>
+</div>
+<div style="border:1px solid #DED5C7;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="background:var(--tt-kit-why);color:#fff;padding:11px 14px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13pt;line-height:1.3">Salesforce Platform Administrator</div>
+<div style="font-size:8.5pt;color:rgba(255,255,255,.85);margin-top:2px">The working credential</div>
+</div>
+<div style="padding:13px 14px;display:flex;flex-direction:column;gap:11px;flex:1">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="badge-check" size="12" color="#8C857A" hint-size="12px,12px"></x-import>What it proves</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">That you can configure and maintain an org: users and permissions, data model changes, automation, reports and dashboards.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:4px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Who it is for</div><div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">The person who actually administers a Salesforce org, or is about to become that person.</div></div>
+<div style="margin-top:auto;padding-top:11px;border-top:1px solid #DED5C7">
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://trailhead.salesforce.com/credentials/administrator" label="Administrator — exam details" caption="Scan for current exam format, fee and prerequisites." tone="teal" size="86" hint-size="100%,1.15in"></x-import>
+</div>
+</div>
+</div>
+</div>
+
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.18in;margin-bottom:0.2in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="route" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Which one first</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Foundations first, then Administrator. Foundations takes weeks, not months, and it is what makes the Administrator material make sense rather than feel like memorization. Skipping it is the single most common reason people stall on Administrator and conclude they are not cut out for this.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D;margin-top:8px;padding-top:8px;border-top:1px solid #CFDEE5">Salesforce publishes free study paths for both, and the exams can be retaken. If cost is the blocker, ask us on the Digital Compass — there are nonprofit discount programs most teams do not know exist.</div>
+</div>
+
+<div style="margin-top:auto">
+<div style="border-top:1px solid #DED5C7;padding-top:0.18in;display:grid;grid-template-columns:1fr 1fr;gap:0.26in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="hand-coins" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Why fund this</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">A trained staff member costs less than the consultant you call when nobody knows how the org works. It is also one of the few professional development budgets people stay for.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="info" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Worth knowing</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">These same two credentials are what our learner programs require, so a certified staff member could also mentor or host — ask us on the Digital Compass.</div></div>
+</div>
+<div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Step</span><span>12</span></div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" id="n5" data-screen-label="Tab 5 — Next Step" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.26in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 5 · Next Step</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Three things to do this month.</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.2in;max-width:4.9in">You have the feature on. What makes it stick is habit — someone checking that it still works, and someone using what it captures.</p>
+<table style="width:100%;border-collapse:collapse">
+<thead><tr>
+<th style="text-align:left;padding:0 8px 7px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5">What we will do</th>
+<th style="text-align:left;padding:0 8px 7px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5;width:24%">Who owns it</th>
+<th style="text-align:left;padding:0 0 7px 0;font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;border-bottom:1.5px solid #C4B8A5;width:17%">By when</th>
+</tr></thead>
+<tbody>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:9.5pt;color:#A39B8E;vertical-align:bottom">Check the sync is still running</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:9.5pt;color:#A39B8E;vertical-align:bottom">Show one colleague where to look</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7;padding:4px 8px 4px 0;font-size:9.5pt;color:#A39B8E;vertical-align:bottom">Add the next two people</td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+<tr><td style="height:0.3in;border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td><td style="border-bottom:1px solid #DED5C7"></td></tr>
+</tbody>
+</table>
+
+<div style="border-top:1px solid #DED5C7;padding-top:0.2in;margin-top:0.24in;margin-bottom:0.24in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:0.12in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="target" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>What good looks like in three months</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.22in">
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b style="font-family:'Poppins',sans-serif;color:#2A2E2C">Nobody thinks about it.</b> Capture runs quietly and no one is logging emails by hand any more.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b style="font-family:'Poppins',sans-serif;color:#2A2E2C">Somebody uses it.</b> At least one person checks the record before a call instead of asking around.</div>
+<div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D"><b style="font-family:'Poppins',sans-serif;color:#2A2E2C">You can answer.</b> When your board asks about engagement, you pull a report.</div>
+</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CompassCTA" headline="Not sure what to tackle next?" body="The Digital Compass is where nonprofit teams like yours figure out which system problem is worth solving first — and where you can ask the question you did not want to ask out loud." cta="Visit the Digital Compass" aside="Scan for the Digital Compass, plus every Trail Kit written for nonprofits." hint-size="100%,2.4in"></x-import>
+<div style="margin-top:auto;padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Step</span><span>13</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="About Transition Trails" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.6in 0.24in 0.5in 0.62in;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.24in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Trail Kit 01 · Nonprofit edition</span><span style="color:#2F6F7E">Tab 5 · Next Step</span></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19pt;color:#2A2E2C;margin:0 0 0.1in">Who made this</h2>
+<p style="font-size:11pt;line-height:1.6;color:#3B3F3D;margin:0 0 0.24in;max-width:5.3in">Transition Trails is a nonprofit workforce-development organization. We exist to close the <b>experience gap</b> — the trap where capable people earn a certification and still cannot get hired, because every employer wants proof they have done the work before.</p>
+
+<div style="background:#EDF5F8;border-radius:8px;padding:0.2in 0.22in;margin-bottom:0.24in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="compass" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Our mission</div>
+<div style="font-size:11.5pt;line-height:1.55;color:#2A2E2C;font-family:'Poppins',sans-serif;font-weight:500">To turn certification into competence through supervised, real project work — and to give nonprofits the capacity they could not otherwise afford while we do it.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.22in;margin-bottom:0.24in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="user" size="12" color="#8C857A" hint-size="12px,12px"></x-import>For learners</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Experience-validated credentials — work a mentor reviewed and signed, not a self-reported project.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="building-2" size="12" color="#8C857A" hint-size="12px,12px"></x-import>For nonprofits</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Supervised project capacity at low risk, scoped in writing before anything touches your system.</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package" size="12" color="#8C857A" hint-size="12px,12px"></x-import>Why kits exist</div><div style="font-size:9.5pt;line-height:1.55;color:#3B3F3D">Not everyone needs a program. A Trail Kit is the same guidance, self-paced, for one task.</div></div>
+</div>
+
+<div style="margin-top:auto">
+<div style="display:flex;gap:0.3in;align-items:center;border-top:1px solid #DED5C7;padding-top:0.2in;margin-bottom:0.16in">
+<div style="flex:1">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="heart-handshake" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Why we sell these</div>
+<div style="font-size:10pt;line-height:1.55;color:#3B3F3D;margin-bottom:9px">Most nonprofits cannot afford a Salesforce consultant and do not need one for a task this size. Kits are how we help the organizations we will never have capacity to work with directly.</div>
+<div style="font-size:9.5pt;line-height:1.6;color:#6E6559">Founded and led by <b style="color:#2A2E2C">Angela Landrith</b>.<br>Written, tested, and sold by the same people who run the programs.</div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org" label="transitiontrails.org" caption="Programs, kits, and how to get involved" size="94" hint-size="2.3in,1.2in"></x-import>
+</div>
+</div><div style="padding-top:0.16in;font-size:8pt;color:#A39B8E;display:flex;justify-content:space-between"><span>Tab 5 · Next Step</span><span>14</span></div>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TabStrip" idPrefix="n" sections="Why,Decide,Build,Verify,Next Step" active="4" hint-size="0.42in,100%"></x-import>
+</div>
+</section>
+
+<section class="page" data-screen-label="Back cover" style="background:#2A2E2C;display:flex;flex-direction:column;font-family:'Open Sans',sans-serif;color:#fff;overflow:hidden">
+<div style="flex:1;position:relative;min-height:0">
+<image-slot id="kit01np-cover-back" shape="rect" placeholder="Drop the back cover image — a trail, a bridge, or hands at work"></image-slot>
+</div>
+<div style="padding:0.5in 0.66in 0.42in">
+<div style="height:3px;background:#7FAFC6;width:1.5in;margin-bottom:0.28in"></div>
+<h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:24pt;line-height:1.34;margin:0 0 0.16in;color:#fff;max-width:5.4in;text-wrap:balance">One system problem at a time.</h2>
+<p style="font-size:11pt;line-height:1.6;color:rgba(255,255,255,.78);margin:0 0 0.34in;max-width:4.9in">Trail Kits are written so a small nonprofit team can do this work without hiring anyone. Each one takes a single feature and explains the decision before the clicks.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.3in;padding-top:0.26in;border-top:1px solid rgba(255,255,255,.16)">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#BFD9E4;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="package" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>More for nonprofits</div><div style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,.82)">08 · Donor record hygiene<br>09 · Reports your board will read<br>10 · Intake forms that feed the CRM</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#BFD9E4;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="map-pin" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Where to start</div><div style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,.82)">The Digital Compass<br>transitiontrails.org/compass</div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#BFD9E4;margin-bottom:6px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="globe" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Find us</div><div style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,.82)">transitiontrails.org<br>transitiontrails.org/kits</div></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:0.4in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:13pt;color:#fff;line-height:1.5">Transition Trails</div><div style="font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:#8C857A;margin-top:2px">Bridging the experience gap</div></div>
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:8.5pt;letter-spacing:.08em;color:#8C857A;white-space:nowrap">TK-01-EAC-NP · v1.0 · 2026</div>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.28);padding-top:0.22in;margin-top:0.26in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:#A9C3CE;margin-bottom:9px">Someone else needs this?</div>
+<div style="display:flex;gap:0.3in;align-items:center">
+<div style="flex:1">
+<div style="font-size:11pt;line-height:1.55;color:#fff;margin-bottom:8px">Do not send them the file — send them your referral link. They get their own copy, and <b>you both get money off a program</b> when either of you enrols.</div>
+<div style="font-size:9.5pt;line-height:1.5;color:#BFD9E4">Your link and code are in the folder this kit came in. Passing the PDF around costs us the next kit and costs you the discount.</div>
+</div>
+<div style="text-align:center;flex-shrink:0">
+<div style="font-family:ui-monospace,Menlo,monospace;font-size:15pt;font-weight:600;letter-spacing:.08em;color:#2A2E2C;background:#fff;border-radius:7px;padding:8px 15px;display:inline-block;white-space:nowrap">REF-KIT01</div>
+<div style="font-size:8pt;color:#BFD9E4;margin-top:6px">Your referral code</div>
+</div>
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

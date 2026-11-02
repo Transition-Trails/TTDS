@@ -1,0 +1,515 @@
+{
+  "_comment": "Trail Kit 01 as it exists in Trail OS (Salesforce). This file is the SOURCE OF TRUTH for every identifier, URL, and asset that appears in the printed kit. Export it from Salesforce; do not hand-edit it here except to prototype a new kit. See guidelines/trail-kit-production.md for the object model and the field map.",
+  "Product2": {
+    "Name": "Trail Kit 01 — Einstein Activity Capture",
+    "ProductCode": "TK-01",
+    "Family": "Trail Kit",
+    "IsActive": true,
+    "Description": "Turn on Einstein Activity Capture deliberately — decide what syncs, who it covers, and how you will prove it worked.",
+    "Trail_Kit_Number__c": 7,
+    "Feature_Area__c": "Einstein Activity Capture",
+    "Version__c": "1.0",
+    "Published_Date__c": "2026-08-05",
+    "Time_Estimate_Minutes__c": 150,
+    "Difficulty__c": "Beginner",
+    "Requires_Credential__c": "None",
+    "Sandbox_Required__c": false,
+    "Next_Kit_Code__c": "TK-02",
+    "Landing_URL__c": "https://transitiontrails.org/kits/01",
+    "Etsy_URL__c": "https://transitiontrails.etsy.com/listing/trail-kit-01",
+    "Compass_URL__c": "https://transitiontrails.org/compass",
+    "About_Page_URL__c": "https://transitiontrails.org/about"
+  },
+  "Trail_Kit_Edition__c": [
+    {
+      "Name": "Learner",
+      "Audience__c": "Self-directed learner / career changer / staff given the org",
+      "Tab_Labels__c": "Orient,Prepare,Build,Verify,Next Trail",
+      "Page_Count__c": 17,
+      "Coupon_Code__c": "TRAIL-EAC-25",
+      "Coupon_Value__c": "25% off next kit or first program month",
+      "Program_Placemat__c": true,
+      "Includes_Affiliate_Links__c": true
+    },
+    {
+      "Name": "Nonprofit",
+      "Audience__c": "Nonprofit staff enabling a feature without a Salesforce admin",
+      "Tab_Labels__c": "Why,Decide,Build,Verify,Next Step",
+      "Page_Count__c": 15,
+      "Coupon_Code__c": "KIT01-START",
+      "Coupon_Value__c": "Registration discount",
+      "Program_Placemat__c": false,
+      "Includes_Affiliate_Links__c": false
+    }
+  ],
+  "Trail_Kit_Step__c": [
+    {
+      "Step_Number__c": 1,
+      "Title__c": "Open the Activity Capture setup page",
+      "Verify_Text__c": "the Einstein Activity Capture settings page with a Configurations list",
+      "Screenshot_Slot_Id__c": "shot-step1",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Step_Number__c": 2,
+      "Title__c": "Create a configuration",
+      "Verify_Text__c": "your new configuration listed with a status of Not Active",
+      "Screenshot_Slot_Id__c": "shot-step2",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Step_Number__c": 3,
+      "Title__c": "Choose what syncs, and which direction",
+      "Verify_Text__c": "your sync selections summarized on the configuration page",
+      "Screenshot_Slot_Id__c": "shot-step3",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Step_Number__c": 4,
+      "Title__c": "Assign the pilot users",
+      "Verify_Text__c": "your pilot users counted on the configuration record",
+      "Screenshot_Slot_Id__c": "shot-step4",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Step_Number__c": 5,
+      "Title__c": "Connect the email and calendar service",
+      "Verify_Text__c": "a Connected status for your Microsoft 365 or Google Workspace account",
+      "Screenshot_Slot_Id__c": "shot-step5",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Step_Number__c": 6,
+      "Title__c": "Activate the configuration",
+      "Verify_Text__c": "a green Active badge on the configuration row",
+      "Screenshot_Slot_Id__c": "shot-step6",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 7,
+      "Title__c": "Send the announcement",
+      "Verify_Text__c": "a reply from at least one pilot user confirming they read it",
+      "Screenshot_Slot_Id__c": "shot-step7",
+      "Editions__c": "Learner"
+    }
+  ],
+  "Trail_Kit_Asset__c": [
+    {
+      "Type__c": "Video",
+      "Sort_Order__c": 1,
+      "Title__c": "Build With Me — full walkthrough",
+      "Duration_Minutes__c": 16,
+      "URL__c": "https://www.youtube.com/watch?v=TT07-BUILD",
+      "Editions__c": "Learner;Nonprofit",
+      "Chapters__c": "00:00 What we are turning on|01:40 Opening setup|03:15 Creating a configuration|05:30 Choosing what syncs|08:05 Assigning people|10:20 Connecting the mailbox|12:45 Activating|14:10 Proving it worked"
+    },
+    {
+      "Type__c": "Audio",
+      "Sort_Order__c": 2,
+      "Title__c": "When consent gets blocked",
+      "Duration_Minutes__c": 7,
+      "URL__c": "https://transitiontrails.org/kits/01/audio",
+      "Editions__c": "Learner"
+    },
+    {
+      "Type__c": "Resource Link",
+      "Sort_Order__c": 3,
+      "Title__c": "Einstein Activity Capture — official documentation",
+      "Provider__c": "Salesforce Help",
+      "Kind__c": "Docs",
+      "Is_Free__c": true,
+      "Is_Affiliate__c": false,
+      "URL__c": "https://help.salesforce.com/s/articleView?id=sf.aac_overview.htm",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Type__c": "Resource Link",
+      "Sort_Order__c": 4,
+      "Title__c": "Salesforce Administrator study guides",
+      "Provider__c": "K2 University",
+      "Kind__c": "Guide",
+      "Is_Free__c": false,
+      "Is_Affiliate__c": true,
+      "URL__c": "https://k2university.com/salesforce-admin",
+      "Editions__c": "Learner"
+    },
+    {
+      "Type__c": "Resource Link",
+      "Sort_Order__c": 5,
+      "Title__c": "Jotform for Salesforce",
+      "Provider__c": "Jotform",
+      "Kind__c": "Tool",
+      "Is_Free__c": false,
+      "Is_Affiliate__c": true,
+      "URL__c": "https://www.jotform.com/integrations/salesforce",
+      "Editions__c": "Learner"
+    },
+    {
+      "Type__c": "Resource Link",
+      "Sort_Order__c": 6,
+      "Title__c": "Free practice questions for the Administrator exam",
+      "Provider__c": "Salesforce",
+      "Kind__c": "Practice",
+      "Is_Free__c": true,
+      "Is_Affiliate__c": false,
+      "URL__c": "https://trailhead.salesforce.com/credentials/administrator",
+      "Editions__c": "Learner"
+    },
+    {
+      "Type__c": "Resource Link",
+      "Sort_Order__c": 7,
+      "Title__c": "Notes from the Trail",
+      "Provider__c": "Transition Trails",
+      "Kind__c": "Newsletter",
+      "Is_Free__c": true,
+      "Is_Affiliate__c": false,
+      "URL__c": "https://transitiontrails.org/notes",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Type__c": "Template",
+      "Sort_Order__c": 8,
+      "Title__c": "Study plan for the Administrator exam",
+      "Provider__c": "Transition Trails",
+      "Kind__c": "Worksheet",
+      "Is_Free__c": true,
+      "Is_Affiliate__c": false,
+      "URL__c": "https://transitiontrails.org/kits/01/study-plan",
+      "Editions__c": "Learner"
+    },
+    {
+      "Type__c": "Resource Link",
+      "Sort_Order__c": 9,
+      "Title__c": "Digital Compass community",
+      "Provider__c": "Transition Trails",
+      "Kind__c": "Community",
+      "Is_Free__c": false,
+      "Is_Affiliate__c": false,
+      "URL__c": "https://transitiontrails.org/compass",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Type__c": "Template",
+      "Sort_Order__c": 10,
+      "Title__c": "Decisions and pre-flight checklist worksheet",
+      "Provider__c": "Transition Trails",
+      "Kind__c": "Worksheet",
+      "Is_Free__c": true,
+      "Is_Affiliate__c": false,
+      "URL__c": "https://transitiontrails.org/kits/01/worksheet",
+      "Editions__c": "Learner;Nonprofit"
+    },
+    {
+      "Title__c": "Dev Org Setup — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/dev-org-setup/",
+      "URL__c": "https://transitiontrails.org/kits/dev-org",
+      "Runtime__c": "6 min video",
+      "Editions__c": "Both",
+      "Notes__c": "Create a free Salesforce Developer org, with its real limitations."
+    },
+    {
+      "Title__c": "Where to Practice — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/where-to-practice/",
+      "URL__c": "https://transitiontrails.org/kits/where-to-practice",
+      "Runtime__c": "9 min video",
+      "Editions__c": "Both",
+      "Notes__c": "Developer org vs sandbox vs production, and how to choose. Pairs with the dev-org sheet and covers the case where a feature is absent on Developer Edition."
+    },
+    {
+      "Title__c": "Navigating Setup — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/setup-navigation/",
+      "URL__c": "https://transitiontrails.org/kits/setup-basics",
+      "Runtime__c": "8 min video",
+      "Editions__c": "Both",
+      "Notes__c": "Find Setup, use Quick Find, tell Lightning from Classic, read Object Manager."
+    },
+    {
+      "Title__c": "Salesforce Glossary — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/glossary/",
+      "URL__c": "https://transitiontrails.org/kits/glossary",
+      "Runtime__c": "none",
+      "Editions__c": "Both",
+      "Notes__c": "Twenty terms every kit uses without defining. Written for someone who inherited an org."
+    },
+    {
+      "Title__c": "Change Record — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/change-record/",
+      "URL__c": "https://transitiontrails.org/kits/change-record",
+      "Runtime__c": "none",
+      "Editions__c": "Both",
+      "Notes__c": "Fill-in sheet: what changed, why, who approved, how to reverse. One per change."
+    },
+    {
+      "Title__c": "Permitted Use — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/license/",
+      "URL__c": "https://transitiontrails.org/kits/license",
+      "Runtime__c": "none",
+      "Editions__c": "Both — variant per edition",
+      "Notes__c": "License terms. Two variants via the edition prop: individual (learner) and organization-wide (nonprofit, after verification)."
+    },
+    {
+      "Title__c": "Sandboxes — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/sandboxes/Sandboxes.dc.html",
+      "Runtime__c": "none",
+      "Notes__c": "Reference only. Types, refresh intervals, the .sandbox username change, change sets, and why reporting cannot be tested in a sandbox. Refresh intervals printed; storage figures deliberately left to the QR."
+    },
+    {
+      "Title__c": "Security Model — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/security-model/SecurityModel.dc.html",
+      "Runtime__c": "none",
+      "Notes__c": "Profiles, permission sets, permission set groups, roles, custom settings. Spine is the do-versus-see split and the missing-versus-locked diagnosis."
+    },
+    {
+      "Title__c": "Report Types — insert sheet",
+      "Type__c": "Insert (shared)",
+      "Shared_Across_Kits__c": true,
+      "Template__c": "templates/report-types/ReportTypes.dc.html",
+      "Runtime__c": "none",
+      "Notes__c": "Creating, managing, maintaining. Spine is the with-versus-with-or-without join and the fact that custom report types do not pick up new fields. Framed as the adoption lever for reporting."
+    },
+    {
+      "Title__c": "Trail Kit 02 — Reports, Dashboards, Views and Home Pages (Learner)",
+      "Type__c": "Kit body",
+      "Shared_Across_Kits__c": false,
+      "Template__c": "templates/trail-kit-02/TrailKit02.dc.html",
+      "Runtime__c": "22 min video",
+      "Editions__c": "Learner",
+      "Notes__c": "Tabs Orient/Prepare/Build/Verify/Next Trail, idPrefix k, slot ids kit02-shot-*. Spine: build the report, but put it where people already are. Adoption fortnight is Tab 5."
+    },
+    {
+      "Title__c": "Trail Kit 02 — Reports, Dashboards, Views and Home Pages (Nonprofit)",
+      "Type__c": "Kit body",
+      "Shared_Across_Kits__c": false,
+      "Template__c": "templates/trail-kit-02-nonprofit/TrailKit02Nonprofit.dc.html",
+      "Runtime__c": "22 min video",
+      "Editions__c": "Nonprofit",
+      "Notes__c": "Tabs Why/Decide/Build/Verify/Next Step, idPrefix n, slot ids kit02np-shot-*. Derived from the learner edition; board and funder framing, closes on Digital Compass rather than programs."
+    },
+    {
+      "Title__c": "Trail Kit 02 test data (Learner)",
+      "Type__c": "Data",
+      "Shared_Across_Kits__c": false,
+      "Template__c": "templates/trail-kit-02/data/",
+      "Editions__c": "Learner",
+      "Notes__c": "26 accounts, 40 contacts, 43 opportunities. Deliberately includes 3 accounts with no opportunities (proves the with-or-without join), a near-duplicate pair, and scattered blanks. Load order and rationale in data/README.md.",
+      "Delivery__c": "Google Drive — bundled in the kit folder the buyer receives on purchase.",
+      "URL__c": "https://drive.google.com/drive/folders/TT-KIT02-DATA"
+    },
+    {
+      "Title__c": "Trail Kit 02 test data (Nonprofit)",
+      "Type__c": "Data",
+      "Shared_Across_Kits__c": false,
+      "Template__c": "templates/trail-kit-02-nonprofit/data/",
+      "Editions__c": "Nonprofit",
+      "Notes__c": "26 organizations, 40 contacts, 43 gifts. Same deliberate edge cases as the learner set, mission flavour. Load order and rationale in data/README.md.",
+      "Delivery__c": "Google Drive — bundled in the kit folder the buyer receives on purchase.",
+      "URL__c": "https://drive.google.com/drive/folders/TT-KIT02-DATA"
+    },
+    {
+      "Title__c": "Trail Kit 01 test data (Learner)",
+      "Type__c": "Data",
+      "Shared_Across_Kits__c": false,
+      "Template__c": "templates/trail-kit/data/",
+      "Editions__c": "Learner",
+      "Delivery__c": "Google Drive — bundled in the kit folder the buyer receives on purchase.",
+      "URL__c": "https://drive.google.com/drive/folders/TT-KIT01-DATA",
+      "Notes__c": "20 accounts, 30 contacts, 8 leads. Five contact addresses and one lead address are REPLACE-WITH-YOUR-ADDRESS placeholders — Activity Capture matches on email, so no sample data can ship pre-matched. Also carries two contacts with no email, a shared address across two accounts, and one personal-domain contact."
+    },
+    {
+      "Title__c": "Trail Kit 01 test data (Nonprofit)",
+      "Type__c": "Data",
+      "Shared_Across_Kits__c": false,
+      "Template__c": "templates/trail-kit-nonprofit/data/",
+      "Editions__c": "Nonprofit",
+      "Delivery__c": "Google Drive — bundled in the kit folder the buyer receives on purchase.",
+      "URL__c": "https://drive.google.com/drive/folders/TT-KIT01NP-DATA",
+      "Notes__c": "Same structure and deliberate edge cases as the learner set, mission flavour."
+    }
+  ],
+  "Trail_Kit_Decision__c": [
+    {
+      "Sort_Order__c": 1,
+      "Question__c": "Who does this cover?",
+      "Guidance__c": "Name two or three people rather than a whole profile. A small pilot you can ask questions of beats a broad rollout nobody owns."
+    },
+    {
+      "Sort_Order__c": 2,
+      "Question__c": "What syncs — email, calendar, or both?",
+      "Guidance__c": "Email on, calendar off is the common starting answer. Calendar sync surfaces personal appointments people did not expect to share."
+    },
+    {
+      "Sort_Order__c": 3,
+      "Question__c": "How will you know it worked?",
+      "Guidance__c": "Pick one record you will check, and one colleague who will confirm they see what you see."
+    }
+  ],
+  "Trail_Kit_Issue__c": [
+    {
+      "Sort_Order__c": 1,
+      "Symptom__c": "Nothing appears on any record after activating",
+      "Likely_Cause__c": "The email connection did not complete, or sync has not run yet",
+      "Fix__c": "Check for a Connected status first. If connected, wait — first sync can take hours."
+    },
+    {
+      "Sort_Order__c": 2,
+      "Symptom__c": "Consent screen is blocked or greyed out",
+      "Likely_Cause__c": "Your email administrator has not granted the app permission",
+      "Fix__c": "This needs whoever administers Microsoft 365 or Google Workspace. It is not a Salesforce permission."
+    },
+    {
+      "Sort_Order__c": 3,
+      "Symptom__c": "Personal calendar events showed up",
+      "Likely_Cause__c": "Calendar sync was left on",
+      "Fix__c": "Turn calendar sync off on the configuration, then tell the affected people what you changed."
+    }
+  ],
+  "_sections": {
+    "_comment": "Standard page inventory every Trail Kit ships with. Editions may add pages (the learner edition adds an action plan, note pages and a programs placemat) but must not drop any of these.",
+    "required": [
+      "Front cover",
+      "How to use / contents",
+      "Tab 1",
+      "Tab 2",
+      "Tab 3 Build",
+      "Tab 4 Verify",
+      "When it doesn't work",
+      "How to turn this off",
+      "Video index",
+      "Certifications",
+      "Tab 5 Next",
+      "About Transition Trails",
+      "Back cover"
+    ]
+  },
+  "_inserts": {
+    "_comment": "Shared one-pagers that ship inside multiple kits. Authored once under templates/, never duplicated or edited per kit. Update one file and every kit reprints correctly.",
+    "order": "Bind in this order behind the tabs: Permitted Use, Glossary, Navigating Setup, Dev Org Setup, Where to Practice, Change Record.",
+    "dev-org-setup": "Dev Org Setup — Create a free Salesforce Developer org, with its real limitations.",
+    "where-to-practice": "Where to Practice — Developer org vs sandbox vs production, and how to choose. Pairs with the dev-org sheet and covers the case where a feature is absent on Developer Edition.",
+    "setup-navigation": "Navigating Setup — Find Setup, use Quick Find, tell Lightning from Classic, read Object Manager.",
+    "glossary": "Salesforce Glossary — Twenty terms every kit uses without defining. Written for someone who inherited an org.",
+    "change-record": "Change Record — Fill-in sheet: what changed, why, who approved, how to reverse. One per change.",
+    "license": "Permitted Use — License terms. Two variants via the edition prop: individual (learner) and organization-wide (nonprofit, after verification).",
+    "sandboxes": "The four sandbox types and their constraints. Reference rather than build-along, since Developer Edition orgs have no sandbox.",
+    "security-model": "What you can do versus what you can see, and which of the five things to reach for.",
+    "report-types": "What a report type decides before anyone opens the builder, and why good ones are what stop people exporting to spreadsheets."
+  },
+  "_companion": {
+    "_comment": "Every Trail Kit is a Product2 with a companion set of content that has to exist before it can go on sale. The PDF is one deliverable among several — a kit is not shippable until every required companion asset exists and is linked to the product record.",
+    "required": [
+      {
+        "asset": "Kit PDF",
+        "where": "ContentVersion on Product2",
+        "note": "Generated from the template, never hand-edited."
+      },
+      {
+        "asset": "Build With Me video",
+        "where": "Trail_Kit_Asset__c, Type = Video",
+        "note": "Chaptered to match the numbered build steps exactly."
+      },
+      {
+        "asset": "Test data CSVs",
+        "where": "Trail_Kit_Asset__c, Type = Data",
+        "note": "REQUIRED ON EVERY KIT. Delivered via the kit’s Google Drive folder on purchase. Designed so the kit’s teaching points are demonstrable — not tidy data. A kit whose exercises cannot be completed from an empty practice org is not finished."
+      },
+      {
+        "asset": "Landing page",
+        "where": "Web",
+        "note": "Every QR destination in the kit must resolve before launch."
+      },
+      {
+        "asset": "Shared inserts",
+        "where": "Referenced, not copied",
+        "note": "Bound at PDF assembly from templates/."
+      },
+      {
+        "asset": "Referral link and code",
+        "where": "Product2 + the buyer’s Drive folder",
+        "note": "Every kit closes on it. The permitted-use sheet points at it too — \"do not share the file, share your link\" only works if the link exists."
+      }
+    ],
+    "optional": [
+      {
+        "asset": "Audio segment",
+        "note": "For the one problem that stops people cold."
+      },
+      {
+        "asset": "Announcement template",
+        "note": "Where the kit changes something other people see."
+      }
+    ]
+  },
+  "_gaps": {
+    "_comment": "Known shortfalls against the companion model. Clear these before the next launch.",
+    "items": [
+      {
+        "kit": "All kits",
+        "missing": "Product2 URL fields populated",
+        "note": "QR destinations now resolve from Product2 fields (see _qr_destinations). The fields exist in the model; the values are not yet entered for kit 01 or kit 02. Placeholder URLs currently sit in the templates and must be replaced by generation from the record before print."
+      }
+    ]
+  },
+  "_qr_destinations": {
+    "_comment": "Every QR in a kit resolves from a field on the Product2 record for that kit, not from a URL typed into the template. Generation reads the record; nothing is hardcoded. A blank field is a blocked launch, not a broken link.",
+    "object": "Product2 (standard)",
+    "fields": [
+      {
+        "field": "Build_Video_URL__c",
+        "feeds": "Build With Me QR",
+        "required": true
+      },
+      {
+        "field": "Audio_URL__c",
+        "feeds": "Audio segment QR",
+        "required": false
+      },
+      {
+        "field": "Test_Data_URL__c",
+        "feeds": "Test data QR — the kit’s Google Drive folder",
+        "required": true
+      },
+      {
+        "field": "Kit_Landing_URL__c",
+        "feeds": "Kit page QR on the back cover",
+        "required": true
+      },
+      {
+        "field": "Programs_URL__c",
+        "feeds": "Programs placemat QR (learner editions)",
+        "required": true
+      },
+      {
+        "field": "Compass_URL__c",
+        "feeds": "Digital Compass QR (nonprofit editions)",
+        "required": true
+      },
+      {
+        "field": "Certification_URL__c",
+        "feeds": "Certifications page QRs",
+        "required": true
+      },
+      {
+        "field": "Referral_URL__c",
+        "feeds": "Referral block on the back cover — the buyer’s personal link",
+        "required": true
+      }
+    ],
+    "rule": "Assembly fails rather than ships if a required URL field is blank on the product record. External destinations we do not own (Salesforce help, credential pages) are the exception and stay literal in the template."
+  }
+}

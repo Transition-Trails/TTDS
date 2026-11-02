@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Change Record — insert sheet" description="Reusable fill-in one-pager: what changed, why, who approved it, how to reverse it. The habit our programs are built on, reduced to one page." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Change record" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.55in 0.5in 0.45in 0.62in;display:flex;flex-direction:column">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.18in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">Photocopy this — one per change</span></div>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:0.3in;margin-bottom:0.18in">
+<div style="max-width:4.5in">
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.25;color:#2A2E2C;margin:0 0 6px;letter-spacing:-.01em">Change record</h1>
+<p style="font-size:10.5pt;line-height:1.5;color:#3B3F3D;margin:0">Fill this in as you make the change, not afterwards. Six months from now this page is the difference between "someone turned this on" and a decision you can defend.</p>
+</div>
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/change-record" label="Blank copies" caption="Print more, free." tone="teal" size="76" hint-size="1.9in,1in"></x-import>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.2in;margin-bottom:0.16in">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">What changed</div><div style="border-bottom:1px solid #A9C3CE;height:0.26in"></div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">Date</div><div style="border-bottom:1px solid #A9C3CE;height:0.26in"></div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:6px">Which org</div><div style="border-bottom:1px solid #A9C3CE;height:0.26in"></div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.24in;margin-bottom:0.16in">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:5px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="11" color="#2F6F7E" hint-size="11px,11px"></x-import>Why — what problem this solves</div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in;margin-bottom:0.1in"></div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in;margin-bottom:0.1in"></div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in"></div>
+</div>
+<div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:5px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="users" size="11" color="#2F6F7E" hint-size="11px,11px"></x-import>Who this affects, and who was told</div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in;margin-bottom:0.1in"></div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in;margin-bottom:0.1in"></div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in"></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 2.05in;gap:0.26in;flex:1;min-height:0">
+<div style="display:flex;flex-direction:column">
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:7px;display:flex;align-items:center;gap:5px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="rotate-ccw" size="11" color="#8A3D1C" hint-size="11px,11px"></x-import>How to reverse it — write this while you still remember</div>
+<div style="border:1px solid #DFA285;border-radius:8px;background:#F7EAE3;padding:0.14in 0.16in;margin-bottom:0.16in">
+<div style="border-bottom:1px solid #DFA285;height:0.24in;margin-bottom:0.11in"></div>
+<div style="border-bottom:1px solid #DFA285;height:0.24in;margin-bottom:0.11in"></div>
+<div style="border-bottom:1px solid #DFA285;height:0.24in"></div>
+</div>
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6B3F;margin-bottom:7px;display:flex;align-items:center;gap:5px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="11" color="#2F6B3F" hint-size="11px,11px"></x-import>How I know it worked</div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in;margin-bottom:0.1in"></div>
+<div style="border-bottom:1px solid #CFDEE5;height:0.24in;margin-bottom:0.16in"></div>
+
+<div style="margin-top:auto;display:grid;grid-template-columns:1.5fr 1fr;gap:0.22in;padding-top:0.14in;border-top:1px solid #DED5C7">
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:7px">Made by</div><div style="border-bottom:1px solid #A9C3CE;height:0.26in"></div></div>
+<div><div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:7.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;margin-bottom:7px">Approved by</div><div style="border-bottom:1px solid #A9C3CE;height:0.26in"></div></div>
+</div>
+
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.13in">
+<div style="background:#EDF5F8;border-radius:8px;padding:0.15in 0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="clipboard-check" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Why bother</div>
+<div style="font-size:9pt;line-height:1.5;color:#3B3F3D">Because the next person to touch this will be a stranger — possibly you, in a year. A change nobody wrote down is a change nobody can safely undo.</div>
+</div>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.KitNote" kind="practice" hint-size="100%,1.35in">"Approved by" does not need a committee. It needs one other person who knew before it happened and would say so.</x-import>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.CoachNote" compact="true" hint-size="100%,1.4in">This one page is the habit that separates people who configure systems from people who click in them. It is also the artifact interviewers ask to see.</x-import>
+</div>
+</div>
+
+<div style="margin-top:0.14in;padding-top:0.14in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · one per change · transitiontrails.org</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Change record</span>
+</div>
+
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+</body>
+</html>

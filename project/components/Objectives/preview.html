@@ -1,0 +1,28 @@
+<!-- @dsCard group="Program" height=220 subtitle="Objectives with competency codes" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>*{box-sizing:border-box}body{margin:0}#root{padding:20px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}</style>
+</head>
+<body>
+<div id="root" class="program-trail is-guided"></div>
+<script>
+(function(){
+  var h = React.createElement;
+  var C = window.TransitionTrailsDesignSystem_335df4.Objectives;
+  var libs = [];
+  function load(i){
+    if (i >= libs.length) { ReactDOM.createRoot(document.getElementById('root')).render(h(C,{items:[
+  ['EAC-1','Scope a capture configuration against a stated business need.'],
+  ['EAC-2','Validate sync behavior and document the evidence.'],
+  ['EAC-3','Communicate data-visibility implications to non-technical stakeholders.']]})); return; }
+    var s = document.createElement('script'); s.src = libs[i];
+    s.onload = s.onerror = function(){ load(i + 1); };
+    document.head.appendChild(s);
+  }
+  load(0);
+})();
+</script>
+</body>
+</html>

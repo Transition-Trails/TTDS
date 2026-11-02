@@ -1,0 +1,34 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Program Curriculum" subtitle="Module band, objectives, rubric & mentor sign-off" -->
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;padding:20px;background:var(--tt-doc)}.stack{display:flex;flex-direction:column;gap:20px}.bands{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}</style>
+</head><body><div id="root" class="program-trail is-guided"></div>
+<script type="text/babel">
+const { ProgramBand, Objectives, Rubric, SignOff } = window.TransitionTrailsDesignSystem_335df4;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className="stack">
+    <div className="bands">
+      <div className="program-trail is-foundations"><ProgramBand stage="foundations" module={1} of={6} title="Orientation to supervised practice" /></div>
+      <div className="program-trail is-guided"><ProgramBand stage="guided" module={3} of={8} eyebrow="Unit 2 · Data integrity" title="Configuring Activity Capture" /></div>
+      <div className="program-trail is-mastery"><ProgramBand stage="mastery" module={2} of={5} title="Multi-partner engagement judgment" /></div>
+    </div>
+    <div style={{display:'grid',gridTemplateColumns:'1fr 1.15fr',gap:'22px'}}>
+      <Objectives items={[
+        ['EAC-1','Scope a capture configuration against a stated business need.'],
+        ['EAC-2','Validate sync behavior and document the evidence.'],
+        ['EAC-3','Communicate data-visibility implications to non-technical stakeholders.'],
+      ]} />
+      <SignOff evidence={['Completed verification log with dates','Scope sheet approved by the partner','Announcement email as sent']} />
+    </div>
+    <Rubric criteria={[
+      ['Scoping','Enables org-wide without discussion','Defines and assigns a pilot group','Documents rationale, risks, and sign-off'],
+      ['Validation','Confirms in-scope users only','Confirms in-scope and out-of-scope','Produces a log another admin could reuse'],
+      ['Communication','Announces after the fact','Announces before activation','Explains visibility in the stakeholder\u2019s own terms'],
+    ]} />
+  </div>
+);
+</script></body></html>

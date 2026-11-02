@@ -1,0 +1,9 @@
+FirstName,LastName,Company,Title,Email,Phone,City,State,LeadSource,Status,Description
+Umar,Vasquez,Blackwood Interiors,Operations Manager,REPLACE-WITH-YOUR-ADDRESS-6@example.com,(500) 555-2100,Portland,OR,Web,Open - Not Contacted,"REPLACE this address too. Activity Capture matches leads as well as contacts, and it is worth proving both."
+Vera,Walsh,Cobalt Print,Finance Director,vera.walsh@cobaltprint.example.com,(501) 555-2101,Boise,WA,Referral,Working - Contacted,
+Wes,Xu,Dunmore Haulage,Owner,wes.xu@dunmorehaulage.example.com,(502) 555-2102,Spokane,OR,Event,Open - Not Contacted,
+Xena,Yildiz,Everline Cabling,Facilities Lead,xena.yildiz@everlinecabling.example.com,(503) 555-2103,Tacoma,WA,Partner,Working - Contacted,
+Yusuf,Zhao,Foxglove Catering,Procurement Manager,yusuf.zhao@foxglovecatering.example.com,(504) 555-2104,Portland,OR,Web,Open - Not Contacted,
+Zoe,Abbott,Granite Peak Tours,IT Manager,zoe.abbott@granitepeaktours.example.com,(505) 555-2105,Eugene,WA,Referral,Working - Contacted,
+Adam,Boone,Hartley Plumbing,Managing Director,adam.boone@hartleyplumbing.example.com,(506) 555-2106,Salem,OR,Event,Open - Not Contacted,
+Beth,Castellanos,Ivywell Consulting,Operations Manager,beth.castellanos@ivywellconsulting.example.com,(507) 555-2107,Seattle,WA,Partner,Working - Contacted,

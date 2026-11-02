@@ -1,0 +1,59 @@
+/* Transition Trails Design System — generated from tokens.json */
+:root, [data-theme="light"] {
+  --tt-trail-green: #2f6b3f;
+  --tt-deep-teal: #2f6f7e;
+  --tt-sky-blue: #7fafc6;
+  --tt-sun-amber: #f5a623;
+  --tt-trail-light: #fafaf7;
+  --tt-warm-gray: #e2e4e1;
+  --tt-slate: #4a4f4d;
+  --tt-charcoal: #2a2e2c;
+  --tt-white: #ffffff;
+  --tt-green-100: #e6f0ea;
+  --tt-green-300: #9fc3ae;
+  --tt-green-500: #2f6b3f;
+  --tt-green-700: #245531;
+  --tt-amber-100: #fff3e0;
+  --tt-amber-300: #ffd08a;
+  --tt-amber-500: #f5a623;
+  --tt-amber-700: #cc8400;
+  --tt-amber-800: #b37400;
+  --tt-sky-100: #edf5f8;
+  --tt-critical-100: #fbeae6;
+  --tt-critical-300: #e8b9b4;
+  --tt-critical-500: #a93f2f;
+  --tt-slate-mid: #686e6c;
+  --tt-shadow-card: 0 12px 28px rgba(42, 46, 44, .10);
+  --tt-shadow-soft: 0 6px 16px rgba(42, 46, 44, .08);
+  --tt-shadow-hover: 0 15px 32px rgba(42, 46, 44, .13);
+  --tt-shadow-amber: 0 2px 8px rgba(245, 166, 35, .35);
+  --tt-focus-ring: 0 0 0 3px rgba(47, 107, 63, .15);
+}
+:root {
+  --tt-space-xs: 4px;
+  --tt-space-sm: 8px;
+  --tt-space-md: 16px;
+  --tt-space-lg: 24px;
+  --tt-space-xl: 32px;
+  --tt-space-2xl: 48px;
+  --tt-space-3xl: 64px;
+  --tt-radius-sm: 8px;
+  --tt-radius-md: 14px;
+  --tt-radius-lg: 22px;
+  --tt-radius-pill: 999px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Open Sans', 'Roboto', system-ui, sans-serif;
+  --font-accent: 'Caveat', cursive;
+  --font-mono: Menlo, 'Courier New', monospace;
+}
+.display-h1 { font-family: var(--font-display); font-size: 44px; line-height: 1.2; font-weight: 700; }
+.display-h2 { font-family: var(--font-display); font-size: 32px; line-height: 1.2; font-weight: 600; }
+.heading-h1 { font-family: var(--font-heading); font-size: 44px; line-height: 1.2; font-weight: 700; }
+.heading-h2 { font-family: var(--font-heading); font-size: 32px; line-height: 1.2; font-weight: 600; }
+.heading-h3 { font-family: var(--font-heading); font-size: 25px; line-height: 1.2; font-weight: 600; }
+.heading-h4 { font-family: var(--font-heading); font-size: 20px; line-height: 1.4; font-weight: 500; }
+.body { font-family: var(--font-body); font-size: 17px; line-height: 1.6; font-weight: 400; }
+.body-sm { font-family: var(--font-body); font-size: 14px; line-height: 1.6; font-weight: 400; }
+.label { font-family: var(--font-body); font-size: 14px; line-height: 1.4; font-weight: 500; }
+.accent { font-family: var(--font-accent); font-size: 30px; line-height: 1.2; font-weight: 400; }

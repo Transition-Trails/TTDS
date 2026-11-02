@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/styles.css">
+<script src="_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tt-trail-light); }
+  a { color: var(--tt-trail-green); }
+  a:hover { color: var(--tt-green-700); }
+</style>
+</helmet>
+
+<div style="min-height:100%;background:var(--tt-trail-light);font-family:'Open Sans',Roboto,sans-serif;color:var(--tt-slate);padding:0 0 96px">
+
+  <div style="background:var(--tt-deep-teal);color:var(--tt-white);padding:44px 0">
+    <div style="max-width:1060px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:14px">
+      <div style="font-family:Poppins,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)">Foundations Trail · Sprint 2 · story revision</div>
+      <h1 style="font-family:Poppins,sans-serif;font-size:38px;line-height:1.14;font-weight:600;margin:0;color:var(--tt-white);text-wrap:pretty">Make the platform limit the lesson</h1>
+      <p style="font-size:17.5px;line-height:1.55;margin:0;max-width:720px;color:rgba(255,255,255,.88)">Three new columns for the traceability matrix, and a revision of the five intake stories so a Developer Edition constraint becomes curriculum instead of a surprise. Written against the matrix as it stands in Week 9 of Cohort 0 testing.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1060px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:48px">
+
+    <section style="margin-top:44px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">01 · The model change</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:29px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Three columns, and a convention for splitting</h2>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:800px;text-wrap:pretty">Your matrix already carries Build Notes and a Pass/Fail Test. What it cannot currently say is <em>where</em> a criterion is provable and <em>what the platform refuses to do</em>. Both matter the moment a learner works in a client sandbox instead of their own dev org.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">Environment</div>
+          <div style="font-size:15px;line-height:1.6">Where this criterion is proved: learner dev org, TT sandbox, or client sandbox. "Passes in a dev org" and "passes in a client sandbox" are different claims — and only one of them counts as client work.</div>
+        </div>
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">Platform constraint</div>
+          <div style="font-size:15px;line-height:1.6">What the edition or the environment will not do. Named up front, so nobody burns a week discovering it — and so the coach knows a failure here is not a knowledge gap.</div>
+        </div>
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:Poppins,sans-serif;font-size:17px;font-weight:600;color:var(--tt-charcoal)">Workaround</div>
+          <div style="font-size:15px;line-height:1.6">The approach that gets the criterion proved anyway. This is the column employers care about — it is the difference between someone who followed a guide and someone who has shipped.</div>
+        </div>
+      </div>
+      <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Alert" tone="info" title="Splitting is a feature, not an exception" dc-props="{{ wideAlert }}" hint-size="100%,110px"><div>S2-03 became .a and .b because a story outgrew its week in real testing. That should be the documented convention rather than a one-off: a story may split into lettered children, each carrying its own acceptance criteria and Definition of Done, and the Week Map allows a story to span weeks. In Trail OS that is a parent/child relationship on the story record — so a coach can split mid-cohort without editing a spreadsheet, and the three sheets cannot drift apart again.</div></x-import>
+    </section>
+
+    <section style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">02 · The five intake stories</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:29px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Revised, with what the platform refuses to do</h2>
+
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--tt-warm-gray)">
+          <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="amber" hint-size="auto,26px">S2-01 · rewrite</x-import>
+          <span style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-charcoal)">Multi-Channel Email-to-Case</span>
+          <span style="font-size:13.5px;color:var(--tt-slate)">Week 5 · Service &amp; Support ~11%</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-charcoal)">Platform constraint</div>
+            <div style="font-size:15px;line-height:1.6">Nobody owns mailboxes at hch.org, and Email-to-Case routing addresses require inbox access to verify. The story assumes three real addresses that cannot exist.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;border-left:1px solid var(--tt-warm-gray);padding-left:24px">
+            <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-trail-green)">Workaround — test before rewriting</div>
+            <div style="font-size:15px;line-height:1.6">Gmail plus-addressing. <strong>name+info@gmail.com</strong>, <strong>+help</strong>, <strong>+grants</strong> all deliver to one inbox and each verifies independently as a distinct routing address. Three channels, one mailbox, no domain needed — the multi-channel build stays intact.</div>
+          </div>
+        </div>
+        <div style="background:var(--tt-trail-light);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:Poppins,sans-serif;font-size:14px;font-weight:600;color:var(--tt-charcoal)">AC-3 threading — retarget, do not delete</div>
+          <div style="font-size:15px;line-height:1.6">"Client replies to a notification; reply attaches to Case #1001 with no duplicate" is the one criterion that cannot be faked, because it needs a real outbound email and a real reply. Retarget it: the learner sends the reply from a second personal address and verifies the Email Message record attaches to the original case. Fiddly, real, and provable.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--tt-warm-gray)">
+          <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="gray" hint-size="auto,26px">S2-02 · decide ownership</x-import>
+          <span style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-charcoal)">Automated Queue Routing</span>
+          <span style="font-size:13.5px;color:var(--tt-slate)">Week 5 or Week 7 — currently both</span>
+        </div>
+        <div style="font-size:15.5px;line-height:1.65">No platform constraint. The problem is bookkeeping: the detail sheet marks S2-02 complete in Week 5, and the Week Map lists it active again in Week 7. A learner cannot answer "what am I building this week" when two weeks claim the same story.</div>
+        <div style="background:var(--tt-green-100);border-radius:14px;padding:18px 20px;font-size:15px;line-height:1.6"><strong>Recommendation:</strong> Week 7 owns S2-02. Week 5 owns record types, queues, and Email-to-Case — the containers. Week 7 owns the routing logic that fills them, paired with S2-04, and the exam concept it teaches (one active assignment rule per object, entries evaluate top-down, first match wins) belongs with the Sales &amp; Marketing domain in Week 7.</div>
+      </div>
+
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--tt-warm-gray)">
+          <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="green" hint-size="auto,26px">S2-03.a / .b · keep the split</x-import>
+          <span style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-charcoal)">Web-to-Case form, then the public site</span>
+          <span style="font-size:13.5px;color:var(--tt-slate)">Week 6 → Week 6 and 7</span>
+        </div>
+        <div style="font-size:15.5px;line-height:1.65">The split was the right call — the LWR digital experience site, guest user access, and guest API permissions are a week of work on their own, and .a is provable without them. Formalize it: <strong>.a</strong> ships the form and its hidden record type; <strong>.b</strong> ships the public site the form lives on. Two Definitions of Done, two demos.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-charcoal)">Platform constraint on .b</div>
+            <div style="font-size:15px;line-height:1.6">Guest user access and guest API access must both be enabled, and guest permissions are deliberately restrictive. This is where learners get stuck, and it is not a Web-to-Case problem.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;border-left:1px solid var(--tt-warm-gray);padding-left:24px">
+            <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-trail-green)">Workaround</div>
+            <div style="font-size:15px;line-height:1.6">Verify in an incognito window as the acceptance criterion already says. Add a named check that the guest user profile has Create on Case — the single most common cause of a silent form failure.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--tt-warm-gray)">
+          <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="gray" hint-size="auto,26px">S2-04 · annotate</x-import>
+          <span style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-charcoal)">Auto-Response &amp; Routing Notifications</span>
+          <span style="font-size:13.5px;color:var(--tt-slate)">Week 7 · Service &amp; Support ~11%</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-charcoal)">Platform constraint</div>
+            <div style="font-size:15px;line-height:1.6">Developer Edition caps daily outbound email to external addresses. Auto-responses count against it, and a learner testing three channels repeatedly will hit the ceiling and see silent failures that look like broken configuration.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;border-left:1px solid var(--tt-warm-gray);padding-left:24px">
+            <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt-trail-green)">Workaround</div>
+            <div style="font-size:15px;line-height:1.6">Name the limit in the story and cap the test plan: one submission per channel, verified, then stop. Teach the learner where to find the org's email log so they can tell a limit from a misconfiguration — which is itself an exam-adjacent skill.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--tt-white);border:2px solid var(--tt-trail-green);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;gap:18px;box-shadow:0 12px 28px rgba(42,46,44,.10)">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--tt-warm-gray)">
+          <x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.Pill" tone="green" hint-size="auto,26px">S2-05 · the constraint encounter</x-import>
+          <span style="font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:var(--tt-charcoal)">Loop Protection Flow</span>
+          <span style="font-size:13.5px;color:var(--tt-slate)">Week 8 · Process Automation ~16%</span>
+        </div>
+        <div style="font-size:15.5px;line-height:1.65">This is the story where your instinct pays off. A learner cannot make a real out-of-office autoresponder fire at them — but they do not need to. Sending an email whose subject begins "Automatic reply:" proves every acceptance criterion, because the flow keys on the subject, not on the sender's intent. All three tests stay provable as written.</div>
+        <div style="background:var(--tt-green-100);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:Poppins,sans-serif;font-size:16px;font-weight:600;color:var(--tt-charcoal)">The added deliverable</div>
+          <div style="font-size:15.5px;line-height:1.65">Email-to-Case is out-of-the-box, and out-of-the-box still let ghost records flood a queue — which is why this story exists at all. Make the learner write that down: what the standard feature does not handle, what you built to cover it, and what it would have cost Elena if you had not. One paragraph, in her language.</div>
+          <div style="font-size:14.5px;line-height:1.6;color:var(--tt-slate);border-top:1px solid var(--tt-green-300);padding-top:12px">This is Explore → Select from the RESOLVE handbook, and it is the most credible entry a Decision Log can contain. Nobody invents having hit a platform limit.</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tt-trail-green)">03 · Before Guided Trail borrows this capstone</div>
+      <h2 style="font-family:Poppins,sans-serif;font-size:29px;line-height:1.2;font-weight:600;margin:0;color:var(--tt-charcoal)">Three things to settle</h2>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:14px;padding:18px 22px;font-size:16px;line-height:1.6"><strong>1.</strong> Regenerate the Story Summary and Week Map from the detail sheet. Three sheets currently disagree about how many stories Sprint 2 has.</div>
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:14px;padding:18px 22px;font-size:16px;line-height:1.6"><strong>2.</strong> Retire the week tables in Program Blueprint v1.0. They disagree with the matrix on Weeks 7, 10 and 11, and the matrix is the one Cohort 0 is actually running.</div>
+        <div style="background:var(--tt-white);border:1px solid var(--tt-warm-gray);border-radius:14px;padding:18px 22px;font-size:16px;line-height:1.6"><strong>3.</strong> The Guided Trail blueprint still calls its predecessor <strong>ACT</strong> — including "if you completed ACT, continue that same org." Foundations replaced it, but the document has not caught up, and GT reuses this capstone.</div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      wideAlert: { style: { maxWidth: 'none', fontSize: '15.5px', lineHeight: 1.65, padding: '22px 26px', borderRadius: '22px', gap: '14px' } }
+    };
+  }
+}
+</script>
+</body>
+</html>

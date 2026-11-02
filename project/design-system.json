@@ -1,0 +1,70 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "notes": {
+      "files": {},
+      "name": "notes",
+      "order": []
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-10-04T23:15:14.213Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": [
+      "project/docs/components/partner/partner.prompt.md",
+      "project/docs/components/program/program.prompt.md",
+      "project/docs/components/status/status.prompt.md",
+      "project/docs/components/trail-kit/trail-kit.prompt.md",
+      "project/github.md",
+      "project/guidelines/founder-voices.md",
+      "project/guidelines/replit-handoff.md",
+      "project/guidelines/token-divergence.md",
+      "project/guidelines/token-reconciliation.md",
+      "project/guidelines/trail-kit-production.md",
+      "project/replit/README.md",
+      "project/replit/replit.md",
+      "project/templates/trail-kit-02-nonprofit/data/README.md",
+      "project/templates/trail-kit-02/data/README.md",
+      "project/templates/trail-kit-nonprofit/data/README.md",
+      "project/templates/trail-kit/data/README.md",
+      "project/ui_kits/portal/README.md",
+      "project/ui_kits/website/README.md",
+      "project/uploads/TRAIL OS and ACADEMY/_ds/transition-trails-design-system-335df4cf-3863-4d1a-b42a-1376e9ff24c3/readme.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/Access model - capability not rank.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/Coach and Learner views - design brief.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/GT-01 - Guided Trail client language.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/TOS-CON-01 - RESOLVE seven phases.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/TOS-CON-01 - Replit prompt.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/TOS-DOC-05 - Extend the data classification.md",
+      "project/uploads/TRAIL OS and ACADEMY/changesets/TOS-DOC-06 - Trail OS UX Standards (brand-aligned).md",
+      "project/uploads/TRAIL OS and ACADEMY/github.md"
+    ]
+  },
+  "groups": [
+    "notes"
+  ],
+  "layout": "files",
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "namespace": "TransitionTrailsDesignSystem_335df4",
+  "sections": {},
+  "title": "Transition Trails Design System",
+  "lastChange": {
+    "by": "Angela",
+    "at": "2026-11-01T23:30:00Z",
+    "via": "Claude",
+    "note": "Finished setting up: tokens, component previews and guidelines, cover, bundle in place"
+  }
+}

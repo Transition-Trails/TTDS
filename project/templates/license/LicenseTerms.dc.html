@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Permitted Use — insert sheet" description="Reusable license page for a paid Trail Kit. Two variants: individual (learner) and organization-wide (nonprofit, after verification). Set the edition prop." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./doc-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<style>doc-page:not(:defined){visibility:hidden}.page a{text-decoration:none}</style>
+</helmet>
+<div class="trail-kit">
+<doc-page size="letter">
+
+<section class="page" data-screen-label="Permitted use" style="background:#FBF7F0;font-family:'Open Sans',sans-serif;overflow:hidden">
+<div style="display:flex;height:100%">
+<div style="flex:1;min-width:0;padding:0.55in 0.5in 0.45in 0.62in;display:flex;flex-direction:column">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #DED5C7;padding-bottom:7px;margin-bottom:0.2in;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8C857A;font-family:'Poppins',sans-serif;font-weight:600"><span>Transition Trails · Insert sheet</span><span style="color:#2F6F7E">{{ editionLabel }}</span></div>
+
+<h1 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:22pt;line-height:1.25;color:#2A2E2C;margin:0 0 7px;letter-spacing:-.01em">What you may do with this kit</h1>
+<p style="font-size:10.5pt;line-height:1.55;color:#3B3F3D;margin:0 0 0.22in;max-width:5.3in">Plain terms, not legal boilerplate. You bought a thing we made; here is exactly how far that goes, and where to ask if your situation is not covered.</p>
+
+<div style="display:grid;grid-template-columns:1fr 2.1in;gap:0.28in;flex:1;min-height:0">
+<div>
+
+<div style="background:#EDF5F8;border-radius:8px;padding:0.15in 0.17in;margin-bottom:0.16in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6F7E;margin-bottom:7px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Your license, in one sentence</div>
+<div style="font-size:10.5pt;line-height:1.5;color:#2A2E2C;font-family:'Poppins',sans-serif;font-weight:500">{{ oneLine }}</div>
+</div>
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#2F6B3F;margin-bottom:0.08in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-check-big" size="12" color="#2F6B3F" hint-size="12px,12px"></x-import>Yes, please do</div>
+<div style="border-bottom:1px solid #DED5C7;margin-bottom:0.16in">
+<sc-for list="{{ allowed }}" as="row" hint-placeholder-count="4">
+<div style="display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="width:6px;height:6px;flex-shrink:0;border-radius:999px;background:#2F6B3F;margin-top:6px"></div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">{{ row }}</div>
+</div>
+</sc-for>
+</div>
+
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.11em;text-transform:uppercase;color:#8A3D1C;margin-bottom:0.1in;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-slash" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>Please do not</div>
+<div style="border-bottom:1px solid #DED5C7">
+<sc-for list="{{ prohibited }}" as="row" hint-placeholder-count="4">
+<div style="display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid #DED5C7">
+<div style="width:6px;height:6px;flex-shrink:0;border-radius:999px;background:#8A3D1C;margin-top:6px"></div>
+<div style="font-size:9.5pt;line-height:1.5;color:#3B3F3D">{{ row }}</div>
+</div>
+</sc-for>
+</div>
+
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.14in">
+
+<sc-if value="{{ isOrg }}" hint-placeholder-val="{{ true }}">
+<div style="background:#F3EDE2;border-radius:8px;padding:0.16in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8A3D1C;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="badge-check" size="12" color="#8A3D1C" hint-size="12px,12px"></x-import>One step first</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D">Organization-wide use starts once we verify your nonprofit status — a short form and your determination letter, usually the same day. Until then, treat this as a single-reader copy.</div>
+</div>
+</sc-if>
+
+<div style="background:#fff;border:1px solid #DED5C7;border-radius:8px;padding:0.16in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="key-round" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>The videos too</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D">The same terms cover the videos and audio linked from this kit. The links do not expire and need no login, which also means please do not repost them — send people here instead.</div>
+</div>
+
+<div style="background:#EDF5F8;border-radius:8px;padding:0.16in 0.17in">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#2F6F7E;margin-bottom:8px;display:flex;align-items:center;gap:6px"><x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.TrailIcon" name="circle-help" size="12" color="#2F6F7E" hint-size="12px,12px"></x-import>Not sure if you are covered?</div>
+<div style="font-size:9pt;line-height:1.55;color:#3B3F3D">Ask. We would rather say yes to something reasonable than have you guess. Training a team, a chapter, a client — just ask first. We wrote these terms to be readable rather than airtight.</div>
+</div>
+
+<x-import component-from-global-scope="TransitionTrailsDesignSystem_335df4.QRLink" url="https://transitiontrails.org/kits/license" label="Full terms & verification" caption="Full terms and how to verify nonprofit status." tone="teal" size="80" hint-size="100%,1.1in"></x-import>
+
+</div>
+</div>
+
+<div style="margin-top:auto;padding-top:0.14in;border-top:1px solid #DED5C7;display:flex;justify-content:space-between;align-items:baseline;font-size:8pt;color:#A39B8E">
+<span>Reusable insert · not kit-specific · © Transition Trails</span>
+<span style="font-family:'Poppins',sans-serif;font-weight:600;color:#2F6F7E">Permitted use</span>
+</div>
+
+</div>
+</div>
+</section>
+
+</doc-page>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:816,&quot;height&quot;:1056},&quot;edition&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;individual&quot;,&quot;organization&quot;],&quot;default&quot;:&quot;individual&quot;,&quot;tsType&quot;:&quot;'individual' | 'organization'&quot;,&quot;section&quot;:&quot;Edition&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const isOrg = (this.props.edition ?? 'individual') === 'organization';
+
+    const individual = {
+      editionLabel: 'Individual license',
+      oneLine: 'This kit is licensed to you, one person, for your own learning and your own work — forever, on as many of your devices as you like.',
+      allowed: [
+        'Use it at work. What you learn here is yours, including on a paid job or for a client.',
+        'Print it, as many times as you want. Write in it. Rebuild it after you spill coffee on it.',
+        'Keep it after you change employers. The license follows you, not your job.',
+        'Show a colleague what you built. Talking about your work is not redistribution.',
+      ],
+      prohibited: [
+        'Share the file or the printed kit with colleagues so they can follow it themselves. Send them your referral link instead — they get their own copy, and you both get money off a program.',
+        'Use it to train a team, a class, or a cohort. Ask us about a team license; there is one.',
+        'Post it anywhere others can download it, including an internal drive or wiki.',
+        'Resell it, or fold it into something you sell or deliver to clients.',
+      ],
+    };
+
+    const organization = {
+      editionLabel: 'Nonprofit organization license',
+      oneLine: 'Once we verify your nonprofit status, this kit is licensed to your whole organization — every staff member and volunteer, for as long as you need it.',
+      allowed: [
+        'Share it internally. Staff, volunteers, board, your accidental admin — all covered.',
+        'Print as many copies as you need, and put it in your onboarding folder.',
+        'Use it to train your own people, in person or on a call.',
+        'Adapt the checklists for your own procedures, keeping our credit on them.',
+      ],
+      prohibited: [
+        'Share it outside your organization, including a sister chapter or partner nonprofit. Send your referral link instead — they get verified for their own copy, and you both get money off a program.',
+        'Use it to deliver paid consulting. If you bill for it, that is a different license.',
+        'Post it publicly, including an open Drive folder or a wiki.',
+        'Resell it, or bundle it into anything you charge for.',
+      ],
+    };
+
+    return { isOrg, ...(isOrg ? organization : individual) };
+  }
+}
+</script>
+</body>
+</html>

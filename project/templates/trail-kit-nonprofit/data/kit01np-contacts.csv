@@ -1,0 +1,31 @@
+FirstName,LastName,AccountName,Title,Email,Phone,MailingCity,Description
+Alice,Barrett,Riverside Community Trust,Executive Director,REPLACE-WITH-YOUR-ADDRESS-1@example.org,,Portland,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Ben,Cho,Hopewell Family Services,Development Director,REPLACE-WITH-YOUR-ADDRESS-2@example.org,(401) 555-1101,Boise,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Carla,Duarte,Cedar Street Shelter,Program Manager,REPLACE-WITH-YOUR-ADDRESS-3@example.org,(402) 555-1102,Spokane,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Devon,Ellis,Bright Futures Tutoring,Board Chair,REPLACE-WITH-YOUR-ADDRESS-4@example.org,(403) 555-1103,Tacoma,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Elena,Fontaine,Green Valley Food Bank,Volunteer Coordinator,REPLACE-WITH-YOUR-ADDRESS-5@example.org,(404) 555-1104,Portland,"REPLACE this address with one you can send from or to. Activity Capture matches on the email address — until this is a real address you control, nothing will ever appear on this record."
+Frank,Gallagher,Harbour Youth Project,Operations Lead,frank.gallagher@harbouryouthproject.example.org,(405) 555-1105,Eugene,
+Grace,Haddad,Meadowlark Arts Fund,Grants Manager,grace.haddad@meadowlarkartsfund.example.org,(406) 555-1106,Salem,
+Hugo,Ibarra,Northside Literacy Council,Executive Director,,(407) 555-1107,Seattle,Deliberately has no email address. A contact with no address can never be matched — this is what an unmatchable record looks like.
+Ivy,Jensen,Open Door Legal Aid,Development Director,ivy.jensen@opendoorlegalaid.example.org,,Bellevue,
+Jonah,Kowalski,Pinegrove Senior Center,Program Manager,jonah.kowalski@pinegroveseniorcenter.example.org,(409) 555-1109,Portland,
+Kira,Lindqvist,Quarry Hill Housing,Board Chair,kira.lindqvist@quarryhillhousing.example.org,(410) 555-1110,Vancouver,
+Liam,Moreau,Riverbend Animal Rescue,Volunteer Coordinator,shared.inbox@brightfuturestutoring.example.org,(411) 555-1111,Yakima,Deliberately shares an address with another contact at a different account. Watch which record the activity lands on.
+Maya,Nakamura,Saltmarsh Conservation,Operations Lead,shared.inbox@brightfuturestutoring.example.org,(412) 555-1112,Tacoma,Second contact using the same shared address. See the note on the other one.
+Noah,Osei,Thornton Health Outreach,Grants Manager,noah.osei@thorntonhealthoutreach.example.org,(413) 555-1113,Bend,
+Orla,Petrov,Unity Refugee Support,Executive Director,orla.petrov@unityrefugeesupport.example.org,(414) 555-1114,Medford,
+Peter,Quintana,Valley Music Program,Development Director,peter.quintana@valleymusicprogram.example.org,(415) 555-1115,Seattle,
+Quinn,Rasmussen,Westgate After School,Program Manager,quinn.rasmussen@westgateafterschool.example.org,,Olympia,
+Rosa,Silva,Anchor Point Recovery,Board Chair,rosa.silva@anchorpointrecovery.example.org,(417) 555-1117,Portland,
+Sam,Tanaka,Beacon Hill Mentoring,Volunteer Coordinator,,(418) 555-1118,Everett,Deliberately has no email address. A contact with no address can never be matched — this is what an unmatchable record looks like.
+Tara,Ueda,Dovetail Job Training,Operations Lead,tara.ueda@dovetailjobtraining.example.org,(419) 555-1119,Kent,
+Umar,Vasquez,Riverside Community Trust,Grants Manager,umarvasquez@personalmail.example.net,(420) 555-1120,Portland,"Uses a personal address rather than the organization domain. Common in real data, and it breaks any assumption that domain implies account."
+Vera,Walsh,Hopewell Family Services,Executive Director,vera.walsh@hopewellfamilyservices.example.org,(421) 555-1121,Boise,
+Wes,Xu,Cedar Street Shelter,Development Director,wes.xu@cedarstreetshelter.example.org,(422) 555-1122,Spokane,
+Xena,Yildiz,Bright Futures Tutoring,Program Manager,xena.yildiz@brightfuturestutoring.example.org,(423) 555-1123,Tacoma,
+Yusuf,Zhao,Green Valley Food Bank,Board Chair,yusuf.zhao@greenvalleyfoodbank.example.org,,Portland,
+Zoe,Abbott,Harbour Youth Project,Volunteer Coordinator,zoe.abbott@harbouryouthproject.example.org,(425) 555-1125,Eugene,
+Adam,Boone,Meadowlark Arts Fund,Operations Lead,adam.boone@meadowlarkartsfund.example.org,(426) 555-1126,Salem,
+Beth,Castellanos,Northside Literacy Council,Grants Manager,beth.castellanos@northsideliteracycouncil.example.org,(427) 555-1127,Seattle,
+Cole,Dunn,Open Door Legal Aid,Executive Director,cole.dunn@opendoorlegalaid.example.org,(428) 555-1128,Bellevue,
+Dina,Emerson,Pinegrove Senior Center,Development Director,dina.emerson@pinegroveseniorcenter.example.org,(429) 555-1129,Portland,

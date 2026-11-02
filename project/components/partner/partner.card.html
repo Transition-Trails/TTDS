@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Partner (nonprofit)" subtitle="Stats, need/answer rows & Digital Compass CTA" -->
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;padding:20px;background:var(--tt-partner-bg)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px}.rows{border-bottom:1px solid var(--tt-partner-rule);margin-bottom:20px}</style>
+</head><body><div id="root" class="partner-trail"></div>
+<script type="text/babel">
+const { StatBlock, NeedRow, CompassCTA } = window.TransitionTrailsDesignSystem_335df4;
+ReactDOM.createRoot(document.getElementById('root')).render(<>
+  <div className="stats">
+    <StatBlock value="42" label="nonprofits have hosted a supervised project with us" />
+    <StatBlock value="0" label="cost to your budget for the learner's time" tone="green" />
+    <StatBlock value="3 wks" label="typical time from scoping call to first delivery" />
+  </div>
+  <div className="rows">
+    <NeedRow n={1} need="Your CRM was set up by a volunteer who left, and nobody has touched it since." answer="A supervised learner documents what exists and rebuilds what broke, with our review on every change." outcome="You end up with documentation, not just a fix." />
+    <NeedRow n={2} need="You know reporting could be better but nobody has a spare week to find out how." answer="We scope a single, bounded project with a defined finish line — not an open-ended engagement." outcome="A finished deliverable, or an honest no." />
+  </div>
+  <CompassCTA body="Tell us what is stuck. We will tell you honestly whether a supervised project fits — and if it does not, we will say so." />
+</>);
+</script></body></html>

@@ -1,0 +1,33 @@
+<!-- @dsCard group="Trail OS" viewport="700x255" name="The change chain" subtitle="Case → Change Request → Story → Sprint → Release · and the structure over it" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px 24px;background:var(--tt-bg);font-family:var(--tt-font-body);color:var(--tt-text)}
+.chain{display:flex;align-items:stretch;gap:0;margin-bottom:14px}
+.step{flex:1;padding-right:9px}
+.num{font-family:var(--tt-font-heading);font-weight:700;font-size:10px;color:var(--tt-sky-blue);letter-spacing:.06em}
+.nm{font-family:var(--tt-font-heading);font-weight:600;font-size:12.5px;color:var(--tt-heading);margin:2px 0 3px;line-height:1.2}
+.sub{font-size:10.5px;line-height:1.4;color:var(--tt-text-muted)}
+.arw{align-self:center;color:var(--tt-warm-gray);font-size:13px;padding:0 3px}
+.tri{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 20px;border-top:1px solid var(--tt-border);padding-top:11px;margin-bottom:12px}
+.tn{font-family:var(--tt-font-heading);font-weight:600;font-size:12.5px;color:var(--tt-heading);margin-bottom:4px}
+.td{font-size:11.5px;line-height:1.5;color:var(--tt-slate)}
+.ft{font-size:12px;line-height:1.55;color:var(--tt-slate);border-top:1px solid var(--tt-border);padding-top:10px}
+.ft b{color:var(--tt-heading)}
+</style></head><body>
+<div class="chain">
+<div class="step"><div class="num">01</div><div class="nm">Case</div><div class="sub">All demand enters here, whoever raises it.</div></div>
+<div class="arw">→</div>
+<div class="step"><div class="num">02</div><div class="nm">Change Request</div><div class="sub">Triaged, with scope, impact and an owner.</div></div>
+<div class="arw">→</div>
+<div class="step"><div class="num">03</div><div class="nm">TT Story</div><div class="sub">Smallest unit that can ship on its own.</div></div>
+<div class="arw">→</div>
+<div class="step"><div class="num">04</div><div class="nm">Sprint</div><div class="sub">Commitment that makes the timeline honest.</div></div>
+<div class="arw">→</div>
+<div class="step"><div class="num">05</div><div class="nm">Release</div><div class="sub">Deployed together, with build logs.</div></div>
+</div>
+<div class="tri">
+<div><div class="tn">Epic — why</div><div class="td">An outcome spanning sprints. Rarely closes quickly.</div></div>
+<div><div class="tn">Feature — what</div><div class="td">One capability a user would name, demonstrate and sign off.</div></div>
+<div><div class="tn">Story — what changes now</div><div class="td">One deployable change with its own acceptance criteria.</div></div>
+</div>
+<div class="ft"><b>Work only moves forward.</b> If something needs to go back, it returns to the previous state explicitly rather than being edited in place. If a Story cannot name its Feature, the scope is not settled yet.</div>
+</body></html>
