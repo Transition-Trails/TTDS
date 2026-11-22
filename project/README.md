@@ -213,6 +213,8 @@ The reader here is an executive director, ops lead, or board member who has **no
 
 **`guidelines/`** — foundation specimen cards (Design System tab): color, type, spacing, brand voice.
 
+For LinkedIn posts, Substack article covers, and visual handoff, see [Marketing assets](guidelines/marketing-assets.md).
+
 **`replit/`** — drop-in starter that gives a Replit app this design system and keeps it there.
 
 | File | Role |
