@@ -296,7 +296,7 @@ See `guidelines/token-divergence.md` — the design system, Trail OS, and the pu
 - `website/` → marketing site recreation (Homepage, Programs, Get Involved).
 - `portal/` → Trail OS, the Experience Cloud learner platform (Dashboard, Program Detail, Slack + dev org access).
 
-**`assets/`** — see Caveats; no brand binaries were provided.
+**`assets/`** — [program badges, symbols, and Slack emoji](assets/program-brand-assets/README.md).
 
 ### Intentional additions
 

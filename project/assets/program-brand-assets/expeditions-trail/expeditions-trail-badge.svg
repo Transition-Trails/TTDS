@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Expeditions Trail badge</title>
+  <path fill="#111111" fill-rule="evenodd" d="M 53,11 Q 64,0 75,11 L 117,53 Q 128,64 117,75 L 75,117 Q 64,128 53,117 L 11,75 Q 0,64 11,53 Z"/>
+  <path fill="#7FAFC6" fill-rule="evenodd" d="M 79,42 C 59,45 49,51 50,55 C 51,58 60,60 69,64 C 88,72 83,84 69,89 C 62,92 54,93 47,94 L 46,86 C 53,85 59,84 65,82 C 73,79 75,76 66,72 C 55,68 43,65 42,56 C 41,46 55,39 77,34 Z M 96,34 A 8,8 0 1 1 80,34 A 8,8 0 1 1 96,34 Z M 43,91 A 8,8 0 1 1 27,91 A 8,8 0 1 1 43,91 Z"/>
+</svg>

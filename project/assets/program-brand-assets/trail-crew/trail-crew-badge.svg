@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Trail Crew badge</title>
+  <path fill="#F1F3F1" fill-rule="evenodd" d="M 24,24 H 104 Q 121,24 121,41 V 87 Q 121,104 104,104 H 24 Q 7,104 7,87 V 41 Q 7,24 24,24 Z"/>
+  <path fill="#2A2E2C" fill-rule="evenodd" d="M 64,35 L 76,54 H 71 L 82,68 H 75 L 88,84 H 69 V 91 H 59 V 84 H 40 L 53,68 H 46 L 57,54 H 52 Z M 35,49 L 44,64 H 40 L 46,74 L 36,87 H 18 L 28,73 H 23 L 31,64 H 26 Z M 93,49 L 102,64 H 97 L 105,73 H 100 L 110,87 H 92 L 82,74 L 88,64 H 84 Z"/>
+  <path fill="#2A2E2C" fill-rule="evenodd" d="M 24,24 H 104 Q 121,24 121,41 V 87 Q 121,104 104,104 H 24 Q 7,104 7,87 V 41 Q 7,24 24,24 Z M 24,29 H 104 Q 116,29 116,41 V 87 Q 116,99 104,99 H 24 Q 12,99 12,87 V 41 Q 12,29 24,29 Z"/>
+</svg>

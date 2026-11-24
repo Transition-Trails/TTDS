@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Trail of Mastery badge</title>
+  <path fill="#2A2E2C" fill-rule="evenodd" d="M 59,9 Q 64,6 69,9 L 111,34 Q 117,37 117,44 V 84 Q 117,91 111,94 L 69,119 Q 64,122 59,119 L 17,94 Q 11,91 11,84 V 44 Q 11,37 17,34 Z"/>
+  <path fill="#FAFAF7" fill-rule="evenodd" d="M 60,32 Q 60,28 64,28 L 91,42 L 65,53 V 61 L 83,79 L 92,73 L 109,92 L 86,83 L 79,88 L 63,75 L 47,88 L 40,83 L 19,93 L 37,73 L 46,78 L 60,62 Z"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Guided Trail badge</title>
+  <path fill="#2F6B3F" fill-rule="evenodd" d="M 60,7 Q 64,5 68,7 L 111,23 Q 116,25 116,30 V 62 C 116,86 96,107 68,120 Q 64,122 60,120 C 32,107 12,86 12,62 V 30 Q 12,25 17,23 Z"/>
+  <path fill="#FAFAF7" fill-rule="evenodd" d="M 59,29 Q 59,24 64,24 Q 69,24 69,29 V 34 H 91 L 103,45 L 91,56 H 69 V 64 H 83 V 86 H 69 V 103 Q 69,107 64,107 Q 59,107 59,103 V 86 H 42 L 29,75 L 42,64 H 59 V 56 H 35 V 34 H 59 Z"/>
+</svg>
