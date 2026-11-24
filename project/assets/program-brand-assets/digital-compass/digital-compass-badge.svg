@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Digital Compass badge</title>
+  <path fill="#7FAFC6" fill-rule="evenodd" d="M 64,7 A 57,57 0 1 1 64,121 A 57,57 0 1 1 64,7 Z"/>
+  <path fill="#1E4F5C" fill-rule="evenodd" d="M 98,25 L 73,73 L 30,101 L 55,55 Z M 70,64 A 6,6 0 1 1 58,64 A 6,6 0 1 1 70,64 Z"/>
+</svg>
