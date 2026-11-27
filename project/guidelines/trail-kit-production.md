@@ -225,7 +225,7 @@ Every kit's Etsy listing has a title of at most 140 characters, a description, a
 
 **Five listing images**, in this order: cover · what's inside · plan, test, prove · who it's for · mission. Each is **2667 x 2000 pixels, 4:3 landscape, JPG**, painterly with visible brushstrokes, golden-hour light, a diverse cast, no text and no logos. Kit 01's set is the reference look. Every image prompt states its size and aspect ratio inside the prompt text.
 
-**Penny visuals** are generated from the approved Penny reference in Canva ("Penny. The AI Trail Assistant"): a coach portrait and pointing and celebrating poses at 1024 x 1024, 1:1, transparent PNG, and a 1920 x 1080, 16:9 JPG thumbnail for her 90-second video.
+**Penny visuals** are shared by every kit and live in the Penny assets folder, subfolder **Trail Kits** (https://drive.google.com/drive/folders/1QM8kid2yAdIHMM_PT5nAfVJWcjnoWumE). Check there before writing a prompt; make only what's missing. Kit 01's coach portrait is `Penny_Welcoming_Portrait_1024.png`. New ones are generated from the approved Penny reference in Canva ("Penny. The AI Trail Assistant"): a coach portrait and pointing and celebrating poses at 1024 x 1024, 1:1, transparent PNG, and a 1920 x 1080, 16:9 JPG thumbnail for her 90-second video.
 
 ## Delivery and support
 
