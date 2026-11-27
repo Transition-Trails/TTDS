@@ -225,7 +225,25 @@ Every kit's Etsy listing has a title of at most 140 characters, a description, a
 
 **Five listing images**, in this order: cover · what's inside · plan, test, prove · who it's for · mission. Each is **2667 x 2000 pixels, 4:3 landscape, JPG**, painterly with visible brushstrokes, golden-hour light, a diverse cast, no text and no logos. Kit 01's set is the reference look. Every image prompt states its size and aspect ratio inside the prompt text.
 
-**Penny visuals** are shared by every kit and live in the Penny assets folder, subfolder **Trail Kits** (https://drive.google.com/drive/folders/1QM8kid2yAdIHMM_PT5nAfVJWcjnoWumE). Check there before writing a prompt; make only what's missing. Kit 01's coach portrait is `Penny_Welcoming_Portrait_1024.png`. New ones are generated from the approved Penny reference in Canva ("Penny. The AI Trail Assistant"): a coach portrait and pointing and celebrating poses at 1024 x 1024, 1:1, transparent PNG, and a 1920 x 1080, 16:9 JPG thumbnail for her 90-second video.
+**Penny visuals** are shared by every kit. Each one is a Content Item under the Salesforce Content Topic **Penny** (CT059), with its Drive link and a note on when to reuse it; the files live in the Penny assets folder, subfolder **Trail Kits** (https://drive.google.com/drive/folders/1QM8kid2yAdIHMM_PT5nAfVJWcjnoWumE). Check the topic first, then the folder, and make only what's missing. New Penny images are generated from `Penny_Welcoming_Portrait_1024.png` as the reference, and each new one gets its own Content Item under CT059.
+
+**The standard Penny set.** Every kit uses the same Penny images in the same places, so a new kit needs no new Penny art:
+
+| Kit page | Penny asset | How it's placed |
+|---|---|---|
+| Start here | CI0245 Pointing right (1024, transparent PNG) | 150 px, beside a one-line Penny welcome |
+| Before you start | CI0287 Scene 01 Meet me on the trail | Banner at the foot of the main column |
+| Prepare: what success looks like | CI0289 Scene 02 Choose the next step | Banner |
+| Build 1 | CI0291 Scene 03 Try it together | Banner |
+| Verify: test script | CI0296 Scene 05 Compare the evidence, revealed | Banner |
+| When it goes wrong | CI0237 Scene 06 Pause and try again | Banner |
+| Prove it | CI0293 Scene 04 Teach it back | Banner between the 90-second script and Penny's note |
+| Go-live checklist | CI0241 Scene 08 Mark the milestone | Banner |
+| Reflection | Scene 09 Look back on the trail (to make) | Banner or sidebar |
+| Next trail | CI0244 Celebrating with a trail map (1024, transparent PNG) | 150 px, beside the closing checklist |
+| Kit page and video | CI0243 90-second thumbnail (cream JPG); CI0298 transparent version for layering | Not printed |
+
+Banners are the 1920 x 1080 scene stills, exported at 1200 px wide JPG, set full column width, 118 to 136 px tall, `object-fit: cover` with the crop set so both faces show, 10 px radius, pushed to the bottom of the main column. In every scene the learner does the work and Penny watches; she never touches the keyboard. The Build With Me video uses the matching silent motion clips: Scene 03 (CI0292) to open, Scene 05 (CI0297) for the test result, Scene 08 (CI0242) to close. The older studio stills (08 to 14 and A-series, marked "Cataloged still; check") are not used in kits until they're reviewed against the current Penny.
 
 ## Delivery and support
 
