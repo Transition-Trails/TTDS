@@ -1,95 +1,185 @@
 {
-  "_comment": "Trail Kit 01 as it exists in Trail OS (Salesforce). This file is the SOURCE OF TRUTH for every identifier, URL, and asset that appears in the printed kit. Export it from Salesforce; do not hand-edit it here except to prototype a new kit. See guidelines/trail-kit-production.md for the object model and the field map.",
+  "_comment": "Trail Kit 01 as it exists in Trail OS (Salesforce). This file is the SOURCE OF TRUTH for every identifier, URL, and asset that appears in the printed kit. Export it from Salesforce; do not hand-edit it here except to prototype a new kit. See guidelines/trail-kit-production.md for the object model and the field map. Updated 2026-11-26 to Kit 01 v2 (Learner): 16 steps, decisions A–F, 5 issues, Mailinator test data, no printed codes, Explorer's Trail close.",
   "Product2": {
     "Name": "Trail Kit 01 — Einstein Activity Capture",
-    "ProductCode": "TK-01",
+    "ProductCode": "TK-01-EAC",
     "Family": "Trail Kit",
     "IsActive": true,
     "Description": "Turn on Einstein Activity Capture deliberately — decide what syncs, who it covers, and how you will prove it worked.",
-    "Trail_Kit_Number__c": 7,
+    "Trail_Kit_Number__c": 1,
     "Feature_Area__c": "Einstein Activity Capture",
-    "Version__c": "1.0",
-    "Published_Date__c": "2026-08-05",
+    "Version__c": "2.0",
+    "Published_Date__c": null,
     "Time_Estimate_Minutes__c": 150,
     "Difficulty__c": "Beginner",
     "Requires_Credential__c": "None",
     "Sandbox_Required__c": false,
     "Next_Kit_Code__c": "TK-02",
-    "Landing_URL__c": "https://transitiontrails.org/kits/01",
-    "Etsy_URL__c": "https://transitiontrails.etsy.com/listing/trail-kit-01",
+    "Landing_URL__c": "https://transitiontrails.org/kits/tk-01",
+    "Etsy_URL__c": null,
     "Compass_URL__c": "https://transitiontrails.org/compass",
-    "About_Page_URL__c": "https://transitiontrails.org/about"
+    "About_Page_URL__c": "https://transitiontrails.org/about",
+    "Penny_Video_URL__c": "https://transitiontrails.org/kits/tk-01#penny-90",
+    "Production_Record__c": "https://claude.ai/artifact/JQc8h5qf3HFjac376LcvDT"
   },
   "Trail_Kit_Edition__c": [
     {
       "Name": "Learner",
       "Audience__c": "Self-directed learner / career changer / staff given the org",
       "Tab_Labels__c": "Orient,Prepare,Build,Verify,Next Trail",
-      "Page_Count__c": 17,
-      "Coupon_Code__c": "TRAIL-EAC-25",
-      "Coupon_Value__c": "25% off next kit or first program month",
-      "Program_Placemat__c": true,
-      "Includes_Affiliate_Links__c": true
+      "Page_Count__c": 20,
+      "Coupon_Code__c": null,
+      "Coupon_Value__c": "Etsy coupon, set in Etsy; never printed in the kit",
+      "Program_Placemat__c": false,
+      "Includes_Affiliate_Links__c": false,
+      "ProductCode__c": "TK-01-EAC",
+      "Closing_Page__c": "Explorer's Trail",
+      "Price__c": "$19 founding, then $29",
+      "License__c": "One person"
     },
     {
       "Name": "Nonprofit",
       "Audience__c": "Nonprofit staff enabling a feature without a Salesforce admin",
       "Tab_Labels__c": "Why,Decide,Build,Verify,Next Step",
       "Page_Count__c": 15,
-      "Coupon_Code__c": "KIT01-START",
-      "Coupon_Value__c": "Registration discount",
+      "Coupon_Code__c": null,
+      "Coupon_Value__c": "Etsy coupon, set in Etsy; never printed in the kit",
       "Program_Placemat__c": false,
-      "Includes_Affiliate_Links__c": false
+      "Includes_Affiliate_Links__c": false,
+      "ProductCode__c": "TK-01-EAC-NP",
+      "Closing_Page__c": "Digital Compass",
+      "Price__c": "$39 founding, then $59",
+      "License__c": "Whole organization, after nonprofit status is verified",
+      "_status": "Not rebuilt for v2 yet; page count and tabs to be set when built"
     }
   ],
   "Trail_Kit_Step__c": [
     {
       "Step_Number__c": 1,
-      "Title__c": "Open the Activity Capture setup page",
-      "Verify_Text__c": "the Einstein Activity Capture settings page with a Configurations list",
-      "Screenshot_Slot_Id__c": "shot-step1",
-      "Editions__c": "Learner;Nonprofit"
+      "Title__c": "Open Einstein Activity Capture settings",
+      "Verify_Text__c": "Welcome To Einstein Activity Capture, with a Get Started button",
+      "Page__c": 8,
+      "Screenshot_Slot_Id__c": "kit01-shot-step1",
+      "Editions__c": "Learner"
     },
     {
       "Step_Number__c": 2,
-      "Title__c": "Create a configuration",
-      "Verify_Text__c": "your new configuration listed with a status of Not Active",
-      "Screenshot_Slot_Id__c": "shot-step2",
-      "Editions__c": "Learner;Nonprofit"
+      "Title__c": "Click Get Started",
+      "Verify_Text__c": "Review terms and give Einstein a try!",
+      "Page__c": 8,
+      "Screenshot_Slot_Id__c": "kit01-shot-step2",
+      "Editions__c": "Learner"
     },
     {
       "Step_Number__c": 3,
-      "Title__c": "Choose what syncs, and which direction",
-      "Verify_Text__c": "your sync selections summarized on the configuration page",
-      "Screenshot_Slot_Id__c": "shot-step3",
-      "Editions__c": "Learner;Nonprofit"
+      "Title__c": "Accept the terms",
+      "Verify_Text__c": "Select Your Email and Calendar Service",
+      "Page__c": 8,
+      "Screenshot_Slot_Id__c": "kit01-shot-step3",
+      "Editions__c": "Learner"
     },
     {
       "Step_Number__c": 4,
-      "Title__c": "Assign the pilot users",
-      "Verify_Text__c": "your pilot users counted on the configuration record",
-      "Screenshot_Slot_Id__c": "shot-step4",
-      "Editions__c": "Learner;Nonprofit"
+      "Title__c": "Choose the email service",
+      "Verify_Text__c": "Two choices for how people connect",
+      "Page__c": 8,
+      "Screenshot_Slot_Id__c": "kit01-shot-step4",
+      "Editions__c": "Learner"
     },
     {
       "Step_Number__c": 5,
-      "Title__c": "Connect the email and calendar service",
-      "Verify_Text__c": "a Connected status for your Microsoft 365 or Google Workspace account",
-      "Screenshot_Slot_Id__c": "shot-step5",
-      "Editions__c": "Learner;Nonprofit"
+      "Title__c": "Choose User Level",
+      "Verify_Text__c": "Name your Configuration",
+      "Page__c": 8,
+      "Screenshot_Slot_Id__c": "kit01-shot-step5",
+      "Editions__c": "Learner"
     },
     {
       "Step_Number__c": 6,
-      "Title__c": "Activate the configuration",
-      "Verify_Text__c": "a green Active badge on the configuration row",
-      "Screenshot_Slot_Id__c": "shot-step6",
+      "Title__c": "Name the configuration",
+      "Verify_Text__c": "Emails, Events and Contacts list",
+      "Page__c": 9,
+      "Screenshot_Slot_Id__c": "kit01-shot-step6",
       "Editions__c": "Learner"
     },
     {
       "Step_Number__c": 7,
-      "Title__c": "Send the announcement",
-      "Verify_Text__c": "a reply from at least one pilot user confirming they read it",
-      "Screenshot_Slot_Id__c": "shot-step7",
+      "Title__c": "Set what syncs and the direction",
+      "Verify_Text__c": "Advanced Settings",
+      "Page__c": 9,
+      "Screenshot_Slot_Id__c": "kit01-shot-step7",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 8,
+      "Title__c": "Set Advanced Settings",
+      "Verify_Text__c": "Screen for choosing users and profiles",
+      "Page__c": 9,
+      "Screenshot_Slot_Id__c": "kit01-shot-step8",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 9,
+      "Title__c": "Add the profile to the configuration",
+      "Verify_Text__c": "System Administrator in the Selected list",
+      "Page__c": 10,
+      "Screenshot_Slot_Id__c": "kit01-shot-step9",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 10,
+      "Title__c": "Enter excluded addresses",
+      "Verify_Text__c": "Ready to Launch! with six green checks",
+      "Page__c": 10,
+      "Screenshot_Slot_Id__c": "kit01-shot-step10",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 11,
+      "Title__c": "Click Finish",
+      "Verify_Text__c": "Settings page showing Google G Suite and User-Level OAuth",
+      "Page__c": 10,
+      "Screenshot_Slot_Id__c": "kit01-shot-step11",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 12,
+      "Title__c": "Check your user's verified email",
+      "Verify_Text__c": "Your email followed by [Verified]",
+      "Page__c": 11,
+      "Screenshot_Slot_Id__c": "kit01-shot-step12",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 13,
+      "Title__c": "Assign the permission set",
+      "Verify_Text__c": "\"1 assignments were successful\" and your name in the summary",
+      "Page__c": 11,
+      "Screenshot_Slot_Id__c": "kit01-shot-step13",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 14,
+      "Title__c": "Open Email and Calendar Accounts",
+      "Verify_Text__c": "Welcome to Smarter Email and Calendar",
+      "Page__c": 11,
+      "Screenshot_Slot_Id__c": "kit01-shot-step14",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 15,
+      "Title__c": "Accept the sharing terms",
+      "Verify_Text__c": "Buttons for Google, Office 365 or Exchange",
+      "Page__c": 11,
+      "Screenshot_Slot_Id__c": "kit01-shot-step15",
+      "Editions__c": "Learner"
+    },
+    {
+      "Step_Number__c": 16,
+      "Title__c": "Connect your account",
+      "Verify_Text__c": "Your Connection listed, and the getting-ready banner",
+      "Page__c": 11,
+      "Screenshot_Slot_Id__c": "kit01-shot-step16",
       "Editions__c": "Learner"
     }
   ],
@@ -101,7 +191,8 @@
       "Duration_Minutes__c": 16,
       "URL__c": "https://www.youtube.com/watch?v=TT07-BUILD",
       "Editions__c": "Learner;Nonprofit",
-      "Chapters__c": "00:00 What we are turning on|01:40 Opening setup|03:15 Creating a configuration|05:30 Choosing what syncs|08:05 Assigning people|10:20 Connecting the mailbox|12:45 Activating|14:10 Proving it worked"
+      "Chapters__c": "00:00 What we are turning on|01:40 Opening setup|03:15 Creating a configuration|05:30 Choosing what syncs|08:05 Assigning people|10:20 Connecting the mailbox|12:45 Activating|14:10 Proving it worked",
+      "Note__c": "v2: re-chapter to the 16 build steps before recording"
     },
     {
       "Type__c": "Audio",
@@ -131,7 +222,8 @@
       "Is_Free__c": false,
       "Is_Affiliate__c": true,
       "URL__c": "https://k2university.com/salesforce-admin",
-      "Editions__c": "Learner"
+      "Editions__c": "Learner",
+      "Kit_01_v2__c": "Not used in Kit 01 v2 (no affiliate links fit this kit)"
     },
     {
       "Type__c": "Resource Link",
@@ -142,7 +234,8 @@
       "Is_Free__c": false,
       "Is_Affiliate__c": true,
       "URL__c": "https://www.jotform.com/integrations/salesforce",
-      "Editions__c": "Learner"
+      "Editions__c": "Learner",
+      "Kit_01_v2__c": "Not used in Kit 01 v2 (no affiliate links fit this kit)"
     },
     {
       "Type__c": "Resource Link",
@@ -328,8 +421,10 @@
       "Template__c": "templates/trail-kit/data/",
       "Editions__c": "Learner",
       "Delivery__c": "Google Drive — bundled in the kit folder the buyer receives on purchase.",
-      "URL__c": "https://drive.google.com/drive/folders/TT-KIT01-DATA",
-      "Notes__c": "20 accounts, 30 contacts, 8 leads. Five contact addresses and one lead address are REPLACE-WITH-YOUR-ADDRESS placeholders — Activity Capture matches on email, so no sample data can ship pre-matched. Also carries two contacts with no email, a shared address across two accounts, and one personal-domain contact."
+      "URL__c": "https://transitiontrails.org/kits/tk-01",
+      "Notes__c": "20 accounts, 30 contacts, 8 leads. Five contact addresses and one lead address are REPLACE-WITH-YOUR-ADDRESS placeholders — Activity Capture matches on email, so no sample data can ship pre-matched. Also carries two contacts with no email, a shared address across two accounts, and one personal-domain contact.",
+      "File__c": "trail-kit-01-test-contacts.csv",
+      "Note__c": "v2: 6 contacts on public Mailinator inboxes; buyer swaps the trailkit01 prefix. Riley and Morgan Summit share one address; Sam Switchback has no email; Casey Outpost has no account."
     },
     {
       "Title__c": "Trail Kit 01 test data (Nonprofit)",
@@ -340,61 +435,117 @@
       "Delivery__c": "Google Drive — bundled in the kit folder the buyer receives on purchase.",
       "URL__c": "https://drive.google.com/drive/folders/TT-KIT01NP-DATA",
       "Notes__c": "Same structure and deliberate edge cases as the learner set, mission flavour."
+    },
+    {
+      "Type__c": "Video",
+      "Title__c": "Penny: Explain it in 90 seconds",
+      "URL__c": "https://transitiontrails.org/kits/tk-01#penny-90",
+      "Editions__c": "Learner",
+      "Note__c": "QR on Prove it (page 15). ElevenLabs voice and avatar."
+    },
+    {
+      "Type__c": "Template",
+      "Title__c": "Start Here PDF",
+      "File__c": "Trail-Kit-Start-Here-Template.docx",
+      "Editions__c": "Learner;Nonprofit",
+      "Note__c": "The only file Etsy delivers."
     }
   ],
   "Trail_Kit_Decision__c": [
     {
       "Sort_Order__c": 1,
-      "Question__c": "Who does this cover?",
-      "Guidance__c": "Name two or three people rather than a whole profile. A small pilot you can ask questions of beats a broad rollout nobody owns."
+      "Label__c": "A",
+      "Question__c": "What should sync: emails, events, contacts?",
+      "Becomes__c": "Build step 7"
     },
     {
       "Sort_Order__c": 2,
-      "Question__c": "What syncs — email, calendar, or both?",
-      "Guidance__c": "Email on, calendar off is the common starting answer. Calendar sync surfaces personal appointments people did not expect to share."
+      "Label__c": "B",
+      "Question__c": "Who should it cover? Plan for the 40-person Northbend team, practice with 2 users.",
+      "Becomes__c": "Build step 9"
     },
     {
       "Sort_Order__c": 3,
-      "Question__c": "How will you know it worked?",
-      "Guidance__c": "Pick one record you will check, and one colleague who will confirm they see what you see."
+      "Label__c": "C",
+      "Question__c": "How much to capture: Entire Email Message or Header Only? Who can open the records emails land on?",
+      "Becomes__c": "Build step 8"
+    },
+    {
+      "Sort_Order__c": 4,
+      "Label__c": "D",
+      "Question__c": "Which addresses to leave out?",
+      "Becomes__c": "Build step 10, test 6"
+    },
+    {
+      "Sort_Order__c": 5,
+      "Label__c": "E",
+      "Question__c": "What will storage cost?",
+      "Becomes__c": "Test 7"
+    },
+    {
+      "Sort_Order__c": 6,
+      "Label__c": "F",
+      "Question__c": "What does success look like, with targets?",
+      "Becomes__c": "Tests 1 to 5"
     }
   ],
   "Trail_Kit_Issue__c": [
     {
       "Sort_Order__c": 1,
-      "Symptom__c": "Nothing appears on any record after activating",
-      "Likely_Cause__c": "The email connection did not complete, or sync has not run yet",
-      "Fix__c": "Check for a Connected status first. If connected, wait — first sync can take hours."
+      "Symptom__c": "Connecting the account is blocked by a consent screen",
+      "Likely_Cause__c": "A Google Workspace or Microsoft 365 admin setting controls outside apps",
+      "Fix__c": "Stop retrying. Use an account you control, or send IT the request template.",
+      "Help_Article_Title__c": "Connect Email and Calendar Accounts to Einstein Activity Capture"
     },
     {
       "Sort_Order__c": 2,
-      "Symptom__c": "Consent screen is blocked or greyed out",
-      "Likely_Cause__c": "Your email administrator has not granted the app permission",
-      "Fix__c": "This needs whoever administers Microsoft 365 or Google Workspace. It is not a Salesforce permission."
+      "Symptom__c": "Nothing gets captured",
+      "Likely_Cause__c": "The address matches no Contact or Lead, or the user's email doesn't match the connected account, or first sync hasn't run",
+      "Fix__c": "Check both matches, then give the first sync time.",
+      "Help_Article_Title__c": "Test, Monitor, or Reset Configurations"
     },
     {
       "Sort_Order__c": 3,
-      "Symptom__c": "Personal calendar events showed up",
-      "Likely_Cause__c": "Calendar sync was left on",
-      "Fix__c": "Turn calendar sync off on the configuration, then tell the affected people what you changed."
+      "Symptom__c": "Setup is missing, or someone can't connect",
+      "Likely_Cause__c": "Trailhead Playground in use, or the person lacks the permission set or a place in a configuration",
+      "Fix__c": "Use Developer Edition. Give the permission set and add the person or profile on the Configurations tab.",
+      "Help_Article_Title__c": "Give Users Access to Einstein Activity Capture"
+    },
+    {
+      "Sort_Order__c": 4,
+      "Symptom__c": "An email lands on the wrong record",
+      "Likely_Cause__c": "Two records share one address (Riley and Morgan Summit in the test data)",
+      "Fix__c": "Decide which record owns the address and fix the data."
+    },
+    {
+      "Sort_Order__c": 5,
+      "Symptom__c": "A Microsoft 365 account won't connect",
+      "Likely_Cause__c": "The configuration still uses the older sign-in method",
+      "Fix__c": "Move the configuration to Microsoft Graph.",
+      "Help_Article_Title__c": "Upgrade Microsoft Office 365 Authentication Method to Microsoft Graph"
     }
   ],
   "_sections": {
-    "_comment": "Standard page inventory every Trail Kit ships with. Editions may add pages (the learner edition adds an action plan, note pages and a programs placemat) but must not drop any of these.",
+    "_comment": "Standard page inventory every Trail Kit ships with (v2, from Kit 01 v2). Editions may add pages but must not drop any of these. Certifications is optional: add it only when the feature maps to an exam objective.",
     "required": [
       "Front cover",
-      "How to use / contents",
-      "Tab 1",
-      "Tab 2",
+      "Before you start (with contents and video index)",
+      "Tab 2 Prepare",
+      "Test data",
       "Tab 3 Build",
-      "Tab 4 Verify",
+      "Tab 4 Verify: test script",
       "When it doesn't work",
       "How to turn this off",
-      "Video index",
+      "Prove it",
+      "Go-live checklist",
+      "Reflection",
+      "Resources",
+      "Tab 5 Next: Explorer's Trail (Learner) / Digital Compass (Nonprofit)",
+      "Back cover (About Transition Trails)"
+    ],
+    "optional": [
       "Certifications",
-      "Tab 5 Next",
-      "About Transition Trails",
-      "Back cover"
+      "Career page (Learner)"
     ]
   },
   "_inserts": {
@@ -426,7 +577,7 @@
       {
         "asset": "Test data CSVs",
         "where": "Trail_Kit_Asset__c, Type = Data",
-        "note": "REQUIRED ON EVERY KIT. Delivered via the kit’s Google Drive folder on purchase. Designed so the kit’s teaching points are demonstrable — not tidy data. A kit whose exercises cannot be completed from an empty practice org is not finished."
+        "note": "REQUIRED ON EVERY KIT. Delivered on the kit page behind the access code. Designed so the kit's teaching points are demonstrable. Kits whose feature sends or captures email use public Mailinator inboxes with a buyer-chosen prefix; all others use .example.com."
       },
       {
         "asset": "Landing page",
@@ -439,9 +590,19 @@
         "note": "Bound at PDF assembly from templates/."
       },
       {
-        "asset": "Referral link and code",
+        "asset": "Referral link",
         "where": "Product2 + the buyer’s Drive folder",
-        "note": "Every kit closes on it. The permitted-use sheet points at it too — \"do not share the file, share your link\" only works if the link exists."
+        "note": "On the back cover. No printed codes; discounts are Etsy coupons."
+      },
+      {
+        "asset": "Start Here PDF",
+        "where": "Etsy digital file",
+        "note": "The only file Etsy delivers: access code, kit page link and QR, what to do first, where to get help."
+      },
+      {
+        "asset": "Production record",
+        "where": "Claude Doc per kit",
+        "note": "Single source for identifiers, steps, decisions, issues, assets, QR destinations, listing and checklists. Kit 01: https://claude.ai/artifact/JQc8h5qf3HFjac376LcvDT"
       }
     ],
     "optional": [
@@ -452,6 +613,10 @@
       {
         "asset": "Announcement template",
         "note": "Where the kit changes something other people see."
+      },
+      {
+        "asset": "Penny 90-second video",
+        "note": "Penny models the portfolio story; QR on the Prove it page."
       }
     ]
   },
@@ -462,6 +627,11 @@
         "kit": "All kits",
         "missing": "Product2 URL fields populated",
         "note": "QR destinations now resolve from Product2 fields (see _qr_destinations). The fields exist in the model; the values are not yet entered for kit 01 or kit 02. Placeholder URLs currently sit in the templates and must be replaced by generation from the record before print."
+      },
+      {
+        "kit": "Kit 01 v2",
+        "missing": "Penny visuals, Build With Me and audio outlines, video index page, shared inserts bound, Product2 records in Trail OS",
+        "note": "Tracked as open tasks in the Kit 01 production record."
       }
     ]
   },
@@ -481,7 +651,7 @@
       },
       {
         "field": "Test_Data_URL__c",
-        "feeds": "Test data QR — the kit’s Google Drive folder",
+        "feeds": "Test data QR — the code-gated kit page",
         "required": true
       },
       {
@@ -491,7 +661,7 @@
       },
       {
         "field": "Programs_URL__c",
-        "feeds": "Programs placemat QR (learner editions)",
+        "feeds": "Explorer's Trail call to action (learner editions)",
         "required": true
       },
       {
@@ -501,12 +671,17 @@
       },
       {
         "field": "Certification_URL__c",
-        "feeds": "Certifications page QRs",
-        "required": true
+        "feeds": "Certifications page QRs (only when the kit has that page)",
+        "required": false
       },
       {
         "field": "Referral_URL__c",
         "feeds": "Referral block on the back cover — the buyer’s personal link",
+        "required": true
+      },
+      {
+        "field": "Penny_Video_URL__c",
+        "feeds": "Penny's 90-second video QR on Prove it",
         "required": true
       }
     ],
