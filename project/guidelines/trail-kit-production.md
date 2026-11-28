@@ -243,7 +243,21 @@ Every kit's Etsy listing has a title of at most 140 characters, a description, a
 | Next trail | CI0244 Celebrating with a trail map (1024, transparent PNG) | 150 px, beside the closing checklist |
 | Kit page and video | CI0243 90-second thumbnail (cream JPG); CI0298 transparent version for layering | Not printed |
 
-Banners are the 1920 x 1080 scene stills, exported at 1200 px wide JPG, set full column width, 118 to 136 px tall, `object-fit: cover` with the crop set so both faces show, 10 px radius, pushed to the bottom of the main column. In every scene the learner does the work and Penny watches; she never touches the keyboard. The Build With Me video uses the matching silent motion clips: Scene 03 (CI0292) to open, Scene 05 (CI0297) for the test result, Scene 08 (CI0242) to close. The older studio stills (08 to 14 and A-series, marked "Cataloged still; check") are not used in kits until they're reviewed against the current Penny.
+Banners are the 1920 x 1080 scene stills, exported at 1200 px wide JPG, set full column width, 118 to 136 px tall, `object-fit: cover` with the crop set so both faces show, 10 px radius, pushed to the bottom of the main column. In every scene the learner does the work and Penny watches; she never touches the keyboard. **Penny beats for video and audio.** Seven reusable beats, each a still, a silent motion clip and one approved Penny voice line (voice TJz0pp7opUc4JvMXMXob, eleven_v4). The lines name no feature, so they're recorded once and reused in every kit; never re-record them per kit.
+
+| Beat | Still / motion | Voice | Penny line |
+|---|---|---|---|
+| 1 Welcome | CI0287 / CI0288 | CI0301 | "Hi, I'm Penny, your trail guide, and today you're building something you can show an employer. Ready to start?" |
+| 2 Plan | CI0289 / CI0290 | CI0302 | "Before you click anything, decide what this should do and who it's for. Who will notice first if it works?" |
+| 3 Build | CI0291 / CI0292 | CI0303 | "Now you build it one step at a time, and check each one before you move on. What do you expect to see next?" |
+| 4 Test | CI0296 / CI0297 | CI0304 | "A test that's meant to fail tells you as much as one that's meant to pass. Which result would surprise you?" |
+| 5 When it breaks | CI0237 / CI0238 | CI0305 | "Something didn't work, and that's part of the trail. What changed since the last time it worked?" |
+| 6 Prove it | CI0293 / CI0294 | CI0306 | "The part people remember is the decision you made, not the button you clicked. Which decision are you proudest of?" |
+| 7 Milestone | CI0241 / CI0242 | CI0307 | "You planned it, built it and proved it on your own. Who will be the first person to see you do it on real work?" |
+
+Build With Me: beats 1 and 3, the kit's screen recording, then beats 4, 6 and 7. The 90-second video opens on beat 6. The audio companion opens on beat 1 and closes on beat 7. Only the screen recording and the kit-specific narration change per kit.
+
+**Thumbnail series.** All kit media covers share one layout: cream #FBF7F0, the deep teal #2F6F7E trail line, Penny on the right, open space for a title added in Canva per kit. 90-second video: CI0243 (1920 x 1080 JPG). Build With Me: Penny with a laptop, 1920 x 1080 JPG. Audio companion: Penny with headphones, 3000 x 3000 JPG. The art never changes between kits; only the title text does. The older studio stills (08 to 14 and A-series, marked "Cataloged still; check") are not used in kits until they're reviewed against the current Penny.
 
 ## Delivery and support
 
