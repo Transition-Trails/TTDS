@@ -14,25 +14,33 @@ Related repos in the `Transition-Trails` org:
 | `Penny-POC` | Penny proof of concept (private). Being retired into Trail OS in Phase 2. |
 | `TT_Salesforce_Devops` | Salesforce DevOps pipeline. |
 
-## Not yet pushed
+## Repo layout
 
-**The TTDS repo still contains only a README.** Everything below lives in this
-project and has never been committed. Until `replit/` is pushed to
-`Transition-Trails/TTDS` on `main`, `npm run tt:sync` fails in every app and
-the Claude Design System Import returns empty.
+As of 2026-11-27 the repo mirrors this project's `project/` tree on `main` (last
+merge before this sync: PR #2, program brand assets). The earlier note that the
+repo held only a README is out of date.
 
-To push, copy these to the repo at the same paths:
-
-```
-replit/tt-tokens.css        replit/README.md        replit/replit.md
-replit/tt-check.mjs.txt     replit/tt-sync.mjs.txt
-```
-
-(The two `.txt` suffixes exist only so this project's compiler skips them; drop
-the suffix when installing into an app, but the repo copy can keep it — the sync
-script fetches `tt-tokens.css` only.)
+**Check:** the files above sit at `project/replit/…` in the repo, but
+`tt-sync.mjs` reads `replit/tt-tokens.css` from the repo root. Until the script
+or the path changes, `npm run tt:sync` may not find the token file.
 
 ## Last sync
+
+date: 2026-11-27
+branch: trail-kit-v2 (pull request into main)
+
+- **Trail Kit v2 standard.** Production guideline rewritten for Kit 01 v2:
+  per-kit production record, click-through verification, no printed codes
+  (Etsy coupons), Explorer's Trail close, Mailinator test data for email kits,
+  updated required pages, listing and Penny image standards, delivery and
+  support.
+- **Kit 01 v2 template.** 21 `TK01-*` pages added to `templates/trail-kit/`
+  with a README; `TrailKit.dc.html` marked retired. `kit-record.json` updated to
+  v2; new `data/trail-kit-01-test-contacts.csv` and data README.
+- **Component notes.** KitCode, CoachNote and the Trail Kit prompt now name
+  Penny as the coach voice and say Etsy editions print no code.
+
+## Earlier sync
 
 date: 2026-08-12T00:58:00Z
 tree: f2c0fccd4c11 (Transition-Trails-Map) — read-only; no commits made
